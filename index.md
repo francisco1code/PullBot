@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Bem-Vindo ao PullBot
 
 You can use the [editor on GitHub](https://github.com/fga-eps-mds/MDS-2020-2-G2/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
