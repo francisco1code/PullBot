@@ -1,6 +1,6 @@
 ## PullBot
 
-![Logo](imagens/logo.png)
+<img src="imagens/logo.png" width="200" height="200">
 
 ## Sobre
 oi
