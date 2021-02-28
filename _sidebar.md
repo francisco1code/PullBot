@@ -2,7 +2,7 @@
 - [**Documentos**](#)
     - [Documento de Visão](docs/documentos/)
     - [Documento de Arquitetura](docs/documentos/)
-    - [Especificação Suplementar](docs/documentos/)
+    - [Especificação Suplementar](docs/documentos/especificacoes_suplementares.md)
     - [Termo de Abertura do Projeto](docs/documentos/)
 - [**Produto**](#)
     - [Roadmap](docs/documentos/roadmap.md)
