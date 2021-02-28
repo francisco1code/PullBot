@@ -1,6 +1,6 @@
 ## PullBot
 
-<img src="imagens/logo.png" width="200" height="200">
+<img src="imagens/logo.png" width="600" height="200">
 
 ## Sobre
 oi2
