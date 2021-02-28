@@ -1,6 +1,6 @@
 ## PullBot
 
-![Logo](https://github.com/fga-eps-mds/MDS-2020-2-G2/blob/GitHub-Pages/imagens/logo.png)
+![Logo](imagens/logo.png)
 
 ## Sobre
 oi
