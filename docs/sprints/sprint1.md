@@ -1,1 +1,0 @@
-# Definindo os termos de conduta para o projeto open source

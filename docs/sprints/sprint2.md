@@ -1,1 +1,0 @@
-# Criação do nossa página GitPage e estudo sobre Python
