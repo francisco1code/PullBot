@@ -7,7 +7,7 @@ Primeiramente é recomendável que leia nosso [código de conduta](https://githu
 &nbsp;
 
 
-Por meio de issues e pull requests é possível contribuir com nosso projeto, reportando bugs ou implementando novas features. É importante seguir nosso template padrão aqui no Git.
+Por meio de [issues](https://github.com/fga-eps-mds/PullBot/issues) e [pull requests](https://github.com/fga-eps-mds/PullBot/pulls) é possível contribuir com nosso projeto, reportando bugs ou implementando novas features. É importante seguir nosso template padrão aqui no Git.
 
 # Issues
 
