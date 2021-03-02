@@ -2,16 +2,13 @@
 
 |Data|Versão|Descrição|Autor|
 |----|------|---------|-----|
-|02/03/2021| 0.1.0| Inserção dos tópicos de "Introdução" e "Representação da Arquitetura" | Ingrid |
-|xx/xx/2021| 0.2.0| Inserção do tópico "Tamanho e Desempenho" |  |
-|xx/xx/2021| 0.3.0| Inserção do tópico "Metas e Restrições da Arquitetura" |  |
-|xx/xx/2021| 0.3.1| Correções de formatação de Referência e Inserção da imagem representativa da camada de apresentação | |
+|02/03/2021| 0.1.0| Criação da primeira versão do documento | Ingrid Carvalho |
 
 
 # _1.Introdução_
 
 ## _1.1.Finalidade_
-Este documento tem como finalidade apresentar a arquitetura do projeto <chatbot_para_acolhimento_de_calouros>,oferecendo uma visão geral arquitetural do sistema que será implementado, possibilitando assim que os envolvidos no projeto tenham conhecimento de como a aplicação será subdivida e quais serão as funções de cada componente.
+Este documento tem como finalidade apresentar a arquitetura do projeto [chatbot_para_acolhimento_de_calouros](),oferecendo uma visão geral arquitetural do sistema que será implementado, possibilitando assim que os envolvidos no projeto tenham conhecimento de como a aplicação será subdivida e quais serão as funções de cada componente.
 
 ## _1.2.Escopo_
 Apresentação as características arquiteturais do projeto <chatbot_para_acolhimento_de_calouros>, expondo detalhadamente as soluções arquiteturais idealizadas e estabelecidas para o projeto, de modo a ser utilizado como base para a edificação do projeto pelos desenvolvedores designados para o projeto.
@@ -19,7 +16,7 @@ Apresentação as características arquiteturais do projeto <chatbot_para_acolhi
 ## _1.3.Definições, acrônimos, abreviações_
 |Definições/Acrônimos/Abreviações| Significado|
 |--------------------------------|------------|
-|MERN|MongoDB, Express, React, Node|
+||MongoDB, Express, React, Node|
 |MC| Model Controller|
 |UI|User Interface (Interface do Usuário)|
 |GUI|Graphical User Interface|
@@ -53,7 +50,7 @@ Apresentação as características arquiteturais do projeto <chatbot_para_acolhi
 |Visão de implementação| Descreve a estrutura geral do modelo de implementação, a divisão do software em camadas e os subsistemas no modelo de implementação e todos os componentes significativos do ponto de vista da arquitetura.|
 
 # _2.Representação da Arquitetura_
-A arquitetura do projeto <chatbot_de_acolhimento_para_calouros> é composta por frontend e backend acoplados, possuindo  apenas um repositório.Apesar de a metodologia utilizada é Modelo em 3 Camadas(3-Tier), expecificamente o modelo MERN Stack onde normalmente são distribuídas separadamente, não será o caso já que o frontend do projeto será simples.
+A arquitetura do projeto [chatbot_de_acolhimento_para_calouros]() é composta por frontend e backend acoplados, possuindo  apenas um repositório.Apesar de a metodologia utilizada é Modelo em 3 Camadas(3-Tier), expecificamente o modelo MERN Stack onde normalmente são distribuídas separadamente, não será o caso já que o frontend do projeto será simples.
 
 [1]O modelo 3-Tier, derivado do modelo 'n' camadas, organizando a aplicação nas camadas de apresentação, de négocio e de dados. A separação em camadas lógicas torna os sistemas mais flexíveis, permitindo que as partes possam ser alteradas de forma independente. As funcionalidades da camada de negócio podem ser divididas em classes e essas classes podem ser agrupadas em pacotes ou componentes, reduzindo as dependências entre as classes e pacotes; podem ser reutilizadas por diferentes partes do aplicativo e até por aplicativos diferentes. O modelo de 3 camadas tornou-se a arquitetura padrão para sistemas corporativos com base na Web.
 
