@@ -1,25 +1,30 @@
-Contribuir
+# Contribuir
+&nbsp;
+*Como contribuir com o projeto ?* 
 
-Como contribuir com o projeto ? 
-Primeiramente é recomendável que leia nosso código de conduta e o README 
-Por meio de issues e pull requests é possível contribuir com nosso projeto, reportando bugs ou implementando novas features, é importante seguir nosso template padrão aqui no Git
 
-Issues
+Primeiramente é recomendável que leia nosso [código de conduta](https://github.com/fga-eps-mds/PullBot/blob/master/CODE_OF_CONDUCT.md) e o [README](https://github.com/fga-eps-mds/PullBot/blob/master/README.md).
+&nbsp;
+
+
+Por meio de issues e pull requests é possível contribuir com nosso projeto, reportando bugs ou implementando novas features. É importante seguir nosso template padrão aqui no Git.
+
+# Issues
 
 As issues podem ser criadas para relatar problemas, sugerir melhorias e também para sanar dúvidas.
 
-Certifique que já não existe uma issue para o problema em questão
+Certifique que já não existe uma issue para o problema em questão.
 
-Aguardar feedBack dos integrantes
+Aguardar feedback dos integrantes.
 
-É importante zelar pela clareza/objetividade tanto no nome quanto em sua descrição
+É importante zelar pela clareza/objetividade tanto no nome quanto em sua descrição.
 
-Pull request
+# Pull request
 
-verificar previamente as features implementads e sua funcionalidade dentro do escopo do projeto
+Verificar previamente as features implementadas e suas funcionalidades dentro do escopo do projeto.
 
-É importante zelar pela clareza/objetividade tanto no nome quanto em seu comentário
+É importante zelar pela clareza/objetividade tanto no nome quanto em seu comentário.
 
-Todo Pull Request deve possuir link de sua issue, para manter a boa organização do repositório
+Todo pull request deve possuir link de sua issue, para manter a boa organização do repositório.
 
-Usar nosso template de pull request 
+Usar nosso template de pull request.
