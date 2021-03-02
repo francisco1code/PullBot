@@ -7,9 +7,9 @@ Bot de produtividade ativado no git a cada fechamento de milestone te dando um a
 ## Colaboradores
 |Nome|  Função| 
 |----|--------|
-[Arthur Garcia](https://github.com/ArthurMeloG)| Scrum Master|
-[Jaime Juan](https://github.com/JaimeJuan11)| Product Owner|
-[Eliás Yousef](https://github.com/ingridSCarvalho)| Devops|
+[Arthur Garcia](https://github.com/ArthurMeloG)| Scrum Master e Devops|
+[Jaime Juan](https://github.com/JaimeJuan11)| Product Owner e Devops|
+[Eliás Yousef](https://github.com/ingridSCarvalho)| Arquiteto de Software e Devops|
 [Ingrid Carvalho](https://github.com/zpeniel09)| Devops|
 [Lorrayne Cardozo](https://github.com/LorrayneCardozo)| Devops|
 [Peniel Zannoukou](https://github.com/eliasyousef00)| Devops|
@@ -18,6 +18,6 @@ Bot de produtividade ativado no git a cada fechamento de milestone te dando um a
 Para contribuir com o projeto, [leia](https://github.com/fga-eps-mds/PullBot/blob/master/CONTRIBUTING.md).
 
 ## Licença
-Sobre [leia](https://github.com/fga-eps-mds/PullBot/blob/master/LICENSE).
+Confira nossa licença [aqui](https://github.com/fga-eps-mds/PullBot/blob/master/LICENSE).
 
 Copyright (c) 2020 PullBot
