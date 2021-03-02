@@ -15,9 +15,9 @@ Bot de produtividade ativado no git a cada fechamento de milestone te dando um a
 [Peniel Zannoukou](https://github.com/eliasyousef00)| Devops|
 ## Contribuição
 
-Para contribuir com o projeto, [leia]().
+Para contribuir com o projeto, [leia](CONTRIBUTING.md).
 
 ## Licença
-Sobre [leia]().
+Sobre [leia](LICENSE).
 
 Copyright (c) 2020 PullBot
