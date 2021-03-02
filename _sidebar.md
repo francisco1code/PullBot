@@ -1,6 +1,6 @@
 - [Home](README.md)
 - [**Documentos**](#)
-    - [Documento de Visão](docs/documentos/)
+    - [Documento de Visão](docs/documentos/documento_de_visao.md)
     - [Documento de Arquitetura](docs/documentos/)
     - [Especificação Suplementar](docs/documentos/especificacoes_suplementares.md)
     - [Termo de Abertura do Projeto](docs/documentos/)
