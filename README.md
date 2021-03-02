@@ -5,19 +5,19 @@
 ## Sobre
 Bot de produtividade ativado no git a cada fechamento de milestone te dando um apanhado geral da atual sprint e realizando automaticamente um Pull Request.
 ## Colaboradores
-### Equipe de Gerenciamento
-Arthur
-Jaime Juan
-### Equipe de Desenvolvimento
-Lorrayne
-Peniel
-Eliás
-Yngrid
+|Nome|  Função| 
+|----|--------|
+[Arthur Garcia](https://github.com/ArthurMeloG)| Scrum Master|
+[Jaime Juan](https://github.com/JaimeJuan11)| Product Owner|
+[Eliás Yousef](https://github.com/ingridSCarvalho)| Devops|
+[Ingrid Carvalho](https://github.com/zpeniel09)| Devops|
+[Lorrayne Cardozo](https://github.com/LorrayneCardozo)| Devops|
+[Peniel Zannoukou](https://github.com/eliasyousef00)| Devops|
 ## Contribuição
 
-Para contribuir com o projeto, "leia".
+Para contribuir com o projeto, [leia]().
 
 ## Licença
-Sobre "leia".
+Sobre [leia]().
 
 Copyright (c) 2020 PullBot
