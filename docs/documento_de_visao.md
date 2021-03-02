@@ -1,3 +1,8 @@
+# Histórico de Versões
+Data | Versão | Descrição | Autor(es)
+:-:|:-:|:-:|:-:
+28/01/2021 | 1.0.0 | Criação do documento | Lorrayne Alves Cardozo
+
 # 1.Introdução
 ## 1.1.	Objetivo
 Este documento tem a finalidade de expor detalhadamente o propósito do projeto PullBot, assim como a relação com os envolvidos no projeto, as funcionalidade e utilidades do produto, afim de que garanta o pleno entendimento do leitor independente de um prévio conhecimento técnico sobre desenvolvimento de software.
