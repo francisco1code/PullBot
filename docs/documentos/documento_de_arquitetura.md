@@ -1,8 +1,9 @@
-# _Histórico de Revisão_
+# Documento de Arquitetura
 
+### Histórico de Revisão
 |Data|Versão|Descrição|Autor|
-|----|------|---------|-----|
-|02/03/2021| 0.1.0| Criação da primeira versão do documento | Ingrid Carvalho |
+:-:|:-:|:-:|:-:
+|02/03/2021| 1.0.0| Criação do documento | Ingrid Carvalho |
 
 
 # _1.Introdução_

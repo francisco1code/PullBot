@@ -1,5 +1,7 @@
-# Histórico de Versões
-Data | Versão | Descrição | Autor(es)
+# Termo de Abertura do Projeto
+
+### Histórico de Revisão
+Data | Versão | Descrição | Autor
 :-:|:-:|:-:|:-:
 28/01/2021 | 1.0.0 | Criação do documento | Jaime Juan
 

@@ -1,8 +1,9 @@
-## **Especificação Suplementar**
+# Especificação Suplementar
 
+### Histórico de Revisão
 |Data|  Versão|  Descrição|  Autor| 
-|----|--------|-----------|-------|
-27/02/2021| 0.1| Criação da Especificação Suplementar| Peniel Etèmana|
+:-:|:-:|:-:|:-:
+27/02/2021| 1.0.0| Criação do documento| Peniel Etèmana|
 
 # 1. Introdução
 ## 1.1 Finalidade
