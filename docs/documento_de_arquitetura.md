@@ -1,8 +1,9 @@
-# _Histórico de Revisão_
+# Documento de Arquitetura
 
+### Histórico de Revisão
 |Data|Versão|Descrição|Autor|
-|----|------|---------|-----|
-|02/03/2021| 0.1.0| Criação da primeira versão do documento | Ingrid Carvalho |
+:-:|:-:|:-:|:-:
+|02/03/2021| 1.0.0| Criação do documento | Ingrid Carvalho |
 
 
 # _1.Introdução_
@@ -15,7 +16,7 @@ Apresentação as características arquiteturais do projeto <chatbot_para_acolhi
 ## _1.4.Referências Bibliográficas_
 [1]_Modelo em três camadas_. Disponível em <https://pt.wikipedia.org/wiki/Modelo_em_tr%C3%AAs_camadas>.Acesso em 03 de Setembro de 2020.
 
-[2]_Python_. Disponivel em (https://pt.wikipedia.org/wiki/Python) Acesso em 02 de março de 2020
+[2]_Python_. Disponivel em (https://pt.wikipedia.org/wiki/Python). Acesso em 02 de março de 2020.
 ## _1.5.Visão Geral_
 
 |Tópico| Descrição|
@@ -49,4 +50,3 @@ A arquitetura foi planejada para que a aplicação atenda de forma satisfatória
 Na aplicação será abordado o conceito de SPA(Single-Page-Application), que possibilita a renderização dinâmica de conteúdo ao contrário de um carregamento completo da página, reduzindo o tempo de espera e proporcionando uma melhor e mais fluida experiência para o usuário.
 
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e da a conexão com o banco de dados, assim como a disponibilidade do servidor.
-
