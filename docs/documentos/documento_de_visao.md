@@ -39,7 +39,7 @@ Equipe de Gestão do Projeto | Grupo de alunos da UnB matriculados na disciplina
 Equipe de Desenvolvimento do Projeto  | Grupo de alunos da UnB matriculados na disciplina MDS | Executar o planejado com qualidade e eficiência dentro dos prazos estabelecidos
 Clientes | Usuários da plataforma GitHub | Acompanhar a execução do projeto, evidenciando a devida apreciação sobre cada funcionalidade do produto
 ## 3.2. Resumo dos Usuários
-Nome | Descrição
+|Nome | Descrição|
 |:-:|:-:|
 Usuários de GitHub | Pessoas que possuem uma conta na plataforma GitHub
 ## 3.3. Ambiente do Usuário
@@ -48,7 +48,7 @@ O usuário necessita de um navegador, que independe do acesso em computador ou d
 ### 3.4.1. Equipe de Gestão de Projeto
 |   |   |
 |:-:|:-:|
-**Repesentantes** | Arthur de Melo Garcia, Jaime Juan de Castro Feliciano Damasceno
+**Representantes** | Arthur Garcia, Eliás Yousef e Jaime Juan 
 **Descrição** | Gestores de projeto
 **Tipo** | Discentes da disciplina MDS na UnB
 **Critério de Sucesso** | Gerenciar a equipe, organizar tarefas a serem concluídas em cada etapa, visando a qualidade prevista e o prazo estabelecido, além de garantir a comunicação entre toda a equipe
@@ -58,7 +58,7 @@ O usuário necessita de um navegador, que independe do acesso em computador ou d
 ### 3.4.2. Equipe de Desenvolvedores de Projeto
 |   |   |
 |:-:|:-:|
-**Repesentantes** | Eliás Yousef, Ingrid da Silva Carvalho , Lorrayne Alves Cardozo, Peniel Etèmana Désirez-Jésus Zannoukou
+**Repesentantes** | Eliás Yousef, Ingrid Carvalho, Lorrayne Cardozo, Peniel Zannoukou
 **Descrição** | Desenvolvedores de projeto
 **Tipo** | Discentes da disciplina MDS na UnB
 **Critério de Sucesso** | Realizar as metas estabelecidas com comprometimento e qualidade dentro do prazo proposto
@@ -84,8 +84,6 @@ O usuário necessita de um navegador, que independe do acesso em computador ou d
 **Critério de Sucesso** | Acompanhar a execução do projeto, evidenciando a devida apreciação sobre cada funcionalidade do produto
 **Envolvimento** | Médio
 **Problemas/Comentários** | Usuários de GitHub que por algum motivo não consigam ter acesso ao aplicativo Telegram
-
-## 3.6. Alternativas e concorrência
 
 # 4. Visão Geral do Produto
 ## 4.1. Perspectiva do produto

@@ -21,21 +21,21 @@ Um ponto essencial para a usabilidade do PullBot é que ele vem para auxiliar na
 
 ## 2.1 Metas de usabilidade
 
-  **.**  Eficaz: O bot deve alcançar seu objetivo.
+  *  Eficaz: O bot deve alcançar seu objetivo.
 
-  **.**  Eficiente: Velocidade de uso.
+  *  Eficiente: Velocidade de uso.
 
-  **.**  Segurança: Proteção ao usuário contra situações indesejáveis (uso).
+  *  Segurança: Proteção ao usuário contra situações indesejáveis (uso).
 
-  **.**  Utilidade: Oferece o tipo certo de funcionalidade.
+  *  Utilidade: Oferece o tipo certo de funcionalidade.
 
-  **.**  Aprendizado: Fácil de aprender.
+  *  Aprendizado: Fácil de aprender.
 
-  **.**  Memorização: Fácil de lembrar como se usa.
+  *  Memorização: Fácil de lembrar como se usa.
 
-  **.**  Prevenções de erros: Evitar inserção de dados errôneos ou inadequados.
+  *  Prevenções de erros: Evitar inserção de dados errôneos ou inadequados.
 
-  **.** Visibilidade de estado do sistema: Deixar claro ao usuário o que está acontecendo em tempo real.
+  * Visibilidade de estado do sistema: Deixar claro ao usuário o que está acontecendo em tempo real.
 
 # 3. Confiabilidade
 
@@ -66,39 +66,38 @@ As informações sigilosas dos usuário só poderão ser vista por ele mesmo. A 
 
 ## 8.1 Interface
 
-  **.**  Intuitiva
+  *  Intuitiva;
 
-  **.**  Receptiva
+  *  Receptiva;
 
-  **.**  Responsiva
+  *  Responsiva.
 
 ## 8.2 Padrão de código
 
-   **.** Python
+   * Python;
 
-   **.** Lint
+   * Lint;
 
-   **.** lowerCamelCase
+   * lowerCamelCase;
 
 # 8.3 Ferramentas
+## 8.3.1 Gerenciamento
 
-**8.3.1 Gerenciamento**
+  *  Telegram;
 
-  **.**  Telegram
+  *  Google Drive;
 
-  **.**  Google Drive
+  *  Discord;
 
-  **.**  Discord
+  *  Whatsapp;
 
-  **.**  Whatsapp
+## 8.3.2 Desenvolvimento
 
-**8.3.2 Desenvolvimento**
+  *  Docker;
 
-  **.**  Docker
+  *  Github;
 
-  **.**  Github
-
-  **.**  Git
+  *  Git;
 
 # 9. Interfaces
 

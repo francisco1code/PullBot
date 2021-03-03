@@ -16,7 +16,7 @@ Apresentação as características arquiteturais do projeto <chatbot_para_acolhi
 ## _1.4.Referências Bibliográficas_
 [1]_Modelo em três camadas_. Disponível em <https://pt.wikipedia.org/wiki/Modelo_em_tr%C3%AAs_camadas>.Acesso em 03 de Setembro de 2020.
 
-[2]_Python_. Disponivel em (https://pt.wikipedia.org/wiki/Python) Acesso em 02 de março de 2020
+[2]_Python_. Disponivel em (https://pt.wikipedia.org/wiki/Python). Acesso em 02 de março de 2020.
 ## _1.5.Visão Geral_
 
 |Tópico| Descrição|

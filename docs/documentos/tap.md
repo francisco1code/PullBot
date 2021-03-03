@@ -28,7 +28,7 @@ Release 1 | 30/03 | Primeira versão da aplicação
 Release 2 | 20/05 | Entrega do produto final
 
 # 4. Estrutura Analítica do Projeto
-[imagem]()
+<img src="/imagens/logo.png" width="auto" height="auto">
 
 # 5. Usuários e Papéis
 ## 5.1. Usuários
@@ -38,45 +38,45 @@ Usuário | Usuário que o bot para automação | Qualquer pessoa interessada
 ## 5.2. Papéis
 Nome | Função
 :-:|:-:
-[Arthur Garcia](https://github.com/ArthurMeloG)| Product Owner e Desenvolvedor|
 [Jaime Juan](https://github.com/JaimeJuan11)| Scrum Master e Devops|
+[Arthur Garcia](https://github.com/ArthurMeloG)| Product Owner e Desenvolvedor|
 [Eliás Yousef](https://github.com/ingridSCarvalho)| Arquiteto e Desenvolvedor|
 [Ingrid Carvalho](https://github.com/zpeniel09)| Desenvolvedor|
 [Lorrayne Cardozo](https://github.com/LorrayneCardozo)| Desenvolvedor|
 [Peniel Zannoukou](https://github.com/eliasyousef00)| Desenvolvedor|
 ## 5.3. Responsabilidades
 ### 5.3.1. Scrum Master
-* Acompanhar e controlar os riscos do projeto
-* Garantir a máxima produtividade da equipe
-* Gerenciar métricas da equipe e do projeto
-* Maximizar a interação e alinhamento entre os membros da equipe
-* Garantir a integridade e a realização das práticas ágeis
-* Orientar e incentivar a equipe a ser auto gerenciável
-* Documentar Sprints
+* Acompanhar e controlar os riscos do projeto;
+* Garantir a máxima produtividade da equipe;
+* Gerenciar métricas da equipe e do projeto;
+* Maximizar a interação e alinhamento entre os membros da equipe;
+* Garantir a integridade e a realização das práticas ágeis;
+* Orientar e incentivar a equipe a ser auto gerenciável;
+* Documentar Sprints.
 ### 5.3.2. Product Owner
-* Documentar o Product Backlog
-* Gerenciar e aplicar o Roadmap
-* Priorizar as tarefas de acordo com o valor para o usuário
-* Levantar os requisitos do projeto
-* Certificar a qualidade do produto em relação aos requisitos
-* Fornecer visão de mercado do produto
-* Avaliar as entregas de acordo com os critérios de aceitação
-* Definir critérios de aceitação
+* Documentar o Product Backlog;
+* Gerenciar e aplicar o Roadmap;
+* Priorizar as tarefas de acordo com o valor para o usuário;
+* Levantar os requisitos do projeto;
+* Certificar a qualidade do produto em relação aos requisitos;
+* Fornecer visão de mercado do produto;
+* Avaliar as entregas de acordo com os critérios de aceitação;
+* Definir critérios de aceitação.
 ### 5.3.3. Devops
-* Gerenciar e configurar ambientes de desenvolvimento, homologação e produção
-* Garantir a qualidade técnica do produto
-* Implementar entrega e integração contínua
-* Levantar padrões
-* Monitorar desempenho das aplicações
-* Aplicar GitFlow
+* Gerenciar e configurar ambientes de desenvolvimento, homologação e produção;
+* Garantir a qualidade técnica do produto;
+* Implementar entrega e integração contínua;
+* Levantar padrões;
+* Monitorar desempenho das aplicações;
+* Aplicar GitFlow.
 ### 5.3.4. Desenvolvedor
-* Propor as soluções de arquitetura dos sistemas
-* Manter a equipe alinhada com os padrões arquiteturais
-* Acompanhar a equipe de desenvolvimento durante a construção das aplicações
+* Propor as soluções de arquitetura dos sistemas;
+* Manter a equipe alinhada com os padrões arquiteturais;
+* Acompanhar a equipe de desenvolvimento durante a construção das aplicações.
 ### 5.3.5. Desenvolvedor
-* Implementar as histórias de usuário dentro do prazo da sprint
-* Seguir as práticas ágeis fornecidas pelo Scrum Master
+* Implementar as histórias de usuário dentro do prazo da sprint;
+* Seguir as práticas ágeis fornecidas pelo Scrum Master.
 
 # 6. Restrições
-* A aplicação não estará disponível offline, será necessária o acesso à internet
-* Usuário deverá possuir acesso a um navegador
+* A aplicação não estará disponível offline, será necessária o acesso à internet;
+* Usuário deverá possuir acesso a um navegador.
