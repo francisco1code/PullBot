@@ -1,4 +1,6 @@
-# Histórico de Versões
+# Documento de Visão
+
+### Histórico de Revisão
 Data | Versão | Descrição | Autor(es)
 :-:|:-:|:-:|:-:
 28/01/2021 | 1.0.0 | Criação do documento | Lorrayne Alves Cardozo
