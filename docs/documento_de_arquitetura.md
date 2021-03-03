@@ -1,9 +1,8 @@
-# Documento de Arquitetura
+# _Histórico de Revisão_
 
-### Histórico de Revisão
 |Data|Versão|Descrição|Autor|
-:-:|:-:|:-:|:-:
-|02/03/2021| 1.0.0| Criação do documento | Ingrid Carvalho |
+|----|------|---------|-----|
+|02/03/2021| 0.1.0| Criação da primeira versão do documento | Ingrid Carvalho |
 
 
 # _1.Introdução_
@@ -16,13 +15,7 @@ Este documento tem como finalidade apresentar a arquitetura do projeto [pullbot]
 ## _1.2.Escopo_
 Apresentação as características arquiteturais do projeto <pullbot>, expondo detalhadamente as soluções arquiteturais idealizadas e estabelecidas para o projeto, de modo a ser utilizado como base para a edificação do projeto pelos desenvolvedores designados para o projeto.
 ## _1.4.Referências Bibliográficas_
-<<<<<<< HEAD
 [1]_Python_. Disponivel em (https://pt.wikipedia.org/wiki/Python) Acesso em 02 de março de 2021
-=======
-[1]_Modelo em três camadas_. Disponível em <https://pt.wikipedia.org/wiki/Modelo_em_tr%C3%AAs_camadas>.Acesso em 03 de Setembro de 2020.
-
-[2]_Python_. Disponivel em (https://pt.wikipedia.org/wiki/Python). Acesso em 02 de março de 2020.
->>>>>>> 35666736b9e66b4f2970ad3ad8e72b64d1e77ebc
 ## _1.5.Visão Geral_
 
 |Tópico| Descrição|
@@ -52,11 +45,5 @@ A aplicação ser desenvolvida em Python.
 # _4. Tamanho e Desempenho_
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação e expansão de funcionalidades, sem a necessidade de dimensionar todo o sistema.
 
-<<<<<<< HEAD
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário.
 
-=======
-Na aplicação será abordado o conceito de SPA(Single-Page-Application), que possibilita a renderização dinâmica de conteúdo ao contrário de um carregamento completo da página, reduzindo o tempo de espera e proporcionando uma melhor e mais fluida experiência para o usuário.
-
-O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e da a conexão com o banco de dados, assim como a disponibilidade do servidor.
->>>>>>> 35666736b9e66b4f2970ad3ad8e72b64d1e77ebc
