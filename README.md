@@ -22,4 +22,4 @@ Para contribuir com o projeto, [leia](https://github.com/fga-eps-mds/PullBot/blo
 ## Licença
 Confira nossa licença [aqui](https://github.com/fga-eps-mds/PullBot/blob/master/LICENSE).
 
-Copyright &copy; 2020 PullBot
+Copyright &copy; 2021 PullBot
