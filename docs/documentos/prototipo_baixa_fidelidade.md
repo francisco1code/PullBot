@@ -10,9 +10,9 @@ O PullBot é um bot de produtividade do github que gera relatórios .md a cada f
 * Quantidade de caracteres escritas em cada issue.
 * Quantidade de pull requests abertos e fechados.
 * Número de commits por integrante do repositório
-* Número de comentários em cada issue por integrante.
+* Número de comentários em cada issue por integrante.2
 
-<img src="/imagens/funcionamento_pullbot.png" height="320px">
+<img src="../../imagens/funcionamento_pullbot.png" height="320px">
 
 Após gerado o arquivo .md, o bot abre um pull request com o arquivo em questão.
 
