@@ -18,4 +18,4 @@ Após gerado o arquivo .md, o bot abre um pull request com o arquivo em questão
 
 A comunicação da aplicação com o github será feita via API do github. Ela trará todas as infomações necessárias para a execução do projeto em questão.
 
-<img src="\imagens\PullBot_API.png" height="250px" width="490px">
+<img src="imagens\PullBot_API.png" height="250px" width="490px">
