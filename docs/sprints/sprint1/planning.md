@@ -1,9 +1,9 @@
 # Sprint 1 - Planning
 
 ## Visão Geral
-* Início: 11/02/2021
-* Fim: 17/02/2021
-* Duração: 7 dias
+* Início: 17/02/2021
+* Fim: 18/02/2021
+* Duração: 2 dias
 
 ## Objetos
 * Sprint dedicada ao estudo de variáveis que rodeiam o projeto, como tema e tecnologias, criação do código de conduta, readme e pull request template.

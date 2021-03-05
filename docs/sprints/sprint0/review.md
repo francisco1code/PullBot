@@ -1,8 +1,8 @@
 # Sprint 0 - Review
 
 ## Visão Geral
-* Inicio: 04/02/2021
-* Fim: 10/02/2021
+* Inicio: 11/02/2021
+* Fim: 18/02/2021
 * Duração: 7 dias
 
 
