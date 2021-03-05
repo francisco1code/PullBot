@@ -9,12 +9,12 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 ## Colaboradores
 |Nome|  Função| 
 |----|--------|
-[Arthur Garcia](https://github.com/ArthurMeloG)| Scrum Master e Devops|
-[Jaime Juan](https://github.com/JaimeJuan11)| Product Owner e Devops|
-[Eliás Yousef](https://github.com/ingridSCarvalho)| Arquiteto de Software e Devops|
-[Ingrid Carvalho](https://github.com/zpeniel09)| Devops|
-[Lorrayne Cardozo](https://github.com/LorrayneCardozo)| Devops|
-[Peniel Zannoukou](https://github.com/eliasyousef00)| Devops|
+[Arthur Garcia](https://github.com/ArthurMeloG)| Product Owner e Desenvolvedor|
+[Jaime Juan](https://github.com/JaimeJuan11)| Scrum Master e Devops|
+[Eliás Yousef](https://github.com/ingridSCarvalho)| Arquiteto e Desenvolvedor|
+[Ingrid Carvalho](https://github.com/zpeniel09)| Desenvolvedor|
+[Lorrayne Cardozo](https://github.com/LorrayneCardozo)| Desenvolvedor|
+[Peniel Zannoukou](https://github.com/eliasyousef00)| Desenvolvedor|
 ## Contribuição
 
 Para contribuir com o projeto, [leia](https://github.com/fga-eps-mds/PullBot/blob/master/CONTRIBUTING.md).
@@ -22,4 +22,4 @@ Para contribuir com o projeto, [leia](https://github.com/fga-eps-mds/PullBot/blo
 ## Licença
 Confira nossa licença [aqui](https://github.com/fga-eps-mds/PullBot/blob/master/LICENSE).
 
-Copyright &copy; 2020 PullBot
+Copyright &copy; 2021 PullBot

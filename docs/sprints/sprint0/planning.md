@@ -10,7 +10,7 @@
 * Sprint dedicada ao estudo do git, práticas ágeis e toda a ambientação necessária para ter um bom desenvolvimento na matéria.
 
 
-Issue | Descrição | Autor
+Issue | Descrição | Responsável
 ---|---|---
 #6 | Definir possíveis temas para o projeto | Eliás Yousef
 #7 |Estudar git como versionador de arquivos | Ingrid Carvalho
