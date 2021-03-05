@@ -12,13 +12,15 @@ Issue | Descrição | Responsável | Condição
 #29 | Documento de visão | Lorrayne Alves | Concluída
 
 ## Pontos positivos:
-* 
+* Comunicação mais eficiente com os integrantes do grupo
+* Criação no grupo de discord para reuniões e Whatsapp para comunicação
+* Maior participação dos integrantes nas sprint
 
 ## Pontos negativos:
-*
+* Mesmo que a comunicação tenha melhorado, ainda não está das melhores
 
 ## Melhorias:
-*
+* Os integrantes precisam dar mais feedbacks
 
 ## Retorno do Scrum Master:
-*
+* 

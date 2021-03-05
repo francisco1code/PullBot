@@ -19,6 +19,7 @@ Issue | Descrição | Responsável | Condição
 ## Pontos negativos
 * Pouca comunicação
 * Pouca contribuição e todos os integrantes
+* Falta de organização nas datas das sprints
 
 ## Melhorias:
 * Encontrar uma boa plataforma para estabelecer comunicação entre os integrantes
