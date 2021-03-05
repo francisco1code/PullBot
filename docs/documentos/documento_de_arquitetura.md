@@ -40,7 +40,7 @@ Apresentação as características arquiteturais do projeto <pullbot>, expondo d
 A arquitetura do projeto [pullbot]() se concentra em auxiliar os usuário da plataforma github revisando a abertura e os fechamentos de milestones sendo assim a arquitetura do projeto está centralizada em back-end com a linguagem de programação python em sinergia com a API do GitHub.
 ## 2.1.Camada de negócio (Back-end)
 [1]Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express
-## 2.2.Linguagem de programação (Python)
+## 2.2.Linguagem de programação (JavaScript)
 [2]Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. 
 ## 2.3.API do GitHub
 [3]API é um conjunto de instruçõoes e informações sobre práticas de um projeto (GitHub) para uso de suas funcionalidades que permite ao programador a implementação de novas funções não disponíveis comumente.

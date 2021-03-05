@@ -74,7 +74,7 @@ As informações sigilosas dos usuário só poderão ser vista por ele mesmo. A 
 
 ## 8.2 Padrão de código
 
-   * Python;
+   * JavaScript;
 
    * Lint;
 
