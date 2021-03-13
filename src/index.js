@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const $btnClose = document.querySelector('.d-inline-block.mr-2 button')
 
 app.get('/', (req, res) => {
   res.send('Ola Mundo!')
