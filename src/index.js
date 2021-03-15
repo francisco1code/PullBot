@@ -12,3 +12,9 @@ document.addEventListener("click", function(e) {
   console.log("URL atual: " + window.location.pathname);
   console.log(e);
 });
+
+
+$btnClose.addEventListener("click", () => {  
+  console.log('Hello word');
+
+})
