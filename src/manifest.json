@@ -5,7 +5,7 @@
   "manifest_version": 3,
   "action": {
     "default_popup": "bot.html",
-    "default_icon": "bot.png"
+    "default_icon": "imageIcon.png"
   },
   "commands": {
     "_execute_action": {
