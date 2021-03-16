@@ -1,14 +1,15 @@
-const express = require('express')
-const app = express()
-const port = 3000
-const $btnClose = document.querySelector('.d-inline-block.mr-2 button')
-
-app.get('/', (req, res) => {
-  res.send('Ola Mundo!')
-})
-
-
 document.addEventListener("click", function(e) {
-  console.log("URL atual: " + window.location.pathname);
-  console.log(e);
+
+    
+console.log("URL atual: " + window.location.pathname);
+
+var text = e.path[0].classList
+    console.log(e)
+
+    if(String(text) == 'btn-link'){
+    window.alert("closed")
+    }
 });
+
+/*const $btnClose = document.querySelector('.d-inline-block.mr-2 button')
+/*/
