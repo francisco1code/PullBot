@@ -12,7 +12,6 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 [Arthur Garcia](https://github.com/ArthurMeloG)| Product Owner e Desenvolvedor|
 [Jaime Juan](https://github.com/JaimeJuan11)| Scrum Master e Devops|
 [Eliás Yousef](https://github.com/ingridSCarvalho)| Arquiteto e Desenvolvedor|
-[Ingrid Carvalho](https://github.com/zpeniel09)| Desenvolvedor|
 [Lorrayne Cardozo](https://github.com/LorrayneCardozo)| Desenvolvedor|
 [Peniel Zannoukou](https://github.com/eliasyousef00)| Desenvolvedor|
 ## Contribuição
