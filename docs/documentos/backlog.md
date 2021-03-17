@@ -1,5 +1,5 @@
 # Backlog - PullBot 
-
+ 
 ## Features
 | ID      | Descrição | 
 | :---        |    :----:   |       
@@ -8,8 +8,8 @@
 | FT03 | Pull Request automático        |    
 | FT04 | Gráficos demonstrativos        |
 | FT05 | Commits no repositório        |
-
-<br/> <br/> 
+ 
+ <br/> 
 
 ## Épicos 
 | ID | Descrição |
@@ -20,7 +20,7 @@
 | EP04 | Execução do PullBot na máquina do usuário |
 | EP05 |Apresentação das informações via Gráficos |
 
-<br/><br/>
+<br/>
 
 ## User Stories 
 | ID | Descrição | Desejo | Épicos | Pontuação | 
@@ -32,10 +32,3 @@
 | US04 | Usuário | Receber um relatório com auxilio de gráficos para melhor compreensão  | EP05 |  |
 | US05 | Desenvolvedor | Estudar javaScript e suas bibliotecas e frameworks | EP02 |  |
 | US06 | Desenvolvedor | Estudar a API do GitHub | EP02 |  |
-
-
-
-
-
-
-
