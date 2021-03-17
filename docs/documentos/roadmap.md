@@ -2,7 +2,7 @@
 
 | Sprint | Data | Tarefas |
 | :--:| :--: | :-- |
-| 0 | 02/02 - 09/02 | Estudar tecnologias <br> Definir tema do projeto <br> Estudar práticas ágeis <br> Definir tecnologias <br> Arrumar o repositório <br> Criar wiki|
+| 0 | 02/02 - 09/02 | - Estudar tecnologias <br> - Definir tema do projeto <br> - Estudar práticas ágeis <br> - Definir tecnologias <br> - Arrumar o repositório <br> - Criar wiki|
 | 1 | 09/02 - 23/02 | a |
 | 2 | 23/02 - 02/03 | a |
 | 3 | 02/03 - 09/03 | a |
