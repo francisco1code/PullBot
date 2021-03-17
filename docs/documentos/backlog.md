@@ -9,8 +9,6 @@
 | FT04 | Gráficos demonstrativos        |
 | FT05 | Commits no repositório        |
  
- <br/> 
-
 ## Épicos 
 | ID | Descrição |
 | :---        |    :----:   |       
@@ -19,8 +17,6 @@
 | EP03 | Como Executar o PullBot no GitHub do usuário |
 | EP04 | Execução do PullBot na máquina do usuário |
 | EP05 |Apresentação das informações via Gráficos |
-
-<br/>
 
 ## User Stories 
 | ID | Descrição | Desejo | Épicos | Pontuação | 
