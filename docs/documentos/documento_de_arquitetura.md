@@ -1,7 +1,7 @@
 # Documento de Arquitetura
 
 ## Histórico de Revisão
-|Data|Versão|Descrição|Autor|
+ Data | Versão | Descrição | Autor
 --- | --- | --- | ---
 02/03/2021 | 1.0.0 | Criação do documento | Ingrid Carvalho
 # 1.Introdução
@@ -11,19 +11,19 @@ Este documento tem como finalidade apresentar a arquitetura do projeto [pullbot]
 ## 1.2.Escopo
 A extensão para google chrome PullBot tem como alvo desenvolvedores que utilizam o github como plataforma de hospedagem para seus repositórios. O projeto consiste em facilitar e agilizar a análise de produtividade do time de desenvolvimento, gerando um arquivo .md com as métricas a serem estudadas.
 ## 1.3.Definições, acrônimos, abreviações
-|Definições/Acrônimos/Abreviações| Significado|
-|--------------------------------|------------|
-|API|Application Programming Interface| 
+Definições/Acrônimos/Abreviações| Significado
+--- | ---
+API | Application Programming Interface
 
 ## 1.5.Visão Geral
 
-|Tópico| Descrição|
-|------|----------|
-|Introdução| Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade|
-|Representação Arquitetural| Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.|
-|Metas e Restrições| Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.|
-|Visão lógica| Retrata as partes relevantes concernente à arquitetura do modelo de design. |
-|Visão de implementação| Descreve a estrutura geral do modelo de implementação, a divisão do software em camadas e os subsistemas no modelo de implementação e todos os componentes significativos do ponto de vista da arquitetura.|
+Tópico | Descrição
+------ | ----------
+Introdução| Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade
+Representação Arquitetural| Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.
+Metas e Restrições| Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.
+Visão lógica| Retrata as partes relevantes concernente à arquitetura do modelo de design.
+Visão de implementação| Descreve a estrutura geral do modelo de implementação, a divisão do software em camadas e os subsistemas no modelo de implementação e todos os componentes significativos do ponto de vista da arquitetura.
 # 2.Representação da Arquitetura
 A arquitetura do projeto [pullbot]() se concentra em auxiliar os usuário da plataforma github revisando a abertura e os fechamentos de milestones sendo assim a arquitetura do projeto está centralizada em back-end com a linguagem de programação python em sinergia com a API do GitHub.
 ## 2.1.Camada de negócio (Back-end)
