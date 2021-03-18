@@ -24,8 +24,13 @@
 | ID      | Descrição | 
 | :---        |    :----:   |       
 | FT01 | Pull Request automático via GitHub API    |
-| FT02 | Informaçoes de desenvolvimento no fechamentos milestone  |     
-| FT03 | Geração de gráficos informativos|
+| FT02 | Commit automático via GitHub API  |
+| FT03 | Receber relatório de desenvolvimento no fechamentos de milestone  |  
+| FT04 | Geração de Gráficos informativos da equipe|
+| FT05 | Geração de Gráficos informativos por contribuinte|
+| FT06 | Pegar evento de fechamento de milestone automaticamente|
+| FT07 | Geração de texto markdown para escopo dos commits e PRs   |
+
 
 
  
@@ -34,7 +39,7 @@
 ## User Stories 
 | ID | Descrição | Desejo | Épicos | Pontuação | 
 --| -- | -- | -- | -- | 
-| US01 | Usuário | desejo realizar pull requests por automação via GitHub | EP04 |  |
+| US01 | Usuário | desejo realizar pull requests por automação via GitHub || EP04 |  |
 | US02 | Usuário | Desejo receber um retorno do que foi  durante a milestone  | EP04 |  
 | US03 | Usuário | Impletar o GitHub facilmente nos projetos  | EP03 |  
 | US04 | Usuário | Receber um relatório com auxilio de gráficos para melhor compreensão  | EP05 |  
