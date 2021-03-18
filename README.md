@@ -10,6 +10,21 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 ## Integrantes
 
 <br>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px; font-family: arial, helvetica, sans-serif; font-size: 8pt; text-align: center;">
+    <span class="col-xs-12 col-sm-2 col-md-2 col-lg-2 normal"></span> 
+    <span class="col-xs-12 col-sm-3 col-md-3 col-lg-3 normal"> 
+        <img style="display: block; margin-left: auto; margin-right: auto;" src="assets/img/1.jpg" alt="Haman Tabosa de Moraes e Córdova" width="100" /><strong>Haman Tabosa de Moraes e Córdova</strong><br /> 
+    </span> 
+    <span class="col-xs-12 col-sm-3 col-md-3 col-lg-3 normal"> 
+        <img style="display: block; margin-left: auto; margin-right: auto;" src="assets/img/2.jpg" alt="Carlos Eduardo Barbosa Paz" width="100" /><strong>Carlos Eduardo Barbosa Paz<br /></strong> 
+    </span> 
+    <span class="col-xs-12 col-sm-3 col-md-3 col-lg-3 normal"> </span> 
+    <span class="col-xs-12 col-sm-3 col-md-3 col-lg-3 normal"> 
+        <img style="display: block; margin-left: auto; margin-right: auto;" src="assets/img/3.jpg" width="100" /><strong>Gabriel Faria Oliveira<br /></strong> 
+    </span> 
+    <span class="col-xs-12 col-sm-2 col-md-2 col-lg-2 normal"> </span>
+</div>
+<!-- 
 <div class="container">
     <div class="col-lg-4 col-xl-4 container-img">
         <img src="assets/img/1.jpg" alt="..." class="img-thumbnail image">
@@ -36,6 +51,7 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
         </div>
     </div>
 </div>
+-->
 
 ## Colaboradores
 |Nome|  Função| 
