@@ -6,9 +6,6 @@
 | 04/03/2021 | 1.0 | Primeiro protótipo de Backlog| Arthur Melo
 | 17/03/2021 | 1.1 | Refatoração do Backlog| Arthur Melo
 
- 
- <br/> <br/> 
-
 # Épicos 
 | ID | Descrição |
 | :---        |    :----:   |       
@@ -16,8 +13,6 @@
 | EP02 | Resultado da sprint gerado para Usuário |
 | EP03 | Extensão Google Chrome para GitHub |
 | EP04 | Gráficos de relatório|
- 
- <br/> <br/> 
  
 # Features
 | ID      | Descrição | 
@@ -31,12 +26,6 @@
 | FT07 | Acessibilzar extensão no Chrome|
 | FT08 | Geração de texto markdown para escopo dos commits e PRs   |
 
-
-
- 
- <br/> <br/> 
-
- do PRs feitos em makdown| FT08 | EP02
 # User Stories 
 | ID | Descrição | Desejo | Features | Épicos |
 --| -- | -- | -- |  -- | 
