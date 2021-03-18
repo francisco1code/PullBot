@@ -4,6 +4,7 @@
  Data | Versão | Descrição | Autor
 --- | --- | --- | ---
 02/03/2021 | 1.0.0 | Criação do documento | Ingrid Carvalho
+17/03/2021 | 1.0.1 | Padronização do documento | Eliás Yousef
 # 1.Introdução
 ## 1.1.Finalidade
 Este documento tem como finalidade apresentar a arquitetura do projeto [pullbot](),oferecendo uma visão geral arquitetural do sistema que será implementado, possibilitando assim que os envolvidos no projeto tenham conhecimento de como a aplicação será subdivida e quais serão as funções de cada componente.
@@ -19,11 +20,11 @@ API | Application Programming Interface
 
 Tópico | Descrição
 ------ | ----------
-Introdução| Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade
-Representação Arquitetural| Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.
-Metas e Restrições| Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.
-Visão lógica| Retrata as partes relevantes concernente à arquitetura do modelo de design.
-Visão de implementação| Descreve a estrutura geral do modelo de implementação, a divisão do software em camadas e os subsistemas no modelo de implementação e todos os componentes significativos do ponto de vista da arquitetura.
+Introdução | Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade
+Representação Arquitetural | Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.
+Metas e Restrições | Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.
+Visão lógica | Retrata as partes relevantes concernente à arquitetura do modelo de design.
+Visão de implementação | Descreve a estrutura geral do modelo de implementação, a divisão do software em camadas e os subsistemas no modelo de implementação e todos os componentes significativos do ponto de vista da arquitetura.
 # 2.Representação da Arquitetura
 A arquitetura do projeto [pullbot]() se concentra em auxiliar os usuário da plataforma github revisando a abertura e os fechamentos de milestones sendo assim a arquitetura do projeto está centralizada em back-end com a linguagem de programação python em sinergia com a API do GitHub.
 ## 2.1.Camada de negócio (Back-end)
