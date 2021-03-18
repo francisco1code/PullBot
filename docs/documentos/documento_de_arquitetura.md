@@ -5,8 +5,6 @@
 --- | --- | --- | ---
 02/03/2021 | 1.0.0 | Criação do documento | Ingrid Carvalho
 # 1.Introdução
-O presente documento tem como objetivo descrever o documento de arquitetura do
-projeto Pullbot. Este sistema tem como finalidade, o auxilio de usuários da plataforma github fazendo controle de abertura e fechamento de milestones, considerando que usualmente muitas passam por esse processo assim garantindo a segurança contra perda de informações ou parte delas.
 ## 1.1.Finalidade
 Este documento tem como finalidade apresentar a arquitetura do projeto [pullbot](),oferecendo uma visão geral arquitetural do sistema que será implementado, possibilitando assim que os envolvidos no projeto tenham conhecimento de como a aplicação será subdivida e quais serão as funções de cada componente.
 
