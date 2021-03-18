@@ -42,9 +42,9 @@
 ## User Stories 
 | ID | Descrição | Desejo | Features | 
 --| -- | -- | -- | 
-| US01 | Usuário | desejo realizar pull requests por automação via GitHub |    FT01 |
-| US02 | Usuário | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | FT08 |  
-| US03 | Usuário | Baixar extensão no Chrome  | FT07 |  
-| US04 | Usuário | Receber um relatório com auxilio de gráficos de desenpenho pessoal para facilitar o entendimento  | EP05 |  
-| US05 | Desenvolvedor | Estudar javaScript e suas bibliotecas e frameworks | EP02 |  |
-| US06 | Desenvolvedor | Estudar a API do GitHub | EP02 |  
+| US01 | Usuario | desejo realizar pull requests por automação via GitHub |    FT01 |
+| US02 | Usuario | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | FT08 |  
+| US03 | Usuario | Baixar extensão no Chrome  | FT07 |  
+| US04 | Usuario | Receber um relatório com auxilio de gráficos de desenpenho pessoal para facilitar o entendimento  | FT05 |  
+| US05 | Usuario  | Receber um relatório com auxilio de gráficos de desenpenho da equipe para melhorar o gerenciamento da mesma | EP02 |  |
+| US06 | Usuário |  | EP02 |  
