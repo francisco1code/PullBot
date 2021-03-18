@@ -19,6 +19,8 @@ UnB | Universidade de Brasília
 FGA | Faculdade do Gama
 MDS | Métodos de Desenvolvimetno de Software
 
+## 1.4 - Referências Bibliográficas
+[1]Pullbot. Disponível em<https://github.com/fga-eps-mds/PullBot>;
 ## 1.5 - Visão Geral
 
 Tópico | Descrição
@@ -48,5 +50,3 @@ A arquitetura foi planejada para que a aplicação atenda de forma satisfatória
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e do programa GitHub.
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário.
 
-# 5 - Referências Bibliográficas
-[1]Pullbot. Disponível em<https://github.com/fga-eps-mds/PullBot>;
