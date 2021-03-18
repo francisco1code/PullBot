@@ -46,5 +46,6 @@
 | US02 | Usuario | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | FT08 |  
 | US03 | Usuario | Baixar extensão no Chrome  | FT07 |  
 | US04 | Usuario | Receber um relatório com auxilio de gráficos de desenpenho pessoal para facilitar o entendimento  | FT05 |  
-| US05 | Usuario  | Receber um relatório com auxilio de gráficos de desenpenho da equipe para melhorar o gerenciamento da mesma | EP02 |  |
-| US06 | Usuário |  | EP02 |  
+| US05 | Usuario  | Receber um relatório com auxilio de gráficos de desenpenho da equipe para melhorar o gerenciamento da mesma | FT04 |  |
+| US06 | Usuário | Apos fechamento de milestone, receber os relatórios | FT06  FT03|  
+| US06 | Usuário | Commits separados em pasta no Pr com os relatórios | FT02 |  
