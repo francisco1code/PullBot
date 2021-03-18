@@ -10,11 +10,11 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 ## Integrantes
 <table>
     <tr>
-        <td align="center"><a href="https://github.com/JaimeJuan11"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="imagens/jaime.jpg" width="200px;" alt=""/><br /><b>Jaime Juan de Castro Feliciano Damasceno</b></a><br /><a href="https://github.com/JaimeJuan11"></a></td>
-        <td align="center"><a href="https://github.com/ArthurMeloG"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Arthur de Melo Garcia</b></a><br /><a href="https://github.com/ArthurMeloG"></a></td>
-        <td align="center"><a href="https://github.com/eliasyousef00"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Eliás Yousef</b></a><br /><a href="https://github.com/eliasyousef00"></a></td>
-        <td align="center"><a href="https://github.com/zpeniel09"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)"style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Peniel Etèmana Désirez-Jésus Zannoukou</b></a><br /><a href="https://github.com/zpeniel09"></a></td>
-        <td align="center"><a href="https://github.com/LorrayneCardozo"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Lorrayne Alves Cardozo</b></a><br /><a href="https://github.com/LorrayneCardozo"></a></td>
+        <td align="center"><a href="https://github.com/JaimeJuan11" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="imagens/jaime.jpg" width="200px;" alt=""/><br /><b>Jaime Juan de Castro Feliciano Damasceno</b></a><br /><a href="https://github.com/JaimeJuan11" target="_blank"></a></td>
+        <td align="center"><a href="https://github.com/ArthurMeloG" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Arthur de Melo Garcia</b></a><br /><a href="https://github.com/ArthurMeloG" target="_blank"></a></td>
+        <td align="center"><a href="https://github.com/eliasyousef00" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Eliás Yousef</b></a><br /><a href="https://github.com/eliasyousef00" target="_blank"></a></td>
+        <td align="center"><a href="https://github.com/zpeniel09" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)"style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Peniel Etèmana Désirez-Jésus Zannoukou</b></a><br /><a href="https://github.com/zpeniel09" target="_blank"></a></td>
+        <td align="center"><a href="https://github.com/LorrayneCardozo" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Lorrayne Alves Cardozo</b></a><br /><a href="https://github.com/LorrayneCardozo" target="_blank"></a></td>
     </tr>
     <script>
     function opaqImg(x) {
@@ -26,16 +26,7 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
     </script>
 </table>
 
-## Colaboradores
-|Nome|  Função| 
-|----|--------|
-[Arthur Garcia](https://github.com/ArthurMeloG)| Product Owner e Desenvolvedor|
-[Jaime Juan](https://github.com/JaimeJuan11)| Scrum Master e Devops|
-[Eliás Yousef](https://github.com/ingridSCarvalho)| Arquiteto e Desenvolvedor|
-[Lorrayne Cardozo](https://github.com/LorrayneCardozo)| Desenvolvedor|
-[Peniel Zannoukou](https://github.com/eliasyousef00)| Desenvolvedor|
 ## Contribuição
-
 Para contribuir com o projeto, [leia](https://github.com/fga-eps-mds/PullBot/blob/master/CONTRIBUTING.md).
 
 ## Licença
