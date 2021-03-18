@@ -13,26 +13,26 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 <div class="container">
   <div class="row">
     <div class="col-sm container-img">
-        <img src="./assets/img/time/oliveira.jpeg" alt="..." class="img-thumbnail image">
+        <img src="./assets/img/1.jpeg" alt="..." class="img-thumbnail image">
             <div class="middle">
               <div class="text">
-                <a href="https://github.com/MateusO97">Mateus de Oliveira</a>
+                <a href="https://github.com/JaimeJuan11">Jaime Juan1</a>
               </div>
             </div>
     </div>
     <div class="col-sm container-img">
-      <img src="./assets/img/time/roberto.jpeg" alt="..." class="img-thumbnail image">  
+      <img src="./assets/img/2.jpeg" alt="..." class="img-thumbnail image">  
           <div class="middle">
             <div class="text">
-            <a href="https://github.com/Matheus456">Matheus Roberto</a>
+            <a href="https://github.com/JaimeJuan11">Jaime Juan2</a>
             </div>
           </div>
     </div>
     <div class="col-sm container-img">
-    <img src="./assets/img/time/cantuaria.jpeg" alt="..." class="img-thumbnail image">
+    <img src="./assets/img/3.jpeg" alt="..." class="img-thumbnail image">
         <div class="middle">
           <div class="text">
-          <a href="https://github.com/cantuariavc">Vinícius Cantuária</a>
+          <a href="https://github.com/JaimeJuan11">Jaime Juan3</a>
           </div>
         </div>
     </div>
