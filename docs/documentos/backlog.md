@@ -1,5 +1,4 @@
 # Backlog - PullBot 
-<<<<<<< HEAD
 
 ## Histórico de Versoẽs
 
@@ -9,9 +8,6 @@
 
 <br/> <br/> 
 
-=======
- 
->>>>>>> 669081757a9064213acc15a664a3d59f8195559f
 ## Features
 | ID      | Descrição | 
 | :---        |    :----:   |       
@@ -32,11 +28,10 @@
 
 ## User Stories 
 | ID | Descrição | Desejo | Épicos | Pontuação | 
---| -- | -- | -- | -- |
-| ID |  Eu como | Desejo | Épicos | Pontuação |  
+--| -- | -- | -- | -- | 
 | US01 | Usuário | desejo realizar pull requests por automação via GitHub | EP04 |  |
-| US02 | Usuário | Desejo receber um retorno do que foi  durante a milestone  | EP04 |  |
-| US03 | Usuário | Impletar o GitHub facilmente nos projetos  | EP03 |  |
-| US04 | Usuário | Receber um relatório com auxilio de gráficos para melhor compreensão  | EP05 |  |
+| US02 | Usuário | Desejo receber um retorno do que foi  durante a milestone  | EP04 |  
+| US03 | Usuário | Impletar o GitHub facilmente nos projetos  | EP03 |  
+| US04 | Usuário | Receber um relatório com auxilio de gráficos para melhor compreensão  | EP05 |  
 | US05 | Desenvolvedor | Estudar javaScript e suas bibliotecas e frameworks | EP02 |  |
-| US06 | Desenvolvedor | Estudar a API do GitHub | EP02 |  |
+| US06 | Desenvolvedor | Estudar a API do GitHub | EP02 |  
