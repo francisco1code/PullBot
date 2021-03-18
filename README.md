@@ -58,7 +58,7 @@ Abra o terminal dentro da pasta do projeto e rode os seguintes comandos:
         </td>
         <td align="center">
         <a href="https://github.com/LorrayneCardozo" target="_blank">
-        <img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/>
+        <img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="imagens/Lorrayne.jpg" width="200px;" alt=""/>
         <br />
         <b>Lorrayne Alves Cardozo</b>
         </a>
