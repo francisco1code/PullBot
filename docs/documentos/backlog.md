@@ -39,8 +39,8 @@
  <br/> <br/> 
 
 ## User Stories 
-| ID | Descrição | Desejo | Épicos | Pontuação | 
---| -- | -- | -- | -- | 
+| ID | Descrição | Desejo | Features | 
+--| -- | -- | -- | 
 | US01 | Usuário | desejo realizar pull requests por automação via GitHub | EP01 |  |
 | US02 | Usuário | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | EP04 |  
 | US03 | Usuário | Impletar o GitHub facilmente nos projetos  | EP03 |  
