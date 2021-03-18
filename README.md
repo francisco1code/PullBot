@@ -19,12 +19,12 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 É necessário:
 - Ter o Docker instalado. No caso do Ubuntu, [clique aqui](https://docs.docker.com/engine/install/ubuntu/) para ver as instruções.
 - Ter o Docker-Compose instalado. [Clique aqui](https://docs.docker.com/compose/install/) para ver as intruções.
-
+- Ter google chrome instalado no computador
 ### Como rodar
 Abra o terminal dentro da pasta do projeto e rode os seguintes comandos:
 - `sudo docker-compose build`
 - `sudo docker-compose up`
-
+- 
 ## :octocat: Integrantes
 <table>
     <tr>
