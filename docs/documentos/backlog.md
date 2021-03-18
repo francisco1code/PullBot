@@ -40,8 +40,8 @@
  <br/> <br/> 
 
 ## User Stories 
-| ID | Descrição | Desejo | Features | 
---| -- | -- | -- | 
+| ID | Descrição | Desejo | Features | Épicos
+--| -- | -- | -- | -- | 
 | US01 | Usuario | desejo realizar pull requests por automação via GitHub |    FT01 |
 | US02 | Usuário | Commits separados em pasta no Pr com os relatórios | FT02 |  
 | US03 | Usuário | Apos fechamento de milestone, receber os relatórios | FT03 FT06  |  
