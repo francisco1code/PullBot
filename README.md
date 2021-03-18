@@ -5,24 +5,26 @@
 ## 🔭 Sobre 
 Consiste em um bot de produtividade ativado no git a cada fechamento de milestone te dando um apanhado geral da atual sprint e realizando automaticamente um Pull Request. 
 
-Quando se está trabalhando em times de software é muito importante gerenciar o andamento do projeto de perto e ter um feedback consistente de tudo que está ocorrendo em sua sprint, o PullBot se encaixa aí! Sua utilidade principal é o gerenciamento efetivo do projeto, e por consequência, ganho de tempo e maior controle de todo trabalho.
+Quando se está trabalhando em times de software é muito importante gerenciar o andamento do projeto de perto e ter um feedback consistente de tudo que está ocorrendo em sua sprint, o PullBot se encaixa aí! Sua utilidade principal é o gerenciamento efetivo do projeto, e por consequência, ganho de tempo e maior controle de todo trabalho.Ele irá criar um pull request com as implementações da milestone fechada e dar um relatório de desempenho de equipe e pessoal.
 
 ## 🌱 Funcionalidades
-- Funcionalidade 1
-- Funcionalidade 2
-- Funcionalidade 3
+- Pull Request automático via GitHub API
+- Commit automático via GitHub API com relatórios de desempenho da sprint
+- Geração de Gráficos informativos da equipe
+- Geração de Gráficos informativos por contribuinte
+- Geração de texto markdown para escopo dos commits e PRs
 
 ## :computer: Ambientalizando
 ### Requisitos
 É necessário:
 - Ter o Docker instalado. No caso do Ubuntu, [clique aqui](https://docs.docker.com/engine/install/ubuntu/) para ver as instruções.
 - Ter o Docker-Compose instalado. [Clique aqui](https://docs.docker.com/compose/install/) para ver as intruções.
-
+- Ter google chrome instalado no computador
 ### Como rodar
 Abra o terminal dentro da pasta do projeto e rode os seguintes comandos:
 - `sudo docker-compose build`
 - `sudo docker-compose up`
-
+-  Acessar google chrome e adicionar extensão no navegador
 ## :octocat: Integrantes
 <table>
     <tr>
