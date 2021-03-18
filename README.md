@@ -5,7 +5,7 @@
 ## 🔭 Sobre 
 Consiste em um bot de produtividade ativado no git a cada fechamento de milestone te dando um apanhado geral da atual sprint e realizando automaticamente um Pull Request. 
 
-Quando se está trabalhando em times de software é muito importante gerenciar o andamento do projeto de perto e ter um feedback consistente de tudo que está ocorrendo em sua sprint, o PullBot se encaixa aí! Sua utilidade principal é o gerenciamento efetivo do projeto, e por consequência, ganho de tempo e maior controle de todo trabalho.
+Quando se está trabalhando em times de software é muito importante gerenciar o andamento do projeto de perto e ter um feedback consistente de tudo que está ocorrendo em sua sprint, o PullBot se encaixa aí! Sua utilidade principal é o gerenciamento efetivo do projeto, e por consequência, ganho de tempo e maior controle de todo trabalho. 
 
 ## 🌱 Funcionalidades
 - Pull Request automático via GitHub API
@@ -24,7 +24,7 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 Abra o terminal dentro da pasta do projeto e rode os seguintes comandos:
 - `sudo docker-compose build`
 - `sudo docker-compose up`
-- 
+-  Acessar google chrome e adicionar extensão no navegador
 ## :octocat: Integrantes
 <table>
     <tr>
