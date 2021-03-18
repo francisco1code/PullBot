@@ -44,11 +44,11 @@
 --| -- | -- | -- | 
 | US01 | Usuario | desejo realizar pull requests por automação via GitHub |    FT01 |
 | US02 | Usuário | Commits separados em pasta no Pr com os relatórios | FT02 |  
-| US06 | Usuário | Apos fechamento de milestone, receber os relatórios | FT03 FT06  |  
-| US05 | Usuario  | Receber um relatório com auxilio de gráficos de desenpenho da equipe para melhorar o gerenciamento da mesma | FT04 | 
-| US04 | Usuario | Receber um relatório com auxilio de gráficos de desenpenho pessoal para facilitar o entendimento  | FT05 | 
-| US03 | Usuario | Baixar extensão no Chrome  | FT07 |  
-| US02 | Usuario | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | FT08 |  
+| US03 | Usuário | Apos fechamento de milestone, receber os relatórios | FT03 FT06  |  
+| US04 | Usuario  | Receber um relatório com auxilio de gráficos de desenpenho da equipe para melhorar o gerenciamento da mesma | FT04 | 
+| US05 | Usuario | Receber um relatório com auxilio de gráficos de desenpenho pessoal para facilitar o entendimento  | FT05 | 
+| US06 | Usuario | Baixar extensão no Chrome  | FT07 |  
+| US07 | Usuario | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | FT08 |  
 
  
  
