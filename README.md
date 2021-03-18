@@ -11,32 +11,31 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 
 <br>
 <div class="container">
-  <div class="row">
     <div class="col-sm container-img">
         <img src="assets/img/1.jpg" alt="..." class="img-thumbnail image">
-            <div class="middle">
-              <div class="text">
+        <div class="middle">
+            <div class="text">
                 <a href="https://github.com/JaimeJuan11">Jaime Juan1</a>
-              </div>
             </div>
+        </div>
     </div>
     <div class="col-sm container-img">
-      <img src="assets/img/2.jpg" alt="..." class="img-thumbnail image">  
-          <div class="middle">
+        <img src="assets/img/2.jpg" alt="..." class="img-thumbnail image">  
+        <div class="middle">
             <div class="text">
             <a href="https://github.com/JaimeJuan11">Jaime Juan2</a>
             </div>
           </div>
     </div>
     <div class="col-sm container-img">
-    <img src="assets/img/3.jpg" alt="..." class="img-thumbnail image">
+        <img src="assets/img/3.jpg" alt="..." class="img-thumbnail image">
         <div class="middle">
           <div class="text">
           <a href="https://github.com/JaimeJuan11">Jaime Juan3</a>
           </div>
         </div>
     </div>
-  </div>
+</div>
 
 ## Colaboradores
 |Nome|  Função| 
