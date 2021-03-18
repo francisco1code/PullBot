@@ -1,15 +1,12 @@
-# Backlog - PullBot 
+# Backlog
 
-## Histórico de Versoẽs
-
+## Histórico de Revisão
 | Data | Versão | Descrição | Autor |  
 --| -- | -- | -- | 
 | 04/03/2021 | 1.0 | Primeiro protótipo de Backlog| Arthur Melo
 | 17/03/2021 | 1.1 | Refatoração do Backlog| Arthur Melo
 
-<br/> <br/> 
-
-## Épicos 
+# Épicos 
 | ID | Descrição |
 | :---        |    :----:   |       
 | EP01 | Comunicação via API |
@@ -17,12 +14,7 @@
 | EP03 | Extensão google Chrome para GitHub |
 | EP04 | Gráficos de relatório|
 
-
-
-
-<br/> <br/> 
-
-## Features
+# Features
 | ID      | Descrição | 
 | :---        |    :----:   |       
 | FT01 | Pull Request automático via GitHub API    |
@@ -34,12 +26,7 @@
 | FT07 | Acessibilzar extensão no Chrome|
 | FT08 | Geração de texto markdown para escopo dos commits e PRs   |
 
-
-
- 
- <br/> <br/> 
-
-## User Stories 
+# User Stories 
 | ID | Descrição | Desejo | Features | 
 --| -- | -- | -- | 
 | US01 | Usuario | desejo realizar pull requests por automação via GitHub |    FT01 |
@@ -48,8 +35,4 @@
 | US04 | Usuario  | Receber um relatório com auxilio de gráficos de desenpenho da equipe para melhorar o gerenciamento da mesma | FT04 | 
 | US05 | Usuario | Receber um relatório com auxilio de gráficos de desenpenho pessoal para facilitar o entendimento  | FT05 | 
 | US06 | Usuario | Baixar extensão no Chrome  | FT07 |  
-| US07 | Usuario | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | FT08 |  
-
- 
- 
-
+| US07 | Usuario | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | FT08 |
