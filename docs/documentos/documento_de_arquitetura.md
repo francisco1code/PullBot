@@ -39,7 +39,7 @@ A arquitetura do projeto [pullbot]() se concentra em auxiliar os usuário da pla
 A aplicação contará com a plataforma do GitHub funcionando juntamente com a extensão PullBot, oferecendo assim uma nova funcionalidade à plataforma.
 
 ## 3.2 - Portabilidade
-A aplicação poderá ser acessada através de um navegador como, por exemplo, Mozilla Firefox ou Google Chrome e acesso ao aplicativo de mensagens Telegram.
+Para acessar a aplicação basta ter acesso à internet e ao navegador Google Chrome.
 # 4 - Tamanho e Desempenho
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação de uma nova funcionalidade ao software.
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e do programa GitHub.
