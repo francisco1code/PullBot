@@ -31,7 +31,8 @@
 | FT04 | Geração de Gráficos informativos da equipe|
 | FT05 | Geração de Gráficos informativos por contribuinte|
 | FT06 | Pegar evento de fechamento de milestone automaticamente|
-| FT07 | Geração de texto markdown para escopo dos commits e PRs   |
+| FT07 | Acessibilzar extensão no Chrome|
+| FT08 | Geração de texto markdown para escopo dos commits e PRs   |
 
 
 
@@ -41,9 +42,9 @@
 ## User Stories 
 | ID | Descrição | Desejo | Features | 
 --| -- | -- | -- | 
-| US01 | Usuário | desejo realizar pull requests por automação via GitHub | EP01 |  |
-| US02 | Usuário | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | EP04 |  
-| US03 | Usuário | Impletar o GitHub facilmente nos projetos  | EP03 |  
-| US04 | Usuário | Receber um relatório com auxilio de gráficos para melhor compreensão  | EP05 |  
+| US01 | Usuário | desejo realizar pull requests por automação via GitHub |    FT01 |
+| US02 | Usuário | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | FT08 |  
+| US03 | Usuário | Baixar extensão no Chrome  | FT07 |  
+| US04 | Usuário | Receber um relatório com auxilio de gráficos de desenpenho pessoal para facilitar o entendimento  | EP05 |  
 | US05 | Desenvolvedor | Estudar javaScript e suas bibliotecas e frameworks | EP02 |  |
 | US06 | Desenvolvedor | Estudar a API do GitHub | EP02 |  
