@@ -9,6 +9,8 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 
 ## Integrantes
 
+
+<!--
 <br>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px; font-family: arial, helvetica, sans-serif; font-size: 8pt; text-align: center;">
     <span class="col-xs-12 col-sm-2 col-md-2 col-lg-2 normal"></span> 
@@ -24,7 +26,7 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
     </span> 
     <span class="col-xs-12 col-sm-2 col-md-2 col-lg-2 normal"> </span>
 </div>
-<!-- 
+ 
 <div class="container">
     <div class="col-lg-4 col-xl-4 container-img">
         <img src="assets/img/1.jpg" alt="..." class="img-thumbnail image">
