@@ -8,8 +8,14 @@
 
 ## :computer: Ambientalizando
 ### Requisitos
+É necessário:
+- Ter o Docker instalado. No caso do Ubuntu, [clique aqui](https://docs.docker.com/engine/install/ubuntu/) para ver as instruções.
+- Ter o Docker-Compose instalado. [Clique aqui](https://docs.docker.com/compose/install/) para ver as intruções.
 
 ### Como rodar
+Abra o terminal dentro da pasta do projeto e rode os seguintes comandos:
+- `sudo docker-compose build`
+- `sudo docker-compose up`
 
 ## :octocat: Integrantes
 <table>
@@ -20,14 +26,6 @@
         <td align="center"><a href="https://github.com/zpeniel09" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)"style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Peniel Etèmana Désirez-Jésus Zannoukou</b></a><br /><a href="https://github.com/zpeniel09" target="_blank"></a></td>
         <td align="center"><a href="https://github.com/LorrayneCardozo" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Lorrayne Alves Cardozo</b></a><br /><a href="https://github.com/LorrayneCardozo" target="_blank"></a></td>
     </tr>
-    <script>
-    function opaqImg(x) {
-        x.style.opacity = "50%";
-    }
-    function normalImg(x) {
-        x.style.opacity = "100%";
-    }
-    </script>
 </table>
 
 ## :balloon: Contribuição
