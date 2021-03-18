@@ -36,7 +36,7 @@ A arquitetura do projeto [pullbot]() se concentra em auxiliar os usuário da pla
 
 # 3 - Metas e Restrições da Arquitetura
 ## 3.1 - Usabilidade
-A aplicação contará com a plataforma do GitHub funcionando apenas como [4] plugin oferecendo uma nova funcionalidade ao programa
+A aplicação contará com a plataforma do GitHub funcionando juntamente com a extensão PullBot, oferecendo assim uma nova funcionalidade à plataforma.
 
 ## 3.2 - Portabilidade
 A aplicação poderá ser acessada através de um navegador como, por exemplo, Mozilla Firefox ou Google Chrome e acesso ao aplicativo de mensagens Telegram.
