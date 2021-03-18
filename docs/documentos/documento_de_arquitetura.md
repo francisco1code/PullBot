@@ -2,11 +2,8 @@
 
 ### Histórico de Revisão
 |Data|Versão|Descrição|Autor|
-:-:|:-:|:-:|:-:
-|02/03/2021| 1.0.0| Criação do documento | Ingrid Carvalho |
-# 1.Introdução
-## 1.1.Finalidade
-Este documento tem como finalidade apresentar a arquitetura do projeto PullBot, oferecendo uma visão geral arquitetural do sistema que será implementado, possibilitando assim que os envolvidos no projeto tenham conhecimento de como a aplicação será subdivida e quais serão as funções de cada componente.
+--- | --- | --- | ---
+02/03/2021 | 1.0.0 | Criação do documento | Ingrid Carvalho
 # 1.Introdução
 O presente documento tem como objetivo descrever o documento de arquitetura do
 projeto Pullbot. Este sistema tem como finalidade, o auxilio de usuários da plataforma github fazendo controle de abertura e fechamento de milestones, considerando que usualmente muitas passam por esse processo assim garantindo a segurança contra perda de informações ou parte delas.
@@ -19,14 +16,7 @@ Apresentação as características arquiteturais do projeto <pullbot>, expondo d
 |Definições/Acrônimos/Abreviações| Significado|
 |--------------------------------|------------|
 |API|Application Programming Interface| 
-## 1.4.Referências Bibliográficas
-[1]Pullbot. Disponível em<https://github.com/fga-eps-mds/PullBot>;
 
-[2]Python. Disponível em <https://pt.wikipedia.org/wiki/Python> Acesso em 02 de março de 2021;
-
-[3]API. Disponível em <https://canaltech.com.br/software/o-que-e-api/> Acesso em 04 de março de 2021;
-
-[4]Plugin.Disponível em <https://rockcontent.com/br/blog/plugins/> Acesso em 04 de março de 2021
 ## 1.5.Visão Geral
 
 |Tópico| Descrição|
@@ -55,3 +45,6 @@ A aplicação poderá ser acessada através de um navegador como, por exemplo, M
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação de uma nova funcionalidade ao software.
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e do programa GitHub.
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário.
+
+# 5. Referências Bibliográficas
+[1]Pullbot. Disponível em<https://github.com/fga-eps-mds/PullBot>;
