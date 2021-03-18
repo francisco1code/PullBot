@@ -41,7 +41,6 @@ Nome | Função
 [Jaime Juan](https://github.com/JaimeJuan11)| Scrum Master e Devops|
 [Arthur Garcia](https://github.com/ArthurMeloG)| Product Owner e Desenvolvedor|
 [Eliás Yousef](https://github.com/ingridSCarvalho)| Arquiteto e Desenvolvedor|
-[Ingrid Carvalho](https://github.com/zpeniel09)| Desenvolvedor|
 [Lorrayne Cardozo](https://github.com/LorrayneCardozo)| Desenvolvedor|
 [Peniel Zannoukou](https://github.com/eliasyousef00)| Desenvolvedor|
 ## 5.3. Responsabilidades
