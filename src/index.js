@@ -9,14 +9,14 @@ document.addEventListener("click", function (e) {
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {
 
     //BOTOES    
-        var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
-        var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
+    var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
+    var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
 
     //VALORES A SEREM PASSADOS PARA API
-        var valuesAPI = String(getFormAction).split("/");
-        var owner = getOwner(valuesAPI);
-        var repo = getRepositori(valuesAPI);
-        var NumberMilestone = getNumberMilestone(valuesAPI);
+    var valuesAPI = String(getFormAction).split("/");
+    const $owner = getOwner(valuesAPI);
+    const $repo = getRepositori(valuesAPI);
+    const $NumberMilestone = getNumberMilestone(valuesAPI);
 
        
     //VALIDA FECHAMENTO DE MILESTONE
@@ -25,7 +25,7 @@ document.addEventListener("click", function (e) {
                 var base = document.querySelectorAll("form.d-inline-block.mr-2").action
                 console.log(base)
             var milestoneName = document.querySelector(".milestone-title-link").innerText;
-             window.alert("Closed: " + milestoneName);
+             
 
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
@@ -34,7 +34,7 @@ document.addEventListener("click", function (e) {
                     alert(xhttp.responseText);
                 }
             };
-            xhttp.open("GET", "https://github.com/fga-eps-mds/PullBot/milestones");
+            xhttp.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot");
             xhttp.send();
 
         }
