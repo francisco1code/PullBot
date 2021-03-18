@@ -11,7 +11,7 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 
 <br>
 <div class="container">
-    <div class="col-sm container-img">
+    <div class="col-lg-4 col-xl-4 container-img">
         <img src="assets/img/1.jpg" alt="..." class="img-thumbnail image">
         <div class="middle">
             <div class="text">
@@ -19,7 +19,7 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
             </div>
         </div>
     </div>
-    <div class="col-sm container-img">
+    <div class="col-lg-4 col-xl-4 container-img">
         <img src="assets/img/2.jpg" alt="..." class="img-thumbnail image">  
         <div class="middle">
             <div class="text">
@@ -27,7 +27,7 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
             </div>
           </div>
     </div>
-    <div class="col-sm container-img">
+    <div class="col-lg-4 col-xl-4 container-img">
         <img src="assets/img/3.jpg" alt="..." class="img-thumbnail image">
         <div class="middle">
           <div class="text">
