@@ -23,11 +23,11 @@
 ## Features
 | ID      | Descrição | 
 | :---        |    :----:   |       
-| FT01      | Request GitHub via API     |
-| FT02 | Gerar Markdown via javaScripts       |    
-| FT03 | Pull Request automático        |    
-| FT04 | Gráficos demonstrativos        |
-| FT05 | Commits no repositório        |
+| FT01 | Pull Request automático via GitHub API    |
+| FT02 | Informaçoes de desenvolvimento no fechamentos milestone  |     
+| FT03 | Geração de gráficos informativos|
+
+
  
  <br/> <br/> 
 
