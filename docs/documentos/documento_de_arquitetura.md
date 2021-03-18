@@ -15,6 +15,9 @@ A extensão para google chrome PullBot tem como alvo desenvolvedores que utiliza
 Definições/Acrônimos/Abreviações| Significado
 --- | ---
 API | Application Programming Interface
+UnB | Universidade de Brasília
+FGA | Faculdade do Gama
+MDS | Métodos de Desenvolvimetno de Software
 
 ## 1.5 - Visão Geral
 
