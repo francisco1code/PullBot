@@ -7,6 +7,17 @@
 | 04/03/2021 | 1.0 | Primeiro protótipo de Backlog| Arthur Melo
 | 17/03/2021 | 1.1 | Refatoração do Backlog| Arthur Melo
 
+<br/> <br/> 
+
+## Épicos 
+| ID | Descrição |
+| :---        |    :----:   |       
+| EP01 |  Protitipo de baixa fidelidade|
+| EP02 | Treinamentos |
+| EP03 | Como Executar o PullBot no GitHub do usuário |
+| EP04 | Execução do PullBot na máquina do usuário |
+| EP05 |Apresentação das informações via Gráficos |
+
 
 <br/> <br/> 
 
@@ -19,14 +30,7 @@
 | FT04 | Gráficos demonstrativos        |
 | FT05 | Commits no repositório        |
  
-## Épicos 
-| ID | Descrição |
-| :---        |    :----:   |       
-| EP01 |  Protitipo de baixa fidelidade|
-| EP02 | Treinamentos |
-| EP03 | Como Executar o PullBot no GitHub do usuário |
-| EP04 | Execução do PullBot na máquina do usuário |
-| EP05 |Apresentação das informações via Gráficos |
+ <br/> <br/> 
 
 ## User Stories 
 | ID | Descrição | Desejo | Épicos | Pontuação | 
