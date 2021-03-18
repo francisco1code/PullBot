@@ -14,7 +14,7 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
         <td align="center"><a href="https://github.com/ArthurMeloG"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Arthur de Melo Garcia</b></a><br /><a href="https://github.com/ArthurMeloG"></a></td>
         <td align="center"><a href="https://github.com/eliasyousef00"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Eliás Yousef</b></a><br /><a href="https://github.com/eliasyousef00"></a></td>
         <td align="center"><a href="https://github.com/zpeniel09"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)"style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Peniel Etèmana Désirez-Jésus Zannoukou</b></a><br /><a href="https://github.com/zpeniel09"></a></td>
-        <td align="center"><a href="https://github.com/LorrayneCardozo"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Matheus Calixto Vaz Pinheiro</b></a><br /><a href="https://github.com/LorrayneCardozo"></a></td>
+        <td align="center"><a href="https://github.com/LorrayneCardozo"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="" width="200px;" alt=""/><br /><b>Lorrayne Alves Cardozo</b></a><br /><a href="https://github.com/LorrayneCardozo"></a></td>
     </tr>
     <script>
     function opaqImg(x) {
