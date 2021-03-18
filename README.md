@@ -1,28 +1,29 @@
 # PullBot
 
 <img src="imagens/logo.png" width=" 400px" style="border-radius: 50%; display: block; margin-left: auto; margin-right: auto"  height="600px">
+<br></br>
 
 ## 🔭 Sobre 
 Consiste em um bot de produtividade ativado no git a cada fechamento de milestone te dando um apanhado geral da atual sprint e realizando automaticamente um Pull Request. 
 
 Quando se está trabalhando em times de software é muito importante gerenciar o andamento do projeto de perto e ter um feedback consistente de tudo que está ocorrendo em sua sprint, o PullBot se encaixa aí! Sua utilidade principal é o gerenciamento efetivo do projeto, e por consequência, ganho de tempo e maior controle de todo trabalho.
-
+<br></br>
 ## 🌱 Funcionalidades
 - Funcionalidade 1
 - Funcionalidade 2
 - Funcionalidade 3
-
+<br></br>
 ## :computer: Ambientalizando
 ### Requisitos
 É necessário:
 - Ter o Docker instalado. No caso do Ubuntu, [clique aqui](https://docs.docker.com/engine/install/ubuntu/) para ver as instruções.
 - Ter o Docker-Compose instalado. [Clique aqui](https://docs.docker.com/compose/install/) para ver as intruções.
-
+<br></br>
 ### Como rodar
 Abra o terminal dentro da pasta do projeto e rode os seguintes comandos:
 - `sudo docker-compose build`
 - `sudo docker-compose up`
-
+<br></br>
 ## :octocat: Integrantes
 <table>
     <tr>
@@ -34,8 +35,13 @@ Abra o terminal dentro da pasta do projeto e rode os seguintes comandos:
     </tr>
 </table>
 
+<br></br>
+<br></br>
+
 ## :balloon: Contribuição
+
 Para contribuir com o projeto, [leia](https://github.com/fga-eps-mds/PullBot/blob/master/CONTRIBUTING.md).
+<br></br>
 
 ## :lock: Licença
 Confira nossa licença [aqui](https://github.com/fga-eps-mds/PullBot/blob/master/LICENSE).
