@@ -1,6 +1,6 @@
 # PullBot
 
-<img src="imagens/logo.png" width="auto" height="auto">
+<img src="imagens/logo.png" width=" 400px" style="border-radius: 50%; display: block; margin-left: auto; margin-right: auto"  height="600px">
 
 ## 🔭 Sobre 
 Consiste em um bot de produtividade ativado no git a cada fechamento de milestone te dando um apanhado geral da atual sprint e realizando automaticamente um Pull Request. 
