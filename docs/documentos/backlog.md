@@ -12,11 +12,10 @@
 ## Épicos 
 | ID | Descrição |
 | :---        |    :----:   |       
-| EP01 |  Protitipo de baixa fidelidade|
-| EP02 | Treinamentos |
-| EP03 | Como Executar o PullBot no GitHub do usuário |
-| EP04 | Execução do PullBot na máquina do usuário |
-| EP05 |Apresentação das informações via Gráficos |
+| EP01 | Comunicação via API |
+| EP02 | Resultado da sprint gerado para Usuário |
+| EP03 | Extensão google Chrome para GitHub |
+
 
 
 <br/> <br/> 
@@ -24,7 +23,7 @@
 ## Features
 | ID      | Descrição | 
 | :---        |    :----:   |       
-| FT01      | Request GtiHub via API     |
+| FT01      | Request GitHub via API     |
 | FT02 | Gerar Markdown via javaScripts       |    
 | FT03 | Pull Request automático        |    
 | FT04 | Gráficos demonstrativos        |
