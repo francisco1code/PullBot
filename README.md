@@ -8,9 +8,11 @@ Consiste em um bot de produtividade ativado no git a cada fechamento de mileston
 Quando se está trabalhando em times de software é muito importante gerenciar o andamento do projeto de perto e ter um feedback consistente de tudo que está ocorrendo em sua sprint, o PullBot se encaixa aí! Sua utilidade principal é o gerenciamento efetivo do projeto, e por consequência, ganho de tempo e maior controle de todo trabalho.
 
 ## 🌱 Funcionalidades
-- Funcionalidade 1
-- Funcionalidade 2
-- Funcionalidade 3
+- Pull Request automático via GitHub API
+- Commit automático via GitHub API com relatórios de desempenho da sprint
+- Geração de Gráficos informativos da equipe
+- Geração de Gráficos informativos por contribuinte
+- Geração de texto markdown para escopo dos commits e PRs
 
 ## :computer: Ambientalizando
 ### Requisitos
