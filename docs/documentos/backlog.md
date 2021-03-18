@@ -1,5 +1,13 @@
 # Backlog - PullBot 
 
+## Histórico de Versoẽs
+
+| Data | Versão | Descrição | Autor |  
+--| -- | -- | -- | 
+|  |  | |
+
+<br/> <br/> 
+
 ## Features
 | ID      | Descrição | 
 | :---        |    :----:   |       
