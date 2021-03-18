@@ -1,6 +1,6 @@
 # Documento de Arquitetura
 
-### Histórico de Revisão
+## Histórico de Revisão
 |Data|Versão|Descrição|Autor|
 --- | --- | --- | ---
 02/03/2021 | 1.0.0 | Criação do documento | Ingrid Carvalho
@@ -9,7 +9,7 @@
 Este documento tem como finalidade apresentar a arquitetura do projeto [pullbot](),oferecendo uma visão geral arquitetural do sistema que será implementado, possibilitando assim que os envolvidos no projeto tenham conhecimento de como a aplicação será subdivida e quais serão as funções de cada componente.
 
 ## 1.2.Escopo
-Apresentação as características arquiteturais do projeto <pullbot>, expondo detalhadamente as soluções arquiteturais idealizadas e estabelecidas para o projeto, de modo a ser utilizado como base para a edificação do projeto pelos desenvolvedores designados para o projeto.
+A extensão para google chrome PullBot tem como alvo desenvolvedores que utilizam o github como plataforma de hospedagem para seus repositórios. O projeto consiste em facilitar e agilizar a análise de produtividade do time de desenvolvimento, gerando um arquivo .md com as métricas a serem estudadas.
 ## 1.3.Definições, acrônimos, abreviações
 |Definições/Acrônimos/Abreviações| Significado|
 |--------------------------------|------------|
