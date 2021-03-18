@@ -15,6 +15,8 @@
 | EP01 | Comunicação via API |
 | EP02 | Resultado da sprint gerado para Usuário |
 | EP03 | Extensão google Chrome para GitHub |
+| EP04 | Gráficos de relatório|
+
 
 
 
@@ -39,8 +41,8 @@
 ## User Stories 
 | ID | Descrição | Desejo | Épicos | Pontuação | 
 --| -- | -- | -- | -- | 
-| US01 | Usuário | desejo realizar pull requests por automação via GitHub || EP04 |  |
-| US02 | Usuário | Desejo receber um retorno do que foi  durante a milestone  | EP04 |  
+| US01 | Usuário | desejo realizar pull requests por automação via GitHub | EP01 |  |
+| US02 | Usuário | Desejo receber relatório do que foi feito durante a milestone dentro do PRs | EP04 |  
 | US03 | Usuário | Impletar o GitHub facilmente nos projetos  | EP03 |  
 | US04 | Usuário | Receber um relatório com auxilio de gráficos para melhor compreensão  | EP05 |  
 | US05 | Desenvolvedor | Estudar javaScript e suas bibliotecas e frameworks | EP02 |  |
