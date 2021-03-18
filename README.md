@@ -32,14 +32,6 @@ Abra o terminal dentro da pasta do projeto e rode os seguintes comandos:
         <td align="center"><a href="https://github.com/zpeniel09" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)"style="border-radius: 50%;" src="" width="auto;" alt="Peniel Etèmana Désirez-Jésus Zannoukou"/><br /><b>Peniel Etèmana Désirez-Jésus Zannoukou</b></a><br /><a href="https://github.com/zpeniel09" target="_blank"></a></td>
         <td align="center"><a href="https://github.com/LorrayneCardozo" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="imagens/Lorrayne.jpg" width="auto;" alt="Lorrayne Alves Cardozo"/><br /><b>Lorrayne Alves Cardozo</b></a><br /><a href="https://github.com/LorrayneCardozo" target="_blank"></a></td>
     </tr>
-    <script>
-    function opaqImg(x) {
-        x.style.opacity = "50%";
-    }
-    function normalImg(x) {
-        x.style.opacity = "100%";
-    }
-    </script>
 </table>
 
 ## :balloon: Contribuição
