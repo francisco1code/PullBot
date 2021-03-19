@@ -21,7 +21,8 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 - Baixar extensão na loja de extensões
 - Deixar ativa enquanto utiliza o GitHub para fechamento de milestone
 ### Como rodar
-- 
+- Passar token para extensão
+- Ativar durante uso de Git
 ## :octocat: Integrantes
 <table>
     <tr>
