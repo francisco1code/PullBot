@@ -19,6 +19,7 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 É necessário:
 - Ter google chrome instalado no computador
 - Baixar extensão na loja de extensões
+- Deixar ativa enquanto utiliza o GitHub para fechamento de milestone
 ### Como rodar
 Abra o terminal dentro da pasta do projeto e rode os seguintes comandos:
 - `sudo docker-compose build`
