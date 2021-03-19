@@ -12,9 +12,10 @@ Este documento tem como finalidade apresentar ao leitor a arquitetura do projeto
 Mediante o presente documento, o leitor conseguirá compreender claramente sobre as tecnologias utilizadas e o modelo de arquitetura adotado para o desenvolvimento do sistema, assim como os fundamentos para que fossem escolhidas pela equipe.
 
 ## 1.3.Definições, acrônimos, abreviações
-|Definições/Acrônimos/Abreviações| Significado|
-|--------------------------------|------------|
-|API|Application Programming Interface| 
+Definições/Acrônimos/Abreviações| Significado
+:--------------------------------:|:------------:
+API|Application Programming Interface
+
 ## 1.4.Referências Bibliográficas
 [1]Pullbot. Disponível em <https://github.com/fga-eps-mds/PullBot>. Acesso em 02 de março de 2021.
 
@@ -24,9 +25,9 @@ Mediante o presente documento, o leitor conseguirá compreender claramente sobre
 
 [4]Plugin.Disponível em <https://rockcontent.com/br/blog/plugins/>. Acesso em 04 de março de 2021.
 ## 1.5.Visão Geral
-
-|Tópico| Descrição|
-|------|----------|
+Para esclarecer de forma clara as tecnologias utilizadas no desenvolvimento do PullBot, assim como o modelo arquitetural e suas motivações, o presente documento foi dividido nos seguintes tópicos:
+Tópico | Descrição
+:-----:|:----------:
 |Introdução| Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade|
 |Representação Arquitetural| Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.|
 |Metas e Restrições| Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.|
