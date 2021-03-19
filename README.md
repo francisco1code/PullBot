@@ -17,11 +17,11 @@ Quando se está trabalhando em times de desenvolvimento de software é muito imp
 ### Requisitos
 É necessário:
 - Ter google chrome instalado no computador
-- Baixar extensão na loja de extensões
+- Baixar extensão PullBot na loja de extensões
 - Deixar ativa enquanto utiliza o GitHub para fechamento de milestone
 ### Como rodar
-- Passar token para extensão
-- Ativar durante uso de Git
+- Informar o token para extensão
+- Ativar durante o uso do GitHub
 ## :octocat: Integrantes
 <table>
     <tr>
