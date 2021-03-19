@@ -6,7 +6,7 @@ Data | Versão | Descrição | Autor
 28/01/2021 | 1.0 | Criação do documento | Jaime Juan
 19/03/2021 | 1.1 | Reformulação do documento | Jaime Juan
 
-<br>
+#
 
 | Sprint | Data | Tarefas |
 | :--:| :--: | :-- |
