@@ -30,7 +30,7 @@
 | ID | Eu, como | Desejo | Features | Épicos |
 --| -- | -- | -- |  -- | 
 | US01 | Usuário | desejo realizar pull requests por automação via GitHub |    FT01 | EP01|
-| US02 | Usuário | Commits separados em pasta no pull request com os relatórios | FT02 |  EP02 |
+| US02 | Usuário | Commits separados em pasta no pull request com os relatórios | FT02 |  EP01 |
 | US03 | Usuário | Após fechamento de milestone, receber os relatórios | FT03 FT06  |  EP02|
 | US04 | Usuário  | Receber um relatório com auxilio de gráficos de desempenho da equipe para melhorar o gerenciamento da mesma | FT04 | EP04 |
 | US05 | Usuário | Receber um relatório com auxilio de gráficos de desempenho pessoal para facilitar o entendimento  | FT05 | EP04|
