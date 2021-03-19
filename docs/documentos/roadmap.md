@@ -4,7 +4,7 @@
 Data | Versão | Descrição | Autor
 :-:|:-:|:-:|:-:
 28/01/2021 | 1.0 | Criação do documento | Jaime Juan
-
+<br>
 | Sprint | Data | Tarefas |
 | :--:| :--: | :-- |
 | 0 | 02/02 - 09/02 | - Estudar tecnologias <br> - Definir tema do projeto <br> - Estudar práticas ágeis <br> - **Definir tecnologias** <br> - **Arrumar o repositório** <br> - **Criar wiki** |

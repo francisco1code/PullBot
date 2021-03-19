@@ -12,7 +12,7 @@
 | EP01 | Comunicação via API |
 | EP02 | Resultado da sprint gerado para Usuário |
 | EP03 | Extensão Google Chrome para GitHub |
-| EP04 | Gráficos de relatório |
+| EP04 | Gráficos de relatório 
  
 # Features
 | ID      | Descrição | 

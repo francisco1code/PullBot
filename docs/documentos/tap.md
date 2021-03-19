@@ -28,7 +28,7 @@ Release 1 | 30/03 | Primeira versão da aplicação
 Release 2 | 20/05 | Entrega do produto final
 
 # 4. Estrutura Analítica do Projeto
-<img src="/imagens/logo.png" width="auto" height="auto">
+<img src="/imagens/EAP.png" width="auto" height="auto">
 
 # 5. Usuários e Papéis
 ## 5.1. Usuários
