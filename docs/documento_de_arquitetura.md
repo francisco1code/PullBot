@@ -17,13 +17,18 @@ Definições/Acrônimos/Abreviações| Significado
 API|Application Programming Interface
 
 ## 1.4.Referências Bibliográficas
-[1]Pullbot. Disponível em <https://github.com/fga-eps-mds/PullBot>. Acesso em 02 de março de 2021.
+[1] Pullbot. Disponível em <https://github.com/fga-eps-mds/PullBot>. Acesso em 02 de março de 2021.
 
-[2]Python. Disponível em <https://pt.wikipedia.org/wiki/Python>. Acesso em 02 de março de 2021.
+[3] JavaScript. Disponível em: <https://developer.mozilla.org/pt-BR/docs/Web/JavaScript>. Acesso em: 19 Mar. 2021.
 
-[3]API. Disponível em <https://canaltech.com.br/software/o-que-e-api/>. Acesso em 04 de março de 2021.
+[3] API. Disponível em <https://canaltech.com.br/software/o-que-e-api/>. Acesso em 04 de março de 2021.
 
-[4]Plugin.Disponível em <https://rockcontent.com/br/blog/plugins/>. Acesso em 04 de março de 2021.
+[4] Plugin.Disponível em <https://rockcontent.com/br/blog/plugins/>. Acesso em 04 de março de 2021.
+
+[5] GitHub Documentation. Github.com. Disponível em: <https://docs.github.com/en>. Acesso em: 19 Mar. 2021.
+
+[6] Node.js. Documentation. Disponível em: <https://nodejs.org/en/docs/>. Acesso em: 19 Mar. 2021.
+
 ## 1.5.Visão Geral
 Para esclarecer de forma clara as tecnologias utilizadas no desenvolvimento do PullBot, assim como o modelo arquitetural e suas motivações, o presente documento foi dividido nos seguintes tópicos:
 Tópico | Descrição
