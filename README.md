@@ -21,10 +21,7 @@ Quando se está trabalhando em times de software é muito importante gerenciar o
 - Baixar extensão na loja de extensões
 - Deixar ativa enquanto utiliza o GitHub para fechamento de milestone
 ### Como rodar
-Abra o terminal dentro da pasta do projeto e rode os seguintes comandos:
-- `sudo docker-compose build`
-- `sudo docker-compose up`
--  Acessar google chrome e adicionar extensão no navegador
+- 
 ## :octocat: Integrantes
 <table>
     <tr>
