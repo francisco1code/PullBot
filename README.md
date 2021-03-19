@@ -9,10 +9,9 @@ Quando se está trabalhando em times de desenvolvimento de software é muito imp
 
 ## 🌱 Funcionalidades
 - Pull Request automático via GitHub API
-- Commit automático via GitHub API com relatórios de desempenho da sprint
 - Geração de Gráficos informativos da equipe
 - Geração de Gráficos informativos por contribuinte
-- Geração de texto markdown para escopo dos commits e PRs
+- Geração de texto markdown para escopo dos commits, issues e Pull Requests
 
 ## :computer: Ambientalizando
 ### Requisitos
