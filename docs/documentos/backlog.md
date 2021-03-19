@@ -27,11 +27,11 @@
 | FT08 | Geração de texto markdown para escopo dos commits e PRs   |
 
 # User Stories 
-| ID | Descrição | Desejo | Features | Épicos |
+| ID | Eu, como | Desejo | Features | Épicos |
 --| -- | -- | -- |  -- | 
 | US01 | Usuário | desejo realizar pull requests por automação via GitHub |    FT01 | EP01|
 | US02 | Usuário | Commits separados em pasta no Pr com os relatórios | FT02 |  EP02 |
-| US03 | Usuário | Apos fechamento de milestone, receber os relatórios | FT03 FT06  |  EP02|
+| US03 | Usuário | Após fechamento de milestone, receber os relatórios | FT03 FT06  |  EP02|
 | US04 | Usuário  | Receber um relatório com auxilio de gráficos de desenpenho da equipe para melhorar o gerenciamento da mesma | FT04 | EP04 |
 | US05 | Usuário | Receber um relatório com auxilio de gráficos de desenpenho pessoal para facilitar o entendimento  | FT05 | EP04|
 | US06 | Usuário | Baixar extensão no Chrome  | FT07 |  EP03|
