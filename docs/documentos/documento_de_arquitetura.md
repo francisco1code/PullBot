@@ -34,8 +34,14 @@ Visão de implementação | Descreve a estrutura geral do modelo de implementaç
 A arquitetura do projeto [pullbot]() se concentra em auxiliar os usuário da plataforma github, revisando os dados das milestones, e por isso, a arquitetura do projeto está centrada no Back-End com a linguagem de programação JavaScript em sinergia com a API do GitHub.
 ## 2.1 - Camada de negócio (Back-end)
 [1]Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express.
-## 2.2 - Linguagem de programação (JavaScript)
-[2]JavaScript é uma linguagem de programação de alto nível, principalmente utilizada para o desenvolvimento web.
+## 2.2 - Tecnologias
+
+Tecnologias | Descrição
+--- | ---
+JavaScript | É uma linguagem de programação de alto nível, principalmente utilizada para o desenvolvimento web.
+Git | Git é um sistema de versionamento destribuído, usado para registrar o histórico de edições.
+Docker | Plataforma de containers que agrupa ambientes de desenvolvimento
+
 ## 2.3 - API do GitHub
 [3]API é um conjunto de instruções e informações sobre o acesso de uma aplicação. Ela é útil para estabalecer comunicação com funcionalidades e infomações que permite ao programador a implementação de novas funções não disponíveis comumente.
 
