@@ -3,7 +3,7 @@
 ### Histórico de Revisão
 Data | Versão | Descrição | Autor
 :-:|:-:|:-:|:-:
-28/01/2021 | 1.0.0 | Criação do documento | Jaime Juan
+28/01/2021 | 1.0 | Criação do documento | Jaime Juan
 
 # 1. Introdução
 Esse documento possui o objetivo de formalizar a abertura do projeto PullBot, expondo os pontos importante sobre sua documentação, desenvolvimento e entregas.

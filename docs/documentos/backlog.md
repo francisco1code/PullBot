@@ -1,8 +1,8 @@
 # Backlog
 
-## Histórico de Revisão
+### Histórico de Revisão
 | Data | Versão | Descrição | Autor |  
---| -- | -- | -- | 
+| :--: | :--:   | :--:      |  :--:  | 
 | 04/03/2021 | 1.0 | Primeiro protótipo de Backlog| Arthur Melo
 | 17/03/2021 | 1.1 | Refatoração do Backlog| Arthur Melo
 
@@ -12,7 +12,7 @@
 | EP01 | Comunicação via API |
 | EP02 | Resultado da sprint gerado para Usuário |
 | EP03 | Extensão Google Chrome para GitHub |
-| EP04 | Gráficos de relatório|
+| EP04 | Gráficos de relatório |
  
 # Features
 | ID      | Descrição | 

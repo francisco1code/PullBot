@@ -3,7 +3,7 @@
 ### Histórico de Revisão
 Data | Versão | Descrição | Autor
 :-:|:-:|:-:|:-:
-28/01/2021 | 1.0.0 | Criação do documento | Lorrayne Alves Cardozo
+28/01/2021 | 1.0 | Criação do documento | Lorrayne Alves Cardozo
 
 # 1.Introdução
 ## 1.1.	Objetivo

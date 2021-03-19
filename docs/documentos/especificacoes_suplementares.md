@@ -3,7 +3,7 @@
 ### Histórico de Revisão
 |Data|  Versão|  Descrição|  Autor| 
 :-:|:-:|:-:|:-:
-27/02/2021| 1.0.0| Criação do documento| Peniel Etèmana|
+27/02/2021| 1.0| Criação do documento| Peniel Etèmana|
 
 # 1. Introdução
 ## 1.1 Finalidade

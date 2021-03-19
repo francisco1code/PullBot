@@ -1,10 +1,10 @@
 # Documento de Arquitetura
 
-## Histórico de Revisão
+### Histórico de Revisão
  Data | Versão | Descrição | Autor
---- | --- | --- | ---
-02/03/2021 | 1.0.0 | Criação do documento | Ingrid Carvalho
-17/03/2021 | 1.0.1 | Padronização do documento | Eliás Yousef
+:---: | :---: | :---: | :---:
+02/03/2021 | 1.0 | Criação do documento | Ingrid Carvalho
+17/03/2021 | 1.1 | Padronização do documento | Eliás Yousef
 # 1.Introdução
 ## 1.1 - Finalidade
 Este documento tem como finalidade apresentar a arquitetura do projeto [pullbot](),oferecendo uma visão geral arquitetural do sistema que será implementado, possibilitando assim que os envolvidos no projeto tenham conhecimento de como a aplicação será subdivida e quais serão as funções de cada componente.
