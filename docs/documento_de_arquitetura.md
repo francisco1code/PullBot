@@ -9,7 +9,8 @@
 Este documento tem como finalidade apresentar ao leitor a arquitetura do projeto PullBot, assim como suas principais características, oferecendo uma visão mais simples e clara possível do modelo arquitetural adotado, possibilitando o pleno entendimento das subdivisões do sistema.
 
 ## 1.2.Escopo
-Apresentação das características arquiteturais do projeto PullBot, expondo detalhadamente as soluções arquiteturais idealizadas e estabelecidas para o projeto, de modo a ser utilizado como base para a edificação do projeto pelos desenvolvedores designados para o projeto.
+Mediante o presente documento, o leitor conseguirá compreender claramente sobre as tecnologias utilizadas e o modelo de arquitetura adotado para o desenvolvimento do sistema, assim como os fundamentos para que fossem escolhidas pela equipe.
+
 ## 1.3.Definições, acrônimos, abreviações
 |Definições/Acrônimos/Abreviações| Significado|
 |--------------------------------|------------|
