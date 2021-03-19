@@ -13,3 +13,10 @@ Para a ativar e começar a utilizar os recursos do PullBot, basta seguir os pass
 Feito isso, assim que se encerrar a milestone do repositório será gerado um arquivo markdown com as métricas de desenvolvimento do time. O PullBot irá gerar um pull request com o arquivo em questão, no repositório envolvido.
 
 ## Funcionalidades
+O PullBot trará as seguintes métricas no arquivo markdown:
+
+* Quantidade de issues abertas e fechadas no repositório e por integrante do grupo
+* Quantidade de pull request abertos e fechados no repositório e por integrante do grupo
+* Número de commits por integrante na principal branch do repositório
+* Número de commits por integrande nas demais branchs do repositório
+* Número de comentários em cada issue por integrante do grupo
