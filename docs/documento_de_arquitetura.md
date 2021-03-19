@@ -1,35 +1,37 @@
 # Documento de Arquitetura
 
 ### Histórico de Revisão
-|Data|Versão|Descrição|Autor|
+Data|Versão|Descrição|Autor
 :-:|:-:|:-:|:-:
-|02/03/2021| 1.0.0| Criação do documento | Ingrid Carvalho |
-# 1.Introdução
-## 1.1.Finalidade
+02/03/2021| 1.0.0| Criação do documento | Ingrid Carvalho 
+19/03/2021 | 1.1.0 | Recriação de documento | Lorrayne Cardozo
+
+# 1. Introdução
+## 1.1. Finalidade
 Este documento tem como finalidade apresentar ao leitor a arquitetura do projeto PullBot, assim como suas principais características, oferecendo uma visão mais simples e clara possível do modelo arquitetural adotado, possibilitando o pleno entendimento das subdivisões do sistema.
 
-## 1.2.Escopo
+## 1.2. Escopo
 Mediante o presente documento, o leitor conseguirá compreender claramente sobre as tecnologias utilizadas e o modelo de arquitetura adotado para o desenvolvimento do sistema, assim como os fundamentos para que fossem escolhidas pela equipe.
 
-## 1.3.Definições, acrônimos, abreviações
+## 1.3. Definições, Acrônimos, Abreviações
 Definições/Acrônimos/Abreviações| Significado
 :--------------------------------:|:------------:
 API|Application Programming Interface
 
-## 1.4.Referências Bibliográficas
+## 1.4. Referências Bibliográficas
 [1] Pullbot. Disponível em <https://github.com/fga-eps-mds/PullBot>. Acesso em 02 de março de 2021.
 
 [3] JavaScript. Disponível em: <https://developer.mozilla.org/pt-BR/docs/Web/JavaScript>. Acesso em: 19 Mar. 2021.
 
 [3] API. Disponível em <https://canaltech.com.br/software/o-que-e-api/>. Acesso em 04 de março de 2021.
 
-[4] Plugin.Disponível em <https://rockcontent.com/br/blog/plugins/>. Acesso em 04 de março de 2021.
+[4] Plugin. Disponível em <https://rockcontent.com/br/blog/plugins/>. Acesso em 04 de março de 2021.
 
-[5] GitHub Documentation. Github.com. Disponível em: <https://docs.github.com/en>. Acesso em: 19 Mar. 2021.
+[5] GitHub Documentation. Disponível em: <https://docs.github.com/en>. Acesso em: 19 Mar. 2021.
 
 [6] Node.js. Documentation. Disponível em: <https://nodejs.org/en/docs/>. Acesso em: 19 Mar. 2021.
 
-## 1.5.Visão Geral
+## 1.5. Visão Geral
 Para esclarecer de forma clara as tecnologias utilizadas no desenvolvimento do PullBot, assim como o modelo arquitetural e suas motivações, o presente documento foi dividido nos seguintes tópicos:
 Tópico | Descrição
 :-----:|:----------:
@@ -42,11 +44,11 @@ Tópico | Descrição
 # 2. Representação Arquitetural
 A finalidade do projeto PullBot se concentra em auxiliar os usuário da plataforma GitHub revisando milestones após seu fechamento. Sendo assim, a arquitetura do projeto está centralizada em back-end utilizando a linguagem de programação javascript em sinergia com a API do GitHub, baseando-se em um modelo arquitetural de microsserviços.
 
-## 2.1.Camada de negócio (Back-end)
+## 2.1. Camada de negócio (Back-end)
 Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express
-## 2.2.Linguagem de programação (Python)
+## 2.2. Linguagem de programação (Python)
 Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. 
-## 2.3.API do GitHub
+## 2.3. API do GitHub
 API é um conjunto de instruçõoes e informações sobre práticas de um projeto (GitHub) para uso de suas funcionalidades que permite ao programador a implementação de novas funções não disponíveis comumente.
 
 # 3. Metas e Restrições da Arquitetura
