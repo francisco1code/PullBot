@@ -38,8 +38,10 @@ Tópico | Descrição
 |Metas e Restrições| Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.|
 |Visão lógica| Retrata as partes relevantes concernente à arquitetura do modelo de design. |
 |Visão de implementação| Descreve a estrutura geral do modelo de implementação, a divisão do software em camadas e os subsistemas no modelo de implementação e todos os componentes significativos do ponto de vista da arquitetura.|
-# 2.Representação da Arquitetura
-A arquitetura do projeto PullBot se concentra em auxiliar os usuário da plataforma GitHub revisando a abertura e os fechamentos de milestones sendo assim a arquitetura do projeto está centralizada em back-end com a linguagem de programação python em sinergia com a API do GitHub.
+
+# 2. Representação Arquitetural
+A finalidade do projeto PullBot se concentra em auxiliar os usuário da plataforma GitHub revisando milestones após seu fechamento. Sendo assim, a arquitetura do projeto está centralizada em back-end utilizando a linguagem de programação javascript em sinergia com a API do GitHub, baseando-se em um modelo arquitetural de microsserviços.
+
 ## 2.1.Camada de negócio (Back-end)
 Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express
 ## 2.2.Linguagem de programação (Python)
