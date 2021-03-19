@@ -6,7 +6,7 @@
 |02/03/2021| 1.0.0| Criação do documento | Ingrid Carvalho |
 # 1.Introdução
 ## 1.1.Finalidade
-Este documento tem como finalidade apresentar a arquitetura do projeto PullBot, oferecendo uma visão geral arquitetural do sistema que será implementado, possibilitando assim que os envolvidos no projeto tenham conhecimento de como a aplicação será subdivida e quais serão as funções de cada componente.
+Este documento tem como finalidade apresentar ao leitor a arquitetura do projeto PullBot, oferecendo uma visão mais simples e clara possível do modelo arquitetural adotado, possibilitando o pleno entendimento das subdivisões do sistema.
 
 ## 1.2.Escopo
 Apresentação das características arquiteturais do projeto PullBot, expondo detalhadamente as soluções arquiteturais idealizadas e estabelecidas para o projeto, de modo a ser utilizado como base para a edificação do projeto pelos desenvolvedores designados para o projeto.
