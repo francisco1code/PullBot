@@ -29,7 +29,7 @@ Release 1 | 30/03 | Primeira versão da aplicação
 Release 2 | 20/05 | Entrega do produto final
 
 # 4. Estrutura Analítica do Projeto
-<img src="/imagens/EAP.png" width="auto" height="auto">
+<img src="imagens/EAP.png" width="auto" height="auto">
 
 # 5. Usuários e Papéis
 ## 5.1. Usuários
@@ -45,6 +45,7 @@ Nome | Função
 [Lorrayne Cardozo](https://github.com/LorrayneCardozo)| Desenvolvedor|
 [Peniel Zannoukou](https://github.com/eliasyousef00)| Desenvolvedor|
 ## 5.3. Responsabilidades
+
 ### 5.3.1. Scrum Master
 * Acompanhar e controlar os riscos do projeto;
 * Garantir a máxima produtividade da equipe;
