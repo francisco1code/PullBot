@@ -61,11 +61,15 @@ Docker | Plataforma de containers que agrupa ambientes de desenvolvimento
 API é um conjunto de instruções e informações sobre o acesso de uma aplicação. Ela é útil para estabalecer comunicação com funcionalidades e infomações que permite ao programador a implementação de novas funções não disponíveis comumente.
 
 # 3. Metas e Restrições da Arquitetura
-## 3.1 Usabilidade
-A aplicação contará com a plataforma do GitHub funcionando apenas como plugin oferecendo uma nova funcionalidade ao programa
+## 3.1. Metas
+* Facilitar a visualização das métricas do time de desenvolvimento durante uma milestone;
+* Agilizar o processo analítico das métricas.
 
-## 3.2 Portabilidade
-A aplicação poderá ser acessada através de um navegador como, por exemplo, Mozilla Firefox ou Google Chrome e acesso ao aplicativo de mensagens Telegram.
+## 3.2. Restrições da arquitetura
+* Ter acesso a internet;
+* Possuir o navegador de internet Google Chrome;
+* Adicionar a extensão PullBot corretamente.
+
 # 4. Tamanho e Desempenho
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação de uma nova funcionalidade ao software.
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e do programa GitHub.
