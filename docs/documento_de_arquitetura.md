@@ -37,7 +37,7 @@ MDS | Métodos de Desenvolvimento de Software
 ## 1.5. Visão Geral
 Para esclarecer de forma clara as tecnologias utilizadas no desenvolvimento do PullBot, assim como o modelo arquitetural e suas motivações, o presente documento foi dividido nos seguintes tópicos:
 Tópico | Descrição
-:-----:|:----------:
+:-:|:-:
 |Introdução| Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade|
 |Representação Arquitetural| Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.|
 |Metas e Restrições| Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.|
@@ -45,14 +45,20 @@ Tópico | Descrição
 |Visão de implementação| Descreve a estrutura geral do modelo de implementação, a divisão do software em camadas e os subsistemas no modelo de implementação e todos os componentes significativos do ponto de vista da arquitetura.|
 
 # 2. Representação Arquitetural
-A finalidade do projeto PullBot se concentra em auxiliar os usuário da plataforma GitHub revisando milestones após seu fechamento. Sendo assim, a arquitetura do projeto está centralizada em back-end utilizando a linguagem de programação javascript em sinergia com a API do GitHub, baseando-se em um modelo arquitetural de microsserviços.
+A finalidade do projeto PullBot se concentra em auxiliar os usuário da plataforma GitHub revisando milestones após seu fechamento. Sendo assim, a arquitetura do projeto está centralizada em Back-End utilizando a linguagem de programação javascript em sinergia com a API do GitHub, baseando-se em um modelo arquitetural de microsserviços.
 
 ## 2.1. Camada de negócio (Back-end)
 Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express
-## 2.2. Linguagem de programação (Python)
-Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. 
+
+## 2.2. Tecnologias
+Tecnologia | Descrição
+:-: | :-:
+JavaScript | É uma linguagem de programação de alto nível, principalmente utilizada para o desenvolvimento web.
+Git | Git é um sistema de versionamento destribuído, usado para registrar o histórico de edições.
+Docker | Plataforma de containers que agrupa ambientes de desenvolvimento
+
 ## 2.3. API do GitHub
-API é um conjunto de instruçõoes e informações sobre práticas de um projeto (GitHub) para uso de suas funcionalidades que permite ao programador a implementação de novas funções não disponíveis comumente.
+API é um conjunto de instruções e informações sobre o acesso de uma aplicação. Ela é útil para estabalecer comunicação com funcionalidades e infomações que permite ao programador a implementação de novas funções não disponíveis comumente.
 
 # 3. Metas e Restrições da Arquitetura
 ## 3.1 Usabilidade
