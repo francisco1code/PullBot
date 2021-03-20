@@ -1,6 +1,6 @@
 ---
 name: Template de Feature
-about: Suggest an idea for this project
+about: Exemplo para padronização de features
 title: ''
 labels: ''
 assignees: ''
