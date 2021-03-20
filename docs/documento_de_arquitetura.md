@@ -3,20 +3,24 @@
 ### Histórico de Revisão
 Data|Versão|Descrição|Autor
 :-:|:-:|:-:|:-:
-02/03/2021| 1.0.0| Criação do documento | Ingrid Carvalho 
-19/03/2021 | 1.1.0 | Recriação de documento | Lorrayne Cardozo
+02/03/2021 | 1.0.0 | Criação do documento | Ingrid Carvalho
+17/03/2021 | 1.1.0 | Padronização do documento | Eliás Yousef 
+19/03/2021 | 1.2.0 | Revisão do documento | Lorrayne Cardozo
 
 # 1. Introdução
 ## 1.1. Finalidade
 Este documento tem como finalidade apresentar ao leitor a arquitetura do projeto PullBot, assim como suas principais características, oferecendo uma visão mais simples e clara possível do modelo arquitetural adotado, possibilitando o pleno entendimento das subdivisões do sistema.
 
 ## 1.2. Escopo
-Mediante o presente documento, o leitor conseguirá compreender claramente sobre as tecnologias utilizadas e o modelo de arquitetura adotado para o desenvolvimento do sistema, assim como os fundamentos para que fossem escolhidas pela equipe.
+A extensão para Google Chrome PullBot tem como alvo desenvolvedores que utilizam a plataforma Github para a hospedagem de seus repositórios. O projeto consiste em facilitar e agilizar a análise de produtividade do time de desenvolvimento, gerando um arquivo .md com as métricas a serem estudadas.
 
 ## 1.3. Definições, Acrônimos, Abreviações
 Definições/Acrônimos/Abreviações| Significado
-:--------------------------------:|:------------:
-API|Application Programming Interface
+:-:|:--:
+API | Application Programming Interface
+UnB | Universidade de Brasília
+FGA | Faculdade do Gama
+MDS | Métodos de Desenvolvimento de Software
 
 ## 1.4. Referências Bibliográficas
 [1] Pullbot. Disponível em <https://github.com/fga-eps-mds/PullBot>. Acesso em 02 de março de 2021.
@@ -29,7 +33,6 @@ API|Application Programming Interface
 
 [5] GitHub Documentation. Disponível em: <https://docs.github.com/en>. Acesso em: 19 Mar. 2021.
 
-[6] Node.js. Documentation. Disponível em: <https://nodejs.org/en/docs/>. Acesso em: 19 Mar. 2021.
 
 ## 1.5. Visão Geral
 Para esclarecer de forma clara as tecnologias utilizadas no desenvolvimento do PullBot, assim como o modelo arquitetural e suas motivações, o presente documento foi dividido nos seguintes tópicos:
