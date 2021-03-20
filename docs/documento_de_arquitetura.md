@@ -72,5 +72,4 @@ API é um conjunto de instruções e informações sobre o acesso de uma aplica�
 
 # 4. Tamanho e Desempenho
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação de uma nova funcionalidade ao software.
-O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e do programa GitHub.
-O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário.
+O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e da plataforma GitHub.
