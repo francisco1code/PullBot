@@ -83,7 +83,8 @@ A interação do sistema com o usuário deve ser mínima, e será feita para col
 * Adicionar a extensão PullBot corretamente.
 
 # 4. Visão de Caso de Uso
-## 4.1. Usuário
+## 4.1. Ator (Usuário)
+O usuário será o único ator do sistema, responsável por instalar a extensão em seu navegador e realizar o fechamento de uma milestone no GitHub, afim de que o PullBot exerça suas funcionalidades.
 
 ## 4.2. Diagrama de Caso de Uso
 ![Diagrama de Caso de Uso](https://raw.githubusercontent.com/fga-eps-mds/PullBot/35-doc-arquitetura/imagens/casoDeUso.jpg.png)
