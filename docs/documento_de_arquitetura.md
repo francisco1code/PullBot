@@ -83,6 +83,12 @@ A interação do sistema com o usuário deve ser mínima, e será feita para col
 * Possuir o navegador de internet Google Chrome;
 * Adicionar a extensão PullBot corretamente.
 
-# 4. Tamanho e Desempenho
+# 4. Visão de Caso de Uso
+## 4.1. Usuário
+
+## 4.2. Diagrama de Caso de Uso
+![Diagrama de Caso de Uso](https://raw.githubusercontent.com/fga-eps-mds/PullBot/35-doc-arquitetura/imagens/casoDeUso.jpg.png)
+
+# 5. Tamanho e Desempenho
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação de uma nova funcionalidade ao software.
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e da plataforma GitHub.
