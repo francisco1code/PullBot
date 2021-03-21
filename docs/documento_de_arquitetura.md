@@ -6,9 +6,11 @@ Data|Versão|Descrição|Autor
 02/03/2021 | 1.0.0 | Criação do documento | Ingrid Carvalho
 17/03/2021 | 1.1.0 | Padronização do documento | Eliás Yousef 
 19/03/2021 | 1.2.0 | Revisão do documento | Lorrayne Cardozo
+21/03/2021 | 1.2.1 | Correção e Atualização Do Documento De Arquitetura | Peniel Zannoukou
 
 # 1. Introdução
 ## 1.1. Finalidade
+
 Este documento tem como finalidade apresentar ao leitor a arquitetura do projeto PullBot, assim como suas principais características, oferecendo uma visão mais simples e clara possível do modelo arquitetural adotado, possibilitando o pleno entendimento das subdivisões do sistema.
 
 ## 1.2. Escopo
@@ -35,7 +37,7 @@ MDS | Métodos de Desenvolvimento de Software
 
 ## 1.5. Visão Geral
 Para esclarecer de forma clara as tecnologias utilizadas no desenvolvimento do PullBot, assim como o modelo arquitetural e suas motivações, o presente documento foi dividido nos seguintes tópicos:
-Tópico | Descrição
+|Tópico | Descrição
 :-:|:-:
 |Introdução| Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade|
 |Representação Arquitetural| Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.|
@@ -50,14 +52,20 @@ A finalidade do projeto PullBot se concentra em auxiliar os usuário da platafor
 * Elementos de interação com o usuário.
 
 ## 2.1. Camada de negócio (Back-end)
-Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express
+Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express.
+
+## 2.1.1 Node
+O Node.js pode ser definido como um ambiente de execução Javascript server-side.Isso significa que com o Node.js é possível criar aplicações Javascript para rodar como uma aplicação standalone em uma máquina, não dependendo de um browser para a execução[5]. No PullBot, o node fará uso da arquitetura overview.
+
+## 2.1.2 Express
+Express é um framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto bem robusto de recursos para os aplicativos web e móvel.
 
 ## 2.2. Tecnologias
 Tecnologia | Descrição
 :-: | :-:
-JavaScript | É uma linguagem de programação de alto nível, principalmente utilizada para o desenvolvimento web.
-Git | Git é um sistema de versionamento destribuído, usado para registrar o histórico de edições.
-Docker | Plataforma de containers que agrupa ambientes de desenvolvimento.
+JavaScript | É uma linguagem de programação de alto nível, principalmente utilizada para o desenvolvimento web,de fácil execução e que pode ser rodadar a partir de um navegador de internet. Ela é uma linguagem popular do mundo.
+Git | Git é um sistema de versionamento distribuído, usado para registrar o histórico de edições.Ela é geralmente usada no desenvolvimento de software.
+Docker | É uma linguagem de alto desempenho.Plataforma de containers que agrupa ambientes de desenvolvimento.
 
 ## 2.3. API do GitHub
 API é um conjunto de instruções e informações sobre o acesso de uma aplicação. Ela é útil para estabalecer comunicação com funcionalidades e infomações que permite ao programador a implementação de novas funções não disponíveis comumente.
@@ -89,6 +97,11 @@ O usuário será o único ator do sistema, responsável por instalar a extensão
 ## 4.2. Diagrama de Caso de Uso
 ![Diagrama de Caso de Uso](https://raw.githubusercontent.com/fga-eps-mds/PullBot/35-doc-arquitetura/imagens/casoDeUso.jpg.png)
 
+
+
+
+
 # 5. Tamanho e Desempenho
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação de uma nova funcionalidade ao software.
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e da plataforma GitHub.
+No software será aplicado alguns conceitos que possibilitarão a renderização de conteúdo e que permitirão uma boa comunicação com o usúario.
