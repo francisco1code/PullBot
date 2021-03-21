@@ -45,9 +45,9 @@ Tópico | Descrição
 
 # 2. Representação Arquitetural
 A finalidade do projeto PullBot se concentra em auxiliar os usuário da plataforma GitHub revisando milestones após seu fechamento. Sendo assim, a arquitetura do projeto está centralizada em Back-End utilizando a linguagem de programação JavaScript em sinergia com a API do GitHub. O desenvolvimento dessa extensão é baseado em um modelo arquitetural composto por:
-* Manifesto;
-* Script de fundo;
-* Elementos da interação com o usuário.
+* Manifest;
+* Background Script;
+* Elementos de interação com o usuário.
 
 ## 2.1. Camada de negócio (Back-end)
 Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express
@@ -63,14 +63,14 @@ Docker | Plataforma de containers que agrupa ambientes de desenvolvimento.
 API é um conjunto de instruções e informações sobre o acesso de uma aplicação. Ela é útil para estabalecer comunicação com funcionalidades e infomações que permite ao programador a implementação de novas funções não disponíveis comumente.
 
 ## 2.4. Modelo Arquitetural
-### 2.4.1. Manifesto
-O manifesto é um arquivo intitulado manifest.json que faz parte de todas as extensões criadas para o Google Chrome. Tem a função de conceder informações relevantes sobre a extensão ao navegador, como arquivos importantes e recursos utilizados.
+### 2.4.1. Manifest
+O Manifest é um arquivo intitulado `manifest.json` que faz parte de todas as extensões criadas para o Google Chrome. Tem a função de conceder informações relevantes sobre a extensão ao navegador, como arquivos importantes e recursos utilizados.
 
-### 2.4.2. Script de Fundo
-O script de fundo - ou script de segundo plano - é o responsável pela operação dos eventos da extensão. Este script permanece inativo até que seja acionado através da execução de um evento, que no caso do PullBot será o fechamendo de uma milestone no GitHub. O script será ativado assim que o evento for efetuado, e após realizar suas devidas instruções, tornará ao ócio.
+### 2.4.2. Background Script
+O script de fundo - ou script de segundo plano - é o responsável pela operação dos eventos e será uma ponte entre as outras partes da extensão. Este script permanece inativo até que seja acionado através da execução de um evento, que no caso do PullBot será o fechamendo de uma milestone no GitHub. O script será ativado assim que o evento for efetuado, e após realizar suas devidas instruções, tornará ao ócio.
 
-### 2.4.3. Elementos da Interação com o Usuário
-A interação do sistema com o usuário deve ser mínima, e será feita para colher dados como o token do usuário.
+### 2.4.3. Elementos de Interação com o Usuário
+A interação do sistema com o usuário deve ser mínima. O objetivo será apenas colher os dados necessários para o funcionamento do PullBot, como o nome de usuário e token do GitHub.
 
 # 3. Metas e Restrições da Arquitetura
 ## 3.1. Metas
