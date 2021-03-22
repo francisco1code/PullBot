@@ -114,3 +114,5 @@ O backlog representa a acumulação de trabalho: tudo o que deve ser feito do pr
 * Protótipo de baixa fidelidade
 * Treinamentos
 * Como executar o PullBot no GitHub do Usúario
+* Execução do PullBot na máquina do usuário
+* Apresentação das informações via Gráficos
