@@ -6,7 +6,8 @@ Data|Versão|Descrição|Autor
 02/03/2021 | 1.0.0 | Criação do documento | Ingrid Carvalho
 17/03/2021 | 1.1.0 | Padronização do documento | Eliás Yousef 
 19/03/2021 | 1.2.0 | Revisão do documento | Lorrayne Cardozo
-21/03/2021 | 1.2.1 | Correção e Atualização Do Documento De Arquitetura | Peniel Zannoukou
+21/03/2021 | 1.2.1 | Correção e atualização Do documento | Peniel Zannoukou
+22/03/2021 | 1.3.0 |Adição do Diagrama de Relações | Lorrayne Alves Cardozo
 
 # 1. Introdução
 ## 1.1. Finalidade
