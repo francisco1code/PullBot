@@ -4,6 +4,7 @@
 Data | Versão | Descrição | Autor
 :-:|:-:|:-:|:-:
 28/01/2021 | 1.0 | Criação do documento | Lorrayne Alves Cardozo
+22/03/2021 | 2.0 | Revisão do documento | Lorrayne Alves Cardozo
 
 # 1.Introdução
 ## 1.1.	Objetivo
