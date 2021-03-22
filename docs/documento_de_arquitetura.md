@@ -95,11 +95,7 @@ A interação do sistema com o usuário deve ser mínima. O objetivo será apena
 O usuário será o único ator do sistema, responsável por instalar a extensão em seu navegador e realizar o fechamento de uma milestone no GitHub, afim de que o PullBot exerça suas funcionalidades.
 
 ## 4.2. Diagrama de Caso de Uso
-![Diagrama de Caso de Uso](https://raw.githubusercontent.com/fga-eps-mds/PullBot/35-doc-arquitetura/imagens/casoDeUso.jpg.png)
-
-
-
-
+<img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/35-doc-arquitetura/imagens/casoDeUso.jpeg" width="750">
 
 # 5. Tamanho e Desempenho
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação de uma nova funcionalidade ao software.
