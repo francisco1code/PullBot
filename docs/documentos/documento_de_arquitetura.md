@@ -38,8 +38,9 @@ MDS | Métodos de Desenvolvimento de Software
 
 ## 1.5. Visão Geral
 Para esclarecer de forma clara as tecnologias utilizadas no desenvolvimento do PullBot, assim como o modelo arquitetural e suas motivações, o presente documento foi dividido nos seguintes tópicos:
-| |Tópico | Descrição
-:-:|:-:|:-:
+
+| | Tópico | Descrição
+|:-:|:-:|:-:
 1 | Introdução | Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade.
 2 | Representação Arquitetural | Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.
 3 | Metas e Restrições | Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.
