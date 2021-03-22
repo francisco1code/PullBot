@@ -42,8 +42,10 @@ Clientes | Usuários da plataforma GitHub | Acompanhar a execução do projeto, 
 |Nome | Descrição|
 |:-:|:-:|
 Usuários de GitHub | Pessoas que possuem uma conta na plataforma GitHub
+
 ## 3.3. Ambiente do Usuário
-O usuário necessita de um navegador, que independe do acesso em computador ou dispositivo móvel, para acessar o GitHub e de um aparelho móvel para acesso ao aplicativo social Telegram, em que serão recebidas as mensagens.
+O usuário necessita de um computador que possua instalado o navegador Google Chrome, para que seja possível instalar a extensão PullBot e realizar o fechamento da milestone na plataforma GitHub.
+
 ## 3.4. Perfis dos Envolvidos
 ### 3.4.1. Equipe de Gestão de Projeto
 |   |   |
