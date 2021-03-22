@@ -7,7 +7,7 @@ Data|Versão|Descrição|Autor
 17/03/2021 | 1.1.0 | Padronização do documento | Eliás Yousef 
 19/03/2021 | 1.2.0 | Revisão do documento | Lorrayne Cardozo
 21/03/2021 | 1.2.1 | Correção e atualização do documento | Peniel Zannoukou
-22/03/2021 | 1.3.0 |Adição do diagrama de relações | Lorrayne Alves Cardozo
+22/03/2021 | 1.3.0 |Adição do diagrama de relações | Lorrayne Cardozo
 
 # 1. Introdução
 ## 1.1. Finalidade
@@ -73,7 +73,7 @@ API é um conjunto de instruções e informações sobre o acesso de uma aplica�
 
 ## 2.4. Modelo Arquitetural
 ### 2.4.1. Manifest
-O Manifest é um arquivo intitulado `manifest.json` que faz parte de todas as extensões criadas para o Google Chrome. Tem a função de conceder informações relevantes sobre a extensão ao navegador, como arquivos importantes e recursos utilizados.
+O Manifest é um arquivo intitulado `manifest.json` que faz parte de todas as extensões criadas para o Google Chrome. Tem a função de conceder informações relevantes sobre a extensão ao navegador, como arquivos importantes e recursos utilizados. Além disso, o manifest também provê ponteiros para os outros arquivos da extensão.
 
 ### 2.4.2. Background Script
 O script de fundo - ou script de segundo plano - é o responsável pela operação dos eventos e será uma ponte entre as outras partes da extensão. Este script permanece inativo até que seja acionado através da execução de um evento, que no caso do PullBot será o fechamendo de uma milestone no GitHub. O script será ativado assim que o evento for efetuado, e após realizar suas devidas instruções, tornará ao ócio.
