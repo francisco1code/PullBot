@@ -109,8 +109,9 @@ Ranking de commits | Ranking com o nome de cada integrante da equipe a respectiv
 * O usuário deve ter um computador com o navegador Google Chrome instalado.
 
 # 7. Intervalos de Qualidade
-## 7.1. Requisitos do Desempenho
-O tempo de ação do bot poderá depender de fatores como velocidade e qualidade da internet do aparelho em que será utilizado o Telegram, além da capacidade de processamento do aparelho e quantidade de informações na respectiva milestone.
+## 7.1. Requisitos de Desempenho
+O tempo de ação do sistema poderá depender de fatores como velocidade e qualidade da internet do usuário, além da quantidade de informações a serem coletadas na respectiva milestone.
+
 ## 7.2. Requisitos de Design
 O bot agirá no aplicativo social Telegram, portanto, possuirá a mesma interface.
 ## 7.3. Requisitos de Portabilidade
