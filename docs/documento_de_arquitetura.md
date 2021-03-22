@@ -8,6 +8,7 @@ Data|Versão|Descrição|Autor
 19/03/2021 | 1.2.0 | Revisão do documento | Lorrayne Cardozo
 21/03/2021 | 1.2.1 | Correção e atualização do documento | Peniel Zannoukou
 22/03/2021 | 1.3.0 |Adição do diagrama de relações | Lorrayne Cardozo
+22/03/2021 | 1.4.0 | Adição do Backlog | Peniel Zannoukou
 
 # 1. Introdução
 ## 1.1. Finalidade
@@ -105,3 +106,7 @@ O usuário será o único ator do sistema, responsável por instalar a extensão
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação de uma nova funcionalidade ao software.
 O tempo de resposta da aplicação web irá depender da velocidade de conexão com a internet do usuário e da plataforma GitHub.
 No software será aplicado alguns conceitos que possibilitarão a renderização de conteúdo e que permitirão uma boa comunicação com o usúario.
+
+
+# 6. Backlog
+O backlog representa a acumulação de trabalho: tudo o que deve ser feito do produto que vai ser desenvolvido. Basicamente, é uma pilha de itens a fazer, 
