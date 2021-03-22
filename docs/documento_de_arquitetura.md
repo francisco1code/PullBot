@@ -109,4 +109,4 @@ No software será aplicado alguns conceitos que possibilitarão a renderização
 
 
 # 6. Backlog
-O backlog representa a acumulação de trabalho: tudo o que deve ser feito do produto que vai ser desenvolvido. Basicamente, é uma pilha de itens a fazer, 
+O backlog representa a acumulação de trabalho: tudo o que deve ser feito do produto que vai ser desenvolvido. Basicamente, é uma pilha de itens a fazer, solicitados por alguém com base em suas necessidades/desejos, que devem ser entregues a quem solicitou depois que forem produzidos. Os épicos levantados para o nosso projeto são:
