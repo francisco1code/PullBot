@@ -116,3 +116,5 @@ O backlog representa a acumulação de trabalho: tudo o que deve ser feito do pr
 * Como executar o PullBot no GitHub do Usúario
 * Execução do PullBot na máquina do usuário
 * Apresentação das informações via Gráficos
+
+Para os demais tópicos do backlog em detalhes, poderá ser consultados nesse link disponibilizado: <https://github.com/fga-eps-mds/PullBot/blob/master/docs/backlog.md>
