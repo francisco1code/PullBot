@@ -102,12 +102,11 @@ Ranking de commits | Ranking com o nome de cada integrante da equipe a respectiv
 
 
 # 6. Restrições
-* O bot deve estar utilizável até maio de 2021;
+* A extensão deve estar utilizável até maio de 2021;
 * O projeto deverá ser desenvolvido no decorrer da disciplina MDS, do campus FGA da UnB, pelos alunos que compõem a equipe;
 * Para utilizá-lo, é fundamental o acesso a internet;
-* O usuário deve ter um cadastro tanto na plataforma GitHub quando no aplicativo Telegram;
-* O usuário deve ter um navegador em seu computador ou aparelho móvel para acessar sua conta no GitHub e realizar o fechamento da milestone;
-* É necessário ter acesso a um aparelho móvel para utilizar o mensageiro Telegram.
+* O usuário deve ter uma conta na plataforma GitHub;
+* O usuário deve ter um computador com o navegador Google Chrome instalado.
 
 # 7. Intervalos de Qualidade
 ## 7.1. Requisitos do Desempenho
