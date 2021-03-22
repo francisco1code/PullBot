@@ -6,9 +6,9 @@ Data|Versão|Descrição|Autor
 02/03/2021 | 1.0.0 | Criação do documento | Ingrid Carvalho
 17/03/2021 | 1.1.0 | Padronização do documento | Eliás Yousef 
 19/03/2021 | 1.2.0 | Revisão do documento | Lorrayne Cardozo
-21/03/2021 | 1.2.1 | Correção e atualização do documento | Peniel Zannoukou
-22/03/2021 | 1.3.0 |Adição do diagrama de relações | Lorrayne Cardozo
-22/03/2021 | 1.4.0 | Adição do Backlog | Peniel Zannoukou
+21/03/2021 | 1.3.0 | Correção e atualização do documento | Peniel Zannoukou
+22/03/2021 | 1.4.0 |Adição do diagrama de relações | Lorrayne Cardozo
+22/03/2021 | 1.4.1 | Adição do Backlog | Peniel Zannoukou
 
 # 1. Introdução
 ## 1.1. Finalidade
@@ -39,13 +39,15 @@ MDS | Métodos de Desenvolvimento de Software
 
 ## 1.5. Visão Geral
 Para esclarecer de forma clara as tecnologias utilizadas no desenvolvimento do PullBot, assim como o modelo arquitetural e suas motivações, o presente documento foi dividido nos seguintes tópicos:
+
 | |Tópico | Descrição
-:-:|:-:|:-:
+|:-:|:-:|:-:
 1 | Introdução | Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade.
 2 | Representação Arquitetural | Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.
 3 | Metas e Restrições | Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.
 4 | Visão de Caso de Uso | Retrata e detalha as partes relevantes ao funcionamento do sistema.
 5 | Tamanho e Desempenho | Descreve sobre os detalhes de funcionamento do sistema, como seu o tempo de resposta e possíveis falhas. 
+6 | Backlog | Apresenta as atividades a serem cumpridas pela equipe durante o desenvolvimento do projeto.
 
 # 2. Representação Arquitetural
 A finalidade do projeto PullBot se concentra em auxiliar os usuário da plataforma GitHub revisando milestones após seu fechamento. Sendo assim, a arquitetura do projeto está centralizada em Back-End utilizando a linguagem de programação JavaScript em sinergia com a API do GitHub. O desenvolvimento dessa extensão é baseado em um modelo arquitetural composto por:
@@ -117,4 +119,4 @@ O backlog representa a acumulação de trabalho: tudo o que deve ser feito do pr
 * Execução do PullBot na máquina do usuário
 * Apresentação das informações via Gráficos
 
-Para os demais tópicos do backlog em detalhes, poderá ser consultados nesse link disponibilizado: <https://github.com/fga-eps-mds/PullBot/blob/master/docs/backlog.md>
+Para mais detalhes sobre os demais tópicos do backlog, [clique aqui](https://fga-eps-mds.github.io/PullBot/#/docs/documentos/backlog).
