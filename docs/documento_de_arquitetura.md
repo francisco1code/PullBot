@@ -37,13 +37,13 @@ MDS | Métodos de Desenvolvimento de Software
 
 ## 1.5. Visão Geral
 Para esclarecer de forma clara as tecnologias utilizadas no desenvolvimento do PullBot, assim como o modelo arquitetural e suas motivações, o presente documento foi dividido nos seguintes tópicos:
-|Tópico | Descrição
-:-:|:-:
-|Introdução| Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade|
-|Representação Arquitetural| Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.|
-|Metas e Restrições| Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.|
-|Visão lógica| Retrata as partes relevantes concernente à arquitetura do modelo de design. |
-|Visão de implementação| Descreve a estrutura geral do modelo de implementação, a divisão do software em camadas e os subsistemas no modelo de implementação e todos os componentes significativos do ponto de vista da arquitetura.|
+| |Tópico | Descrição
+:-:|:-:|:-:
+1 | Introdução | Fornece uma visão geral do documento inteiro, descrevendo informações sobre a sua finalidade.
+2 | Representação Arquitetural | Traz o detalhamento da arquitetura de software do sistema para melhor entendimento de sua estrutura e funcionamento. Além de apresentar o modo como ela está sendo representada.
+3 | Metas e Restrições | Detalha os requisitos e objetivos do software que têm algum impacto sobre a arquitetura. Ela também captura as restrições especiais que podem ser aplicáveis.
+4 | Visão de Caso de Uso | Retrata e detalha as partes relevantes ao funcionamento do sistema.
+5 | Tamanho e Desempenho | Descreve sobre os detalhes de funcionamento do sistema, como seu o tempo de resposta e possíveis falhas. 
 
 # 2. Representação Arquitetural
 A finalidade do projeto PullBot se concentra em auxiliar os usuário da plataforma GitHub revisando milestones após seu fechamento. Sendo assim, a arquitetura do projeto está centralizada em Back-End utilizando a linguagem de programação JavaScript em sinergia com a API do GitHub. O desenvolvimento dessa extensão é baseado em um modelo arquitetural composto por:
