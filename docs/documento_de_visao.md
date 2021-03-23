@@ -71,7 +71,7 @@ O usuário necessita de um computador que possua instalado o navegador Google Ch
 **Tipo** | Usuários de GitHub que possuem o aplicativo Telegram
 **Critério de Sucesso** | Acompanhar a execução do projeto, evidenciando a devida apreciação sobre cada funcionalidade do produto
 **Envolvimento** | Médio
-**Problemas/Comentários** | Usuários de GitHub que por algum motivo não consigam ter acesso ao aplicativo Telegram
+**Problemas/Comentários** | Usuários de GitHub que por algum motivo não consigam instalar a extensão corretamente
 
 ## 3.5. Perfil do Usuário
 ### 3.5.1. Usuários de GitHub
