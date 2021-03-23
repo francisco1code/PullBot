@@ -27,7 +27,7 @@ Tendo em vista que a plataforma GitHub possui milhões de usuários que provavel
 O problema de | visualizar de forma compacta e ágil tudo o que foi feito no projeto durante uma milestone
 afeta |  usuários da plataforma GitHub
 cujo impacto é | um processo lento de retrospectiva da milestone
-uma boa solução seria | um bot capaz de, após o fechamento de uma milestone, apresentar automaticamente de modo sintetizado o que foi feito de forma coletiva e individual
+uma boa solução seria | uma extensão capaz de, após o fechamento de uma milestone, apresentar automaticamente de modo sintetizado o que foi feito de forma coletiva e individual, além de abrir um Pull Request automaticamente
 
 # 3. Descrição dos Envolvidos e dos Usuários
 ## 3.1. Resumo dos Envolvidos
