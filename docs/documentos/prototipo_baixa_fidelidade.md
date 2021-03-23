@@ -3,7 +3,7 @@
 ## Introdução
 Este documento tempo por finalidade apresentar as funcionalidades básicas e triviais do projeto, sendo sujeito a alterações com o caminhar das atividades.
 
-## Funcionamento
+## Funcionalidades
 O PullBot é um bot de produtividade do github que gera relatórios .md a cada fechamento de milestone. Nestes relatórios estão informações a respeito de toda a sprint em questão. Na lista abaixo estão algumas infomações que estarão presentes nos relatórios gerados:
 
 * Quantidade de issues abertas e fechadas;
@@ -12,7 +12,7 @@ O PullBot é um bot de produtividade do github que gera relatórios .md a cada f
 * Número de commits por integrante do repositório;
 * Número de comentários em cada issue por integrante.
 
-<img src="imagens\funcionamento_pullbot.png" height="320px">
+<img src="imagens\funcionalidades_pullbot_baixa_fidelidade.png" height="320px">
 
 Após gerado o arquivo .md, o bot abre um pull request com o arquivo em questão.
 
