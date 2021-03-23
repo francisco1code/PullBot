@@ -22,3 +22,39 @@ O PullBot trará as seguintes métricas no arquivo markdown:
 * Número de comentários em cada issue por integrante do grupo
 
 <img src="imagens\funcionalidades_pullbot_alta_fidelidade.png" height="320px">
+
+## Exemplo do Markdown
+A seguir, tem-se um exemplo abstrato de como serão os arquivos markdown gerados pelo PullBot
+
+# Relatório referente a Milestone X
+
+## Issues
+Integrantes | Issues abertas | Issues fechadas
+--- | --- | ---
+Integrante 1 | 3 | 2
+Integrante 2 | 1 | 1
+Integrante 3 | 2 | 2
+Integrante 4 | 0 | 1
+Integrante 5 | 2 | 1
+Total: | 8 | 7 
+
+## Pull requests
+Integrantes | Pull requests abertos | Pull requests fechados
+--- | --- | ---
+Integrante 1 | 1 | 0
+Integrante 2 | 1 | 1
+Integrante 3 | 2 | 1
+Integrante 4 | 0 | 1
+Integrante 5 | 0 | 1
+Total: | 4 | 4 
+
+## Commits
+Integrantes | Commits na branch principal | Commits nas demais branchs
+--- | --- | ---
+Integrante 1 | 2 | 7
+Integrante 2 | 1 | 10
+Integrante 3 | 3 | 8
+Integrante 4 | 1 | 9
+Integrante 5 | 0 | 11
+Total: | 7 | 49
+
