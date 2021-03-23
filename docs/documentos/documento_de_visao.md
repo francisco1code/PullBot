@@ -3,27 +3,33 @@
 ### Histórico de Revisão
 Data | Versão | Descrição | Autor
 :-:|:-:|:-:|:-:
-28/01/2021 | 1.0 | Criação do documento | Lorrayne Alves Cardozo
-22/03/2021 | 2.0 | Revisão do documento | Lorrayne Alves Cardozo
+28/01/2021 | 1.0 | Criação do documento | Lorrayne Cardozo
+22/03/2021 | 2.0 | Revisão do documento | Lorrayne Cardozo
 
 # 1.Introdução
 ## 1.1.	Objetivo
 Este documento tem a finalidade de expor detalhadamente o propósito do projeto PullBot, assim como a relação com os envolvidos no projeto, as funcionalidade e utilidades do produto, afim de que garanta o pleno entendimento do leitor independente de um prévio conhecimento técnico sobre desenvolvimento de software.
+
 ## 1.2.	Escopo
 O documento apresenta informações sobre o projeto a fim de possibilitar entendimento claro e detalhado sobre o objetivo e funcionalidades do produto, tecnologias utilizadas e seus possíveis usuários.
+
 ## 1.3.	Definições, Acrônimos e Abreviações
 Acrônimo/Abreviação | Definição
 :-:|:-:
 Unb | Universidade de Brasília
 MDS | Métodos de Desenvolvimento de Software
 FGA|Faculdade do Gama
+
 ## 1.4. Referências Bibliográficas
 International Business Machines Corporation: Documento de Visão. Disponível em: <https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html>. Acesso em: 27 de fevereiro de 2021.
+
 ## 1.5. Visão Geral
 Produzido a partir do processo RUP - Rational Unified Process, o presente documento é organizado com as ideias, recursos, descrição e posicionamento do produto. Apresentando, deste modo, uma visão geral do produto, seus requisitos e a relação com os envolvidos e usuários do produto.
+
 # 2. Posicionamento
 ## 2.1. Oportunidade de Negócios
 Tendo em vista que a plataforma GitHub possui milhões de usuários que provavelmente abrem e fecham milestones constantemente, o PullBot seria uma solução útil para revisar tudo o que foi feito em cada milestone após seu fechamento, principalmente para os projetos de desenvolvimento ágil, que estão em alta no mercado. Pelo método ágil Scrum, por exemplo, ao fim de cada curto período de tempo reservado para realizar parte do projeto, denominado Sprint, a equipe faz uma retrospectiva para análise das mudanças realizadas. Utilizando o PullBot, essa retrospectiva será feita de forma automatizada, organizada e detalhada.
+
 ## 2.2. Descrição do Problema
 |   |    |
 :--:|:--:
@@ -39,6 +45,7 @@ uma boa solução seria | uma extensão capaz de, após o fechamento de uma mile
 Equipe de Gestão do Projeto | Grupo de alunos da UnB matriculados na disciplina MDS | Gerenciar o projeto, garantindo a comunicação entre toda a equipe e mantendo organizada a execução do que foi previamente planejado 
 Equipe de Desenvolvimento do Projeto  | Grupo de alunos da UnB matriculados na disciplina MDS | Executar o planejado com qualidade e eficiência dentro dos prazos estabelecidos
 Clientes | Usuários da plataforma GitHub | Acompanhar a execução do projeto, evidenciando a devida apreciação sobre cada funcionalidade do produto
+
 ## 3.2. Resumo dos Usuários
 |Nome | Descrição|
 |:-:|:-:|
@@ -67,6 +74,7 @@ O usuário necessita de um computador que possua instalado o navegador Google Ch
 **Critério de Sucesso** | Realizar as metas estabelecidas com comprometimento e qualidade dentro do prazo proposto
 **Envolvimento** | Alto
 **Problemas/Comentários** | Equipe inexperiente em desenvolvimento de software e com pouco conhecimento em relação as tecnologias utilizadas
+
 ### 3.4.3. Clientes
 |   |   |
 |:-:|:-:|
@@ -99,8 +107,7 @@ Quantidade de issues abertas/fechadas | Será apresentado ao usuário a quantida
 Quantidade de PullRequest abertos/fechados | Será apresentado ao usuário a quantidade de PullRequest abertos e fechados 
 Quantidade de comentários escritos nas issues | O usuário poderá visualizar a quantidade de comentário em casa issue aberta/fechada
 Quantidade de commits | Será exibido ao usuário a quantidade de commits
-Ranking de commits | Ranking com o nome de cada integrante da equipe a respectiva quantidade de commits
-
+Ranking de commits | Ranking com o nome de cada integrante da equipe e a respectiva quantidade de commits
 
 # 6. Restrições
 * A extensão deve estar utilizável até maio de 2021;
