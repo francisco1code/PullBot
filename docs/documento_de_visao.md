@@ -111,7 +111,7 @@ Ranking de commits | Ranking com o nome de cada integrante da equipe a respectiv
 ## 7.1. Requisitos do Desempenho
 O tempo de ação do bot poderá depender de fatores como velocidade e qualidade da internet do aparelho em que será utilizado o Telegram, além da capacidade de processamento do aparelho e quantidade de informações na respectiva milestone.
 ## 7.2. Requisitos de Design
-O bot agirá no aplicativo social Telegram, portanto, possuirá a mesma interface.
+A extensão terá um ícone com design simples de coloração azul.
 ## 7.3. Requisitos de Portabilidade
 O bot poderá ser utilizado em qualquer dispositivo móvel que possua o aplicativo Telegram.
 
