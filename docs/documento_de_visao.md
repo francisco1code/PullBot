@@ -113,7 +113,7 @@ O tempo de ação do bot poderá depender de fatores como velocidade e qualidade
 ## 7.2. Requisitos de Design
 A extensão terá um ícone com design simples de coloração azul.
 ## 7.3. Requisitos de Portabilidade
-O bot poderá ser utilizado em qualquer dispositivo móvel que possua o aplicativo Telegram.
+A extensão poderá ser instalada e utilizada em qualquer computador que possua o navegador Google Chrome instalado.
 
 # 8. Prioridades e precedência
 O produto prioriza facilitar a retrospectiva de cada milestone, para que o usuário consiga visualizar de forma prática e rápida os detalhes sobre a determinada etapa do projeto e sobre toda a equipe.
