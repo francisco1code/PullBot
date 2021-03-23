@@ -107,7 +107,7 @@ Quantidade de issues abertas/fechadas | Será apresentado ao usuário a quantida
 Quantidade de PullRequest abertos/fechados | Será apresentado ao usuário a quantidade de PullRequest abertos e fechados 
 Quantidade de comentários escritos nas issues | O usuário poderá visualizar a quantidade de comentário em casa issue aberta/fechada
 Quantidade de commits | Será exibido ao usuário a quantidade de commits
-Ranking de commits | Ranking com o nome de cada integrante da equipe a respectiva quantidade de commits
+Ranking de commits | Ranking com o nome de cada integrante da equipe e a respectiva quantidade de commits
 
 # 6. Restrições
 * A extensão deve estar utilizável até maio de 2021;
