@@ -39,9 +39,9 @@ Usuário | Usuário que o bot para automação | Qualquer pessoa interessada
 ## 5.2. Papéis
 Nome | Função
 :-:|:-:
-[Jaime Juan](https://github.com/JaimeJuan11)| Scrum Master e Devops|
+[Jaime Juan](https://github.com/JaimeJuan11)| Scrum Master e Desenvolvedor|
 [Arthur Garcia](https://github.com/ArthurMeloG)| Product Owner e Desenvolvedor|
-[Eliás Yousef](https://github.com/ingridSCarvalho)| Arquiteto e Desenvolvedor|
+[Eliás Yousef](https://github.com/ingridSCarvalho)| Devops e Desenvolvedor|
 [Lorrayne Cardozo](https://github.com/LorrayneCardozo)| Desenvolvedor|
 [Peniel Zannoukou](https://github.com/eliasyousef00)| Desenvolvedor|
 ## 5.3. Responsabilidades
@@ -70,13 +70,12 @@ Nome | Função
 * Levantar padrões;
 * Monitorar desempenho das aplicações;
 * Aplicar GitFlow.
-### 5.3.4. Desenvolvedor
 * Propor as soluções de arquitetura dos sistemas;
 * Manter a equipe alinhada com os padrões arquiteturais;
 * Acompanhar a equipe de desenvolvimento durante a construção das aplicações.
-### 5.3.5. Desenvolvedor
-* Implementar as histórias de usuário dentro do prazo da sprint;
+### 5.3.4. Desenvolvedor
 * Seguir as práticas ágeis fornecidas pelo Scrum Master.
+* Criar e implementar as funcionalidades necessárias para a conclusão do projeto e a entrega do produto.
 
 # 6. Restrições
 * A aplicação não estará disponível offline, será necessária o acesso à internet;
