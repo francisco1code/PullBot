@@ -7,7 +7,7 @@
 
 Issue | Descrição | Responsável | Condição
 ---|---|---|---
-
+Login Automático | Conseguir logar automáticamente para realizar o pull request | Eliás Yousef e Arthur de Melo | Concluída
 
 ## Pontos positivos:
 * Finalização do documento do termo de abertura do projeto.
