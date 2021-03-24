@@ -1,4 +1,4 @@
-# Protótipo Alta Fidelidade
+# Protótipo de Alta Fidelidade
 
 ## Introdução
 Este documento tem por finalidade apresentar o funcionamento e funcionalidades da extensão para o navegador Google Chrome, a PullBot.
@@ -24,7 +24,7 @@ O PullBot trará as seguintes métricas no arquivo markdown:
 <img src="imagens\funcionalidades_pullbot_alta_fidelidade.png" height="320px">
 
 ## Exemplo do Markdown
-A seguir, tem-se um exemplo abstrato de como serão os arquivos markdown gerados pelo PullBot
+A seguir, tem-se um exemplo abstrato de como serão os arquivos markdown gerados pelo PullBot.
 
 # Relatório referente a Milestone X
 

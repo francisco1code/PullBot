@@ -1,4 +1,4 @@
-# Protótipo de baixa fidelidade
+# Protótipo de Baixa Fidelidade
 
 ## Introdução
 Este documento tempo por finalidade apresentar as funcionalidades básicas e triviais do projeto, sendo sujeito a alterações com o caminhar das atividades.
