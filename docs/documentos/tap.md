@@ -5,6 +5,7 @@ Data | Versão | Descrição | Autor
 :-:|:-:|:-:|:-:
 28/01/2021 | 1.0 | Criação do documento | Jaime Juan
 19/03/2021 | 1.1 | Subindo EAP | Jaime Juan
+24/03/2021 | 1.2 | Arrumando os pápeis e as responsabilidades | Jaime Juan
 
 # 1. Introdução
 Esse documento possui o objetivo de formalizar a abertura do projeto PullBot, expondo os pontos importante sobre sua documentação, desenvolvimento e entregas.
