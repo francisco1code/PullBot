@@ -70,12 +70,12 @@ Nome | Função
 * Implementar entrega e integração contínua;
 * Levantar padrões;
 * Monitorar desempenho das aplicações;
-* Aplicar GitFlow.
+* Aplicar GitFlow;
 * Propor as soluções de arquitetura dos sistemas;
 * Manter a equipe alinhada com os padrões arquiteturais;
 * Acompanhar a equipe de desenvolvimento durante a construção das aplicações.
 ### 5.3.4. Desenvolvedor
-* Seguir as práticas ágeis fornecidas pelo Scrum Master.
+* Seguir as práticas ágeis fornecidas pelo Scrum Master;
 * Criar e implementar as funcionalidades necessárias para a conclusão do projeto e a entrega do produto.
 
 # 6. Restrições
