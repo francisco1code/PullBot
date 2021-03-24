@@ -13,15 +13,14 @@ Issue | Descrição | Responsável | Condição
 #11 | Criação da licença para código open source | Arthur de Melo | Concluída
 #13 | Estudar sobre práticas ágeis | Lorrayne Alves, Indrid e Peniel | Concluída
 
-
-## **Pontos positivos:**
+## Pontos positivos:
 * Bom conteúdo de estudos compartilhado.
 
-## **Pontos negativos:**
+## Pontos negativos:
 * Pouca comunicação.
 * Issues mal organizadas.
 
-## **Melhorias:** 
+## Melhorias: 
 * Encontrar uma melhor forma de organizar as issues.
 * Comunicação com os integrantes.
 * Disponibilidade de tempo.
