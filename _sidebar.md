@@ -31,3 +31,5 @@
     - [**Sprint 6**](#)
         - [Planning](docs/sprints/sprint6/planning.md)
         - [Review](docs/sprints/sprint6/review.md)
+- [**Releases**](#)
+    - [**Release 1**](docs/releases/release1.md)
