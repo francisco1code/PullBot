@@ -3,21 +3,21 @@
 <img src="imagens/logo.png" width="auto" height="auto">
 
 ## 🔭 Sobre 
-Consiste em um bot de produtividade ativado no GitHub a cada fechamento de milestone, dando um apanhado geral da atual sprint e realizando automaticamente um Pull Request com as métricas da mesma. 
+Consiste em um bot de produtividade ativado no GitHub a cada fechamento de milestone, dando um apanhado geral da atual sprint e realizando automaticamente um pull request com as métricas da mesma. 
 
 Quando se está trabalhando em times de desenvolvimento de software é muito importante gerenciar o andamento do projeto de perto e ter um feedback consistente de tudo que está ocorrendo na sprint. O PullBot se encaixa aí! Sua utilidade principal é o gerenciamento efetivo do projeto, e por consequência, ganho de tempo e maior controle de todo trabalho e produtividade da equipe. Ele irá criar um pull request com as métricas da milestone finalizada e dar um relatório de desempenho da equipe e de cada integrante.
 
 ## 🌱 Funcionalidades
-- Pull Request automático via GitHub API.
-- Geração de Gráficos informativos da equipe.
-- Geração de Gráficos informativos por contribuinte.
-- Geração de texto markdown para escopo dos commits, issues e Pull Requests.
+- Pull request automático via GitHub API.
+- Geração de gráficos informativos da equipe.
+- Geração de gráficos informativos por contribuinte.
+- Geração de texto markdown para escopo dos commits, issues e pull requests.
 
 ## :computer: Ambientalizando
 ### Requisitos
 É necessário:
-- Ter google chrome instalado no computador.
-- Baixar extensão PullBot na loja de extensões.
+- Ter Google Chrome instalado no computador, [veja como instala aqui](https://www.google.com/chrome/) caso não tenha.
+- Baixar a extensão _PullBot_ na [loja de extensões](https://chrome.google.com/webstore/category/extensions).
 - Deixar ativa enquanto utiliza o GitHub para fechamento de milestone.
 ### Como rodar
 - Informar o token para extensão.
