@@ -10,6 +10,8 @@ Issue | Descrição | Responsável | Condição
 
 
 ## Pontos positivos:
+* Documentações revisadas e aprovadas
+* Repositório revisado e aprovado
 * 
 
 ## Pontos negativos:
