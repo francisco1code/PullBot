@@ -5,7 +5,7 @@
 * Fim: 23/02/2021
 * Duração: 7 dias
 
-## Objetos
+## Objetivos
 * Sprint dedicada ao estudo de variáveis que rodeiam o projeto, como tema e tecnologias, criação do código de conduta, readme e pull request template.
 
 Issue | Descrição | Responsável

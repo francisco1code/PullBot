@@ -23,4 +23,4 @@ Issue | Descrição | Responsável | Condição
 * Os integrantes precisam dar mais feedbacks
 
 ## Retorno do Scrum Master:
-* 
+* Entregas fracas, pouca noção com o git e a plataforma github
