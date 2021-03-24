@@ -10,3 +10,4 @@
 
 Issue | Descrição | Responsável
 ---|---|---
+Login Automático | Conseguir logar automáticamente para realizar o pull request | Eliás Yousef e Arthur de Melo
