@@ -1,9 +1,9 @@
 # Sprint 0 - Review
 
 ## Visão Geral
-* Inicio: 02/02/2021
-* Fim: 09/02/2021
-* Duração: 7 dias
+* Inicio: 02/02/2021.
+* Fim: 09/02/2021.
+* Duração: 7 dias.
 
 
 Issue | Descrição | Responsável | Condição
@@ -15,16 +15,16 @@ Issue | Descrição | Responsável | Condição
 
 
 ## **Pontos positivos:**
-* Bom conteúdo de estudos compartilhado
+* Bom conteúdo de estudos compartilhado.
 
 ## **Pontos negativos:**
-* Pouca comunicação
-* Issues mal organizadas
+* Pouca comunicação.
+* Issues mal organizadas.
 
 ## **Melhorias:** 
-* Encontrar uma melhor forma de organizar as issues
-* Comunicação com os integrantes
-* Disponibilidade de tempo
+* Encontrar uma melhor forma de organizar as issues.
+* Comunicação com os integrantes.
+* Disponibilidade de tempo.
 
 ## Retorno do Scrum Master:
 A pouca comunicação entre os integrantes do grupo e o pouco tempo de disponibilidade foram os principais fatores que levaram à um pequeno desenvolvimento na Sprint 0.

@@ -1,9 +1,9 @@
 # Sprint 0 - Planning
 
 ## Visão Geral 
-* Inicio: 02/02/2021
-* Fim: 09/02/2021
-* Duração: 7 dias
+* Inicio: 02/02/2021.
+* Fim: 09/02/2021.
+* Duração: 7 dias.
 
 ## Objetivos
 

@@ -14,16 +14,16 @@ Issue | Descrição | Responsável | Condição
 #23 | Pull request template | Arthur de Melo | Concluída
 
 ## Pontos positivos
-* Melhor ambientação com as plataformas utilizadas
+* Melhor ambientação com as plataformas utilizadas.
 
 ## Pontos negativos
-* Pouca comunicação
-* Pouca contribuição e todos os integrantes
-* Falta de organização nas datas das sprints
+* Pouca comunicação.
+* Pouca contribuição e todos os integrantes.
+* Falta de organização nas datas das sprints.
 
 ## Melhorias:
-* Encontrar uma boa plataforma para estabelecer comunicação entre os integrantes
-* Mais produtividade dos membros do projeto
+* Encontrar uma boa plataforma para estabelecer comunicação entre os integrantes.
+* Mais produtividade dos membros do projeto.
 
 ## Retorno do Scrum Master:
 O time ainda estava se organizando e por esse motivo não se teve grande produtividade.

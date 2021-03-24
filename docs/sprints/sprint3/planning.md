@@ -1,9 +1,9 @@
 # Sprint 3 - Planning
 
 ## Visão Geral:
-* Início: 02/03/2021
-* Fim: 09/03/2021
-* Duração: 7 dias
+* Início: 02/03/2021.
+* Fim: 09/03/2021.
+* Duração: 7 dias.
 
 ## Objetivos
 * Sprint dedicada a organização e documentação das sprints e issue, protótipo de baixa fidelidade, criação do backlog, roadmap e início do desenvolvimento do projeto.
