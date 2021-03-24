@@ -6,7 +6,7 @@
 * Duração: 7 dias
 
 ## Objetivos
-* Sprint dedicada a organização e documentação das sprints e issue, criação do backlog, roadmap e início do desenvolvimento do projeto.
+* Sprint dedicada a organização e documentação das sprints e issue, protótipo de baixa fidelidade, criação do backlog, roadmap e início do desenvolvimento do projeto.
 
 Issue | Descrição | Responsável
 ---|---|---
