@@ -1,9 +1,9 @@
 # Sprint 1 - Review
 
 ## Visão Geral
-* Início: 17/02/2021
-* Fim: 18/02/2021
-* Duração: 2 dias
+* Início: 09/02/2021
+* Fim: 23/02/2021
+* Duração: 7 dias
 
 Issue | Descrição | Responsável | Condição
 ---|---|---|---

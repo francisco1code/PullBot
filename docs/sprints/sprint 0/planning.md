@@ -1,13 +1,13 @@
 # Sprint 0 - Planning
 
 ## Visão Geral 
-* Inicio: 11/02/2021
-* Fim: 18/02/2021
+* Inicio: 02/02/2021
+* Fim: 09/02/2021
 * Duração: 7 dias
 
 ## Objetivos
 
-* Sprint dedicada ao estudo do git, práticas ágeis e toda a ambientação necessária para ter um bom desenvolvimento na matéria.
+* Sprint dedicada ao estudo do git, práticas ágeis e toda a ambientação e tecnologias necessárias para ter-se um bom desenvolvimento na matéria.
 
 
 Issue | Descrição | Responsável
