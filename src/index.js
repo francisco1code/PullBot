@@ -39,8 +39,6 @@ document.addEventListener("click", function (e) {
         }
     }
 });
-//token do usuário
-
 /*FUNÇOES A DEFINIREM OS VALORES A SEREM PASSADOS PARA API*/
 
 /*GET DONO DO REPOSITORIO*/
