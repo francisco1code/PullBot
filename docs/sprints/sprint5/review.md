@@ -7,7 +7,9 @@
 
 Issue | Descrição | Responsável | Condição
 ---|---|---|---
-
+Comunicação Git via API | Conseguir acessar e enviar dados para a API do GitHub | Lorrayne Cardozo e Peniel Etèmana | Prorrogada
+Identificar botão close da milestone | Conseguir identificar a árvore de classes do botão close da milestone | Eliás Yousef | Concluída
+Criação de novas Labels | Criar novas Labels para melhor organização e indicação das issues | Arthur de Melo | Concluída
 
 ## Pontos positivos:
 * Finalização do protótipo de alta fidelidade.
