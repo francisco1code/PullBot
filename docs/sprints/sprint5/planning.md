@@ -10,3 +10,6 @@
 
 Issue | Descrição | Responsável
 ---|---|---
+Comunicação Git via API | Conseguir acessar e enviar dados para a API do GitHub | Lorrayne Cardozo e Peniel Etèmana
+Identificar botão close da milestone | Conseguir identificar a árvore de classes do botão close da milestone | Eliás Yousef
+Criação de novas Labels | Criar novas Labels para melhor organização e indicação das issues | Arthur de Melo
