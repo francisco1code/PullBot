@@ -67,7 +67,7 @@ Express é um framework para aplicativo da web do Node.js mínimo e flexível qu
 ## 2.2. Tecnologias
 Tecnologia | Descrição
 :-: | :-:
-JavaScript | É uma linguagem de programação de alto nível, principalmente utilizada para o desenvolvimento web,de fácil execução e que pode ser rodadar a partir de um navegador de internet. Ela é uma linguagem popular do mundo.
+JavaScript | É uma linguagem de programação de alto nível, principalmente utilizada para o desenvolvimento web,de fácil execução e que pode ser rodadar a partir de um navegador de internet. Ela é uma linguagem amplamente utilizaeda.
 Git | Git é um sistema de versionamento distribuído, usado para registrar o histórico de edições.Ela é geralmente usada no desenvolvimento de software.
 Docker | É uma linguagem de alto desempenho.Plataforma de containers que agrupa ambientes de desenvolvimento.
 
@@ -85,7 +85,7 @@ O script de fundo - ou script de segundo plano - é o responsável pela operaç�
 A interação do sistema com o usuário deve ser mínima. O objetivo será apenas colher os dados necessários para o funcionamento do PullBot, como o nome de usuário e token do GitHub.
 
 ## 2.5. Diagrama de Relações
-<img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/35-doc-arquitetura/imagens/diagramaDeRelacoes.jpg" width="550">
+<img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/master/imagens/diagramaDeRelacoes.jpg" width="550">
 
 # 3. Metas e Restrições da Arquitetura
 ## 3.1. Metas
@@ -102,7 +102,7 @@ A interação do sistema com o usuário deve ser mínima. O objetivo será apena
 O usuário será o único ator do sistema, responsável por instalar a extensão em seu navegador e realizar o fechamento de uma milestone no GitHub, afim de que o PullBot exerça suas funcionalidades.
 
 ## 4.2. Diagrama de Caso de Uso
-<img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/35-doc-arquitetura/imagens/casoDeUso.jpeg" width="750">
+<img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/master/imagens/casoDeUso.jpeg" width="750">
 
 # 5. Tamanho e Desempenho
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação de uma nova funcionalidade ao software.
