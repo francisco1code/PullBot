@@ -1,3 +1,12 @@
+// SALVA TOKEN DO USUÁRIO
+$input_token = document.querySelector("#token")
+$btn_submit = document.querySelector("#btn_submit")
+
+$btn_submit.addEventListener('click', () => {
+    let token = $input_token.value
+    window.alert(token)
+})
+
 /*PEGAR EVENTO DE CLICK NA PAGINA*/
 document.addEventListener("click", function (e) {
     var currentUrl = String(window.location.href);
