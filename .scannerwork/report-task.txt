@@ -2,5 +2,5 @@ projectKey=pullbot
 serverUrl=http://localhost:9000
 serverVersion=8.7.1.42226
 dashboardUrl=http://localhost:9000/dashboard?id=pullbot
-ceTaskId=AXhtb6hx701q6WBseqLx
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXhtb6hx701q6WBseqLx
+ceTaskId=AXhtc9Jt701q6WBseqLy
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXhtc9Jt701q6WBseqLy
