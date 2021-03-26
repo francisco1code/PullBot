@@ -1,0 +1,1 @@
+curl -X POST -u <USERNAME>:<TOKEN> -d "{\"title\":\"<TÍTULO DO PULL REQUEST>\",\"body\":\"<DESCRIÇÃO>\",\"head\":\"<BRANCH SECUNDÁRIA>\",\"base\":\"<BRANCH PRINCIPAL(MAIN/MASTER)>\"}" https://api.github.com/repos/<PROPRIETÁRIO/ORGANIZAÇÃO>/<REPOSITÓRIO>/pulls
