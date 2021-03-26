@@ -85,7 +85,7 @@ O script de fundo - ou script de segundo plano - é o responsável pela operaç�
 A interação do sistema com o usuário deve ser mínima. O objetivo será apenas colher os dados necessários para o funcionamento do PullBot, como o nome de usuário e token do GitHub.
 
 ## 2.5. Diagrama de Relações
-<img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/35-doc-arquitetura/imagens/diagramaDeRelacoes.jpg" width="550">
+<img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/master/imagens/diagramaDeRelacoes.jpg" width="550">
 
 # 3. Metas e Restrições da Arquitetura
 ## 3.1. Metas
