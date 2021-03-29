@@ -9,6 +9,7 @@ Data|Versão|Descrição|Autor
 21/03/2021 | 1.3.0 | Correção e atualização do documento | Peniel Zannoukou
 22/03/2021 | 1.4.0 |Adição do diagrama de relações | Lorrayne Cardozo
 22/03/2021 | 1.4.1 | Adição do Backlog | Peniel Zannoukou
+29/03/2021 | 1.5.0 | Adição do OAuth2 | Lorrayne Cardozo
 
 # 1. Introdução
 ## 1.1. Finalidade
@@ -53,7 +54,7 @@ Para esclarecer de forma clara as tecnologias utilizadas no desenvolvimento do P
 A finalidade do projeto PullBot se concentra em auxiliar os usuário da plataforma GitHub revisando milestones após seu fechamento. Sendo assim, a arquitetura do projeto está centralizada em Back-End utilizando a linguagem de programação JavaScript em sinergia com a API do GitHub. O desenvolvimento dessa extensão é baseado em um modelo arquitetural composto por:
 * Manifest;
 * Background Script;
-* Content script
+* Content Script.
 
 ## 2.1. Camada de negócio (Back-end)
 Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express.
