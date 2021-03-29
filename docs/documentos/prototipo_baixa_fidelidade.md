@@ -1,5 +1,10 @@
 # Protótipo de Baixa Fidelidade
 
+## Histórico de versão
+Data | Versão | Descrição | Autor
+--- | --- | --- | ---
+03/03 | 0.1 | Criação do documento | Eliás Yousef
+
 ## Introdução
 Este documento tempo por finalidade apresentar as funcionalidades básicas e triviais do projeto, sendo sujeito a alterações com o caminhar das atividades.
 
