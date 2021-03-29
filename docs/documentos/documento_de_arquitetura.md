@@ -74,17 +74,20 @@ Docker | É uma linguagem de alto desempenho.Plataforma de containers que agrupa
 ## 2.3. API do GitHub
 API é um conjunto de instruções e informações sobre o acesso de uma aplicação. Ela é útil para estabalecer comunicação com funcionalidades e infomações que permite ao programador a implementação de novas funções não disponíveis comumente.
 
-## 2.4. Modelo Arquitetural
-### 2.4.1. Manifest
+## 2.4. OAuth 2
+O OAuth 2 é um protocolo de autorização que permite que uma aplicação se autentique em outra. Funciona de forma que uma aplicação requisita ao usuário a permissão de acesso para que não haja a necessidade de acessar alguma senha ou token pessoal. Após o usuário permitir o acesso, a aplicação tem aquisição limitada às suas informações, e mesmo que a senha seja alterada a autorização continuará válida.
+
+## 2.5. Modelo Arquitetural
+### 2.5.1. Manifest
 O Manifest é um arquivo intitulado `manifest.json` que faz parte de todas as extensões criadas para o Google Chrome. Tem a função de conceder informações relevantes sobre a extensão ao navegador, como arquivos importantes e recursos utilizados. Além disso, o manifest também provê ponteiros para os outros arquivos da extensão.
 
-### 2.4.2. Background Script
+### 2.5.2. Background Script
 O script de fundo - ou script de segundo plano - é o responsável pela operação dos eventos e será uma ponte entre as outras partes da extensão. Este script permanece inativo até que seja acionado através da execução de um evento, que no caso do PullBot será o fechamendo de uma milestone no GitHub. O script será ativado assim que o evento for efetuado, e após realizar suas devidas instruções, tornará ao ócio.
 
-### 2.4.3. Elementos de Interação com o Usuário
-A interação do sistema com o usuário deve ser mínima. O objetivo será apenas colher os dados necessários para o funcionamento do PullBot, como o nome de usuário e token do GitHub.
+### 2.5.3. Content script
+O script de conteúdo será executado nos contextos de uma página que foi carregada no navegador, que no caso será a do GitHub. Terá a função de se comunicar com a extensão trocando mensagens e armazenando valores.
 
-## 2.5. Diagrama de Relações
+## 2.6. Diagrama de Relações
 <img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/master/imagens/diagramaDeRelacoes.jpg" width="550">
 
 # 3. Metas e Restrições da Arquitetura
