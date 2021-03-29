@@ -6,7 +6,7 @@
 * Duração: 7 dias.
 
 ## Objetivos
-* Sprint dedicada a criação do documento de arquitetura, documento de visão e Definição de algumas tecnologias.
+* Sprint dedicada a criação do documento de arquitetura, documento de visão e definição de algumas tecnologias.
 
 Issue | Descrição | Responsável
 ---|---|---
