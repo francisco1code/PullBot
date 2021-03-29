@@ -1,9 +1,9 @@
+//URL DAS PÁGINAS
 var currentUrl = String(window.location.href);
 var urlParts = currentUrl.split("/");
-console.log(urlParts)
+
 document.addEventListener("click", function (e) {
-    
-    
+  
     //VALIDA ENTRADA EM GITHUB MILESTONES
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {
   
@@ -16,7 +16,7 @@ document.addEventListener("click", function (e) {
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-        console.log(base);
+        
         var milestoneName = document.querySelector(".milestone-title-link").innerText;
         
       // PEGAR VALORES DE BRANCHS
@@ -35,37 +35,39 @@ document.addEventListener("click", function (e) {
       const $owner = getOwner(valuesAPI);
       const $repo = getRepositori(valuesAPI);
       const $NumberMilestone = getNumberMilestone(valuesAPI);
-  
-    
-  
-        /*  xhr.addEventListener("readystatechange", function () {
+      var token = localStorage.getItem('token');
+      
+
+      var xhr = new XMLHttpRequest();
+         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-              console.log(this.responseText);
+              windoe.alert(this.responseText);
             }
           });
-          
+         
           xhr.open("POST", "https://api.github.com/repos/" + $owner + "/" + $repo + "/pulls");
           xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
           xhr.setRequestHeader("content-type", "application/json");
-          xhr.setRequestHeader("authorization","Bearer 5775e10c014ae90cbdabadbe9b2595ad35437559" );
+          xhr.setRequestHeader("authorization", "Bearer " + token);
+          
   
-          xhr.send(data);*/
+          xhr.send(data);
         }
     }
   });
-  if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" ){
+  if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
     
     var xhr = new XMLHttpRequest();
 
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
 
-         localStorage.setItem("key_da_propriedade","Valor armazenado");
+         
         
         const $getResponse = String(this.responseText).split("&");
         const $separeteValueDevice = $getResponse[0].split("=");
-        const $deviceCode = $separeteValueDevice[1];
-        localStorage.setItem("key_dev", $deviceCode);
+        var deviceCode = $separeteValueDevice[1];
+        localStorage.setItem("key_dev", deviceCode);
        const $separatevalue = String($getResponse[3]).split("=");
        var codeUser = $separatevalue[1];
         loginDevice(codeUser)
@@ -75,16 +77,18 @@ document.addEventListener("click", function (e) {
     xhr.open("POST", "https://github.com/login/device/code?client_id=46da77694ca94b6a86d7&scope=repo%20user");
     xhr.send();
   }
+
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
 
-    const keyValue = localStorage.getItem('key_dev');
+    var keyValue = localStorage.getItem('key_dev');
     var xhr = new XMLHttpRequest();
 
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
         const $getResponse = String(this.responseText).split("&");
         const $separateToken = $getResponse[0].split("=");
-        console.log($separateToken);
+        const $token = $separateToken[1]
+        localStorage.setItem("token",$token);
       }
     });
 
