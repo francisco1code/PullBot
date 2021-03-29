@@ -25,13 +25,13 @@ Roadmap | Criar o roadmap com as respectivas datas e objetivos | Arthur de Melo 
 ## Pontos positivos:
 * Documentações revisadas e aprovadas.
 * Repositório revisado e aprovado.
-* 
+* Sprint com maior participação de todos os integrantes do grupo
 
 ## Pontos negativos:
-* 
+* Grande carga de tarefas devido a release 1
 
 ## Melhorias:
-* 
+* Distribuir de forma mais eficiente as tarefas no decorrer das sprints
 
 ## Retorno do Scrum Master:
 * 
