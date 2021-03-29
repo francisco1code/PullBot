@@ -23,3 +23,4 @@ Refatoração do documento de arquitetura | Realizar as devidas alterações no 
 Refatoração do Readme | Realizar as devidas alterações no Readme do projeto | Arthur de Melo e Jaime Juan
 Refatoração do documento de visão | Realizar as devidas alterações no documento de visão | Lorrayne Alves
 Roadmap | Criar o roadmap com as respectivas datas e objetivos | Arthur de Melo e Jaime Juan
+
