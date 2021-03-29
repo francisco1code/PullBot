@@ -17,11 +17,10 @@ Quando se está trabalhando em times de desenvolvimento de software é muito imp
 ### Requisitos
 É necessário:
 - Ter Google Chrome instalado no computador, [veja como instala aqui](https://www.google.com/chrome/) caso não tenha.
-- Baixar a extensão _PullBot_ na [loja de extensões](https://chrome.google.com/webstore/category/extensions).
-- Deixar ativa enquanto utiliza o GitHub para fechamento de milestone.
+- Por hora nossa extensão nao esta disponível na loja de apps da google, então para utiliza-la precisa ativar o modo desenvolvedor nas extensões e carregar a pasta "src" dentro da pasta PullBot.
 ### Como rodar
-- Informar o token para extensão.
-- Ativar durante o uso do GitHub.
+- Ir no ícone do PullBot e clicar no botão para conectar com o App do pullBot
+- Deixar ativa enquanto utiliza o GitHub para fechamento de milestone.
 
 ## :octocat: Integrantes
 <table>
