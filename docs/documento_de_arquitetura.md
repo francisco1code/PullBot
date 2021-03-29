@@ -9,6 +9,7 @@ Data|Versão|Descrição|Autor
 21/03/2021 | 1.3.0 | Correção e atualização do documento | Peniel Zannoukou
 22/03/2021 | 1.4.0 |Adição do diagrama de relações | Lorrayne Cardozo
 22/03/2021 | 1.4.1 | Adição do Backlog | Peniel Zannoukou
+29/03/2021 | 1.5.0 | Adição do OAuth2 | Lorrayne Cardozo
 
 # 1. Introdução
 ## 1.1. Finalidade
