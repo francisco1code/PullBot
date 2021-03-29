@@ -1,6 +1,8 @@
+var currentUrl = String(window.location.href);
+var urlParts = currentUrl.split("/");
+console.log(urlParts)
 document.addEventListener("click", function (e) {
-    var currentUrl = String(window.location.href);
-    var urlParts = currentUrl.split("/");
+    
     
     //VALIDA ENTRADA EM GITHUB MILESTONES
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {
@@ -51,27 +53,64 @@ document.addEventListener("click", function (e) {
         }
     }
   });
-  
-  
+  if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" ){
+    
+    var xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("readystatechange", function() {
+      if(this.readyState === 4) {
+
+         localStorage.setItem("key_da_propriedade","Valor armazenado");
+        
+        const $getResponse = String(this.responseText).split("&");
+        const $separeteValueDevice = $getResponse[0].split("=");
+        const $deviceCode = $separeteValueDevice[1];
+        localStorage.setItem("key_dev", $deviceCode);
+       const $separatevalue = String($getResponse[3]).split("=");
+       var codeUser = $separatevalue[1];
+        loginDevice(codeUser)
+      }
+    });
+
+    xhr.open("POST", "https://github.com/login/device/code?client_id=46da77694ca94b6a86d7&scope=repo%20user");
+    xhr.send();
+  }
+  if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
+
+    const keyValue = localStorage.getItem('key_dev');
+    var xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("readystatechange", function() {
+      if(this.readyState === 4) {
+        const $getResponse = String(this.responseText).split("&");
+        const $separateToken = $getResponse[0].split("=");
+        console.log($separateToken);
+      }
+    });
+
+    xhr.open("POST", "https://github.com/login/oauth/access_token?client_id=46da77694ca94b6a86d7&device_code="+keyValue+"&grant_type=urn:ietf:params:oauth:grant-type:device_code");
+    xhr.setRequestHeader("Cookie", "_device_id="+keyValue+"; _gh_sess=eJ4SGU%2B24YwcePUSGoD82e%2Bm5C6pCMXSTicqWhqxjqK2q%2FdT%2BnIZRy2VT17XgsvqnrMmPA8Nm3foDTdRakuDTl5ZVWW%2F%2BzDAqvsEv6B4eoE83TNIIaC1HTZvT93ojGs8ARDPh26hSSFoUIYDHYnz6KEDJTK3hjlrX5ATkhOLy%2BDUwus78XVkwT1hhC0nIpj4Qm0YC6Z2rqNGkDeCzg6Kz5O0tSNzQxyahCC9WHLgoECgonCtnYIQ27w%2BBmzQ%2FWIqRmaUM%2BPRUOZBGmttLbSEhX4FaHUNIlglvwjNx9R34UAcaVkO--YFp0BPOo4pjLQIHV--aQrfy79bV3QfnmGMwYPhGw%3D%3D; _octo=GH1.1.2068834575.1616879702; logged_in=no");
+
+
+    xhr.send();
+    
+    
+  }
   
   
   function loginDevice(codeUser){
-  
-    var currentUrl = String(window.location.href);
-    var urlParts = currentUrl.split("/");
-    if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"){
-    document.getElementById("user-code-0").value = (codeUser.subStr(0, 0));
-    document.getElementById("user-code-1").value = (codeUser.subStr(1, 1));
-    document.getElementById("user-code-2").value = (codeUser.subStr(2, 2));
-    document.getElementById("user-code-3").value = (codeUser.subStr(3, 3));
-    document.getElementById("user-code-4").value = (codeUser.subStr(5, 5));
-    document.getElementById("user-code-5").value = (codeUser.subStr(6, 6));
-    document.getElementById("user-code-6").value = (codeUser.subStr(7, 7));
-    document.getElementById("user-code-7").value = (codeUser.subStr(8, 8));
+   
+    document.getElementById("user-code-0").value = codeUser[0];
+    document.getElementById("user-code-1").value = codeUser[1];
+    document.getElementById("user-code-2").value =  codeUser[2];
+    document.getElementById("user-code-3").value = codeUser[3];
+    document.getElementById("user-code-5").value = codeUser[5];
+    document.getElementById("user-code-6").value = codeUser[6];
+    document.getElementById("user-code-7").value = codeUser[7];
+    document.getElementById("user-code-8").value = codeUser[8];
     
-  }
-  }
-  
+    
+}
   /*FUNÇOES A DEFINIREM OS VALORES A SEREM PASSADOS PARA API*/
   
   /*GET DONO DO REPOSITORIO*/
