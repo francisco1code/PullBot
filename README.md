@@ -33,6 +33,10 @@ Quando se está trabalhando em times de desenvolvimento de software é muito imp
     </tr>
 </table>
 
+## :movie_camera: Release 1
+[Assista aqui](https://www.youtube.com/watch?v=gyQHephBHjk).
+[Veja os slides aqui](https://drive.google.com/file/d/1eqFcDay-HR5pWDbDmp6qv3tlPCDPJwLK/view?usp=sharing).
+
 ## :balloon: Contribuição
 Para contribuir com o projeto, [leia](https://github.com/fga-eps-mds/PullBot/blob/master/CONTRIBUTING.md).
 
