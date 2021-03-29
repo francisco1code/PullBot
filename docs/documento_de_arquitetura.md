@@ -84,8 +84,8 @@ O Manifest é um arquivo intitulado `manifest.json` que faz parte de todas as ex
 ### 2.5.2. Background Script
 O script de fundo - ou script de segundo plano - é o responsável pela operação dos eventos e será uma ponte entre as outras partes da extensão. Este script permanece inativo até que seja acionado através da execução de um evento, que no caso do PullBot será o fechamendo de uma milestone no GitHub. O script será ativado assim que o evento for efetuado, e após realizar suas devidas instruções, tornará ao ócio.
 
-### 2.5.3. Elementos de Interação com o Usuário
-A interação do sistema com o usuário deve ser mínima. O objetivo será apenas colher os dados necessários para o funcionamento do PullBot, como o nome de usuário e token do GitHub.
+### 2.5.3. Content script
+O script de conteúdo será executado nos contextos de uma página que foi carregada no navegador, que no caso será a do GitHub. Terá a função de se comunicar com a extensão trocando mensagens e armazenando valores.
 
 ## 2.6. Diagrama de Relações
 <img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/master/imagens/diagramaDeRelacoes.jpg" width="550">
