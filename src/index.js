@@ -24,8 +24,8 @@ document.addEventListener("click", function (e) {
     const recieveBranch = window.prompt("Qual branch destino ?");    
     
       var data = JSON.stringify({
-            "title": "Amazing new feature",
-            "body": "Please pull this in!",
+            "title": "Fechamento do Evento Click Milestone e Pull Request Automatico",
+            "body": "Este merge foi feito com o próprio código",
             "head": currentBrnach,
             "base": recieveBranch
           });
