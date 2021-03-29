@@ -17,7 +17,7 @@ Quando se está trabalhando em times de desenvolvimento de software é muito imp
 ### Requisitos
 É necessário:
 - Ter Google Chrome instalado no computador, [veja como instala aqui](https://www.google.com/chrome/) caso não tenha.
-- Por hora a extensão não está disponível online, então para utilizá-la precisa ativar o modo desenvolvedor nas extensões e carregar a pasta "src" dentro da pasta do projeto.
+- Por hora a extensão não está disponível online, então para utilizá-la precisa ativar o modo desenvolvedor nas extensões e carregar a pasta `src` dentro da pasta do projeto.
 ### Como rodar
 - Ir no ícone da extensão PullBot e clicar no botão para conectar-se.
 - Deixar a extensão ativa enquanto utiliza o GitHub para fechamento de milestone.
