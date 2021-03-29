@@ -34,7 +34,7 @@ Quando se está trabalhando em times de desenvolvimento de software é muito imp
 </table>
 
 ## :movie_camera: Release 1
-- [Assista aqui](https://www.youtube.com/watch?v=gyQHephBHjk).
+- [Assista aqui](https://www.youtube.com/watch?v=3ph3lByYGgg).
 - [Veja os slides aqui](https://drive.google.com/file/d/1eqFcDay-HR5pWDbDmp6qv3tlPCDPJwLK/view?usp=sharing).
 
 ## :balloon: Contribuição
