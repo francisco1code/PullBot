@@ -5,6 +5,7 @@ Data | Versão | Descrição | Autor
 :-:|:-:|:-:|:-:
 28/01/2021 | 1.0 | Criação do documento | Jaime Juan
 19/03/2021 | 1.1 | Reformulação do documento | Jaime Juan
+30/03/2021 | 1.2 | Adaptação após _Release 1_ | Jaime Juan
 
 # Roadmap Geral
 | Sprint | Data | Tarefas |
@@ -16,7 +17,7 @@ Data | Versão | Descrição | Autor
 | 4 | 09/03 - 16/03 | - Protótipo de Alta Fidelidade <br> - US01-Implementar Pull Requets automatizados <br> - **EAP** |
 | 5 | 16/03 - 23/03 | - US02-Implementar commits automáticos <br> - Documento de Arquitetura (Refatoração) <br> - **Ajustar Roadmap** <br> - **Ajustar Backlog** <br> - **Ajustar o GitHub Pages**|
 | 6 | 23/03 - 30/03 | - Preparar apresentação para a Release 1 <br> - Revisar documentos <br> - **Revisar implementação** <br> - **Revisar o GitHub Pages** <br> |
-| 7 | 30/03 - 06/04 | - **_Release 1_** |
+| 7 | 30/03 - 06/04 | - **_Release 1_**  <br> - Estudo de viabilidade de inserção de banco de dados <br> - Correção de _bug_ encontrado <br> - Organização arquitetural do código <br> - Elaboração de retorno de mensagem em markdown ao fechamento do pull request automático <br> - Estudo de tecnologia para a geração de gráficos informativos <br> - Elaboração do plano de riscos |
 | 8 | 06/04 - 13/04 | - US03-Implementar recebimento de relatórios ao fechar milestone |
 | 9 | 13/04 - 20/04 | - US04-Implementar gráficos informativos da equipe |
 | 10 | 20/04 - 27/04 | - US05-Implementar gráficos informativos pesoais |
