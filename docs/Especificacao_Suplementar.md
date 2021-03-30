@@ -42,8 +42,7 @@ O sistema deverá ter alto nível de disponibilidade considerando a necessidade 
 
 
 # 4. Portabilidade
-
-O sistema deverá funcionar nos navegadores de internet em geral, assim como em dispositivos capazes de acessar a internet, que suportem os demais navegadores e, também, que estejam equipados com sistema Windows, Linux, Mac, Android e iOS, ou seja,se adaptando visualmente à esses sistemas.
+O sistema deverá funcionar no navegador Google Chrome, podendo estar equipado com sistema Windows, Linux, Mac, ou seja, se adaptando visualmente à esses sistemas.
 
 
 # 5. Desempenho
