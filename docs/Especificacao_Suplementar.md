@@ -11,8 +11,8 @@ Este documento tem como objetivo abordar aspectos técnicos, legais e demais req
 
 
 ## 1.2 Escopo
+Os requisitos aqui elucidados fazem parte do processo de desenvolvimento do nosso projeto PullBot, que consiste em uma extensão para o GitHub em que a cada fechamento de milestone fornece ao usuário um apanhado geral da atual sprint e realizando automaticamente um Pull Request.
 
-Os requisitos aqui elucidados fazem parte do processo de desenvolvimento do nosso projeto PullBot, que consiste em um bot de produtividade ativado no git a cada fechamento de milestone te dando um apanhado geral da atual sprint e realizando automaticamente um Pull Request.
 # 2. Usabilidade
 
 Um ponto essencial para a usabilidade do PullBot é que ele vem para auxiliar na produtividade ativado no git.
