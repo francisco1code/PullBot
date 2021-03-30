@@ -1,11 +1,12 @@
 {
   "name": "Git Pullbot Extension",
-  "description": "Uma extensão do chrome para gerenciar repositórios do git, e automatizar o processo do fechamento de milestones",
+  
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "bot.html",
-    "default_icon": "imageIcon.png"
+    "default_popup": "popup.html",
+    "default_icon": "imageIcon.png", 
+    "default_tittle":"PullBot "
   },
   "commands": {
     "_execute_action": {
@@ -13,7 +14,7 @@
         "default": "Ctrl+Shift+F",
         "mac": "MacCtrl+Shift+F"
       },
-      "description": "Opens bot.html"
+      "deion": "Opens bot.html"
     }
   },
   "content_scripts": [
