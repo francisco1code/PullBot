@@ -1,8 +1,9 @@
 ## **Especificação Suplementar**
 
 |Data|  Versão|  Descrição|  Autor| 
-|----|--------|-----------|-------|
-27/02/2021| 0.1| Criação da Especificação Suplementar| Peniel Etèmana|
+|:----:|:--------:|:-----------:|:-------:|
+27/02/2021| 0.1| Criação do documento| Peniel Etèmana|
+30/03/2021 | 0.2 | Revisão do documento | Lorrayne Cardozo
 
 # 1. Introdução
 ## 1.1 Finalidade
