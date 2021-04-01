@@ -9,6 +9,8 @@
     - [Backlog do Produto](docs/documentos/backlog.md)
     - [Protótipo de Baixa Fidelidade](docs/documentos/prototipo_baixa_fidelidade.md)
     - [Protótipo de Alta Fidelidade](docs/documentos/prototipo_alta_fidelidade.md)
+- [**Projeto**](#)
+    - [Plano de Gestão de Riscos](docs/documentos/riscos.md)
 - [**Releases**](#)
     - [Release 1](docs/releases/release1.md)
 - [**Sprints**](#)
