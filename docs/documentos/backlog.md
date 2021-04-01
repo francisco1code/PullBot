@@ -25,6 +25,8 @@
 | FT06 | Pegar evento de fechamento de milestone automaticamente|
 | FT07 | Acessibilzar extensão no Chrome|
 | FT08 | Geração de texto markdown para escopo dos commits e pull requests   |
+| FT09 | Autenticação via token Ouath2  |
+
 
 # User Stories 
 | ID | Eu, como | Desejo | Features | Épicos |
