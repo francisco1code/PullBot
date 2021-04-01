@@ -36,15 +36,14 @@ Escala | Impacto
 
 Identificador | Prevenção | Contenção
 :-:|:-:|:-:
-R01 | a | b
-R01 | a | b
-R01 | a | b
-R01 | a | b
-R01 | a | b
-R01 | a | b
-R01 | a | b
-R01 | a | b
-R01 | a | b
-R01 | a | b
+R01 | Marcar no calendário Teams para notificar, além de reforçar a importância da prática. | Mudar o dia e horário da reunião excepcionalmente.
+R02 | 	Monitorar o andamento das entregas e fazer revisões ao longo da semana | Reorganizar o roadmap
+R03 | Testar viabilidade técnica por meio de protótipos e documentação de planejamento | Reorganizar o roadmap
+R04 | Iniciar as atividades de execução o quanto antes, mas de forma gradual | Prestar apoio aos membros com dificuldades
+R05 | Acompanhar a motivação do time e impedimentos | Reorganizar roadmap
+R06 | Formalizar os canais de comunicação e suas finalidades e estimular a união da equipe. | Encontrar meios alternativos para se comunicar.
+R07 | Organizar os horários de trabalho e evitar fadiga e exaustão | Reorganizar o roadmap e distribuição de tarefas
+R08 | Evitar fazer atualizações ou trocas tecnológicas no meio do projeto | Ver a possibilidade de aderir outros hardwares e ter horários alternativos para as tarefas.
+R09 | 	Conhecer os opções do mercado e estudá-las antes de implementar | Tentar fazer a troca dentro de uma sprint
 
 # 5. Burndown
