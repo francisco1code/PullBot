@@ -8,6 +8,11 @@
     "default_icon": "imageIcon.png", 
     "default_tittle":"PullBot "
   },
+  "web_accessible_resources": [{
+    "resources": ["options.html"],
+    "matches": ["<all_urls>"],
+    "extension_ids": []
+   }],
   "commands": {
     "_execute_action": {
       "suggested_key": {
