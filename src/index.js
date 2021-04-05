@@ -11,50 +11,96 @@ document.addEventListener("click", function (e) {
     var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
     var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
   
-  
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
+
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-        
         var milestoneName = document.querySelector(".milestone-title-link").innerText;
-        
-      // PEGAR VALORES DE BRANCHS
-    const currentBrnach =  window.prompt("Qual branch para merge ?");
-    const recieveBranch = window.prompt("Qual branch destino ?");    
-    
-      var data = JSON.stringify({
-            "title": "Fechamento do Evento Click Milestone e Pull Request Automatico",
-            "body": "Este merge foi feito com o próprio código",
-            "head": currentBrnach,
-            "base": recieveBranch
-          });
-          
-        //VALORES A SEREM PASSADOS PARA API
-      var valuesAPI = String(getFormAction).split("/");
-      const $owner = getOwner(valuesAPI);
-      const $repo = getRepositori(valuesAPI);
-      const $NumberMilestone = getNumberMilestone(valuesAPI);
-      var token = localStorage.getItem('token');
       
 
-      var xhr = new XMLHttpRequest();
-         xhr.addEventListener("readystatechange", function () {
-            if (this.readyState === 4) {
-              windoe.alert(this.responseText);
-            }
-          });
-         
-          xhr.open("POST", "https://api.github.com/repos/" + $owner + "/" + $repo + "/pulls");
-          xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-          xhr.setRequestHeader("content-type", "application/json");
-          xhr.setRequestHeader("authorization", "Bearer " + token);
+        var optionsUrl = chrome.runtime.getURL("options.html"); 
+        window.open(optionsUrl,'','width=500,height=320, top=100, left=450');
+        
           
-  
-          xhr.send(data);
-        }
+     }
     }
   });
+
+
+  document.addEventListener("click", function (e) {
+    if(e.target == document.getElementById("submit")) {
+
+      window.alert("submit")
+
+      var chkDoc = document.getElementById("documentação");
+      var chkFuncionalidade = document.getElementById("funcionalidade");
+      var chkFuncionalidadeModificada = document.getElementById("funcionalidadeModificada");
+      var chkBug = document.getElementById("correçãoBug");
+      var chkOutro = document.getElementById("outro");
+      var issues = document.getElementById("issues");
+      var recieveBranch = document.getElementById("recieveBranch");
+      var currentBranch = document.getElementById("currentBranch");
+      var alteracoes = '';
+  
+  
+      if (chkDoc.checked) {
+        alteracoes = `${alteracoes} \n* Alteração em documentação`
+      }
+  
+      if (chkFuncionalidade.checked) {
+        alteracoes = `${alteracoes} \n* Nova funcionalidade`
+      }
+  
+      if (chkFuncionalidadeModificada.checked) {
+        alteracoes = `${alteracoes} \n* Alteração em funcionalidade`
+      }
+  
+      if (chkBug.checked) {
+        alteracoes = `${alteracoes} \n* Correção de bug`
+      }
+  
+      if (chkOutro.checked) {
+        alteracoes = `${alteracoes} \n* ${document.getElementById("outraOpcao").value}`
+      }
+  
+
+  var data = JSON.stringify({
+        "title": "Fechamento do Evento Click Milestone e Pull Request Automatico",
+        "body": `# Fechamento da Milestone \n## Descrição \nSolicita-se um pull request para que seja feito o merge das alterações realizadas da branch ${currentBranch} para a branch ${recieveBranch}. \n## Issue(s) Relacionada(s) \n${issues}## Tipo de Alteração \nForam feitas as seguintes alterações na branch ${currentBranch}: \n${alteracoes}`,
+        "head": currentBranch,
+        "base": recieveBranch
+      });
+      
+      var url_atual = window.location.href;
+      window.close(url_atual);
+
+    //VALORES A SEREM PASSADOS PARA API
+    var valuesAPI = String(getFormAction).split("/");
+    const $owner = getOwner(valuesAPI);
+    const $repo = getRepositori(valuesAPI);
+    /*const $NumberMilestone = getNumberMilestone(valuesAPI);*/
+    var token = localStorage.getItem('token');
+  
+
+  var xhr = new XMLHttpRequest();
+     xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+          window.alert(this.responseText);
+        }
+      });
+     
+      xhr.open("POST", "https://api.github.com/repos/" + $owner + "/" + $repo + "/pulls");
+      xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+      xhr.setRequestHeader("content-type", "application/json");
+      xhr.setRequestHeader("authorization", "Bearer " + token);
+      
+
+      xhr.send(data);
+    }})
+  
+
+
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
     
     var xhr = new XMLHttpRequest();
@@ -137,4 +183,3 @@ document.addEventListener("click", function (e) {
     console.log(milestoneNumber)
     return milestoneNumber;
   }
-   
