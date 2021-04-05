@@ -63,8 +63,8 @@ document.addEventListener("click", function (e) {
   
 
   var data = JSON.stringify({
-        "title": "Fechamento do Evento Click Milestone e Pull Request Automatico",
-        "body": `# Fechamento da Milestone \n## Descrição \nSolicita-se um pull request para que seja feito o merge das alterações realizadas da branch ${currentBranch} para a branch ${recieveBranch}. \n## Issue(s) Relacionada(s) \n${issues}## Tipo de Alteração \nForam feitas as seguintes alterações na branch ${currentBranch}: \n${alteracoes}`,
+        "title": `# Fechamento da Milestone ${getNumberMilestone(String(getFormAction).split("/"))}`,
+        "body": `# Fechamento da Milestone ${getNumberMilestone(String(getFormAction).split("/"))} \n## Descrição \nSolicita-se um pull request para que seja feito o merge das alterações realizadas da branch ${currentBranch} para a branch ${recieveBranch}. \n## Issue(s) Relacionada(s) \n${issues}## Tipo de Alteração \nForam feitas as seguintes alterações na branch ${currentBranch}: ${alteracoes}`,
         "head": currentBranch,
         "base": recieveBranch
       });
@@ -76,7 +76,7 @@ document.addEventListener("click", function (e) {
     var valuesAPI = String(getFormAction).split("/");
     const $owner = getOwner(valuesAPI);
     const $repo = getRepositori(valuesAPI);
-    /*const $NumberMilestone = getNumberMilestone(valuesAPI);*/
+    const $NumberMilestone = getNumberMilestone(valuesAPI);
     var token = localStorage.getItem('token');
   
 
