@@ -18,20 +18,17 @@ document.addEventListener("click", function (e) {
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
         var milestoneName = document.querySelector(".milestone-title-link").innerText;
       
-
+        //ABRINDO PÁGINA DE OPÇÕES
         var optionsUrl = chrome.runtime.getURL("options.html"); 
         window.open(optionsUrl,'','width=500,height=320, top=100, left=450');
         
-          
      }
     }
   });
 
-
+ //EVENTO CLICK NO BOTÃO SUBMIT DA PÁGINA DE OPÇÕES
   document.addEventListener("click", function (e) {
     if(e.target == document.getElementById("submit")) {
-
-      window.alert("submit")
 
       var chkDoc = document.getElementById("documentação");
       var chkFuncionalidade = document.getElementById("funcionalidade");
@@ -43,7 +40,7 @@ document.addEventListener("click", function (e) {
       var currentBranch = document.getElementById("currentBranch");
       var alteracoes = '';
   
-  
+  //CONSTRUINDO STRING COM ALTERAÇÕES FEITAS NA BRANCH
       if (chkDoc.checked) {
         alteracoes = `${alteracoes} \n* Alteração em documentação`
       }
