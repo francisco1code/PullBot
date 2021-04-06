@@ -45,7 +45,7 @@ document.addEventListener("click", function (e) {
       if(this.readyState === 4) {
 
          
-        
+
         const $getResponse = String(this.responseText).split("&");
         const $separeteValueDevice = $getResponse[0].split("=");
         var deviceCode = $separeteValueDevice[1];
