@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<h4>Insira as informações abaixo para a solicitação do Pull Request</h4>
+        <div>
+        <fieldset>
+            Qual a branch para merge? &nbsp;
+            <input type="text" id = "currentBranch">
+            <br> 
+            Qual a branch destino?&nbsp;
+            <input type="text" id = "recieveBranch">
+            <br> 
+            <br> 
+             Quais foram as issues relacionadas? (ex.: #10 #11)&nbsp;
+            <input type="text" id = "issues">
+            <br> 
+            <br>
+            Quais foram as alterações feitas?&nbsp;
+            <br> 
+            <input type = "checkbox" id = "documentação" name = "interesse" valor = "documentação">
+            Alteração em documentação
+            <br> 
+            <input type = "checkbox" id = "funcionalidade" name = "interesse" valor = "funcionalidade">
+            Nova funcionalidade
+            <br> 
+            <input type = "checkbox" id = "funcionalidadeModificada" name = "interesse" valor = "funcionalidadeModificada">
+            Alteração em funcionalidade
+            <br> 
+            <input type = "checkbox" id = "correçãoBug" nome = "interesse" valor = "correçãoBug">
+            Correção de bug
+            <br> 
+            <input type = "checkbox" id = "outro" nome = "interesse" valor = "outro">
+            Outro &nbsp;
+            <input type = "text" id = "outraOpcao" nome = "outro">            
+        </fieldset>
+        </div>
+
+        <div>
+            <button type="button" id = "submit">Concluir</button>
+        </div>
+
+        <script src = "index.js"></script>
+</body>
+</html>
