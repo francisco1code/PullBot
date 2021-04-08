@@ -6,11 +6,11 @@ Data|Versão|Descrição|Autor
 01/04/2021 | 1.0.0 | Criação do documento | Jaime Juan
 
 # 1. Introdução
-O plano de gerenciamento de riscos deste projeto possui duas etapas preliminares e outra contínua. A etapa preliminar consiste na identificação de cada risco que posso interferir neste projeto, além do impacto que cada um tem sobre o projeto. Um impacto é pontuado de acordo com uma escala de normalização que se refere aos dias de interferência no projeto caso o risco se concretize.
+O plano de gerenciamento de riscos deste projeto possui duas etapas preliminares. 
+
+A primeira etapa preliminar consiste na identificação de cada risco que posso interferir neste projeto, além do impacto que cada um tem sobre o projeto. Um impacto é pontuado de acordo com uma escala de normalização que se refere aos dias de interferência no projeto caso o risco se concretize.
 
 A segunda etapa preliminar é planejar quais são as ações para evitar que o risco se concretize e quais são ações para lidar com o risco caso ele se concretize, mesmo realizando as medidas de prevenção.
-
-A terceira e última etapa é contínua e consiste em atribuir a probabilidade do risco se concretizar. Isto é feito para cada Sprint e se espera que as probabilidades diminuam à medida que o projeto chega ao fim. Por fim, as probabilidades são multiplicadas por seus impactos, e este processo tem como resultado o Expousure, o qual tem seus valores mapeados sprint a sprint no gráfico de Burndown.
 
 # 2. Identificação
 Identificador | Descrição | Impacto | Justificativa
