@@ -5,7 +5,7 @@
 | :--: | :--:   | :--:      |  :--:  | 
 | 04/03/2021 | 1.0 | Primeiro protótipo de Backlog| Arthur Melo
 | 17/03/2021 | 1.1 | Refatoração do Backlog| Arthur Melo
-
+| 07/04/2021 | 1.1 | Refatoração do Backlog| Arthur Melo
 # Épicos 
 | ID | Descrição |
 | :---        |    :----:   |       
