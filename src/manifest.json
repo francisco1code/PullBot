@@ -9,12 +9,9 @@
     "default_tittle":"PullBot "
   },
   "web_accessible_resources": [{
-<<<<<<< HEAD
-    "resources": ["index.js",
-                  "pullRequest.js"],
-=======
-    "resources": ["options.html"],
->>>>>>> 5c8fd19 ((#85) arquivo de requisiçoes adicionado)
+    "resources": ["options.html",
+                  "index.js",
+                  "services.js"],
     "matches": ["<all_urls>"],
     "extension_ids": []
    }],
@@ -32,13 +29,7 @@
       "matches": [
         "<all_urls>"
       ],
-<<<<<<< HEAD
       "js": ["content.js"]
-=======
-      "js": ["index.js",
-        "requestApi.js"
-      ]
->>>>>>> 5c8fd19 ((#85) arquivo de requisiçoes adicionado)
     }
   ], "background": {
     "service_worker": "background.js"

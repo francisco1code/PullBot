@@ -1,4 +1,4 @@
-import {criarPullRequest} from './pullRequest.js';
+import {criarPullRequest} from './services.js';
 
 //URL DAS PÁGINAS
 var currentUrl = String(window.location.href);
@@ -45,7 +45,7 @@ document.addEventListener("click", function (e) {
       if(this.readyState === 4) {
 
          
-
+        
         const $getResponse = String(this.responseText).split("&");
         const $separeteValueDevice = $getResponse[0].split("=");
         var deviceCode = $separeteValueDevice[1];
