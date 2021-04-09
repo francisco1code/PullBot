@@ -1,6 +1,15 @@
+import {criarPullRequest} from './pullRequest.js';
+
 //URL DAS PÁGINAS
 var currentUrl = String(window.location.href);
 var urlParts = currentUrl.split("/");
+
+//ABRIR MODAL CASO O BOTÃO CLOSE DA MILESTONE JÁ TENHA SIDO CLICADO
+if(localStorage.getItem('abrirModal')){
+  criarPullRequest();
+  localStorage.removeItem('abrirModal');
+}
+
 
 document.addEventListener("click", function (e) {
   
@@ -10,92 +19,21 @@ document.addEventListener("click", function (e) {
     //BOTOES    
     var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
     var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
-  
+    localStorage.setItem('getFormAction', getFormAction);
+
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
-
+        
+        //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
+        localStorage.setItem('abrirModal', 'true')
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
         var milestoneName = document.querySelector(".milestone-title-link").innerText;
-      
-        //ABRINDO PÁGINA DE OPÇÕES
-        var optionsUrl = chrome.runtime.getURL("options.html"); 
-        window.open(optionsUrl,'','width=500,height=320, top=100, left=450');
-        
      }
     }
   });
 
- //EVENTO CLICK NO BOTÃO SUBMIT DA PÁGINA DE OPÇÕES
-  document.addEventListener("click", function (e) {
-    if(e.target == document.getElementById("submit")) {
-
-      var chkDoc = document.getElementById("documentação");
-      var chkFuncionalidade = document.getElementById("funcionalidade");
-      var chkFuncionalidadeModificada = document.getElementById("funcionalidadeModificada");
-      var chkBug = document.getElementById("correçãoBug");
-      var chkOutro = document.getElementById("outro");
-      var issues = document.getElementById("issues");
-      var recieveBranch = document.getElementById("recieveBranch");
-      var currentBranch = document.getElementById("currentBranch");
-      var alteracoes = '';
-  
-  //CONSTRUINDO STRING COM ALTERAÇÕES FEITAS NA BRANCH
-      if (chkDoc.checked) {
-        alteracoes = `${alteracoes} \n* Alteração em documentação`
-      }
-  
-      if (chkFuncionalidade.checked) {
-        alteracoes = `${alteracoes} \n* Nova funcionalidade`
-      }
-  
-      if (chkFuncionalidadeModificada.checked) {
-        alteracoes = `${alteracoes} \n* Alteração em funcionalidade`
-      }
-  
-      if (chkBug.checked) {
-        alteracoes = `${alteracoes} \n* Correção de bug`
-      }
-  
-      if (chkOutro.checked) {
-        alteracoes = `${alteracoes} \n* ${document.getElementById("outraOpcao").value}`
-      }
-  
-
-  var data = JSON.stringify({
-        "title": `# Fechamento da Milestone ${getNumberMilestone(String(getFormAction).split("/"))}`,
-        "body": `# Fechamento da Milestone ${getNumberMilestone(String(getFormAction).split("/"))} \n## Descrição \nSolicita-se um pull request para que seja feito o merge das alterações realizadas da branch ${currentBranch} para a branch ${recieveBranch}. \n## Issue(s) Relacionada(s) \n${issues}## Tipo de Alteração \nForam feitas as seguintes alterações na branch ${currentBranch}: ${alteracoes}`,
-        "head": currentBranch,
-        "base": recieveBranch
-      });
-      
-      var url_atual = window.location.href;
-      window.close(url_atual);
-
-    //VALORES A SEREM PASSADOS PARA API
-    var valuesAPI = String(getFormAction).split("/");
-    const $owner = getOwner(valuesAPI);
-    const $repo = getRepositori(valuesAPI);
-    const $NumberMilestone = getNumberMilestone(valuesAPI);
-    var token = localStorage.getItem('token');
-  
-
-  var xhr = new XMLHttpRequest();
-     xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === 4) {
-          window.alert(this.responseText);
-        }
-      });
-     
-      xhr.open("POST", "https://api.github.com/repos/" + $owner + "/" + $repo + "/pulls");
-      xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-      xhr.setRequestHeader("content-type", "application/json");
-      xhr.setRequestHeader("authorization", "Bearer " + token);
-      
-
-      xhr.send(data);
-    }})
-  
+ 
 
 
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
@@ -138,7 +76,6 @@ document.addEventListener("click", function (e) {
     xhr.open("POST", "https://github.com/login/oauth/access_token?client_id=46da77694ca94b6a86d7&device_code="+keyValue+"&grant_type=urn:ietf:params:oauth:grant-type:device_code");
     xhr.setRequestHeader("Cookie", "_device_id="+keyValue+"; _gh_sess=eJ4SGU%2B24YwcePUSGoD82e%2Bm5C6pCMXSTicqWhqxjqK2q%2FdT%2BnIZRy2VT17XgsvqnrMmPA8Nm3foDTdRakuDTl5ZVWW%2F%2BzDAqvsEv6B4eoE83TNIIaC1HTZvT93ojGs8ARDPh26hSSFoUIYDHYnz6KEDJTK3hjlrX5ATkhOLy%2BDUwus78XVkwT1hhC0nIpj4Qm0YC6Z2rqNGkDeCzg6Kz5O0tSNzQxyahCC9WHLgoECgonCtnYIQ27w%2BBmzQ%2FWIqRmaUM%2BPRUOZBGmttLbSEhX4FaHUNIlglvwjNx9R34UAcaVkO--YFp0BPOo4pjLQIHV--aQrfy79bV3QfnmGMwYPhGw%3D%3D; _octo=GH1.1.2068834575.1616879702; logged_in=no");
 
-
     xhr.send();
     
     
@@ -158,25 +95,3 @@ document.addEventListener("click", function (e) {
     
     
 }
-  /*FUNÇOES A DEFINIREM OS VALORES A SEREM PASSADOS PARA API*/
-  
-  /*GET DONO DO REPOSITORIO*/
-  function getOwner(valuesAPI){
-    var owner = valuesAPI[3];
-    console.log(owner)
-    return owner;
-  }
-  
-  /*GET  REPOSITORIO*/
-  function getRepositori(valuesAPI){
-    var repo = valuesAPI[4]
-    console.log(repo)
-    return repo;
-  }
-  
-  /*GET NUMERO DA MILESTONE A SER FECHADA*/
-  function getNumberMilestone(valuesAPI){
-    var milestoneNumber = valuesAPI[6]
-    console.log(milestoneNumber)
-    return milestoneNumber;
-  }
