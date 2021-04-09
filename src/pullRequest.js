@@ -165,7 +165,7 @@ document.addEventListener("click", function (e) {
   //ESCOPO DO PULL REQUEST
   var data = JSON.stringify({
         "title": `# Fechamento da Milestone ${getNumberMilestone(String(getFormAction).split("/"))}`,
-        "body": `# Fechamento da Milestone ${getNumberMilestone(String(getFormAction).split("/"))} \n## Descrição \nSolicita-se um pull request para que seja feito o merge das alterações realizadas da branch ${currentBranch.value} para a branch ${recieveBranch.value}. \n## Issue(s) Relacionada(s) \n${issues.value} \n## Tipo de Alteração \nForam feitas as seguintes alterações na branch ${currentBranch.value}: ${alteracoes}`,
+        "body": `# Fechamento da Milestone ${getNumberMilestone(String(getFormAction).split("/"))} \n## Descrição \nSolicita-se um Pull Request para que seja feito o merge das alterações realizadas da branch ${currentBranch.value} para a branch ${recieveBranch.value}. \n## Issue(s) Relacionada(s) \n${issues.value} \n## Tipo de Alteração \nForam feitas as seguintes alterações na branch ${currentBranch.value}: ${alteracoes}`,
         "head": currentBranch.value,
         "base": recieveBranch.value
       });
