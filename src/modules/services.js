@@ -182,7 +182,7 @@ document.addEventListener("click", function (e) {
   var xhr = new XMLHttpRequest();
      xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-          window.alert(this.responseText);
+         
         }
       });
      
