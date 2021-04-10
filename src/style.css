@@ -5,8 +5,7 @@ button {
 
 body{
     background-color: #29567b;
-    width: 400px;
-    
+    width: 400px; 
 }
 
 .text{
@@ -15,8 +14,14 @@ body{
 
 p{
     font-size: 16px;
+    padding: 12px;
+}
+
+a{
+    color: rgb(175, 175, 175);
 }
 
 .title{
+    padding-top: 16px;
     text-align: center;
 }
