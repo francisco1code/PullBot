@@ -30,10 +30,6 @@ export function criarPullRequest() {
     }
 
 
-    .mostrar .modal-dialog {
-        animation: modal .3s;
-    }
-
     .close {
         position: absolute;
         font-size: 1.2em;
@@ -158,7 +154,8 @@ document.addEventListener("click", function (e) {
       }
   
   const getFormAction = localStorage.getItem('getFormAction');
-  
+  const milestoneName = localStorage.getItem('milestoneName');
+
   //VALORES A SEREM PASSADOS PARA API
   var valuesAPI = String(getFormAction).split("/");
   const $owner = getOwner(valuesAPI);
@@ -168,27 +165,15 @@ document.addEventListener("click", function (e) {
 
   //ESCOPO DO PULL REQUEST
   var data = JSON.stringify({
-        "title": `# Fechamento da Milestone ${$NumberMilestone}`,
-
+        "title": `# Fechamento da milestone: ${$NumberMilestone} - ${milestoneName}`,
         "body": 
-                `# Fechamento da Milestone ${$NumberMilestone} \n
-                
-                ## Descrição \n
-                Solicita-se um Pull Request para que seja feito o merge das alterações realizadas da branch ${currentBranch.value} para a branch ${recieveBranch.value}. \n
-
-                ## Issue(s) Relacionada(s) \n
-                ${issues.value} \n
-
-                ## Tipo de Alteração \n
-                Foram feitas as seguintes alterações na branch 
-                ${currentBranch.value}: ${alteracoes}`,
+                `# Fechamento da milestone: ${$NumberMilestone} - ${milestoneName} \n## Descrição \nSolicita-se um Pull Request para que seja feito o merge das alterações realizadas da branch ${currentBranch.value} para a branch ${recieveBranch.value}. \n  ## Issue(s) Relacionada(s) \n${issues.value} \n## Tipo de Alteração \nForam feitas as seguintes alterações na branch ${currentBranch.value}: ${alteracoes}`,
 
         "head": currentBranch.value,
         "base": recieveBranch.value
       });
       
-  
-  
+
   var xhr = new XMLHttpRequest();
      xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
@@ -209,7 +194,6 @@ document.addEventListener("click", function (e) {
     }})
   
 }
-
 
   /*FUNÇOES A DEFINIREM OS VALORES A SEREM PASSADOS PARA API*/
   
