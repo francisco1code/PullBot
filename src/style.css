@@ -5,8 +5,18 @@ button {
 
 body{
     background-color: #29567b;
+    width: 400px;
+    
+}
+
+.text{
+    color: white;
+}
+
+p{
+    font-size: 16px;
 }
 
 .title{
-    color: white;
+    text-align: center;
 }
