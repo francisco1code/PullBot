@@ -1,6 +1,6 @@
-import {criarPullRequest} from './services.js';
-import {CodigoDevicePost} from './services.js';
-import {ConfirmaLoginContaUsuario} from './services.js';
+import {criarPullRequest} from './modules/services.js';
+import {CodigoDevicePost} from './modules/apiServices.js';
+import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
 //URL DAS PÁGINAS
 var currentUrl = String(window.location.href);
 var urlParts = currentUrl.split("/");
@@ -41,7 +41,7 @@ document.addEventListener("click", function (e) {
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
-    
+
   }
   
   
