@@ -158,22 +158,35 @@ document.addEventListener("click", function (e) {
       }
   
   const getFormAction = localStorage.getItem('getFormAction');
- 
+  
+  //VALORES A SEREM PASSADOS PARA API
+  var valuesAPI = String(getFormAction).split("/");
+  const $owner = getOwner(valuesAPI);
+  const $repo = getRepositori(valuesAPI);
+  const $NumberMilestone = getNumberMilestone(valuesAPI);
+  var token = localStorage.getItem('token');
+
   //ESCOPO DO PULL REQUEST
   var data = JSON.stringify({
-        "title": `# Fechamento da Milestone ${getNumberMilestone(String(getFormAction).split("/"))}`,
-        "body": `# Fechamento da Milestone ${getNumberMilestone(String(getFormAction).split("/"))} \n## Descrição \nSolicita-se um Pull Request para que seja feito o merge das alterações realizadas da branch ${currentBranch.value} para a branch ${recieveBranch.value}. \n## Issue(s) Relacionada(s) \n${issues.value} \n## Tipo de Alteração \nForam feitas as seguintes alterações na branch ${currentBranch.value}: ${alteracoes}`,
+        "title": `# Fechamento da Milestone ${$NumberMilestone}`,
+
+        "body": 
+                `# Fechamento da Milestone ${$NumberMilestone} \n
+                
+                ## Descrição \n
+                Solicita-se um Pull Request para que seja feito o merge das alterações realizadas da branch ${currentBranch.value} para a branch ${recieveBranch.value}. \n
+
+                ## Issue(s) Relacionada(s) \n
+                ${issues.value} \n
+
+                ## Tipo de Alteração \n
+                Foram feitas as seguintes alterações na branch 
+                ${currentBranch.value}: ${alteracoes}`,
+
         "head": currentBranch.value,
         "base": recieveBranch.value
       });
       
-  
-    //VALORES A SEREM PASSADOS PARA API
-    var valuesAPI = String(getFormAction).split("/");
-    const $owner = getOwner(valuesAPI);
-    const $repo = getRepositori(valuesAPI);
-    const $NumberMilestone = getNumberMilestone(valuesAPI);
-    var token = localStorage.getItem('token');
   
   
   var xhr = new XMLHttpRequest();
