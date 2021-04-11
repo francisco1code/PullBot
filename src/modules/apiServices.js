@@ -53,3 +53,24 @@ export function ConfirmaLoginContaUsuario(){
   xhr.send();
   
 }
+
+export function contribuintesRepositorio(){
+  
+var xhr = new XMLHttpRequest();
+
+
+xhr.addEventListener("readystatechange", function() {
+  if(this.readyState === 4) {
+   var b = JSON.parse(this.responseText);
+   console.log(b);
+
+  
+}});
+
+xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/contributors");
+xhr.setRequestHeader("Cookie", "_octo=GH1.1.2068834575.1616879702; logged_in=no");
+
+xhr.send();
+}
+
+//b[0].login

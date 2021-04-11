@@ -1,0 +1,102 @@
+<style > 
+    .modal {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,.5);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 2000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal.mostrar {
+        display: flex;
+    }
+
+    .modal-dialog {
+        background: white;
+        width: 40%;
+        min-width: 300px;
+        padding: 40px;
+        position: relative;
+    }
+
+
+    .mostrar .modal-dialog {
+        animation: modal .3s;
+    }
+
+    .close {
+        position: absolute;
+        font-size: 1.2em;
+        top: 0px;
+        right: 0px;
+        cursor: pointer;
+    }
+
+
+    </style>
+
+
+    <div class="modal" id="modal-mensagem">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" id="fechar" data-dismiss="modal">
+                    ×
+                    </button>
+
+                    <h4 class="modal-title">Insira as informações abaixo para a solicitação do Pull Request</h4>
+                </div>
+                <div class="modal-body">
+                    
+                <form>
+                    <fieldset>
+                        
+                        <label> Qual a branch para merge? &nbsp; </label>
+                        <input type="text" id = "currentBranch">
+                        <br> 
+                        <label> Qual a branch destino?&nbsp; </label>
+                        <input type="text" id = "recieveBranch">
+                        <br> 
+                        <br> 
+                        <label> Quais foram as issues relacionadas? (ex.: #10 #11)&nbsp; </label>
+                        <input type="text" id = "issues">
+                        <br> 
+                        <br>
+                        <label> Quais foram as alterações feitas?&nbsp; </label> <br> 
+                        <input type = "checkbox" id = "documentação" name = "interesse" valor = "documentação">
+                        <label for = "documentação"> Alteração em documentação </label>
+                        <br> 
+                        <input type = "checkbox" id = "funcionalidade" name = "interesse" valor = "funcionalidade">
+                        <label for = "funcionalidade"> Nova funcionalidade </label>
+                        <br> 
+                        <input type = "checkbox" id = "funcionalidadeModificada" name = "interesse" valor = "funcionalidadeModificada">
+                        <label for = "funcionalidadeModificada"> Alteração em funcionalidade </label>
+                        <br> 
+                        <input type = "checkbox" id = "correçãoBug" nome = "interesse" valor = "correçãoBug">
+                        <label for = "correçãoBug"> Correção de bug </label>
+                        <br> 
+                        <input type = "checkbox" id = "outro" nome = "interesse" valor = "outro">
+                        <label for = "outro"> Outro &nbsp; </label>
+                        <input type = "text" id = "outraOpcao" nome = "outro">
+                        
+                        
+                    </fieldset>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id = "submit">Concluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="service.js">
+    
+    import {criarPullRequest} from './modules/services.js'</script>
