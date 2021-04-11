@@ -83,7 +83,6 @@ while(i < numerosContribuintes){
   i++;
 }
 }
-
 function getContribuicao(contribuinte){
   var xhr = new XMLHttpRequest();
   xhr.addEventListener("readystatechange", function() {
@@ -93,10 +92,10 @@ function getContribuicao(contribuinte){
     }
   });
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since=21-3-10");
+  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since=21-03-10");
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-  xhr.setRequestHeader("Authorization", "Bearer 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");
   
+ 
   
   xhr.send();
 }
