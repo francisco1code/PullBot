@@ -22,7 +22,7 @@ export function criarPullRequest() {
     }
 
     .modal-dialog {
-        background: white;
+        background: #24292e;
         width: 40%;
         min-width: 300px;
         padding: 40px;
@@ -38,6 +38,9 @@ export function criarPullRequest() {
         cursor: pointer;
     }
 
+    .texto {
+      color: white;
+    }
 
     </style>
 
@@ -51,39 +54,40 @@ export function criarPullRequest() {
                     ×
                     </button>
 
-                    <h4 class="modal-title">Insira as informações abaixo para a solicitação do Pull Request</h4>
+                    <center><h3 class="texto">Insira as informações abaixo para a solicitação do Pull Request:</h3></center>
+                    <br>
                 </div>
                 <div class="modal-body">
                     
                 <form>
                     <fieldset>
                         
-                        <label> Qual a branch para merge? &nbsp; </label>
+                        <label class="texto"> Qual a branch para merge? &nbsp; </label>
                         <input type="text" id = "currentBranch">
                         <br> 
-                        <label> Qual a branch destino?&nbsp; </label>
+                        <label class="texto"> Qual a branch destino?&nbsp; </label>
                         <input type="text" id = "recieveBranch">
                         <br> 
                         <br> 
-                        <label> Quais foram as issues relacionadas? (ex.: #10 #11)&nbsp; </label>
+                        <label class="texto"> Quais foram as issues relacionadas? (ex.: #10 #11)&nbsp; </label>
                         <input type="text" id = "issues">
                         <br> 
                         <br>
-                        <label> Quais foram as alterações feitas?&nbsp; </label> <br> 
-                        <input type = "checkbox" id = "documentação" name = "interesse" valor = "documentação">
-                        <label for = "documentação"> Alteração em documentação </label>
+                        <label class="texto"> Quais foram as alterações feitas?&nbsp; </label> <br> 
+                        <input type = "checkbox" id = "documentação"  class="texto" valor = "documentação">
+                        <label class="texto" for = "documentação"> Alteração em documentação </label>
                         <br> 
-                        <input type = "checkbox" id = "funcionalidade" name = "interesse" valor = "funcionalidade">
-                        <label for = "funcionalidade"> Nova funcionalidade </label>
+                        <input type = "checkbox" id = "funcionalidade" name =  class="texto" valor = "funcionalidade">
+                        <label class="texto" for = "funcionalidade"> Nova funcionalidade </label>
                         <br> 
-                        <input type = "checkbox" id = "funcionalidadeModificada" name = "interesse" valor = "funcionalidadeModificada">
-                        <label for = "funcionalidadeModificada"> Alteração em funcionalidade </label>
+                        <input type = "checkbox" id = "funcionalidadeModificada" name =  class="texto" valor = "funcionalidadeModificada">
+                        <label class="texto" for = "funcionalidadeModificada"> Alteração em funcionalidade </label>
                         <br> 
-                        <input type = "checkbox" id = "correçãoBug" nome = "interesse" valor = "correçãoBug">
-                        <label for = "correçãoBug"> Correção de bug </label>
+                        <input type = "checkbox" id = "correçãoBug" nome =  class="texto" valor = "correçãoBug">
+                        <label class="texto" for = "correçãoBug"> Correção de bug </label>
                         <br> 
-                        <input type = "checkbox" id = "outro" nome = "interesse" valor = "outro">
-                        <label for = "outro"> Outro &nbsp; </label>
+                        <input type = "checkbox" id = "outro" nome =  class="texto" valor = "outro">
+                        <label class="texto" for = "outro"> Outro &nbsp; </label>
                         <input type = "text" id = "outraOpcao" nome = "outro">
                         
                         
@@ -92,7 +96,8 @@ export function criarPullRequest() {
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id = "submit">Concluir</button>
+                <br>
+                    <button type="button" class="btn" data-dismiss="modal" id = "submit">Concluir</button>
                 </div>
             </div>
         </div>
