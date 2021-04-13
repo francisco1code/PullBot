@@ -50,9 +50,7 @@ export function criarPullRequest() {
             <div class="modal-content">
                 <div class="modal-header">
 
-                    <button type="button" class="close" id="fechar" data-dismiss="modal">
-                    ×
-                    </button>
+                    <button type="button" class="close" id="fechar">×</button>
 
                     <center><h3 class="texto">Insira as informações abaixo para a solicitação do Pull Request:</h3></center>
                     <br>
@@ -74,21 +72,21 @@ export function criarPullRequest() {
                         <br> 
                         <br>
                         <label class="texto"> Quais foram as alterações feitas?&nbsp; </label> <br> 
-                        <input type = "checkbox" id = "documentação"  class="texto" valor = "documentação">
-                        <label class="texto" for = "documentação"> Alteração em documentação </label>
+                        <input type = "checkbox" id = "documentação" class="texto">
+                        <label class="texto"> Alteração em documentação </label>
                         <br> 
-                        <input type = "checkbox" id = "funcionalidade" name =  class="texto" valor = "funcionalidade">
-                        <label class="texto" for = "funcionalidade"> Nova funcionalidade </label>
+                        <input type = "checkbox" id = "funcionalidade" class="texto">
+                        <label class="texto"> Nova funcionalidade </label>
                         <br> 
-                        <input type = "checkbox" id = "funcionalidadeModificada" name =  class="texto" valor = "funcionalidadeModificada">
-                        <label class="texto" for = "funcionalidadeModificada"> Alteração em funcionalidade </label>
+                        <input type = "checkbox" id = "funcionalidadeModificada" class="texto">
+                        <label class="texto"> Alteração em funcionalidade </label>
                         <br> 
-                        <input type = "checkbox" id = "correçãoBug" nome =  class="texto" valor = "correçãoBug">
-                        <label class="texto" for = "correçãoBug"> Correção de bug </label>
+                        <input type = "checkbox" id = "correçãoBug" class="texto">
+                        <label class="texto"> Correção de bug </label>
                         <br> 
-                        <input type = "checkbox" id = "outro" nome =  class="texto" valor = "outro">
-                        <label class="texto" for = "outro"> Outro &nbsp; </label>
-                        <input type = "text" id = "outraOpcao" nome = "outro">
+                        <input type = "checkbox" id = "outro" class="texto">
+                        <label class="texto"> Outro &nbsp; </label>
+                        <input type = "text" id = "outraOpcao">
                         
                         
                     </fieldset>
