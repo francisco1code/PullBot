@@ -29,15 +29,6 @@ export function criarPullRequest() {
         position: relative;
     }
 
-
-    .close {
-        position: absolute;
-        font-size: 1.2em;
-        top: 0px;
-        right: 0px;
-        cursor: pointer;
-    }
-
     .texto {
       color: white;
     }
@@ -50,7 +41,7 @@ export function criarPullRequest() {
             <div class="modal-content">
                 <div class="modal-header">
 
-                    <button type="button" class="close" id="fechar">×</button>
+                    <button type="button" class="btn" id="fechar">×</button>
 
                     <center><h3 class="texto">Insira as informações abaixo para a solicitação do Pull Request:</h3></center>
                     <br>
@@ -87,7 +78,6 @@ export function criarPullRequest() {
                         <input type = "checkbox" id = "outro" class="texto">
                         <label class="texto"> Outro &nbsp; </label>
                         <input type = "text" id = "outraOpcao">
-                        
                         
                     </fieldset>
                     </form>
