@@ -28,6 +28,10 @@ var myChart = new Chart(ctx, {
         }]
     }, 
     options: {
-        
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
     }
 });    
