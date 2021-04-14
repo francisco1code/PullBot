@@ -62,7 +62,7 @@ var xhr = new XMLHttpRequest();
 xhr.addEventListener("readystatechange", function() {
   if(this.readyState === 4) {
    var recebeContribuintes = JSON.parse(this.responseText);
-  const $numerosContribuintes = recebeContribuintes.length
+  const $numerosContribuintes = recebeContribuintes.length;
    ProcuraContribuicao(recebeContribuintes, $numerosContribuintes);
 
   
@@ -74,9 +74,10 @@ xhr.send();
 
 function ProcuraContribuicao(recebeContribuintes, numerosContribuintes){
 
-var i = 1;
+var i = 0;
 while(i < numerosContribuintes){
   var contribuinte = recebeContribuintes[i].login
+  
   getContribuicao(contribuinte)
   i++;
 }
@@ -87,8 +88,7 @@ function getContribuicao(contribuinte){
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
       var todosCommits = this.responseText;
-      console.log(todosCommits)
-      calculaCommits(todosCommits);
+      calculaCommits(contribuinte, todosCommits);
       
     }
   });
@@ -98,15 +98,16 @@ function getContribuicao(contribuinte){
   xhr.send();
 }
   
-function calculaCommits(todosCommits){
+function calculaCommits(contribuinte, todosCommits){
 
-  var tamanho =  JSON.parse(this.responseText);
-  console.log(tamanho);
+  var tamanho =  JSON.parse(todosCommits);
+  console.log(contribuinte);
+  console.log(tamanho.length);
 }
 
 
 var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+
 
 xhr.addEventListener("readystatechange", function() {
   if(this.readyState === 4) {
