@@ -9,8 +9,7 @@
     "default_tittle":"PullBot "
   },
   "web_accessible_resources": [{
-    "resources": ["options.html",
-                  "index.js",
+    "resources": ["index.js",
                   "pullRequest.js"],
     "matches": ["<all_urls>"],
     "extension_ids": []
