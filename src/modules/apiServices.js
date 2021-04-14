@@ -53,7 +53,8 @@ export function ConfirmaLoginContaUsuario(){
   xhr.send();
   
 }
-
+// ///////////////////////////////////////////////////////////////////////
+var datamilestoneAberta;
 export function contribuintesRepositorio(){
   
 var xhr = new XMLHttpRequest();
@@ -84,6 +85,7 @@ while(i < numerosContribuintes){
 }
 
 function getContribuicao(contribuinte){
+  
   var xhr = new XMLHttpRequest();
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
@@ -93,7 +95,7 @@ function getContribuicao(contribuinte){
     }
   });
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since=21-03-10");
+  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since="+);
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
   xhr.send();
 }
@@ -106,19 +108,27 @@ function calculaCommits(contribuinte, todosCommits){
 }
 
 
+
+function milestone(){
   var xhr = new XMLHttpRequest();
 
-xhr.addEventListener("readystatechange", function() {
-  if(this.readyState === 4) {
-   var respota = JSON.parse(this.responseText);
-   const $aberturaMilestone = respota[0].updated_at
-   console.log(respota[0].updated_at)
-  }
-});
+  xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+     var respota = JSON.parse(this.responseText);
+     const $aberturaMilestone = respota[0].updated_at
+     setDatamilestoneAberta($aberturaMilestone)
+    }
+  });
+  
+  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/milestones?state=open&sort=completeness");
+  xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+  xhr.setRequestHeader("Cookie", "_octo=GH1.1.2068834575.1616879702; logged_in=no");
+  
+  xhr.send();
+ 
+}
+  
 
-xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/milestones?state=open&sort=completeness");
-xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-xhr.setRequestHeader("Cookie", "_octo=GH1.1.2068834575.1616879702; logged_in=no");
-
-xhr.send();
-
+function setDatamilestoneAberta($aberturaMilestone){
+  this.datamilestoneAberta = $aberturaMilestone;
+}
