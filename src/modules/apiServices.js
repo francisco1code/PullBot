@@ -105,12 +105,14 @@ function calculaCommits(contribuinte, todosCommits){
   console.log(tamanho.length);
 }
 
-function milestone(){
+
   var xhr = new XMLHttpRequest();
 
 xhr.addEventListener("readystatechange", function() {
   if(this.readyState === 4) {
-    console.log(this.responseText);
+   var respota = JSON.parse(this.responseText);
+   const $aberturaMilestone = respota[0].updated_at
+   console.log(respota[0].updated_at)
   }
 });
 
@@ -119,4 +121,4 @@ xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
 xhr.setRequestHeader("Cookie", "_octo=GH1.1.2068834575.1616879702; logged_in=no");
 
 xhr.send();
-}
+
