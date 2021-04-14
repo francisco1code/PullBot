@@ -25,4 +25,4 @@ Extensão Google Chrome para GitHub | Fornecer um protótipo com o funcionamento
 * Conseguir manter o ritmo das implementações e focar demasiadamente no código do projeto.
 
 ## Retorno do Scrum Master:
-* Grande progresso comparando com a sprint anterior onde grande parte das issues da sprint atual eram pendências da mesma.  
+* Grande progresso comparando com a sprint anterior onde grande parte das issues da sprint atual eram pendências da mesma. 
