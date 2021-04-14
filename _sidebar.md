@@ -41,3 +41,6 @@
     - [Sprint 8](#)
         - [Planning](docs/sprints/sprint8/planning.md)
         - [Review](docs/sprints/sprint8/review.md)
+    - [Sprint 9](#)
+        - [Planning](docs/sprints/sprint9/planning.md)
+        - [Review](docs/sprints/sprint9/review.md)
