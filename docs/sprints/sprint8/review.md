@@ -16,13 +16,13 @@ Aprimoramento do layout da extensão da API | Aprimoramento do layout da extens�
 Extensão Google Chrome para GitHub | Fornecer um protótipo com o funcionamento mínimo, apenas as funções básicas. Nesse épico, temos que fazer uma extensão que funcione no Google Chrome e responda as features | Arthur de Melo e Eliás Yousef | Concluída
 
 ## Pontos positivos:
-* ..
+* Grande progresso nas implementações do projeto.
 
 ## Pontos negativos:
-* ..
+* Falta de orientação por parte da professora para uma melhor organização do projeto.
 
 ## Melhorias:
-* ..
+* Conseguir manter o ritmo das implementações e focar demasiadamente no código do projeto.
 
 ## Retorno do Scrum Master:
-* ..
+* Grande progresso comparando com a sprint anterior onde grande parte das issues da sprint atual eram pendências da mesma.  
