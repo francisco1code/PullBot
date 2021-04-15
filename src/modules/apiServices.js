@@ -54,7 +54,7 @@ export function ConfirmaLoginContaUsuario(){
   
 }
 // ///////////////////////////////////////////////////////////////////////
-var datamilestoneAberta;
+
 export function contribuintesRepositorio(){
   
 var xhr = new XMLHttpRequest();
@@ -116,7 +116,7 @@ function milestone(){
     if(this.readyState === 4) {
      var respota = JSON.parse(this.responseText);
      const $aberturaMilestone = respota[0].updated_at
-     setDatamilestoneAberta($aberturaMilestone)
+    
     }
   });
   
@@ -129,6 +129,3 @@ function milestone(){
 }
   
 
-function setDatamilestoneAberta($aberturaMilestone){
-  this.datamilestoneAberta = $aberturaMilestone;
-}
