@@ -2,3 +2,40 @@ button {
     padding: 5px;
     margin-top: 10px;
 }
+
+body{
+    background-color: #29567b;
+    width: 400px; 
+}
+
+.text{
+    color: white;
+}
+
+p{
+    font-size: 16px;
+    padding: 6px 12px;
+}
+
+a{
+    color: rgb(175, 175, 175);
+}
+
+.title{
+    padding-top: 16px;
+    text-align: center;
+}
+
+.btn-style{
+    display: block;
+    padding: 10px 20px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    color: #29567b;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+

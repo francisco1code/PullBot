@@ -95,7 +95,7 @@ function getContribuicao(contribuinte){
     }
   });
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since="+);
+  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since=21-3-10");
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
   xhr.send();
 }

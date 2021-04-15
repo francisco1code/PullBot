@@ -43,6 +43,7 @@ document.addEventListener("click", function (e) {
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
+    contribuintesRepositorio();
 
   }
   
