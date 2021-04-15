@@ -53,3 +53,81 @@ export function ConfirmaLoginContaUsuario(){
   xhr.send();
   
 }
+// ///////////////////////////////////////////////////////////////////////
+
+export function contribuintesRepositorio(){
+  
+var xhr = new XMLHttpRequest();
+
+
+xhr.addEventListener("readystatechange", function() {
+  if(this.readyState === 4) {
+   var recebeContribuintes = JSON.parse(this.responseText);
+  const $numerosContribuintes = recebeContribuintes.length;
+   ProcuraContribuicao(recebeContribuintes, $numerosContribuintes);
+
+  
+}});
+
+xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/contributors");
+xhr.send();
+}
+
+function ProcuraContribuicao(recebeContribuintes, numerosContribuintes){
+
+var i = 0;
+while(i < numerosContribuintes){
+  var contribuinte = recebeContribuintes[i].login
+  
+  milestone(contribuinte)
+  i++;
+}
+}
+
+function getContribuicao(contribuinte, dataAbertura){
+  
+  var xhr = new XMLHttpRequest();
+  xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+      var todosCommits = this.responseText;
+      calculaCommits(contribuinte, todosCommits);
+      
+    }
+  });
+  
+  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since="+dataAbertura);
+  xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+  xhr.send();
+}
+  
+function calculaCommits(contribuinte, todosCommits){
+
+  var tamanho =  JSON.parse(todosCommits);
+  console.log(contribuinte);
+  console.log(tamanho.length);
+}
+
+
+
+function milestone(contribuinte){
+  var xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+     var respota = JSON.parse(this.responseText);
+     const dataAberturaMilestone = respota[0].updated_at
+     getContribuicao(contribuinte, dataAberturaMilestone);
+
+    
+    }
+  });
+  
+  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/milestones?state=open&sort=completeness");
+  xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+  
+  
+  xhr.send();
+ 
+}
+  
+
