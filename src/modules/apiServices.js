@@ -79,12 +79,12 @@ var i = 0;
 while(i < numerosContribuintes){
   var contribuinte = recebeContribuintes[i].login
   
-  getContribuicao(contribuinte)
+  milestone(contribuinte)
   i++;
 }
 }
 
-function getContribuicao(contribuinte){
+function getContribuicao(contribuinte, dataAbertura){
   
   var xhr = new XMLHttpRequest();
   xhr.addEventListener("readystatechange", function() {
@@ -95,7 +95,7 @@ function getContribuicao(contribuinte){
     }
   });
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since=21-3-10");
+  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since="+dataAbertura);
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
   xhr.send();
 }
@@ -109,20 +109,22 @@ function calculaCommits(contribuinte, todosCommits){
 
 
 
-function milestone(){
+function milestone(contribuinte){
   var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
      var respota = JSON.parse(this.responseText);
-     const $aberturaMilestone = respota[0].updated_at
+     const dataAberturaMilestone = respota[0].updated_at
+     getContribuicao(contribuinte, dataAberturaMilestone);
+
     
     }
   });
   
   xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/milestones?state=open&sort=completeness");
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-  xhr.setRequestHeader("Cookie", "_octo=GH1.1.2068834575.1616879702; logged_in=no");
+  
   
   xhr.send();
  
