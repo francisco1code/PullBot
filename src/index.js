@@ -11,10 +11,12 @@ if(localStorage.getItem('abrirModal')){
   localStorage.removeItem('abrirModal');
 }
 
-document.addEventListener("click", function (e) {
 
+document.addEventListener("click", function (e) {
+  
     //VALIDA ENTRADA EM GITHUB MILESTONES
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {
+  
     //BOTOES    
     var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
     var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
@@ -23,6 +25,7 @@ document.addEventListener("click", function (e) {
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
+        
         //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
         localStorage.setItem('abrirModal', 'true')
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
