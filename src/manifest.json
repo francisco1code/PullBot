@@ -20,7 +20,7 @@
     "128": "/images/get_started128.png"
   },
   "web_accessible_resources": [{
-    "resources": ["options.html",
+    "resources": [
                   "index.js",
                   "/modules/*"],
     "matches": ["<all_urls>"],
@@ -42,5 +42,7 @@
       ],
       "js": ["content.js"]
     }
-  ]
+  ], "background": {
+    "service_worker": "background.js"
+  }
 }

@@ -24,17 +24,19 @@ document.addEventListener("click", function (e) {
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
+        
         //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
         localStorage.setItem('abrirModal', 'true')
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
         var milestoneName = document.querySelector(".milestone-title-link").innerText;
+        localStorage.setItem('milestoneName', milestoneName);
      }
     }
   });
 
  
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
-    contribuintesRepositorio();
+    
     CodigoDevicePost();
   }
 
