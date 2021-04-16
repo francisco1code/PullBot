@@ -122,7 +122,7 @@ function milestone(contribuinte){
     }
   });
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/milestones?state=open&sort=completeness");
+  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/milestones?state=all&sort=completeness");
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
   
   
