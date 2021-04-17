@@ -54,6 +54,13 @@ export function ConfirmaLoginContaUsuario(){
   
 }
 // ///////////////////////////////////////////////////////////////////////
+const getFormAction = localStorage.getItem('getFormAction');
+ //VALORES A SEREM PASSADOS PARA API
+ var valuesAPI = String(getFormAction).split("/");
+ const $owner = getOwner(valuesAPI);
+ const $repo = getRepositori(valuesAPI);
+ var token = localStorage.getItem('token');
+
 
 export function contribuintesRepositorio(){
   
@@ -69,7 +76,7 @@ xhr.addEventListener("readystatechange", function() {
   
 }});
 
-xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/contributors");
+xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/"+contributors);
 xhr.send();
 }
 
@@ -89,40 +96,44 @@ function getContribuicao(contribuinte, dataAbertura){
   var xhr = new XMLHttpRequest();
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
-      var todosCommits = this.responseText;
-      calculaCommits(contribuinte, todosCommits);
+      var todosCommits = JSON.parse(this.responseText);
+
+      calculaCommits(contribuinte, todosCommits.length);
       
     }
   });
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since="+dataAbertura);
+  xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/commits?author="+contribuinte+"&since="+dataAbertura);
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
   xhr.send();
 }
-  
+var total = 0;
 function calculaCommits(contribuinte, todosCommits){
 
-  var tamanho =  JSON.parse(todosCommits);
-  console.log(contribuinte);
-  console.log(tamanho.length);
+    total = todosCommits + total;
+   console.log(contribuinte);
+   console.log(todosCommits);
+   console.log(total);
 }
 
 
 
-function milestone(contribuinte){
+function milestone(contribuinte){ 
   var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
      var respota = JSON.parse(this.responseText);
-     const dataAberturaMilestone = respota[0].updated_at
+    
+     const dataAberturaMilestone = respota[0].created_at
+     console.log(dataAberturaMilestone)
      getContribuicao(contribuinte, dataAberturaMilestone);
 
     
     }
   });
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/milestones?state=open&sort=completeness");
+  xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/milestones?state=open&sort=completeness");
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
   
   
