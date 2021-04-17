@@ -1,7 +1,9 @@
 import {criarPullRequest} from './modules/services.js';
 import {CodigoDevicePost} from './modules/apiServices.js';
 import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
-import {contribuintesRepositorio} from './modules/apiServices.js';
+import {contribuinteRepositorio} from './modules/apiServices.js';
+
+
 //URL DAS PÁGINAS
 var currentUrl = String(window.location.href);
 var urlParts = currentUrl.split("/");
@@ -30,6 +32,8 @@ document.addEventListener("click", function (e) {
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
         var milestoneName = document.querySelector(".milestone-title-link").innerText;
         localStorage.setItem('milestoneName', milestoneName);
+
+        
      }
     }
   });
@@ -43,8 +47,9 @@ document.addEventListener("click", function (e) {
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
-    contribuintesRepositorio();
-
+    
+    contribuinteRepositorio(imprime);
+    
   }
   
   
