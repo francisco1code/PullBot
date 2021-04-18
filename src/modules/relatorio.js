@@ -1,26 +1,42 @@
 // CONSTRUINDO RELATÓRIO DE DESENVOLVIMENTO
 
-export function criarRelatorio(){
-  
+export function criarRelatorio() {
     var xhr = new XMLHttpRequest();
     const owner = localStorage.getItem('owner');
     const repo = localStorage.getItem('repo');
-
+    
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
         var contribuintes = JSON.parse(this.responseText);
-        montarRelatorio(contribuintes);
-  
+        getCommits(contribuintes);
     }});
     
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/contributors`);
     xhr.send();
+  
+  }
+
+function getCommits(contribuintes) {
+    var xhr = new XMLHttpRequest();
+    const owner = localStorage.getItem('owner');
+    const repo = localStorage.getItem('repo');
+    
+    xhr.addEventListener("readystatechange", function() {
+      if(this.readyState === 4) {
+        var commits = JSON.parse(this.responseText)
+        relatorio(contribuintes,commits);
+  
+    }});
+    
+    xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/stats/contributors`);
+    xhr.send();
 }
 
-function montarRelatorio(contribuintes) {
 
+function relatorio(contribuintes, commits){
+    
     const milestoneName = localStorage.getItem('milestoneName');
-    var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n## 1. Ranking de Contribuições \n| | Contribuinte | Quantidade de Contribuições \n|:-:|:-:|:-:| \n`;
+    var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n\n## 1. Ranking de contribuições total  \n| | Contribuinte | Quantidade de Contribuições \n|:-:|:-:|:-:| \n`;
 
 // CONTRIBUIÇÕES
     var totalContribuicoes = 0;
@@ -30,17 +46,21 @@ function montarRelatorio(contribuintes) {
     }
 
     relatorio += `|  | Total | ${totalContribuicoes} | \n`;
-    relatorio += `## 2. Commits \n| Contribuinte | Quantidade de Commits | \n|:-:|:-:| \n`;
-    
+    relatorio += `\n## 2. Commits \n| Contribuinte | Quantidade de Commits | \n|:-:|:-:| \n`;
+
+
 // COMMITS
+    var totalCommits = 0;
     for(i = 0; i < contribuintes.length; i++) {
-        relatorio += `| ${contribuintes[i].login} |  | \n`;
+        var semanas = commits[i].weeks.length;
+        relatorio += `| ${commits[i].author.login} | ${commits[i].weeks[semanas-1].c} | \n`;
+        totalCommits += commits[i].weeks[semanas-1].c;
     }
 
-relatorio += `| Total |  |  | \n`;
+relatorio += `| Total | ${totalCommits} | \n`;
 
 
-    relatorio += `## 3. Issues \n| Contribuinte | Issues abertas | Issues fechadas \n|:-:|:-:|:-:| \n`;
+    relatorio += `\n## 3. Issues \n| Contribuinte | Issues abertas | Issues fechadas \n|:-:|:-:|:-:| \n`;
 
 // ISSUES
     for(i = 0; i < contribuintes.length; i++) {
@@ -48,7 +68,7 @@ relatorio += `| Total |  |  | \n`;
     }
 
     relatorio += `| Total |  |  | \n`;
-    relatorio += `## 4. Pull Requests \n| Contribuinte | Pull Requests abertos | Pull Requests fechados \n|:-:|:-:|:-:| \n`;
+    relatorio += `\n## 4. Pull Requests \n| Contribuinte | Pull Requests abertos | Pull Requests fechados \n|:-:|:-:|:-:| \n`;
 
 // PULL REQUESTS
 for(i = 0; i < contribuintes.length; i++) {
@@ -59,4 +79,3 @@ relatorio += `| Total |  |  | \n`;
 
 console.log(relatorio);
 }
-
