@@ -131,7 +131,7 @@ const getFormAction = localStorage.getItem('getFormAction');
       console.log(numerosContribuintes);
      
        if(i == numerosContribuintes){
-        GraficoPessoal(contribuinte, todosCommits , numerosContribuintes);
+        GraficoPessoal(todosCommits);
        }
        i++;
     }
