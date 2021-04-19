@@ -15,7 +15,7 @@ if(localStorage.getItem('abrirModal')){
 }
 
 document.addEventListener("click", function (e) {
-
+    
     //VALIDA ENTRADA EM GITHUB MILESTONES
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {
     //BOTOES    
@@ -42,13 +42,14 @@ document.addEventListener("click", function (e) {
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
     
     CodigoDevicePost();
+    contribuinteRepositorio();
   }
 
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
     
-    contribuinteRepositorio(criaGrafico());
+    
     
   }
   

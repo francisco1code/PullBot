@@ -60,7 +60,8 @@ const getFormAction = localStorage.getItem('getFormAction');
  const $owner = getOwner(valuesAPI);
  const $repo = getRepositori(valuesAPI);
 
-  export function contribuinteRepositorio(GraficoPessoal){
+ const milestoneNum = localStorage.getItem('milestoneName');
+  export function contribuinteRepositorio(){
   
     var xhr = new XMLHttpRequest();
     
@@ -69,71 +70,73 @@ const getFormAction = localStorage.getItem('getFormAction');
       if(this.readyState === 4) {
        var recebeContribuintes = JSON.parse(this.responseText);
       const $numerosContribuintes = recebeContribuintes.length;
-       ProcuraContribuicao(recebeContribuintes, $numerosContribuintes, GraficoPessoal);
+      milestone(recebeContribuintes, $numerosContribuintes);
     
       
     }});
     
     xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/contributors");
     xhr.send();
+    
     }
     
-    function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, GraficoPessoal){
-    
-    var i = 0;
-    while(i < numerosContribuintes){
-      var contribuinte = recebeContribuintes[i].login;
-      milestone(contribuinte, numerosContribuintes, GraficoPessoal);
-      i++;
-    }
-    }
-    
-    function milestone(contribuinte, numerosContribuintes, GraficoPessoal){ 
+    function milestone(recebeContribuintes, numerosContribuintes){ 
       var xhr = new XMLHttpRequest();
     
       xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
          var respota = JSON.parse(this.responseText);
-        
          const dataAberturaMilestone = respota[0].created_at
-         console.log(dataAberturaMilestone)
-         getContribuicao(contribuinte, dataAberturaMilestone, numerosContribuintes, GraficoPessoal);
+         ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone);
     
         }
       });
-      
-      xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/milestones?state=open&sort=completeness");
+      xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/milestones?state=all&sort=completeness");
       xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
       xhr.send();
     }
 
-    function getContribuicao(contribuinte, dataAbertura, numerosContribuintes, GraficoPessoal){
+    function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, dataAberturaMilestone){
+    
+    var i = 0;
+    while(i < numerosContribuintes){
+      var contribuinte = recebeContribuintes[i].login;
+      getContribuicao(contribuinte, numerosContribuintes,  dataAberturaMilestone);
+      i++;
+    }
+    }
+    
+    function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone){
       
       var xhr = new XMLHttpRequest();
       xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
           var todosCommits = JSON.parse(this.responseText);
-           calculaCommits(contribuinte, todosCommits.length, numerosContribuintes, GraficoPessoal);
+           calculaCommits(contribuinte, todosCommits.length, numerosContribuintes);
         
         }
       });
       
-      xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/commits?author="+contribuinte+"&since="+dataAbertura);
+      xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/commits?author="+contribuinte+"&since="+dataAberturaMilestone);
       xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
       xhr.send();
     }
 
     var total = 0;
     var i = 1;
-    function calculaCommits(contribuinte, todosCommits, numerosContribuintes, GraficoPessoal){
+    let nomeContribuinte = [];
+    let qtdComitsContribuinte = [];
+    function calculaCommits(contribuinte, todosCommits, numerosContribuintes ){
       
       total = todosCommits + total;
-      console.log(numerosContribuintes);
+    
+      nomeContribuinte[i]  = contribuinte;
+      qtdComitsContribuinte[i] = todosCommits;
+      console.log(nomeContribuinte[i]);
+     console.log(qtdComitsContribuinte)
      
-       if(i == numerosContribuintes){
-        GraficoPessoal(todosCommits);
-       }
        i++;
+
     }
     
  
