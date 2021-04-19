@@ -60,7 +60,7 @@ const getFormAction = localStorage.getItem('getFormAction');
  const $owner = getOwner(valuesAPI);
  const $repo = getRepositori(valuesAPI);
 
- const milestoneNum = localStorage.getItem('milestoneName');
+ const milestoneNome = localStorage.getItem('milestoneName');
   export function contribuinteRepositorio(){
   
     var xhr = new XMLHttpRequest();
@@ -85,9 +85,16 @@ const getFormAction = localStorage.getItem('getFormAction');
     
       xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
-         var respota = JSON.parse(this.responseText);
-         const dataAberturaMilestone = respota[0].created_at
-         ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone);
+          var b = String(this.responseText).split('url:')
+          
+         var resposta = JSON.parse(this.responseText);
+        
+         const resultadoProcura = milestoneDesejada(resposta, resposta.length)
+         var dataAberturaMilestone = resultadoProcura.number;
+          var dataAberturaMilestone =  resultadoProcura.created_at
+          var dataFechamentoMilestone = resultadoProcura.closed_at
+         
+         ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone);
     
         }
       });
@@ -96,17 +103,26 @@ const getFormAction = localStorage.getItem('getFormAction');
       xhr.send();
     }
 
-    function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, dataAberturaMilestone){
+    function milestoneDesejada(resposta,  qtdMilestones){
+      
+      for( i = 0; i < qtdMilestones; i++){
+        if (resposta[i].title == milestoneNome);
+        
+        return resposta[i];
+      }
+    }
+
+    function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone){
     
     var i = 0;
     while(i < numerosContribuintes){
       var contribuinte = recebeContribuintes[i].login;
-      getContribuicao(contribuinte, numerosContribuintes,  dataAberturaMilestone);
+      getContribuicao(contribuinte, numerosContribuintes,  dataAberturaMilestone, dataFechamentoMilestone);
       i++;
     }
     }
     
-    function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone){
+    function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone){
       
       var xhr = new XMLHttpRequest();
       xhr.addEventListener("readystatechange", function() {
@@ -117,7 +133,7 @@ const getFormAction = localStorage.getItem('getFormAction');
         }
       });
       
-      xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/commits?author="+contribuinte+"&since="+dataAberturaMilestone);
+      xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/commits?author="+contribuinte+"&since="+dataAberturaMilestone+"&until="+dataFechamentoMilestone);
       xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
       xhr.send();
     }
@@ -133,7 +149,7 @@ const getFormAction = localStorage.getItem('getFormAction');
       nomeContribuinte[i]  = contribuinte;
       qtdComitsContribuinte[i] = todosCommits;
       console.log(nomeContribuinte[i]);
-     console.log(qtdComitsContribuinte)
+     console.log(qtdComitsContribuinte[i])
      
        i++;
 
