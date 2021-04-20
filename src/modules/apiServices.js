@@ -34,7 +34,7 @@ export function CodigoDevicePost(){
 }
 //////////////////////////////////////////////////////////////////////////////
 
-export function ConfirmaLoginContaUsuario(){
+export function ConfirmaLoginContaUsuario(GraficoPessoal){
   var keyValue = localStorage.getItem('key_dev');
   var xhr = new XMLHttpRequest();
 
@@ -90,9 +90,12 @@ const getFormAction = localStorage.getItem('getFormAction');
          var resposta = JSON.parse(this.responseText);
         
          const resultadoProcura = milestoneDesejada(resposta, resposta.length)
-         var dataAberturaMilestone = resultadoProcura.number;
+         var numeroMilestone = resultadoProcura.number;
           var dataAberturaMilestone =  resultadoProcura.created_at
           var dataFechamentoMilestone = resultadoProcura.closed_at
+         console.log(numeroMilestone)
+         console.log(dataAberturaMilestone)
+         console.log(dataFechamentoMilestone)
          
          ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone);
     
@@ -106,9 +109,12 @@ const getFormAction = localStorage.getItem('getFormAction');
     function milestoneDesejada(resposta,  qtdMilestones){
       
       for( i = 0; i < qtdMilestones; i++){
-        if (resposta[i].title == milestoneNome);
+        if (resposta[i].title == milestoneNome){
+          console.log(resposta[i].title)
+          return resposta[i];
+        }
+      
         
-        return resposta[i];
       }
     }
 
@@ -142,7 +148,7 @@ const getFormAction = localStorage.getItem('getFormAction');
     var i = 1;
     let nomeContribuinte = [];
     let qtdComitsContribuinte = [];
-    function calculaCommits(contribuinte, todosCommits, numerosContribuintes ){
+    function calculaCommits(contribuinte, todosCommits , numerosContribuintes){
       
       total = todosCommits + total;
     
@@ -150,7 +156,9 @@ const getFormAction = localStorage.getItem('getFormAction');
       qtdComitsContribuinte[i] = todosCommits;
       console.log(nomeContribuinte[i]);
      console.log(qtdComitsContribuinte[i])
-     
+     if(i == numerosContribuintes){
+      GraficoPessoal(nomeContribuinte, qtdComitsContribuinte)
+     }
        i++;
 
     }
@@ -178,5 +186,21 @@ function getNumberMilestone(valuesAPI){
   return milestoneNumber;
 }
 
-
-  
+function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte ){
+  var ctx = document.getElementById("chart").getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+      labels: [ nomeContribuinte[0], nomeContribuinte[1], nomeContribuinte[2], nomeContribuinte[3] ],
+          datasets: [{
+          backgroundColor: [
+              "#59be5b",
+              "#d56328",
+              "#ff1b2d",
+              "#0078d7"
+          ],
+          data: [ qtdComitsContribuinte[0], qtdComitsContribuinte[1], qtdComitsContribuinte[2], qtdComitsContribuinte[3] ]
+      }]
+  }
+});
+}

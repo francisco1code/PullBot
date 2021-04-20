@@ -31,7 +31,7 @@ document.addEventListener("click", function (e) {
         localStorage.setItem('abrirModal', 'true')
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
         var milestoneName = document.querySelector(".milestone-title-link").innerText;
-        localStorage.setItem('milestoneName', milestoneName);
+        
 
         
      }
