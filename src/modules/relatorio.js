@@ -8,7 +8,7 @@ export function criarRelatorio() {
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
         var contribuintes = JSON.parse(this.responseText);
-        getCommits(contribuintes);
+        milestone(contribuintes);
     }});
     
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/contributors`);
@@ -16,27 +16,45 @@ export function criarRelatorio() {
   
   }
 
-function getCommits(contribuintes) {
+function milestone(contribuinte){
     var xhr = new XMLHttpRequest();
     const owner = localStorage.getItem('owner');
     const repo = localStorage.getItem('repo');
-    
+
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
-        var commits = JSON.parse(this.responseText)
-        relatorio(contribuintes,commits);
-  
-    }});
+       var milestone = JSON.parse(this.responseText);
+       const dataAberturaMilestone = milestone[0].created_at
+       relatorio(contribuinte, dataAberturaMilestone);
     
-    xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/stats/contributors`);
+      }
+    });
+    
+    xhr.open("GET", "https://api.github.com/repos/" + owner + "/" + repo + "/milestones?state=all&sort=completeness");
+    xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+    xhr.send();
+  }
+
+
+function getCommits(contribuinte, dataAbertura){
+
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", function() {
+        if(this.readyState === 4) {
+            var commits = JSON.parse(this.responseText).length;
+            localStorage.setItem(`commits_${contribuinte}`, commits);
+        }
+    });
+
+    xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since="+dataAbertura);
+    xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
     xhr.send();
 }
 
-
-function relatorio(contribuintes, commits){
+function relatorio(contribuintes, data){
     
     const milestoneName = localStorage.getItem('milestoneName');
-    var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n\n## 1. Ranking de contribuições total  \n| | Contribuinte | Quantidade de Contribuições \n|:-:|:-:|:-:| \n`;
+    var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n\n## 1. Ranking de contribuições total  \n| | Contribuinte | Quantidade de Contribuições | \n|:-:|:-:|:-:| \n`;
 
 // CONTRIBUIÇÕES
     var totalContribuicoes = 0;
@@ -52,15 +70,17 @@ function relatorio(contribuintes, commits){
 // COMMITS
     var totalCommits = 0;
     for(i = 0; i < contribuintes.length; i++) {
-        var semanas = commits[i].weeks.length;
-        relatorio += `| ${commits[i].author.login} | ${commits[i].weeks[semanas-1].c} | \n`;
-        totalCommits += commits[i].weeks[semanas-1].c;
+        
+        getCommits(contribuintes[i].login, data);
+        var commits = JSON.parse(localStorage.getItem(`commits_${contribuintes[i].login}`));
+        
+        relatorio += `| ${contribuintes[i].login} | ${commits} | \n`;
+        totalCommits += commits;
     }
 
-relatorio += `| Total | ${totalCommits} | \n`;
-
-
+    relatorio += `| Total | ${totalCommits} | \n`;
     relatorio += `\n## 3. Issues \n| Contribuinte | Issues abertas | Issues fechadas \n|:-:|:-:|:-:| \n`;
+
 
 // ISSUES
     for(i = 0; i < contribuintes.length; i++) {
@@ -70,12 +90,12 @@ relatorio += `| Total | ${totalCommits} | \n`;
     relatorio += `| Total |  |  | \n`;
     relatorio += `\n## 4. Pull Requests \n| Contribuinte | Pull Requests abertos | Pull Requests fechados \n|:-:|:-:|:-:| \n`;
 
-// PULL REQUESTS
-for(i = 0; i < contribuintes.length; i++) {
-    relatorio += `| ${contribuintes[i].login} |  |  | \n`;
-}
+    // PULL REQUESTS
+    for(i = 0; i < contribuintes.length; i++) {
+        relatorio += `| ${contribuintes[i].login} |  |  | \n`;
+    }
 
-relatorio += `| Total |  |  | \n`;
+    relatorio += `| Total |  |  | \n`;
 
-console.log(relatorio);
+    console.log(relatorio);
 }
