@@ -1,8 +1,8 @@
 import {GraficoPessoal} from '../CHART/app.js';
-document.addEventListener('DOMContentLoaded', function()
-{
-   
-   
+const $btn_download = document.querySelector(".btn-download")
+
+
+document.addEventListener('DOMContentLoaded', function(){
     GraficoPessoal()
     document.getElementById('test').textContent = 'SUCCEED';
 
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function()
         var a =  document.getElementById("download");
         /*insert chart image url to download button (tag: <a></a>) */
         a.href = url_base64jp;
-    
-   
 });
+
+
 
      
