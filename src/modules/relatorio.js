@@ -24,7 +24,7 @@ function milestone(contribuinte){
       if(this.readyState === 4) {
        var milestone = JSON.parse(this.responseText);
        const dataAberturaMilestone = milestone[0].created_at
-       getComments(contribuinte, '2021-04-14T06:17:40Z');
+       getComments(contribuinte, dataAberturaMilestone);
     
       }
 });
