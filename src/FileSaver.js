@@ -166,11 +166,14 @@ var saveAs = _global.saveAs || (
 
 _global.saveAs = saveAs.saveAs = saveAs
 
-if(localStorage.getItem('relatorioDeDesenvolvimento')) {
+// DOWNLOAD DO RELATÓRIO DE DESENVOLVIMENTO APÓS FECHAR MILESTONE
+document.addEventListener("click", function (e) {
+  if(e.path[0] == document.querySelector(".d-inline-block.mr-2 .btn-link") && e.target.textContent.toLowerCase() == "close") {
     var relatorio = localStorage.getItem('relatorioDeDesenvolvimento');
     var numberMilestone = localStorage.getItem('NumberMilestone');
     var blob = new Blob([relatorio], {type: "text/plain;charset=utf-8"});
     saveAs(blob, `metricas_milestone${numberMilestone}.md`);
     localStorage.removeItem('relatorioDeDesenvolvimento');
-}
+  }
+})
       

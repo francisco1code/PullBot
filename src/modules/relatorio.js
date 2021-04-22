@@ -1,5 +1,4 @@
-// CONSTRUINDO RELATÓRIO DE DESENVOLVIMENTO
-
+// CONTRIBUINTES
 export function criarRelatorio() {
     var xhr = new XMLHttpRequest();
     const owner = localStorage.getItem('owner');
@@ -9,13 +8,13 @@ export function criarRelatorio() {
       if(this.readyState === 4) {
         var contribuintes = JSON.parse(this.responseText);
         milestone(contribuintes);
-    }});
-    
+}});
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/contributors`);
     xhr.send();
   
   }
 
+// DATA DE ABERTURA DA MILESTONE
 function milestone(contribuinte){
     var xhr = new XMLHttpRequest();
     const owner = localStorage.getItem('owner');
@@ -28,66 +27,65 @@ function milestone(contribuinte){
        getComments(contribuinte, '2021-04-14T06:17:40Z');
     
       }
-    });
-    
+});
     xhr.open("GET", "https://api.github.com/repos/" + owner + "/" + repo + "/milestones?state=all&sort=completeness");
     xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
     xhr.send();
   }
 
 
-  
+// COMENTÁRIOS EM ISSUES
 function getComments(contribuinte, dataAbertura) {
     var xhr = new XMLHttpRequest();
     const owner = localStorage.getItem('owner');
     const repo = localStorage.getItem('repo');
+
     xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
             var comments = JSON.parse(this.responseText);
             getIssues(contribuinte, dataAbertura, comments)
         }
-    });
-
+});
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues/comments?since=${dataAbertura}`);
     xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
     xhr.send();
 }
 
+// ISSUES ASSOCIADAS A CADA CONTRIBUINTE
 function getIssues(contribuinte, dataAbertura, comments) {
-
     var xhr = new XMLHttpRequest();
     const owner = localStorage.getItem('owner');
     const repo = localStorage.getItem('repo');
+
     xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
             var issues = JSON.parse(this.responseText);
             relatorio(contribuinte, dataAbertura, comments, issues)
         }
-    });
-
+});
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues?since=${dataAbertura}`);
     xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
     xhr.send();
 }
 
+// QUANTIDADE DE COMMITS POR CONTRIBUINTE DESDE A ABERTURA DA MILESTONE
 function getCommits(contribuinte, dataAbertura){
-
     var xhr = new XMLHttpRequest();
     const owner = localStorage.getItem('owner');
     const repo = localStorage.getItem('repo');
+
     xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
             var commits = JSON.parse(this.responseText).length;
             localStorage.setItem(`commits_${contribuinte}`, commits);
         }
-    });
-
+});
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/commits?author=${contribuinte}&since=${dataAbertura}`);
     xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
     xhr.send();
 }
 
-
+// CONSTRUINDO RELATÓRIO DE DESENVOLVIMENTO
 function relatorio(contribuintes, data, comments, issues){
     
     const milestoneName = localStorage.getItem('milestoneName');
@@ -119,7 +117,6 @@ function relatorio(contribuintes, data, comments, issues){
     relatorio += `\n## 4. Issues associadas \n| Contribuinte | Issues associadas \n|:-:|:-:| \n`;
 
  // ISSUES ASSOCIADAS
-
     for(i = 0; i < contribuintes.length; i++) {
         localStorage.setItem(`issues_${contribuintes[i].login}`, 0);
     }
@@ -161,8 +158,7 @@ function relatorio(contribuintes, data, comments, issues){
         relatorio += `| ${contribuintes[i].login} | ${quantidade} | \n`;
         totalComments += quantidade;
     }
-
     relatorio += `| Total | ${totalComments} | \n`;
 
-    console.log(relatorio);
+    localStorage.setItem('relatorioDeDesenvolvimento', relatorio);
 }
