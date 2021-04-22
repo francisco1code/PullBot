@@ -103,20 +103,23 @@ function relatorio(contribuintes, data, comments){
 
 
 // COMENTÁRIOS EM ISSUES
-    var comentarios = [];
-
+    
     for(i = 0; i < contribuintes.length; i++) {
-        comentarios.contribuintes[i].login = 0;
+        localStorage.setItem(`comments_${contribuintes[i].login}`, 0);
     }
 
     for(i = 0; i < comments.length; i++) {
-        comentarios.contribuintes[i].login += comentarios.contribuintes[i].login;
+        var quantidade = new Number(localStorage.getItem(`comments_${comments[i].user.login}`));
+        quantidade++;
+        localStorage.setItem(`comments_${comments[i].user.login}`, quantidade)
+
     }
 
     var totalComments = 0;
     for(i = 0; i < contribuintes.length; i++) {
-        relatorio += `| ${contribuintes[i].login} | ${comentarios.contribuintes[i].login} | \n`;
-        totalComments += comentarios.i;
+        var quantidade = new Number(localStorage.getItem(`comments_${contribuintes[i].login}`));
+        relatorio += `| ${contribuintes[i].login} | ${quantidade} | \n`;
+        totalComments += quantidade;
     }
 
     relatorio += `| Total | ${totalComments} | \n`;
