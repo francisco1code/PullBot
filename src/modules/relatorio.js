@@ -25,7 +25,7 @@ function milestone(contribuinte){
       if(this.readyState === 4) {
        var milestone = JSON.parse(this.responseText);
        const dataAberturaMilestone = milestone[0].created_at
-       relatorio(contribuinte, dataAberturaMilestone);
+       getComments(contribuinte, '2021-04-14T06:17:40Z');
     
       }
     });
@@ -36,9 +36,28 @@ function milestone(contribuinte){
   }
 
 
+  
+function getComments(contribuinte, dataAbertura) {
+    var xhr = new XMLHttpRequest();
+    const owner = localStorage.getItem('owner');
+    const repo = localStorage.getItem('repo');
+    xhr.addEventListener("readystatechange", function() {
+        if(this.readyState === 4) {
+            var comments = JSON.parse(this.responseText);
+            relatorio(contribuinte, dataAbertura, comments)
+        }
+    });
+
+    xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues/comments?since=${dataAbertura}`);
+    xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+    xhr.send();
+}
+
 function getCommits(contribuinte, dataAbertura){
 
     var xhr = new XMLHttpRequest();
+    const owner = localStorage.getItem('owner');
+    const repo = localStorage.getItem('repo');
     xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
             var commits = JSON.parse(this.responseText).length;
@@ -46,12 +65,13 @@ function getCommits(contribuinte, dataAbertura){
         }
     });
 
-    xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since="+dataAbertura);
+    xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/commits?author=${contribuinte}&since=${dataAbertura}`);
     xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
     xhr.send();
 }
 
-function relatorio(contribuintes, data){
+
+function relatorio(contribuintes, data, comments){
     
     const milestoneName = localStorage.getItem('milestoneName');
     var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n\n## 1. Ranking de contribuições total  \n| | Contribuinte | Quantidade de Contribuições | \n|:-:|:-:|:-:| \n`;
@@ -79,15 +99,27 @@ function relatorio(contribuintes, data){
     }
 
     relatorio += `| Total | ${totalCommits} | \n`;
-    relatorio += `\n## 3. Issues \n| Contribuinte | Issues abertas | Issues fechadas \n|:-:|:-:|:-:| \n`;
+    relatorio += `\n## 3. Comentários em Issues \n| Contribuinte | Quantidade de comentários | \n|:-:|:-:| \n`;
 
 
-// ISSUES
+// COMENTÁRIOS EM ISSUES
+    var comentarios = [];
+
     for(i = 0; i < contribuintes.length; i++) {
-        relatorio += `| ${contribuintes[i].login} |  |  | \n`;
+        comentarios.contribuintes[i].login = 0;
     }
 
-    relatorio += `| Total |  |  | \n`;
+    for(i = 0; i < comments.length; i++) {
+        comentarios.contribuintes[i].login += comentarios.contribuintes[i].login;
+    }
+
+    var totalComments = 0;
+    for(i = 0; i < contribuintes.length; i++) {
+        relatorio += `| ${contribuintes[i].login} | ${comentarios.contribuintes[i].login} | \n`;
+        totalComments += comentarios.i;
+    }
+
+    relatorio += `| Total | ${totalComments} | \n`;
     relatorio += `\n## 4. Pull Requests \n| Contribuinte | Pull Requests abertos | Pull Requests fechados \n|:-:|:-:|:-:| \n`;
 
     // PULL REQUESTS
