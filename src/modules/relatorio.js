@@ -44,11 +44,28 @@ function getComments(contribuinte, dataAbertura) {
     xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
             var comments = JSON.parse(this.responseText);
-            relatorio(contribuinte, dataAbertura, comments)
+            getIssues(contribuinte, dataAbertura, comments)
         }
     });
 
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues/comments?since=${dataAbertura}`);
+    xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+    xhr.send();
+}
+
+function getIssues(contribuinte, dataAbertura, comments) {
+
+    var xhr = new XMLHttpRequest();
+    const owner = localStorage.getItem('owner');
+    const repo = localStorage.getItem('repo');
+    xhr.addEventListener("readystatechange", function() {
+        if(this.readyState === 4) {
+            var issues = JSON.parse(this.responseText);
+            relatorio(contribuinte, dataAbertura, comments, issues)
+        }
+    });
+
+    xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues?since=${dataAbertura}`);
     xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
     xhr.send();
 }
@@ -71,7 +88,7 @@ function getCommits(contribuinte, dataAbertura){
 }
 
 
-function relatorio(contribuintes, data, comments){
+function relatorio(contribuintes, data, comments, issues){
     
     const milestoneName = localStorage.getItem('milestoneName');
     var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n\n## 1. Ranking de contribuições total  \n| | Contribuinte | Quantidade de Contribuições | \n|:-:|:-:|:-:| \n`;
@@ -99,10 +116,33 @@ function relatorio(contribuintes, data, comments){
     }
 
     relatorio += `| Total | ${totalCommits} | \n`;
-    relatorio += `\n## 3. Comentários em Issues \n| Contribuinte | Quantidade de comentários | \n|:-:|:-:| \n`;
+    relatorio += `\n## 4. Issues associadas \n| Contribuinte | Issues associadas \n|:-:|:-:| \n`;
 
+ // ISSUES ASSOCIADAS
+
+    for(i = 0; i < contribuintes.length; i++) {
+        localStorage.setItem(`issues_${contribuintes[i].login}`, 0);
+    }
+
+    for(i = 0; i < issues.length; i++) {
+
+        for(var j = 0; j < issues[i].assignees.length; j++) {
+            var quantidade = new Number(localStorage.getItem(`issues_${issues[i].assignees[j].login}`));
+            quantidade++;
+            localStorage.setItem(`issues_${issues[i].assignees[j].login}`, quantidade)
+        }
+    }
+
+    var totalIssues = 0;
+    for(i = 0; i < contribuintes.length; i++) {
+        var quantidade = new Number(localStorage.getItem(`issues_${contribuintes[i].login}`));
+        relatorio += `| ${contribuintes[i].login} | ${quantidade} | \n`;
+        totalIssues += quantidade;
+    }
 
 // COMENTÁRIOS EM ISSUES
+    relatorio += `\n## 3. Comentários em Issues \n| Contribuinte | Quantidade de comentários | \n|:-:|:-:| \n`;
+
     
     for(i = 0; i < contribuintes.length; i++) {
         localStorage.setItem(`comments_${contribuintes[i].login}`, 0);
@@ -123,14 +163,6 @@ function relatorio(contribuintes, data, comments){
     }
 
     relatorio += `| Total | ${totalComments} | \n`;
-    relatorio += `\n## 4. Pull Requests \n| Contribuinte | Pull Requests abertos | Pull Requests fechados \n|:-:|:-:|:-:| \n`;
-
-    // PULL REQUESTS
-    for(i = 0; i < contribuintes.length; i++) {
-        relatorio += `| ${contribuintes[i].login} |  |  | \n`;
-    }
-
-    relatorio += `| Total |  |  | \n`;
 
     console.log(relatorio);
 }
