@@ -9,7 +9,7 @@ const script = document.createElement('script');
         // var milestoneNome = document.getElementsByClassName('mt-0 mb-2 h1 text-normal')[0].outerText;
         var dados = [numeroMilestone, token]
         chrome.storage.sync.set({key: dados}, function() {
-            console.log('Value is set to ' + dados);
+           
           })
       }
      

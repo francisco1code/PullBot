@@ -3,8 +3,8 @@ import {GraficoPessoal} from '../CHART/app.js';
 chrome.storage.sync.get(['key'], function(result) {
   var dados = result.key;
  
-  console.log(dados[0], dados[1])
-  contribuinteRepositorio()
+  
+  contribuinteRepositorio(dados[0], dados[1]  )
 });
 const $btn_download = document.querySelector("#btn-download")
 const $canvas = document.querySelector("#canvas")
@@ -112,7 +112,7 @@ function contribuinteRepositorio(numeroMilestone, token){
  }
  }
  
- function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone){
+ function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token){
    
    var xhr = new XMLHttpRequest();
    xhr.addEventListener("readystatechange", function() {
