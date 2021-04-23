@@ -5,12 +5,12 @@ const script = document.createElement('script');
     const head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
     head.insertBefore(script, head.lastChild);
     
-    function run(numeroMilestone) {
+    function run(numeroMilestone, token) {
         // var milestoneNome = document.getElementsByClassName('mt-0 mb-2 h1 text-normal')[0].outerText;
-        chrome.storage.sync.set({key: numeroMilestone}, function() {
-            console.log('Value is set to ' + numeroMilestone);
-           
-          });
+        var dados = [numeroMilestone, token]
+        chrome.storage.sync.set({key: dados}, function() {
+            console.log('Value is set to ' + dados);
+          })
       }
      
    
@@ -25,7 +25,8 @@ const script = document.createElement('script');
           var urlParts = currentUrl.split("/");
        
          if(e.path[0] == "https://github.com/fga-eps-mds/PullBot/milestone/"+urlParts[6] ){
-          run(urlParts[6])
+          var token = localStorage.getItem('token');
+          run(urlParts[6], token)
          }
         
 
