@@ -32,9 +32,7 @@ document.addEventListener("click", function (e) {
         //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
         localStorage.setItem('abrirModal', 'true')
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-        var milestoneNome = document.querySelector(".milestone-title-link").innerText;
-        localStorage.setItem('milestoneNome', milestoneNome);
-
+        
         
      }
     }

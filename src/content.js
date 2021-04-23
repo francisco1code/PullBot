@@ -5,11 +5,11 @@ const script = document.createElement('script');
     const head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
     head.insertBefore(script, head.lastChild);
     
-    function run(numeroMilestone, token) {
+    function run(numeroMilestone, token,  owner, repo) {
         // var milestoneNome = document.getElementsByClassName('mt-0 mb-2 h1 text-normal')[0].outerText;
-        var dados = [numeroMilestone, token]
+        var dados = [numeroMilestone, token, owner, repo]
         chrome.storage.sync.set({key: dados}, function() {
-           
+            console.log('Value is set to ' + dados);
           })
       }
      
@@ -23,10 +23,10 @@ const script = document.createElement('script');
         // if( currentUrl == 'https://github.com/'+$owner+'/'+$repo+'/milestones?state=closed'){
           var currentUrl = String(window.location.href);
           var urlParts = currentUrl.split("/");
-       
+          console.log(urlParts)
          if(e.path[0] == "https://github.com/fga-eps-mds/PullBot/milestone/"+urlParts[6] ){
           var token = localStorage.getItem('token');
-          run(urlParts[6], token)
+          run(urlParts[6], token, urlParts[3], urlParts[4])
          }
         
 
