@@ -55,6 +55,7 @@ export function ConfirmaLoginContaUsuario(GraficoPessoal){
   
 }
 // ///////////////////////////////////////////////////////////////////////
+
 const getFormAction = localStorage.getItem('getFormAction');
  //VALORES A SEREM PASSADOS PARA API
  var valuesAPI = String(getFormAction).split("/");
@@ -65,8 +66,8 @@ const getFormAction = localStorage.getItem('getFormAction');
  let nomeContribuinte = [];
  let qtdComitsContribuinte = [];
 //VALORES A SEREM PASSADOS PARA API
-var milestoneNome = 10
-export function contribuinteRepositorio(){
+
+export function contribuinteRepositorio(numeroMilestone){
 
  var xhr = new XMLHttpRequest();
  
@@ -75,7 +76,7 @@ export function contribuinteRepositorio(){
    if(this.readyState === 4) {
     var recebeContribuintes = JSON.parse(this.responseText);
    const $numerosContribuintes = recebeContribuintes.length;
-   milestone(recebeContribuintes, $numerosContribuintes);
+   milestone(numeroMilestone, recebeContribuintes, $numerosContribuintes);
  
    
  }});
@@ -85,7 +86,7 @@ export function contribuinteRepositorio(){
  
  }
  
- function milestone(recebeContribuintes, numerosContribuintes){ 
+ function milestone(numeroMilestone, recebeContribuintes, numerosContribuintes){ 
    var xhr = new XMLHttpRequest();
  
    xhr.addEventListener("readystatechange", function() {
@@ -94,9 +95,8 @@ export function contribuinteRepositorio(){
        
       var resposta = JSON.parse(this.responseText);
      
-      const resultadoProcura = milestoneDesejada(resposta, resposta.length)
-      var numeroMilestone = resultadoProcura.number;
-      console.log(numeroMilestone)
+      const resultadoProcura = milestoneDesejada(numeroMilestone,resposta, resposta.length)
+     
        var dataAberturaMilestone =  resultadoProcura.created_at
        var dataFechamentoMilestone = resultadoProcura.closed_at
 
@@ -110,10 +110,10 @@ export function contribuinteRepositorio(){
    xhr.send();
  }
 
- function milestoneDesejada(resposta,  qtdMilestones){
+ function milestoneDesejada(numeroMilestone,resposta,  qtdMilestones){
    
    for(var i = 0; i < qtdMilestones; i++){
-     if (resposta[i].number == milestoneNome){
+     if (resposta[i].number == numeroMilestone){
        console.log(resposta[i])
        return resposta[i];
      }
