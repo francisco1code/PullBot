@@ -15,13 +15,13 @@ Testes unitários | Testar as assinaturas de entrada e saída do projeto, afim d
 Criação do banco de dados para salvar antigos Prs | A ideia é criar um banco de dados para salvar os antigos PullRequests para o usuário conseguir comparar com outros | Arthur de Melo |
 
 ## Pontos positivos:
-* 
+* Implementação da biblioteca chartJS que permitirá a implementação de várias coisas importantes no projeto, assim como o aperfeiçoamento arquitetural, distribuindo o código em mais de um arquivo. Além de um grande progresso nas outras features a serem desenvolvidas.
 
 ## Pontos negativos:
-* 
+* Falta de finalização de issues importantes para a sprint.
 
 ## Melhorias:
-* 
+* Terminar o que ainda falta dessa sprint e partir para novas implementações afim de recompor tempo perdido.
 
 ## Retorno do Scrum Master:
-* 
+* Houve um grande avanço nas implentações, embora nem todas tenham sido concluídas. 
