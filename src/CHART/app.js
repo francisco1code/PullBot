@@ -1,18 +1,25 @@
-export function GraficoPessoal(){
-    var ctx = document.getElementById("chart").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'doughnut',
+
+export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte ){
+
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
     data: {
-        labels: [ 'a', 'b', 'c', 'd' ],
-            datasets: [{
-            backgroundColor: [
-                "#59be5b",
-                "#d56328",
-                "#ff1b2d",
-                "#0078d7"
-            ],
-            data: [ 1, 2, 3, 4 ]
-        }]
+       
+       labels:  nomeContribuinte,
+           datasets: [{
+           backgroundColor: [
+               "#FFD700",
+               "#F08080",
+               "#FF00FF",
+               "#F4A460",
+               "#836FFF", 
+               "#00BFFF",
+               "#98FB98"
+           ],
+           data: qtdComitsContribuinte
+       }]
     }
-});
-}
+    });
+    }

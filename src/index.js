@@ -4,6 +4,8 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
 import {contribuinteRepositorio} from './modules/apiServices.js';
 
 
+
+
 //URL DAS PÁGINAS
 var currentUrl = String(window.location.href);
 var urlParts = currentUrl.split("/");
@@ -30,8 +32,8 @@ document.addEventListener("click", function (e) {
         //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
         localStorage.setItem('abrirModal', 'true')
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-        var milestoneName = document.querySelector(".milestone-title-link").innerText;
-        
+        var milestoneNome = document.querySelector(".milestone-title-link").innerText;
+        localStorage.setItem('milestoneNome', milestoneNome);
 
         
      }
@@ -42,17 +44,19 @@ document.addEventListener("click", function (e) {
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
     
     CodigoDevicePost();
-    contribuinteRepositorio();
+   
   }
 
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
+    contribuinteRepositorio();
     
     
     
   }
   
-  
+ 
+ 
   
   

@@ -1,3 +1,4 @@
+
 export function CodigoDevicePost(){
     var xhr = new XMLHttpRequest();
 
@@ -59,113 +60,115 @@ const getFormAction = localStorage.getItem('getFormAction');
  var valuesAPI = String(getFormAction).split("/");
  const $owner = getOwner(valuesAPI);
  const $repo = getRepositori(valuesAPI);
+ var total = 0;
+ var contador = 0;
+ let nomeContribuinte = [];
+ let qtdComitsContribuinte = [];
+//VALORES A SEREM PASSADOS PARA API
+var milestoneNome = 10
+export function contribuinteRepositorio(){
 
- const milestoneNome = localStorage.getItem('milestoneName');
-  export function contribuinteRepositorio(){
-  
-    var xhr = new XMLHttpRequest();
-    
-    
-    xhr.addEventListener("readystatechange", function() {
-      if(this.readyState === 4) {
-       var recebeContribuintes = JSON.parse(this.responseText);
-      const $numerosContribuintes = recebeContribuintes.length;
-      milestone(recebeContribuintes, $numerosContribuintes);
-    
-      
-    }});
-    
-    xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/contributors");
-    xhr.send();
-    
-    }
-    
-    function milestone(recebeContribuintes, numerosContribuintes){ 
-      var xhr = new XMLHttpRequest();
-    
-      xhr.addEventListener("readystatechange", function() {
-        if(this.readyState === 4) {
-          var b = String(this.responseText).split('url:')
-          
-         var resposta = JSON.parse(this.responseText);
-        
-         const resultadoProcura = milestoneDesejada(resposta, resposta.length)
-         var numeroMilestone = resultadoProcura.number;
-          var dataAberturaMilestone =  resultadoProcura.created_at
-          var dataFechamentoMilestone = resultadoProcura.closed_at
-         console.log(numeroMilestone)
-         console.log(dataAberturaMilestone)
-         console.log(dataFechamentoMilestone)
-         
-         ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone);
-    
-        }
-      });
-      xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/milestones?state=all&sort=completeness");
-      xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-      xhr.send();
-    }
-
-    function milestoneDesejada(resposta,  qtdMilestones){
-      
-      for( i = 0; i < qtdMilestones; i++){
-        if (resposta[i].title == milestoneNome){
-          console.log(resposta[i].title)
-          return resposta[i];
-        }
-      
-        
-      }
-    }
-
-    function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone){
-    
-    var i = 0;
-    while(i < numerosContribuintes){
-      var contribuinte = recebeContribuintes[i].login;
-      getContribuicao(contribuinte, numerosContribuintes,  dataAberturaMilestone, dataFechamentoMilestone);
-      i++;
-    }
-    }
-    
-    function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone){
-      
-      var xhr = new XMLHttpRequest();
-      xhr.addEventListener("readystatechange", function() {
-        if(this.readyState === 4) {
-          var todosCommits = JSON.parse(this.responseText);
-           calculaCommits(contribuinte, todosCommits.length, numerosContribuintes);
-        
-        }
-      });
-      
-      xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/commits?author="+contribuinte+"&since="+dataAberturaMilestone+"&until="+dataFechamentoMilestone);
-      xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-      xhr.send();
-    }
-
-    var total = 0;
-    var i = 1;
-    let nomeContribuinte = [];
-    let qtdComitsContribuinte = [];
-    function calculaCommits(contribuinte, todosCommits , numerosContribuintes){
-      
-      total = todosCommits + total;
-    
-      nomeContribuinte[i]  = contribuinte;
-      qtdComitsContribuinte[i] = todosCommits;
-      console.log(nomeContribuinte[i]);
-     console.log(qtdComitsContribuinte[i])
-     if(i == numerosContribuintes){
-      GraficoPessoal(nomeContribuinte, qtdComitsContribuinte)
-     }
-       i++;
-
-    }
-    
+ var xhr = new XMLHttpRequest();
  
+ 
+ xhr.addEventListener("readystatechange", function() {
+   if(this.readyState === 4) {
+    var recebeContribuintes = JSON.parse(this.responseText);
+   const $numerosContribuintes = recebeContribuintes.length;
+   milestone(recebeContribuintes, $numerosContribuintes);
+ 
+   
+ }});
+ 
+ xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/contributors");
+ xhr.send();
+ 
+ }
+ 
+ function milestone(recebeContribuintes, numerosContribuintes){ 
+   var xhr = new XMLHttpRequest();
+ 
+   xhr.addEventListener("readystatechange", function() {
+     if(this.readyState === 4) {
+       var b = String(this.responseText).split('url:')
+       
+      var resposta = JSON.parse(this.responseText);
+     
+      const resultadoProcura = milestoneDesejada(resposta, resposta.length)
+      var numeroMilestone = resultadoProcura.number;
+      console.log(numeroMilestone)
+       var dataAberturaMilestone =  resultadoProcura.created_at
+       var dataFechamentoMilestone = resultadoProcura.closed_at
+
+      
+      ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone);
+ 
+     }
+   });
+   xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/milestones?state=all&sort=completeness");
+   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+   xhr.send();
+ }
+
+ function milestoneDesejada(resposta,  qtdMilestones){
+   
+   for(var i = 0; i < qtdMilestones; i++){
+     if (resposta[i].number == milestoneNome){
+       console.log(resposta[i])
+       return resposta[i];
+     }
+   
+     
+   }
+ }
     
-/*GET DONO DO REPOSITORIO*/
+ function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone){
+ 
+ var i = 0;
+ while(i < numerosContribuintes){
+   var contribuinte = recebeContribuintes[i].login;
+ 
+   getContribuicao(contribuinte, numerosContribuintes,  dataAberturaMilestone, dataFechamentoMilestone);
+   i++;
+ }
+ }
+ 
+ function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone){
+   
+   var xhr = new XMLHttpRequest();
+   xhr.addEventListener("readystatechange", function() {
+     if(this.readyState === 4) {
+       var todosCommits = JSON.parse(this.responseText);
+         
+        calculaCommits(contribuinte, todosCommits.length, numerosContribuintes);
+     
+     }
+   });
+   
+   xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/commits?author="+contribuinte+"&since="+dataAberturaMilestone+"&until="+dataFechamentoMilestone);
+   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+   xhr.send();
+ }
+
+ function calculaCommits(contribuinte, todosCommits , numerosContribuintes){
+   
+   total = todosCommits + total;
+ 
+   nomeContribuinte[contador]  = contribuinte;
+   qtdComitsContribuinte[contador] = todosCommits;
+  
+  
+  if(contador == numerosContribuintes - 1){
+    console.log('a')
+  }
+   
+  contador++;
+
+ }
+ 
+
+ 
+
 function getOwner(valuesAPI){
   var owner = valuesAPI[3];
   console.log(owner)
@@ -184,23 +187,4 @@ function getNumberMilestone(valuesAPI){
   var milestoneNumber = valuesAPI[6]
   console.log(milestoneNumber)
   return milestoneNumber;
-}
-
-function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte ){
-  var ctx = document.getElementById("chart").getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'doughnut',
-  data: {
-      labels: [ nomeContribuinte[0], nomeContribuinte[1], nomeContribuinte[2], nomeContribuinte[3] ],
-          datasets: [{
-          backgroundColor: [
-              "#59be5b",
-              "#d56328",
-              "#ff1b2d",
-              "#0078d7"
-          ],
-          data: [ qtdComitsContribuinte[0], qtdComitsContribuinte[1], qtdComitsContribuinte[2], qtdComitsContribuinte[3] ]
-      }]
-  }
-});
 }
