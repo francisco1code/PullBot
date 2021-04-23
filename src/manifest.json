@@ -23,7 +23,7 @@
     "resources": [
                   "index.js",
                   "/modules/*",
-                  "/CHART/app.js"],
+                  "/Chart/app.js"],
                   
     "matches": ["<all_urls>"],
     "extension_ids": []

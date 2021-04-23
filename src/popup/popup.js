@@ -10,12 +10,9 @@ chrome.storage.sync.get(['key'], function(result) {
 
   contribuinteRepositorio(dados[0], dados[1] , $owner,  $repo )
 });
+
 const $btn_download = document.querySelector("#btn-download")
 const $canvas = document.querySelector("#canvas")
-
-
-
-
 
 $btn_download.addEventListener('click', () => {
     

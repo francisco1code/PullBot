@@ -146,14 +146,14 @@ export function criarPullRequest() {
           alteracoes = `${alteracoes} \n* ${document.getElementById("outraOpcao").value}`
         }
     
-    const getFormAction = localStorage.getItem('getFormAction');
+   
     const milestoneName = localStorage.getItem('milestoneName');
   
     //VALORES A SEREM PASSADOS PARA API
-    var valuesAPI = String(getFormAction).split("/");
-    const $owner = getOwner(valuesAPI);
-    const $repo = getRepositori(valuesAPI);
-    const $NumberMilestone = getNumberMilestone(valuesAPI);
+   
+    const $owner = localStorage.getItem(owner)
+    const $repo = localStorage.getItem(repo)
+    const $NumberMilestone = localStorage.getItem(milestoneNumber)
     var token = localStorage.getItem('token');
   
     //ESCOPO DO PULL REQUEST
@@ -191,22 +191,4 @@ export function criarPullRequest() {
     /*FUNÇOES A DEFINIREM OS VALORES A SEREM PASSADOS PARA API*/
     
     /*GET DONO DO REPOSITORIO*/
-    function getOwner(valuesAPI){
-      var owner = valuesAPI[3];
-      console.log(owner)
-      return owner;
-    }
-    
-    /*GET  REPOSITORIO*/
-    function getRepositori(valuesAPI){
-      var repo = valuesAPI[4]
-      console.log(repo)
-      return repo;
-    }
-    
-    /*GET NUMERO DA MILESTONE A SER FECHADA*/
-    function getNumberMilestone(valuesAPI){
-      var milestoneNumber = valuesAPI[6]
-      console.log(milestoneNumber)
-      return milestoneNumber;
-    }
+ 

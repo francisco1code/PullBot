@@ -1,14 +1,23 @@
 
-export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte ){
+export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint){
  
 
     var ctx = document.getElementById("myChart").getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'bar',
+    options: {
+        plugins: {
+          title: {
+            display: true,
+            text: sprint,
+          }
+        }
+      },
     data: {
         
         labels:  nomeContribuinte,
             datasets: [{
+                label: "commits",
             backgroundColor: [
                 "#FFD700",
                 "#F08080",

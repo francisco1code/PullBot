@@ -1,4 +1,4 @@
-
+import {GraficoPessoal} from '../Chart/app.js';
 export function CodigoDevicePost(){
     var xhr = new XMLHttpRequest();
 
@@ -64,7 +64,7 @@ export function ConfirmaLoginContaUsuario(){
  let qtdComitsContribuinte = [];
 //VALORES A SEREM PASSADOS PARA API
 
-export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo){
+export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, sprint){
 
   var xhr = new XMLHttpRequest();
   
@@ -73,7 +73,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo){
     if(this.readyState === 4) {
      var recebeContribuintes = JSON.parse(this.responseText);
     const $numerosContribuintes = recebeContribuintes.length;
-    milestone(numeroMilestone, recebeContribuintes, $numerosContribuintes, token, $owner, $repo);
+    milestone(numeroMilestone, recebeContribuintes, $numerosContribuintes, token, $owner, $repo, sprint);
      
     
   }});
@@ -84,7 +84,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo){
   
   }
   
-  function milestone(numeroMilestone, recebeContribuintes, numerosContribuintes, token, $owner, $repo){ 
+  function milestone(numeroMilestone, recebeContribuintes, numerosContribuintes, token, $owner, $repo, sprint){ 
     var xhr = new XMLHttpRequest();
   
     xhr.addEventListener("readystatechange", function() {
@@ -95,12 +95,12 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo){
       
        const resultadoProcura = milestoneDesejada(numeroMilestone,resposta, resposta.length)
        
-       console.log(numeroMilestone)
+       var nomeSprint = resultadoProcura.title
         var dataAberturaMilestone =  resultadoProcura.created_at
         var dataFechamentoMilestone = resultadoProcura.closed_at
         console.log( resultadoProcura.created_at)
        
-       ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token,  $owner, $repo);
+       ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token,  $owner, $repo, nomeSprint);
   
       }
     });
@@ -122,25 +122,25 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo){
     }
   }
      
-  function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo){
+  function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo, nomeSprint){
   
   var i = 0;
   while(i < numerosContribuintes){
     var contribuinte = recebeContribuintes[i].login;
   
-    getContribuicao(contribuinte, numerosContribuintes,  dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo);
+    getContribuicao(contribuinte, numerosContribuintes,  dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo, nomeSprint);
     i++;
   }
   }
   
-  function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo){
+  function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo, nomeSprint){
     
     var xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
         var todosCommits = JSON.parse(this.responseText);
           
-         calculaCommits(contribuinte, todosCommits.length, numerosContribuintes);
+         calculaCommits(contribuinte, todosCommits.length, numerosContribuintes, nomeSprint);
       
       }
     });
@@ -151,7 +151,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo){
     xhr.send();
   }
  
-  function calculaCommits(contribuinte, todosCommits , numerosContribuintes){
+  function calculaCommits(contribuinte, todosCommits , numerosContribuintes, nomeSprint){
     
     total = todosCommits + total;
   
@@ -162,11 +162,10 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo){
    if(contador == numerosContribuintes - 1){
      console.log(nomeContribuinte)
      console.log(qtdComitsContribuinte)
-     GraficoPessoal(nomeContribuinte, qtdComitsContribuinte)
+     GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint)
    }
     
    contador++;
  
   }
   
-import {GraficoPessoal} from '../CHART/app.js';
