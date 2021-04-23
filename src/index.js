@@ -32,7 +32,11 @@ document.addEventListener("click", function (e) {
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
-        
+
+          localStorage.setItem('abrirModal', 'true')
+          var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
+          var milestoneName = document.querySelector(".milestone-title-link").innerText;
+          localStorage.setItem('milestoneName', milestoneName);
         //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
         localStorage.setItem('abrirModal', 'true')
      }
@@ -54,5 +58,4 @@ document.addEventListener("click", function (e) {
   }
   
  
- 
-  
+     
