@@ -72,7 +72,6 @@ document.addEventListener("click", function (e) {
    
     ConfirmaLoginContaUsuario();
     
-    
   }
   
 

@@ -24,6 +24,7 @@ const script = document.createElement('script');
        if(e.path[0] == "https://github.com/"+urlParts[3]+"/"+urlParts[4]+"/milestone/"+urlParts[6] ){
           
         var token = localStorage.getItem('token');
+        console.log(urlParts)
         run(urlParts[6], token, urlParts[3], urlParts[4])
        }
     });
