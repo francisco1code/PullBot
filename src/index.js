@@ -1,21 +1,21 @@
-import {criarPullRequest} from './modules/services.js';
-import {CodigoDevicePost} from './modules/apiServices.js';
-import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
-import {criarRelatorio} from './modules/relatorio.js';
+    import {criarPullRequest} from './modules/services.js';
+    import {CodigoDevicePost} from './modules/apiServices.js';
+    import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
+    import {criarRelatorio} from './modules/relatorio.js';
 
-//URL DAS PÁGINAS
-var currentUrl = String(window.location.href);
-var urlParts = currentUrl.split("/");
+    //URL DAS PÁGINAS
+    var currentUrl = String(window.location.href);
+    var urlParts = currentUrl.split("/");
 
-//ABRIR MODAL CASO O BOTÃO CLOSE DA MILESTONE JÁ TENHA SIDO CLICADO
-if(localStorage.getItem('abrirModal')){
-  criarPullRequest();
-  localStorage.removeItem('abrirModal');
-}
+    //ABRIR MODAL CASO O BOTÃO CLOSE DA MILESTONE JÁ TENHA SIDO CLICADO
+    if(localStorage.getItem('abrirModal')){
+      criarPullRequest();
+      localStorage.removeItem('abrirModal');
+    }
 
-document.addEventListener("click", function (e) {
+    document.addEventListener("click", function (e) {
 
-    criarRelatorio();
+   
          
     //VALIDA ENTRADA EM GITHUB MILESTONES
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {         
@@ -47,7 +47,7 @@ document.addEventListener("click", function (e) {
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
-
+          criarRelatorio();
           localStorage.setItem('abrirModal', 'true')
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
           var milestoneName = document.querySelector(".milestone-title-link").innerText;
