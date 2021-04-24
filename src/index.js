@@ -1,7 +1,6 @@
 import {criarPullRequest} from './modules/services.js';
 import {CodigoDevicePost} from './modules/apiServices.js';
 import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
-import {contribuintesRepositorio} from './modules/apiServices.js';
 import {criarRelatorio} from './modules/relatorio.js';
 
 //URL DAS PÁGINAS

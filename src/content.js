@@ -4,11 +4,7 @@ const script = document.createElement('script');
     script.setAttribute("src", chrome.runtime.getURL('index.js'));
     const head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
     head.insertBefore(script, head.lastChild);
-    
-const scriptFileSaver = document.createElement('script');
-    scriptFileSaver.setAttribute("type", "module");
-    scriptFileSaver.setAttribute("src", chrome.runtime.getURL('FileSaver.js'));
-    head.insertBefore(scriptFileSaver, head.lastChild);   
+
     function run(numeroMilestone, token,  owner, repo) {
 
 
@@ -20,14 +16,19 @@ const scriptFileSaver = document.createElement('script');
    
     // document.addEventListener("DOMContentLoaded", run());
 
-      document.addEventListener("click", function (e) {
+    document.addEventListener("click", function (e) {
 
-          var currentUrl = String(window.location.href);
-          var urlParts = currentUrl.split("/");
+        var currentUrl = String(window.location.href);
+        var urlParts = currentUrl.split("/");
+        
+       if(e.path[0] == "https://github.com/"+urlParts[3]+"/"+urlParts[4]+"/milestone/"+urlParts[6] ){
           
-         if(e.path[0] == "https://github.com/"+urlParts[3]+"/"+urlParts[4]+"/milestone/"+urlParts[6] ){
-          var token = localStorage.getItem('token');
-          run(urlParts[6], token, urlParts[3], urlParts[4])
-         }
-      });
+        var token = localStorage.getItem('token');
+        run(urlParts[6], token, urlParts[3], urlParts[4])
+       }
+    });
 
+    const scriptFileSaver = document.createElement('script');
+    scriptFileSaver.setAttribute("type", "module");
+    scriptFileSaver.setAttribute("src", chrome.runtime.getURL('FileSaver.js'));
+    head.insertBefore(scriptFileSaver, head.lastChild);   
