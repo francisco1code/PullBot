@@ -22,7 +22,8 @@
   "web_accessible_resources": [{
     "resources": [
                   "index.js",
-                  "/modules/*"],
+                  "/modules/*",
+                  "FileSaver.js"],
     "matches": ["<all_urls>"],
     "extension_ids": []
    }],

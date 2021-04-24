@@ -5,4 +5,7 @@ const script = document.createElement('script');
     const head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
     head.insertBefore(script, head.lastChild);
 
-    
+const scriptFileSaver = document.createElement('script');
+    scriptFileSaver.setAttribute("type", "module");
+    scriptFileSaver.setAttribute("src", chrome.runtime.getURL('FileSaver.js'));
+    head.insertBefore(scriptFileSaver, head.lastChild);    

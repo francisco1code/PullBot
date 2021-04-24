@@ -2,6 +2,7 @@ import {criarPullRequest} from './modules/services.js';
 import {CodigoDevicePost} from './modules/apiServices.js';
 import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
 import {contribuintesRepositorio} from './modules/apiServices.js';
+import {criarRelatorio} from './modules/relatorio.js';
 //URL DAS PÁGINAS
 var currentUrl = String(window.location.href);
 var urlParts = currentUrl.split("/");
@@ -13,13 +14,32 @@ if(localStorage.getItem('abrirModal')){
 }
 
 document.addEventListener("click", function (e) {
-
+    criarRelatorio();
+         
     //VALIDA ENTRADA EM GITHUB MILESTONES
-    if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {
+    if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {         
+     
     //BOTOES    
     var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
     var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
     localStorage.setItem('getFormAction', getFormAction);
+
+    
+    //      SALVANDO INFORMAÇÕES NO LOCAL STORAGE
+    var valuesAPI = String(getFormAction).split("/");
+    // OWNER
+    const $owner = getOwner(valuesAPI);
+    localStorage.setItem('owner', $owner);
+    // REPOSITORIO
+    const $repo = getRepositori(valuesAPI);
+    localStorage.setItem('repo', $repo);
+    // NUMERO DA MILESTONE
+    const $NumberMilestone = getNumberMilestone(valuesAPI);
+    localStorage.setItem('NumberMilestone', $NumberMilestone);
+    // NOME DA MILESTONE
+    var milestoneName = document.querySelector(".milestone-title-link").innerText;
+    localStorage.setItem('milestoneName', milestoneName);
+
 
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
@@ -28,8 +48,6 @@ document.addEventListener("click", function (e) {
         //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
         localStorage.setItem('abrirModal', 'true')
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-        var milestoneName = document.querySelector(".milestone-title-link").innerText;
-        localStorage.setItem('milestoneName', milestoneName);
      }
     }
   });
@@ -47,5 +65,25 @@ document.addEventListener("click", function (e) {
 
   }
   
-  
-  
+/*FUNÇOES A DEFINIREM OS VALORES A SEREM PASSADOS PARA API*/
+
+/*GET DONO DO REPOSITORIO*/
+function getOwner(valuesAPI){
+  var owner = valuesAPI[3];
+  console.log(owner)
+  return owner;
+}
+
+/*GET  REPOSITORIO*/
+function getRepositori(valuesAPI){
+  var repo = valuesAPI[4]
+  console.log(repo)
+  return repo;
+}
+
+/*GET NUMERO DA MILESTONE A SER FECHADA*/
+function getNumberMilestone(valuesAPI){
+  var milestoneNumber = valuesAPI[6]
+  console.log(milestoneNumber)
+  return milestoneNumber;
+}
