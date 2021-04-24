@@ -23,6 +23,7 @@
     "resources": [
                   "index.js",
                   "/modules/*",
+                  "/Chart/app.js"],
                   "FileSaver.js"],
     "matches": ["<all_urls>"],
     "extension_ids": []
@@ -41,9 +42,14 @@
       "matches": [
         "<all_urls>"
       ],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_end"
     }
   ], "background": {
     "service_worker": "background.js"
-  }
+  },
+  "permissions": ["<all_urls>",
+    "storage",
+    "tabs"
+]
 }

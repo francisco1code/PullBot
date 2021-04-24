@@ -1,3 +1,4 @@
+import {GraficoPessoal} from '../Chart/app.js';
 export function CodigoDevicePost(){
     var xhr = new XMLHttpRequest();
 
@@ -55,79 +56,118 @@ export function ConfirmaLoginContaUsuario(){
 }
 // ///////////////////////////////////////////////////////////////////////
 
-export function contribuintesRepositorio(){
-  
-var xhr = new XMLHttpRequest();
 
 
-xhr.addEventListener("readystatechange", function() {
-  if(this.readyState === 4) {
-   var recebeContribuintes = JSON.parse(this.responseText);
-  const $numerosContribuintes = recebeContribuintes.length;
-   ProcuraContribuicao(recebeContribuintes, $numerosContribuintes);
+ var total = 0;
+ var contador = 0;
+ let nomeContribuinte = [];
+ let qtdComitsContribuinte = [];
+//VALORES A SEREM PASSADOS PARA API
 
-  
-}});
+export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, sprint){
 
-xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/contributors");
-xhr.send();
-}
-
-function ProcuraContribuicao(recebeContribuintes, numerosContribuintes){
-
-var i = 0;
-while(i < numerosContribuintes){
-  var contribuinte = recebeContribuintes[i].login
-  
-  milestone(contribuinte)
-  i++;
-}
-}
-
-function getContribuicao(contribuinte, dataAbertura){
-  
   var xhr = new XMLHttpRequest();
+  
+  
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
-      var todosCommits = this.responseText;
-      calculaCommits(contribuinte, todosCommits);
+     var recebeContribuintes = JSON.parse(this.responseText);
+    const $numerosContribuintes = recebeContribuintes.length;
+    milestone(numeroMilestone, recebeContribuintes, $numerosContribuintes, token, $owner, $repo, sprint);
+     
+    
+  }});
+  
+  xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/contributors");
+  xhr.setRequestHeader("authorization", "Bearer " + token);
+  xhr.send();
+  
+  }
+  
+  function milestone(numeroMilestone, recebeContribuintes, numerosContribuintes, token, $owner, $repo, sprint){ 
+    var xhr = new XMLHttpRequest();
+  
+    xhr.addEventListener("readystatechange", function() {
+      if(this.readyState === 4) {
+        var b = String(this.responseText).split('url:')
+        
+       var resposta = JSON.parse(this.responseText);
+      
+       const resultadoProcura = milestoneDesejada(numeroMilestone,resposta, resposta.length)
+       
+       var nomeSprint = resultadoProcura.title
+        var dataAberturaMilestone =  resultadoProcura.created_at
+        var dataFechamentoMilestone = resultadoProcura.closed_at
+        console.log( resultadoProcura.created_at)
+       
+       ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token,  $owner, $repo, nomeSprint);
+  
+      }
+    });
+    xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/milestones?state=all&sort=completeness");
+    xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+    xhr.setRequestHeader("authorization", "Bearer " + token);
+    xhr.send();
+  }
+ 
+  function milestoneDesejada(numeroMilestone,resposta,  qtdMilestones){
+    
+    for(var i = 0; i < qtdMilestones; i++){
+      if (resposta[i].number == numeroMilestone){
+       
+        return resposta[i];
+      }
+    
       
     }
-  });
+  }
+     
+  function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo, nomeSprint){
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/commits?author="+contribuinte+"&since="+dataAbertura);
-  xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-  xhr.send();
-}
+
+  var i = 0;
+  while(i < numerosContribuintes){
+    var contribuinte = recebeContribuintes[i].login;
+
   
-function calculaCommits(contribuinte, todosCommits){
-
-  var tamanho =  JSON.parse(todosCommits);
-  console.log(contribuinte);
-  console.log(tamanho.length);
-}
-
-
-
-function milestone(contribuinte){
-  var xhr = new XMLHttpRequest();
-
-  xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-     var respota = JSON.parse(this.responseText);
-     const dataAberturaMilestone = respota[0].updated_at
-     getContribuicao(contribuinte, dataAberturaMilestone);
-
+    getContribuicao(contribuinte, numerosContribuintes,  dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo, nomeSprint);
+    i++;
+  }
+  }
+  
+  function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo, nomeSprint){
     
-    }
-  });
-  
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/milestones?state=all&sort=completeness");
-  xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-  
-  
-  xhr.send();
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", function() {
+      if(this.readyState === 4) {
+        var todosCommits = JSON.parse(this.responseText);
+          
+         calculaCommits(contribuinte, todosCommits.length, numerosContribuintes, nomeSprint);
+      
+      }
+    });
+    
+    xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/commits?author="+contribuinte+"&since="+dataAberturaMilestone+"&until="+dataFechamentoMilestone);
+    xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+    xhr.setRequestHeader("authorization", "Bearer " + token);
+    xhr.send();
+  }
  
-}
+  function calculaCommits(contribuinte, todosCommits , numerosContribuintes, nomeSprint){
+    
+    total = todosCommits + total;
   
-
+    nomeContribuinte[contador]  = contribuinte;
+    qtdComitsContribuinte[contador] = todosCommits;
+   
+   
+   if(contador == numerosContribuintes - 1){
+     console.log(nomeContribuinte)
+     console.log(qtdComitsContribuinte)
+     GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint)
+   }
+    
+   contador++;
+ 
+  }
+  

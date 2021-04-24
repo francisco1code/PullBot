@@ -182,5 +182,6 @@ export function criarPullRequest() {
   
       //FECHANDO MODAL APÓS CONCLUIR INSTRUÇÕES
         document.getElementById("modal-mensagem").classList.remove('mostrar');
+
       }}) 
   }

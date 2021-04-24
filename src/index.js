@@ -3,6 +3,7 @@ import {CodigoDevicePost} from './modules/apiServices.js';
 import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
 import {contribuintesRepositorio} from './modules/apiServices.js';
 import {criarRelatorio} from './modules/relatorio.js';
+
 //URL DAS PÁGINAS
 var currentUrl = String(window.location.href);
 var urlParts = currentUrl.split("/");
@@ -14,12 +15,15 @@ if(localStorage.getItem('abrirModal')){
 }
 
 document.addEventListener("click", function (e) {
+
     criarRelatorio();
          
     //VALIDA ENTRADA EM GITHUB MILESTONES
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {         
      
+
     //BOTOES    
+    
     var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
     var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
     localStorage.setItem('getFormAction', getFormAction);
@@ -44,27 +48,35 @@ document.addEventListener("click", function (e) {
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
-        
+
+          localStorage.setItem('abrirModal', 'true')
+          var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
+          var milestoneName = document.querySelector(".milestone-title-link").innerText;
+          localStorage.setItem('milestoneName', milestoneName);
         //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
         localStorage.setItem('abrirModal', 'true')
+
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
+
      }
     }
   });
 
  
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
-    
+
     CodigoDevicePost();
+
   }
 
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
-    contribuintesRepositorio();
-
+    
+    
   }
   
+
 /*FUNÇOES A DEFINIREM OS VALORES A SEREM PASSADOS PARA API*/
 
 /*GET DONO DO REPOSITORIO*/
@@ -87,3 +99,4 @@ function getNumberMilestone(valuesAPI){
   console.log(milestoneNumber)
   return milestoneNumber;
 }
+
