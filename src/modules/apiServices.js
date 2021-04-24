@@ -124,9 +124,11 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
      
   function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo, nomeSprint){
   
+
   var i = 0;
   while(i < numerosContribuintes){
     var contribuinte = recebeContribuintes[i].login;
+
   
     getContribuicao(contribuinte, numerosContribuintes,  dataAberturaMilestone, dataFechamentoMilestone, token, $owner, $repo, nomeSprint);
     i++;

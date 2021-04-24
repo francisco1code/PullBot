@@ -5,7 +5,12 @@ const script = document.createElement('script');
     const head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
     head.insertBefore(script, head.lastChild);
     
+const scriptFileSaver = document.createElement('script');
+    scriptFileSaver.setAttribute("type", "module");
+    scriptFileSaver.setAttribute("src", chrome.runtime.getURL('FileSaver.js'));
+    head.insertBefore(scriptFileSaver, head.lastChild);   
     function run(numeroMilestone, token,  owner, repo) {
+
 
         var dados = [numeroMilestone, token, owner, repo]
         chrome.storage.sync.set({key: dados}, function() {
@@ -25,3 +30,4 @@ const script = document.createElement('script');
           run(urlParts[6], token, urlParts[3], urlParts[4])
          }
       });
+
