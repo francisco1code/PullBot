@@ -23,7 +23,7 @@
     "resources": [
                   "index.js",
                   "/modules/*",
-                  "/Chart/app.js"],
+                  "/Chart/app.js",
                   "FileSaver.js"],
     "matches": ["<all_urls>"],
     "extension_ids": []
