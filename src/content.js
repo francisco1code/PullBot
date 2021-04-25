@@ -29,7 +29,7 @@ const script = document.createElement('script');
        }
     });
 
-    const scriptFileSaver = document.createElement('script');
-    scriptFileSaver.setAttribute("type", "module");
-    scriptFileSaver.setAttribute("src", chrome.runtime.getURL('FileSaver.js'));
-    head.insertBefore(scriptFileSaver, head.lastChild);   
+    // const scriptFileSaver = document.createElement('script');
+    // scriptFileSaver.setAttribute("type", "module");
+    // scriptFileSaver.setAttribute("src", chrome.runtime.getURL('FileSaver.js'));
+    // head.insertBefore(scriptFileSaver, head.lastChild);   

@@ -54,7 +54,7 @@
           localStorage.setItem('milestoneName', milestoneName);
         //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
         localStorage.setItem('abrirModal', 'true')
-
+          
         var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
 
      }
@@ -65,7 +65,7 @@
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
 
     CodigoDevicePost();
-
+    criarRelatorio();
   }
 
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){

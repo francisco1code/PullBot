@@ -1,4 +1,7 @@
+import {File} from '../libraries/filesaver.js';
+
 // CONTRIBUINTES
+
 export function criarRelatorio() {
     var xhr = new XMLHttpRequest();
     const owner = localStorage.getItem('owner');
@@ -7,6 +10,7 @@ export function criarRelatorio() {
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
         var contribuintes = JSON.parse(this.responseText);
+        
         milestone(contribuintes);
 }});
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/contributors`);
@@ -160,5 +164,9 @@ function relatorio(contribuintes, data, comments, issues){
     }
     relatorio += `| Total | ${totalComments} | \n`;
 
-    localStorage.setItem('relatorioDeDesenvolvimento', relatorio);
+   
+    var numberMilestone = localStorage.getItem('NumberMilestone');
+   
+    File(relatorio);
+   
 }

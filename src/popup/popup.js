@@ -31,13 +31,6 @@ $btn_download.addEventListener('click', () => {
 })
 
 
-     
-  
-  
-
-
-//VALORES A SEREM PASSADOS PARA API
-
 
 
  
