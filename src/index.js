@@ -24,30 +24,29 @@
     //BOTOES    
     
     var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
-    var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
-    localStorage.setItem('getFormAction', getFormAction);
-
-    
-    //      SALVANDO INFORMAÇÕES NO LOCAL STORAGE
-    var valuesAPI = String(getFormAction).split("/");
-    // OWNER
-    const $owner = getOwner(valuesAPI);
-    localStorage.setItem('owner', $owner);
-    // REPOSITORIO
-    const $repo = getRepositori(valuesAPI);
-    localStorage.setItem('repo', $repo);
-    // NUMERO DA MILESTONE
-    const $NumberMilestone = getNumberMilestone(valuesAPI);
-    localStorage.setItem('NumberMilestone', $NumberMilestone);
-    // NOME DA MILESTONE
-    var milestoneName = document.querySelector(".milestone-title-link").innerText;
-    localStorage.setItem('milestoneName', milestoneName);
-
-
+   
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
-          criarRelatorio();
+          var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
+          localStorage.setItem('getFormAction', getFormAction);
+      
+          //      SALVANDO INFORMAÇÕES NO LOCAL STORAGE
+          var valuesAPI = String(getFormAction).split("/");
+          // OWNER
+          const $owner = getOwner(valuesAPI);
+          localStorage.setItem('owner', $owner);
+          // REPOSITORIO
+          const $repo = getRepositori(valuesAPI);
+          localStorage.setItem('repo', $repo);
+          // NUMERO DA MILESTONE
+          const $NumberMilestone = getNumberMilestone(valuesAPI);
+          localStorage.setItem('NumberMilestone', $NumberMilestone);
+          // NOME DA MILESTONE
+          var milestoneName = document.querySelector(".milestone-title-link").innerText;
+          localStorage.setItem('milestoneName', milestoneName); 
+
+          criarRelatorio($owner, $repo,  $NumberMilestone, milestoneName);
           localStorage.setItem('abrirModal', 'true')
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
           var milestoneName = document.querySelector(".milestone-title-link").innerText;

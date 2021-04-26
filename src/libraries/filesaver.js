@@ -1,7 +1,3 @@
-
-
-
-
 var _global = typeof window === 'object' && window.window === window
 ? window : typeof self === 'object' && self.self === self
 ? self : typeof global === 'object' && global.global === global
@@ -159,14 +155,11 @@ var saveAs = _global.saveAs || (
 _global.saveAs = saveAs.saveAs = saveAs
 
 
-export function File(relatorio){
+export function File(relatorio, numberMilestone){
 
 
-// DOWNLOAD DO RELATÓRIO DE DESENVOLVIMENTO APÓS FECHAR MILESTONE
-
- 
- 
-    var numberMilestone = localStorage.getItem('NumberMilestone');
+  // DOWNLOAD DO RELATÓRIO DE DESENVOLVIMENTO APÓS FECHAR MILESTONE
+   
     var blob = new Blob([relatorio], {type: "text/plain;charset=utf-8"});
     saveAs(blob, `metricas_milestone${numberMilestone}.md`);
     

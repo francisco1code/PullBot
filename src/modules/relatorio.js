@@ -2,16 +2,14 @@ import {File} from '../libraries/filesaver.js';
 
 // CONTRIBUINTES
 
-export function criarRelatorio() {
+export function criarRelatorio(owner, repo,  $NumberMilestone, milestoneName) {
     var xhr = new XMLHttpRequest();
-    const owner = localStorage.getItem('owner');
-    const repo = localStorage.getItem('repo');
     
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
         var contribuintes = JSON.parse(this.responseText);
         
-        milestone(contribuintes);
+        milestone(contribuintes, owner, repo,  $NumberMilestone, milestoneName);
 }});
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/contributors`);
     xhr.send();
@@ -19,16 +17,14 @@ export function criarRelatorio() {
   }
 
 // DATA DE ABERTURA DA MILESTONE
-function milestone(contribuinte){
+function milestone(contribuinte, owner, repo,  $NumberMilestone, milestoneName){
     var xhr = new XMLHttpRequest();
-    const owner = localStorage.getItem('owner');
-    const repo = localStorage.getItem('repo');
 
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
        var milestone = JSON.parse(this.responseText);
        const dataAberturaMilestone = milestone[0].created_at
-       getComments(contribuinte, dataAberturaMilestone);
+       getComments(contribuinte, dataAberturaMilestone, owner, repo,  $NumberMilestone, milestoneName);
     
       }
 });
@@ -39,15 +35,13 @@ function milestone(contribuinte){
 
 
 // COMENTÁRIOS EM ISSUES
-function getComments(contribuinte, dataAbertura) {
+function getComments(contribuinte, dataAbertura, owner, repo,  $NumberMilestone, milestoneName) {
     var xhr = new XMLHttpRequest();
-    const owner = localStorage.getItem('owner');
-    const repo = localStorage.getItem('repo');
 
     xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
             var comments = JSON.parse(this.responseText);
-            getIssues(contribuinte, dataAbertura, comments)
+            getIssues(contribuinte, dataAbertura, comments,  owner, repo,  $NumberMilestone, milestoneName )
         }
 });
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues/comments?since=${dataAbertura}`);
@@ -56,15 +50,13 @@ function getComments(contribuinte, dataAbertura) {
 }
 
 // ISSUES ASSOCIADAS A CADA CONTRIBUINTE
-function getIssues(contribuinte, dataAbertura, comments) {
+function getIssues(contribuinte, dataAbertura, comments,  owner, repo,  $NumberMilestone, milestoneName) {
     var xhr = new XMLHttpRequest();
-    const owner = localStorage.getItem('owner');
-    const repo = localStorage.getItem('repo');
-
+    
     xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
             var issues = JSON.parse(this.responseText);
-            relatorio(contribuinte, dataAbertura, comments, issues)
+            relatorio(contribuinte, dataAbertura, comments, issues, owner, repo,  $NumberMilestone, milestoneName)
         }
 });
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues?since=${dataAbertura}`);
@@ -73,15 +65,19 @@ function getIssues(contribuinte, dataAbertura, comments) {
 }
 
 // QUANTIDADE DE COMMITS POR CONTRIBUINTE DESDE A ABERTURA DA MILESTONE
-function getCommits(contribuinte, dataAbertura){
+function getCommits(contribuinte, dataAbertura, owner, repo){
     var xhr = new XMLHttpRequest();
-    const owner = localStorage.getItem('owner');
-    const repo = localStorage.getItem('repo');
+  
 
     xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
             var commits = JSON.parse(this.responseText).length;
             localStorage.setItem(`commits_${contribuinte}`, commits);
+            getCommits(contribuintes[i].login, data, owner, repo);
+            var commits = JSON.parse(localStorage.getItem(`commits_${contribuintes[i].login}`));
+        
+        relatorio += `| ${contribuintes[i].login} | ${commits} | \n`;
+        totalCommits += commits;
         }
 });
     xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/commits?author=${contribuinte}&since=${dataAbertura}`);
@@ -90,9 +86,9 @@ function getCommits(contribuinte, dataAbertura){
 }
 
 // CONSTRUINDO RELATÓRIO DE DESENVOLVIMENTO
-function relatorio(contribuintes, data, comments, issues){
+function relatorio(contribuintes, data, comments, issues, owner, repo,  NumberMilestone, milestoneName){
     
-    const milestoneName = localStorage.getItem('milestoneName');
+    
     var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n\n## 1. Ranking de contribuições total  \n| | Contribuinte | Quantidade de Contribuições | \n|:-:|:-:|:-:| \n`;
 
 // CONTRIBUIÇÕES
@@ -110,7 +106,7 @@ function relatorio(contribuintes, data, comments, issues){
     var totalCommits = 0;
     for(i = 0; i < contribuintes.length; i++) {
         
-        getCommits(contribuintes[i].login, data);
+        getCommits(contribuintes[i].login, data, owner, repo);
         var commits = JSON.parse(localStorage.getItem(`commits_${contribuintes[i].login}`));
         
         relatorio += `| ${contribuintes[i].login} | ${commits} | \n`;
@@ -163,10 +159,7 @@ function relatorio(contribuintes, data, comments, issues){
         totalComments += quantidade;
     }
     relatorio += `| Total | ${totalComments} | \n`;
-
    
-    var numberMilestone = localStorage.getItem('NumberMilestone');
-   
-    File(relatorio);
+    File(relatorio, NumberMilestone);
    
 }
