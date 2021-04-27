@@ -20,7 +20,7 @@ const script = document.createElement('script');
 
         var currentUrl = String(window.location.href);
         var urlParts = currentUrl.split("/");
-        
+        console.log(e.path[0])
        if(e.path[0] == "https://github.com/"+urlParts[3]+"/"+urlParts[4]+"/milestone/"+urlParts[6] ){
           
         var token = localStorage.getItem('token');

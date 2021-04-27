@@ -1,165 +1,115 @@
 import {File} from '../libraries/filesaver.js';
 
-// CONTRIBUINTES
 
-export function criarRelatorio(owner, repo,  $NumberMilestone, milestoneName) {
-    var xhr = new XMLHttpRequest();
-    
-    xhr.addEventListener("readystatechange", function() {
-      if(this.readyState === 4) {
-        var contribuintes = JSON.parse(this.responseText);
-        
-        milestone(contribuintes, owner, repo,  $NumberMilestone, milestoneName);
-}});
-    xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/contributors`);
-    xhr.send();
+   var total = 0;
+   var contador = 0;
+   let nomeContribuinte = [];
+   let qtdComitsContribuinte = [];
+  //VALORES A SEREM PASSADOS PARA API
   
-  }
-
-// DATA DE ABERTURA DA MILESTONE
-function milestone(contribuinte, owner, repo,  $NumberMilestone, milestoneName){
+  export function  criarRelatorio(numeroMilestone, token, $owner, $repo){
+  
     var xhr = new XMLHttpRequest();
-
+    
+    
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
-       var milestone = JSON.parse(this.responseText);
-       const dataAberturaMilestone = milestone[0].created_at
-       getComments(contribuinte, dataAberturaMilestone, owner, repo,  $NumberMilestone, milestoneName);
+       var recebeContribuintes = JSON.parse(this.responseText);
+      const $numerosContribuintes = recebeContribuintes.length;
+      milestone(numeroMilestone, recebeContribuintes, $numerosContribuintes, token, $owner, $repo);
+       
+      
+    }});
     
+    xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/contributors");
+    xhr.setRequestHeader("authorization", "Bearer " + token);
+    xhr.send();
+    
+    }
+    
+    function milestone(numeroMilestone, recebeContribuintes, numerosContribuintes, token, owner, repo){ 
+      var xhr = new XMLHttpRequest();
+    
+      xhr.addEventListener("readystatechange", function() {
+        if(this.readyState === 4) {
+          var b = String(this.responseText).split('url:')
+          
+         var resposta = JSON.parse(this.responseText);
+        
+         const resultadoProcura = milestoneDesejada(numeroMilestone,resposta, resposta.length)
+         
+         var nomeSprint = resultadoProcura.title
+          var dataAberturaMilestone =  resultadoProcura.created_at
+          var dataFechamentoMilestone = resultadoProcura.closed_at
+        //   console.log( resultadoProcura.created_at)
+         
+         ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token,  owner, repo, nomeSprint);
+    
+        }
+      });
+      xhr.open("GET", "https://api.github.com/repos/"+owner+"/"+repo+"/milestones?state=all&sort=completeness");
+      xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+      xhr.setRequestHeader("authorization", "Bearer " + token);
+      xhr.send();
+    }
+   
+    function milestoneDesejada(numeroMilestone,resposta,  qtdMilestones){
+      
+      for(var i = 0; i < qtdMilestones; i++){
+        if (resposta[i].number == numeroMilestone){
+         
+          return resposta[i];
+        }
+      
+        
       }
-});
-    xhr.open("GET", "https://api.github.com/repos/" + owner + "/" + repo + "/milestones?state=all&sort=completeness");
-    xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-    xhr.send();
-  }
-
-
-// COMENTÁRIOS EM ISSUES
-function getComments(contribuinte, dataAbertura, owner, repo,  $NumberMilestone, milestoneName) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.addEventListener("readystatechange", function() {
-        if(this.readyState === 4) {
-            var comments = JSON.parse(this.responseText);
-            getIssues(contribuinte, dataAbertura, comments,  owner, repo,  $NumberMilestone, milestoneName )
-        }
-});
-    xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues/comments?since=${dataAbertura}`);
-    xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-    xhr.send();
-}
-
-// ISSUES ASSOCIADAS A CADA CONTRIBUINTE
-function getIssues(contribuinte, dataAbertura, comments,  owner, repo,  $NumberMilestone, milestoneName) {
-    var xhr = new XMLHttpRequest();
+    }
+       
+    function ProcuraContribuicao(recebeContribuintes, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token, owner, repo, nomeSprint){
     
-    xhr.addEventListener("readystatechange", function() {
-        if(this.readyState === 4) {
-            var issues = JSON.parse(this.responseText);
-            relatorio(contribuinte, dataAbertura, comments, issues, owner, repo,  $NumberMilestone, milestoneName)
-        }
-});
-    xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues?since=${dataAbertura}`);
-    xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-    xhr.send();
-}
-
-// QUANTIDADE DE COMMITS POR CONTRIBUINTE DESDE A ABERTURA DA MILESTONE
-function getCommits(contribuinte, dataAbertura, owner, repo){
-    var xhr = new XMLHttpRequest();
   
-
-    xhr.addEventListener("readystatechange", function() {
+    var i = 0;
+    while(i < numerosContribuintes){
+      var contribuinte = recebeContribuintes[i].login;
+  
+    
+      getContribuicao(contribuinte, numerosContribuintes,  dataAberturaMilestone, dataFechamentoMilestone, token, owner, repo, nomeSprint);
+      i++;
+    }
+    }
+    
+    function getContribuicao(contribuinte, numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token, owner, repo, nomeSprint){
+      
+      var xhr = new XMLHttpRequest();
+      xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
-            var commits = JSON.parse(this.responseText).length;
-            localStorage.setItem(`commits_${contribuinte}`, commits);
-            getCommits(contribuintes[i].login, data, owner, repo);
-            var commits = JSON.parse(localStorage.getItem(`commits_${contribuintes[i].login}`));
+            console.log(this.responseText)
+          var todosCommits = JSON.parse(this.responseText);
+            
+           calculaCommits(contribuinte, todosCommits.length, numerosContribuintes, nomeSprint);
         
-        relatorio += `| ${contribuintes[i].login} | ${commits} | \n`;
-        totalCommits += commits;
         }
-});
-    xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/commits?author=${contribuinte}&since=${dataAbertura}`);
-    xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
-    xhr.send();
-}
-
-// CONSTRUINDO RELATÓRIO DE DESENVOLVIMENTO
-function relatorio(contribuintes, data, comments, issues, owner, repo,  NumberMilestone, milestoneName){
-    
-    
-    var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n\n## 1. Ranking de contribuições total  \n| | Contribuinte | Quantidade de Contribuições | \n|:-:|:-:|:-:| \n`;
-
-// CONTRIBUIÇÕES
-    var totalContribuicoes = 0;
-    for(var i = 0; i < contribuintes.length; i++) {
-        relatorio += `| ${i+1}º | ${contribuintes[i].login} | ${contribuintes[i].contributions} | \n`;
-        totalContribuicoes += contribuintes[i].contributions;
+      });
+     
+      xhr.open("GET", "https://api.github.com/repos/"+owner+"/"+repo+"/commits?author="+contribuinte+"&since="+dataAberturaMilestone+"&until="+dataFechamentoMilestone);
+      xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
+      xhr.setRequestHeader("authorization", "Bearer " + token);
+      xhr.send();
     }
-
-    relatorio += `|  | Total | ${totalContribuicoes} | \n`;
-    relatorio += `\n## 2. Commits \n| Contribuinte | Quantidade de Commits | \n|:-:|:-:| \n`;
-
-
-// COMMITS
-    var totalCommits = 0;
-    for(i = 0; i < contribuintes.length; i++) {
-        
-        getCommits(contribuintes[i].login, data, owner, repo);
-        var commits = JSON.parse(localStorage.getItem(`commits_${contribuintes[i].login}`));
-        
-        relatorio += `| ${contribuintes[i].login} | ${commits} | \n`;
-        totalCommits += commits;
-    }
-
-    relatorio += `| Total | ${totalCommits} | \n`;
-    relatorio += `\n## 4. Issues associadas \n| Contribuinte | Issues associadas \n|:-:|:-:| \n`;
-
- // ISSUES ASSOCIADAS
-    for(i = 0; i < contribuintes.length; i++) {
-        localStorage.setItem(`issues_${contribuintes[i].login}`, 0);
-    }
-
-    for(i = 0; i < issues.length; i++) {
-
-        for(var j = 0; j < issues[i].assignees.length; j++) {
-            var quantidade = new Number(localStorage.getItem(`issues_${issues[i].assignees[j].login}`));
-            quantidade++;
-            localStorage.setItem(`issues_${issues[i].assignees[j].login}`, quantidade)
-        }
-    }
-
-    var totalIssues = 0;
-    for(i = 0; i < contribuintes.length; i++) {
-        var quantidade = new Number(localStorage.getItem(`issues_${contribuintes[i].login}`));
-        relatorio += `| ${contribuintes[i].login} | ${quantidade} | \n`;
-        totalIssues += quantidade;
-    }
-
-// COMENTÁRIOS EM ISSUES
-    relatorio += `\n## 3. Comentários em Issues \n| Contribuinte | Quantidade de comentários | \n|:-:|:-:| \n`;
-
-    
-    for(i = 0; i < contribuintes.length; i++) {
-        localStorage.setItem(`comments_${contribuintes[i].login}`, 0);
-    }
-
-    for(i = 0; i < comments.length; i++) {
-        var quantidade = new Number(localStorage.getItem(`comments_${comments[i].user.login}`));
-        quantidade++;
-        localStorage.setItem(`comments_${comments[i].user.login}`, quantidade)
-
-    }
-
-    var totalComments = 0;
-    for(i = 0; i < contribuintes.length; i++) {
-        var quantidade = new Number(localStorage.getItem(`comments_${contribuintes[i].login}`));
-        relatorio += `| ${contribuintes[i].login} | ${quantidade} | \n`;
-        totalComments += quantidade;
-    }
-    relatorio += `| Total | ${totalComments} | \n`;
    
-    File(relatorio, NumberMilestone);
+    function calculaCommits(contribuinte, todosCommits , numerosContribuintes, nomeSprint){
+      
+      total = todosCommits + total;
+    
+      nomeContribuinte[contador]  = contribuinte;
+      qtdComitsContribuinte[contador] = todosCommits;
+     
+     
+     if(contador == numerosContribuintes - 1){
+       console.log("u")
+     
+     }
+      
+     contador++;
    
-}
+    }

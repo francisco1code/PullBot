@@ -1,4 +1,3 @@
-
 import {contribuinteRepositorio} from '../modules/apiServices.js';
 chrome.storage.sync.get(['key'], function(result) {
   var dados = result.key;
@@ -29,9 +28,4 @@ $btn_download.addEventListener('click', () => {
     pdfMake.createPdf(docDefinition).open();
 
 })
-
-
-
-
- 
 

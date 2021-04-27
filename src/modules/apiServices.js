@@ -1,5 +1,4 @@
 import {GraficoPessoal} from '../libraries/app.js';
-
 export function CodigoDevicePost(){
     var xhr = new XMLHttpRequest();
 
@@ -163,12 +162,11 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
    
    
    if(contador == numerosContribuintes - 1){
-     console.log(nomeContribuinte);
-     console.log(qtdComitsContribuinte);
-     GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint);
+     console.log(nomeContribuinte)
+     console.log(qtdComitsContribuinte)
+     GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint)
    }
     
    contador++;
  
   }
-  
