@@ -5,7 +5,7 @@ export function criarRelatorio(owner, repo, milestoneName) {
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
       var contribuintes = JSON.parse(this.responseText);
-      milestone(contribuintes);
+      milestone(contribuintes, owner, repo, milestoneName);
 }});
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/contributors`);
   xhr.send();
