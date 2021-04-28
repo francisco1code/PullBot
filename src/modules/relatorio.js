@@ -20,7 +20,7 @@ function milestone(contribuinte, owner, repo){
     if(this.readyState === 4) {
      var milestone = JSON.parse(this.responseText);
      const dataAberturaMilestone = milestone[0].created_at
-     getComments(contribuinte, dataAberturaMilestone);
+     getComments(contribuinte, dataAberturaMilestone,  owner, repo);
   
     }
 });
@@ -31,10 +31,7 @@ function milestone(contribuinte, owner, repo){
 
 
 // COMENTÁRIOS EM ISSUES
-function getComments(contribuinte, dataAbertura) {
-  var xhr = new XMLHttpRequest();
-  const owner = localStorage.getItem('owner');
-  const repo = localStorage.getItem('repo');
+function getComments(contribuinte, dataAbertura,  owner, repo) {
 
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
