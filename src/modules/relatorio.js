@@ -59,7 +59,7 @@ function getIssues(contribuinte, dataAbertura, comments,  owner, repo) {
 }
 
 // QUANTIDADE DE COMMITS POR CONTRIBUINTE DESDE A ABERTURA DA MILESTONE
-function getCommits(contribuinte, dataAbertura){
+function getCommits(contribuinte, dataAbertura , owner, repo){
 
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
