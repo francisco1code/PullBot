@@ -36,7 +36,7 @@ function getComments(contribuinte, dataAbertura,  owner, repo) {
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
           var comments = JSON.parse(this.responseText);
-          getIssues(contribuinte, dataAbertura, comments)
+          getIssues(contribuinte, dataAbertura, comments,  owner, repo)
       }
 });
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues/comments?since=${dataAbertura}`);
@@ -45,10 +45,7 @@ function getComments(contribuinte, dataAbertura,  owner, repo) {
 }
 
 // ISSUES ASSOCIADAS A CADA CONTRIBUINTE
-function getIssues(contribuinte, dataAbertura, comments) {
-  var xhr = new XMLHttpRequest();
-  const owner = localStorage.getItem('owner');
-  const repo = localStorage.getItem('repo');
+function getIssues(contribuinte, dataAbertura, comments,  owner, repo) {
 
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
