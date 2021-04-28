@@ -1,6 +1,6 @@
 import {File} from '../libraries/filesaver.js';
 
-export function criarRelatorio(owner, repo) {
+export function criarRelatorio(owner, repo, milestoneName) {
   
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
@@ -13,14 +13,14 @@ export function criarRelatorio(owner, repo) {
 }
 
 // DATA DE ABERTURA DA MILESTONE
-function milestone(contribuinte, owner, repo){
+function milestone(contribuinte, owner, repo, milestoneName){
   
 
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
      var milestone = JSON.parse(this.responseText);
      const dataAberturaMilestone = milestone[0].created_at
-     getComments(contribuinte, dataAberturaMilestone,  owner, repo);
+     getComments(contribuinte, dataAberturaMilestone,  owner, repo, milestoneName);
   
     }
 });
@@ -31,12 +31,12 @@ function milestone(contribuinte, owner, repo){
 
 
 // COMENTÁRIOS EM ISSUES
-function getComments(contribuinte, dataAbertura,  owner, repo) {
+function getComments(contribuinte, dataAbertura,  owner, repo, milestoneName) {
 
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
           var comments = JSON.parse(this.responseText);
-          getIssues(contribuinte, dataAbertura, comments,  owner, repo)
+          getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestoneName)
       }
 });
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues/comments?since=${dataAbertura}`);
@@ -45,7 +45,7 @@ function getComments(contribuinte, dataAbertura,  owner, repo) {
 }
 
 // ISSUES ASSOCIADAS A CADA CONTRIBUINTE
-function getIssues(contribuinte, dataAbertura, comments,  owner, repo) {
+function getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestoneName) {
 
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
@@ -73,9 +73,8 @@ function getCommits(contribuinte, dataAbertura , owner, repo){
 }
 
 // CONSTRUINDO RELATÓRIO DE DESENVOLVIMENTO
-function relatorio(contribuintes, data, comments, issues){
+function relatorio(contribuintes, data, comments, issues, milestoneName){
   
-  const milestoneName = localStorage.getItem('milestoneName');
   var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n\n## 1. Ranking de contribuições total  \n| | Contribuinte | Quantidade de Contribuições | \n|:-:|:-:|:-:| \n`;
 
 // CONTRIBUIÇÕES
