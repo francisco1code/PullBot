@@ -45,7 +45,7 @@
           // NOME DA MILESTONE
           var milestoneName = document.querySelector(".milestone-title-link").innerText;
           localStorage.setItem('milestoneName', milestoneName); 
-
+          criarRelatorio(owner, repo, milestoneName);
           //criarRelatorio($owner, $repo,  $NumberMilestone, milestoneName);
           localStorage.setItem('abrirModal', 'true')
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
