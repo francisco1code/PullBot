@@ -50,7 +50,7 @@ function getIssues(contribuinte, dataAbertura, comments,  owner, repo) {
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
           var issues = JSON.parse(this.responseText);
-          relatorio(contribuinte, dataAbertura, comments, issues)
+          relatorio(contribuinte, dataAbertura, comments, issues,  owner, repo)
       }
 });
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues?since=${dataAbertura}`);
@@ -60,9 +60,6 @@ function getIssues(contribuinte, dataAbertura, comments,  owner, repo) {
 
 // QUANTIDADE DE COMMITS POR CONTRIBUINTE DESDE A ABERTURA DA MILESTONE
 function getCommits(contribuinte, dataAbertura){
-  var xhr = new XMLHttpRequest();
-  const owner = localStorage.getItem('owner');
-  const repo = localStorage.getItem('repo');
 
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
