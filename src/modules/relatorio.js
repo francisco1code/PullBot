@@ -13,10 +13,8 @@ export function criarRelatorio(owner, repo) {
 }
 
 // DATA DE ABERTURA DA MILESTONE
-function milestone(contribuinte){
-  var xhr = new XMLHttpRequest();
-  const owner = localStorage.getItem('owner');
-  const repo = localStorage.getItem('repo');
+function milestone(contribuinte, owner, repo){
+  
 
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {

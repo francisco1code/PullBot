@@ -70,7 +70,7 @@
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
-    criarRelatorio(11, "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","fga-eps-mds",  "PullBot" )
+    
   }
   
 
