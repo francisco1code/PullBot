@@ -164,7 +164,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
    if(contador == numerosContribuintes - 1){
      console.log(nomeContribuinte)
      console.log(qtdComitsContribuinte)
-     GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint)
+     GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint);
    }
     
    contador++;

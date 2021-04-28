@@ -14,7 +14,7 @@
     }
 
     document.addEventListener("click", function (e) {
-
+      
    
          
     //VALIDA ENTRADA EM GITHUB MILESTONES
@@ -30,7 +30,7 @@
         closeMilestoneButton.textContent.toLowerCase() == "close") {
           var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
           localStorage.setItem('getFormAction', getFormAction);
-      
+          criarRelatorio();
           //      SALVANDO INFORMAÇÕES NO LOCAL STORAGE
           var valuesAPI = String(getFormAction).split("/");
           // OWNER
