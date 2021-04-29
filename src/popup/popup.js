@@ -1,4 +1,3 @@
-
 import {contribuinteRepositorio} from '../modules/apiServices.js';
 chrome.storage.sync.get(['key'], function(result) {
   var dados = result.key;
@@ -12,16 +11,4 @@ chrome.storage.sync.get(['key'], function(result) {
 });
 
 
-
-
-     
-  
-  
-
-
-//VALORES A SEREM PASSADOS PARA API
-
-
-
- 
 
