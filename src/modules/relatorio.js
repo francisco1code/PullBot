@@ -2,6 +2,7 @@ import {File} from '../libraries/filesaver.js';
 
 export function criarRelatorio(owner, repo, milestoneName) {
   var xhr = new XMLHttpRequest();
+  var token = localStorage.getItem('token');
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
       var contribuintes = JSON.parse(this.responseText);
@@ -17,7 +18,7 @@ export function criarRelatorio(owner, repo, milestoneName) {
 function milestone(contribuinte, owner, repo, milestoneName){
   
   var xhr = new XMLHttpRequest();
-
+  var token = localStorage.getItem('token');
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
      var milestone = JSON.parse(this.responseText);
@@ -37,6 +38,7 @@ function milestone(contribuinte, owner, repo, milestoneName){
 // COMENTÁRIOS EM ISSUES
 function getComments(contribuinte, dataAbertura,  owner, repo, milestoneName, numeroMilestone) {
   var xhr = new XMLHttpRequest();
+  var token = localStorage.getItem('token');
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
           var comments = JSON.parse(this.responseText);
@@ -52,6 +54,7 @@ function getComments(contribuinte, dataAbertura,  owner, repo, milestoneName, nu
 // ISSUES ASSOCIADAS A CADA CONTRIBUINTE
 function getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestoneName, numeroMilestone) {
   var xhr = new XMLHttpRequest();
+  var token = localStorage.getItem('token');
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
           var issues = JSON.parse(this.responseText);
@@ -68,6 +71,7 @@ function getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestone
 // QUANTIDADE DE COMMITS POR CONTRIBUINTE DESDE A ABERTURA DA MILESTONE
 function getCommits(contribuinte, dataAbertura , owner, repo){
   var xhr = new XMLHttpRequest();
+  var token = localStorage.getItem('token');
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
           var commits = JSON.parse(this.responseText).length;
