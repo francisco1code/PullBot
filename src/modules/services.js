@@ -1,5 +1,6 @@
+import {criarRelatorio} from './relatorio.js';
 export function criarPullRequest() {
-
+  
   //CRIANDO MODAL APÓS FECHAMENTO DA MILESTONE
       const modal = document.createElement('div');
       modal.innerHTML =
@@ -182,6 +183,7 @@ export function criarPullRequest() {
   
       //FECHANDO MODAL APÓS CONCLUIR INSTRUÇÕES
         document.getElementById("modal-mensagem").classList.remove('mostrar');
-
+        criarRelatorio($owner,  $repo, milestoneName);
       }}) 
+
   }

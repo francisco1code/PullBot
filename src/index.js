@@ -1,7 +1,7 @@
     import {criarPullRequest} from './modules/services.js';
     import {CodigoDevicePost} from './modules/apiServices.js';
     import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
-    import {criarRelatorio} from './modules/relatorio.js';
+   
 
     //URL DAS PÁGINAS
     var currentUrl = String(window.location.href);
@@ -41,20 +41,19 @@
           localStorage.setItem('repo', $repo);
           // NUMERO DA MILESTONE
           const $NumberMilestone = getNumberMilestone(valuesAPI);
-          localStorage.setItem('NumberMilestone', $NumberMilestone);
-          criarRelatorio($owner, $repo,  $NumberMilestone);
-          // NOME DA MILESTONE
           var milestoneName = document.querySelector(".milestone-title-link").innerText;
-          
+          localStorage.setItem('milestoneName', milestoneName);
+          localStorage.setItem('NumberMilestone', $NumberMilestone);
+
+          // NOME DA MILESTONE
           localStorage.setItem('milestoneName', milestoneName); 
           localStorage.setItem('abrirModal', 'true')
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-          localStorage.setItem('milestoneName', milestoneName);
           //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
           localStorage.setItem('abrirModal', 'true')
          
           // var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-
+          
      }
     }
   });
