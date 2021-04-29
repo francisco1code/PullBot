@@ -98,7 +98,6 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
        var nomeSprint = resultadoProcura.title
         var dataAberturaMilestone =  resultadoProcura.created_at
         var dataFechamentoMilestone = resultadoProcura.closed_at
-        console.log( resultadoProcura.created_at)
        
        ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token,  $owner, $repo, nomeSprint);
   
@@ -172,7 +171,9 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
   }
 
 ////////////////////////////////////////////////
+function getDadosSemanaisContribuinte(qtdContribuintes, jsonDados){
 
+}
 export function geracaoPorGrupo(){
 
   var xhr = new XMLHttpRequest();
@@ -180,7 +181,8 @@ export function geracaoPorGrupo(){
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
       console.log(this.responseText);
-      
+      var qtdContribuintes = this.responseText.length
+      getDadosSemanaisContribuinte(qtdContribuintes, this.responseText);
     }
   });
   
