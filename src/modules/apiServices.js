@@ -170,3 +170,22 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
    contador++;
  
   }
+
+////////////////////////////////////////////////
+
+export function geracaoPorGrupo(){
+
+  var xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+      console.log(this.responseText);
+      
+    }
+  });
+  
+  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/stats/contributors");
+  
+  xhr.send();
+  
+}  
