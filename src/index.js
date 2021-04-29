@@ -30,7 +30,6 @@
         closeMilestoneButton.textContent.toLowerCase() == "close") {
           var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
           localStorage.setItem('getFormAction', getFormAction);
-          criarRelatorio();
           //      SALVANDO INFORMAÇÕES NO LOCAL STORAGE
           var valuesAPI = String(getFormAction).split("/");
           // OWNER
@@ -45,8 +44,6 @@
           // NOME DA MILESTONE
           var milestoneName = document.querySelector(".milestone-title-link").innerText;
           localStorage.setItem('milestoneName', milestoneName); 
-          criarRelatorio(owner, repo, milestoneName);
-          //criarRelatorio($owner, $repo,  $NumberMilestone, milestoneName);
           localStorage.setItem('abrirModal', 'true')
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
           var milestoneName = document.querySelector(".milestone-title-link").innerText;
@@ -64,13 +61,13 @@
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
 
     CodigoDevicePost();
-  
+   
   }
 
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
-    
+    criarRelatorio('fga-eps-mds',  "PullBot",  "Sprint 11");
   }
   
 
