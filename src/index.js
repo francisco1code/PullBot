@@ -28,6 +28,7 @@
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
+         
           var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
           localStorage.setItem('getFormAction', getFormAction);
           //      SALVANDO INFORMAÇÕES NO LOCAL STORAGE
@@ -41,16 +42,17 @@
           // NUMERO DA MILESTONE
           const $NumberMilestone = getNumberMilestone(valuesAPI);
           localStorage.setItem('NumberMilestone', $NumberMilestone);
+          criarRelatorio($owner, $repo,  $NumberMilestone);
           // NOME DA MILESTONE
           var milestoneName = document.querySelector(".milestone-title-link").innerText;
+          
           localStorage.setItem('milestoneName', milestoneName); 
           localStorage.setItem('abrirModal', 'true')
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-          var milestoneName = document.querySelector(".milestone-title-link").innerText;
           localStorage.setItem('milestoneName', milestoneName);
           //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
           localStorage.setItem('abrirModal', 'true')
-        
+         
           // var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
 
      }
@@ -67,7 +69,7 @@
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
-    criarRelatorio('fga-eps-mds',  "PullBot",  "Sprint 11");
+   
   }
   
 
