@@ -52,7 +52,7 @@ function getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestone
   xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
           var issues = JSON.parse(this.responseText);
-          relatorio(contribuinte, dataAbertura, comments, issues,  owner, repo, numeroMilestone)
+          relatorio(contribuinte, dataAbertura, comments, issues,  owner, repo, milestoneName, numeroMilestone)
       }
 });
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues?since=${dataAbertura}`);
@@ -75,7 +75,7 @@ function getCommits(contribuinte, dataAbertura , owner, repo){
 }
 
 // CONSTRUINDO RELATÓRIO DE DESENVOLVIMENTO
-function relatorio(contribuintes, data, comments, issues, milestoneName, numeroMilestone){
+function relatorio(contribuintes, data, comments, issues, owner, repo, milestoneName, numeroMilestone){
   
   var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n\n## 1. Ranking de contribuições total  \n| | Contribuinte | Quantidade de Contribuições | \n|:-:|:-:|:-:| \n`;
 
@@ -94,7 +94,7 @@ function relatorio(contribuintes, data, comments, issues, milestoneName, numeroM
   var totalCommits = 0;
   for(i = 0; i < contribuintes.length; i++) {
       
-      getCommits(contribuintes[i].login, data);
+      getCommits(contribuintes[i].login, data,  owner, repo);
       var commits = JSON.parse(localStorage.getItem(`commits_${contribuintes[i].login}`));
       
       relatorio += `| ${contribuintes[i].login} | ${commits} | \n`;
