@@ -3,95 +3,7 @@ export function criarPullRequest() {
   
   //CRIANDO MODAL APÓS FECHAMENTO DA MILESTONE
       const modal = document.createElement('div');
-      modal.innerHTML =
-  `<style> 
-      .modal {
-          width: 100vw;
-          height: 100vh;
-          background: rgba(0,0,0,.5);
-          position: fixed;
-          top: 0px;
-          left: 0px;
-          z-index: 2000;
-          display: none;
-          justify-content: center;
-          align-items: center;
-      }
-  
-      .modal.mostrar {
-          display: flex;
-      }
-  
-      .modal-dialog {
-          background: #24292e;
-          width: 40%;
-          min-width: 300px;
-          padding: 40px;
-          position: relative;
-      }
-  
-      .texto {
-        color: white;
-      }
-  
-      </style>
-  
-  
-      <div class="modal" id="modal-mensagem">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-  
-                      <button type="button" class="btn" id="fechar">×</button>
-  
-                      <center><h3 class="texto">Insira as informações abaixo para a solicitação do Pull Request:</h3></center>
-                      <br>
-                  </div>
-                  <div class="modal-body">
-                      
-                  <form>
-                      <fieldset>
-                          
-                          <label class="texto"> Qual a branch para merge?   </label>
-                          <input type="text" id = "currentBranch">
-                          <br> 
-                          <label class="texto"> Qual a branch destino?  </label>
-                          <input type="text" id = "recieveBranch">
-                          <br> 
-                          <br> 
-                          <label class="texto"> Quais foram as issues relacionadas? (ex.: #10 #11)  </label>
-                          <input type="text" id = "issues">
-                          <br> 
-                          <br>
-                          <label class="texto"> Quais foram as alterações feitas?  </label> <br> 
-                          <input type = "checkbox" id = "documentação" class="texto">
-                          <label class="texto"> Alteração em documentação </label>
-                          <br> 
-                          <input type = "checkbox" id = "funcionalidade" class="texto">
-                          <label class="texto"> Nova funcionalidade </label>
-                          <br> 
-                          <input type = "checkbox" id = "funcionalidadeModificada" class="texto">
-                          <label class="texto"> Alteração em funcionalidade </label>
-                          <br> 
-                          <input type = "checkbox" id = "correçãoBug" class="texto">
-                          <label class="texto"> Correção de bug </label>
-                          <br> 
-                          <input type = "checkbox" id = "outro" class="texto">
-                          <label class="texto"> Outro   </label>
-                          <input type = "text" id = "outraOpcao">
-                          
-                      </fieldset>
-                      </form>
-  
-                  </div>
-                  <div class="modal-footer">
-                  <br>
-                      <button type="button" class="btn" data-dismiss="modal" id = "submit">Concluir</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      `
+      modal.innerHTML = `<style> .modal { width: 100vw; height: 100vh;background: rgba(0,0,0,.5);position: fixed;top: 0px;left: 0px;z-index: 2000;display: none;justify-content: center;align-items: center;}.modal.mostrar {display: flex;}.modal-dialog {background: #24292e;width: 40%;min-width: 300px;padding: 40px;position: relative.texto {color: white;}</style><div class="modal" id="modal-mensagem"><div class="modal-dialog"><div class="modal-content">    <div class="modal-header"><button type="button" class="btn" id="fechar">×</button> <center><h3 class="texto">Insira as informações abaixo para a solicitação do Pull Request:</h3></center>        <br>    </div>    <div class="modal-body">            <form>        <fieldset><label class="texto"> Qual a branch para merge?   </label><input type="text" id = "currentBranch"><br> <label class="texto"> Qual a branch destino?  </label><input type="text" id = "recieveBranch"><br> <br> <label class="texto"> Quais foram as issues relacionadas? (ex.: #10 #11)  </label><input type="text" id = "issues"><br> <br><label class="texto"> Quais foram as alterações feitas?  </label> <br> <input type = "checkbox" id = "documentação" class="texto"><label class="texto"> Alteração em documentação </label><br> <input type = "checkbox" id = "funcionalidade" class="texto"><label class="texto"> Nova funcionalidade </label><br> <input type = "checkbox" id = "funcionalidadeModificada" class="texto"><label class="texto"> Alteração em funcionalidade </label><br> <input type = "checkbox" id = "correçãoBug" class="texto"><label class="texto"> Correção de bug </label><br> <input type = "checkbox" id = "outro" class="texto"><label class="texto"> Outro   </label><input type = "text" id = "outraOpcao">    </fieldset></form> </div><div class="modal-footer">    <br>        <button type="button" class="btn" data-dismiss="modal" id = "submit">Concluir</button>    </div></div></div></div>`
       const body = document.body || document.getElementsByTagName("body")[0] || document.documentElement;
       body.insertBefore(modal, body.lastChild);
   
@@ -187,3 +99,8 @@ export function criarPullRequest() {
       }}) 
 
   }
+
+
+
+
+
