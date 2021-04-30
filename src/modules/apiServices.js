@@ -171,8 +171,12 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
   }
 
 ////////////////////////////////////////////////
-function getDadosSemanaisContribuinte(qtdContribuintes, jsonDados){
 
+function getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson){
+  let Contribuintes = [qtdContribuintes];
+  for(i = 0; i < qtdContribuintes ; i++){
+    calculaResultados(Contribuintes[i], qtdSemanas, respostaJson);
+  }
 }
 export function geracaoPorGrupo(){
 
@@ -180,9 +184,12 @@ export function geracaoPorGrupo(){
 
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
-      console.log(this.responseText);
-      var qtdContribuintes = this.responseText.length
-      getDadosSemanaisContribuinte(qtdContribuintes, this.responseText);
+      // console.log(this.responseText);
+      var respostaJson = JSON.parse(this.responseText)
+      var qtdContribuintes = respostaJson.length
+      var qtdSemanas = respostaJson[0].weeks.length
+      console.log(qtdContribuintes, qtdSemanas)
+       getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson);
     }
   });
   
