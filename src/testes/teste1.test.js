@@ -1,4 +1,4 @@
-import getFactorial from './factorial'
+import getFactorial from './teste1'
 
 test('getFactorial should be a function', () => {
     expect(getFactorial).toBeInstanceOf(Function)
