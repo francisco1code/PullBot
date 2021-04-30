@@ -170,12 +170,34 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
  
   }
 
-////////////////////////////////////////////////
+// ////////////////////////////////////////////////
+var adicoes = [];
+var delecoes = [];
+var commits = [];
+var semanas = [];
 
+function calcResultado(qtdSemanas, respostaJson){
+ 
+  for(var i = 0; i < qtdSemanas; i++){
+    
+      var minhaData = new Date( respostaJson.weeks[i].w *1000);
+      semanas[i] =   minhaData.toLocaleString();
+      adicoes[i] =  respostaJson.weeks[i].a
+      delecoes[i] = respostaJson.weeks[i].d
+      commits[i] =   respostaJson.weeks[i].c
+  }
+  console.log(semanas[i] ,
+        adicoes[i] ,
+        delecoes[i],
+        commits[i] )
+}
 function getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson){
-  let Contribuintes = [qtdContribuintes];
-  for(i = 0; i < qtdContribuintes ; i++){
-    calculaResultados(Contribuintes[i], qtdSemanas, respostaJson);
+  var contribuinte = []
+  for(var i = 0; i < qtdContribuintes ; i++){
+    contribuinte[i] = respostaJson[i].author.login;
+    console.log(contribuinte[i])
+    calcResultado(qtdSemanas, respostaJson[i])
+    
   }
 }
 export function geracaoPorGrupo(){
@@ -188,7 +210,7 @@ export function geracaoPorGrupo(){
       var respostaJson = JSON.parse(this.responseText)
       var qtdContribuintes = respostaJson.length
       var qtdSemanas = respostaJson[0].weeks.length
-      console.log(qtdContribuintes, qtdSemanas)
+      // console.log(qtdContribuintes, qtdSemanas)
        getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson);
     }
   });
