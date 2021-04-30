@@ -1,9 +1,11 @@
-const getFactorial = require('./factorial');
+import getFactorial from './factorial'
 
 test('getFactorial should be a function', () => {
     expect(getFactorial).toBeInstanceOf(Function)
 })
 
-test('getFactorial return 3', () => {
-    expect(getFactorial()).toBe(3)
+test('getFactorial return 6', () => {
+    const atual = getFactorial(3)
+    const expected = 6
+    expect(atual).toBe(expected)
 })

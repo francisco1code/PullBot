@@ -1,5 +1,1 @@
-function getFactorial() {
-    return 3;
-}
-
-module.exports = getFactorial;
+export default () => 6
