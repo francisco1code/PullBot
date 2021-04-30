@@ -185,11 +185,12 @@ function calcResultado(qtdSemanas, respostaJson){
       adicoes[i] =  respostaJson.weeks[i].a
       delecoes[i] = respostaJson.weeks[i].d
       commits[i] =   respostaJson.weeks[i].c
-  }
-  console.log(semanas[i] ,
+      console.log(semanas[i] ,
         adicoes[i] ,
         delecoes[i],
         commits[i] )
+  }
+  
 }
 function getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson){
   var contribuinte = []
@@ -206,7 +207,7 @@ export function geracaoPorGrupo(){
 
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
-      // console.log(this.responseText);
+      //  console.log(this.responseText);
       var respostaJson = JSON.parse(this.responseText)
       var qtdContribuintes = respostaJson.length
       var qtdSemanas = respostaJson[0].weeks.length
