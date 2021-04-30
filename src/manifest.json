@@ -23,8 +23,8 @@
     "resources": [
                   "index.js",
                   "/modules/*",
-                  "/Chart/app.js",
-                  "FileSaver.js"],
+                  "/libraries/app.js",
+                  "/libraries/filesaver.js"],
     "matches": ["<all_urls>"],
     "extension_ids": []
    }],

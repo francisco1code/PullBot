@@ -32,3 +32,5 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
     }
   });
   }
+
+ 
