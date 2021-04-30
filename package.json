@@ -3,6 +3,7 @@
         "test": "jest --coverage", 
         "test:watch": "npm run test -- --watch"
     },
+    
     "devDependencies": {
         "@babel/core": "^7.6.0",
         "@babel/present-env": "^7.6.0",
