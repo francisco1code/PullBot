@@ -171,6 +171,8 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
   }
 
 // ////////////////////////////////////////////////
+
+
 var adicoes = [];
 var delecoes = [];
 var commits = [];
@@ -188,7 +190,7 @@ function calcResultado(qtdSemanas, respostaJson , adicoes, interacao, qtdContrib
   if(interacao == qtdContribuintes - 1){
     console.log(adicoes, 
       delecoes,
-      commits, semanas )
+      commits, semanas);
   }
 }
 
