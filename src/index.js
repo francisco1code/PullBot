@@ -52,14 +52,14 @@
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
 
     CodigoDevicePost();
-    geracaoPorGrupo();
+    
    
   }
 
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
-   
+    geracaoPorGrupo();
   }
   
 

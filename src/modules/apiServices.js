@@ -176,38 +176,45 @@ var delecoes = [];
 var commits = [];
 var semanas = [];
 
-function calcResultado(qtdSemanas, respostaJson){
+function calcResultado(qtdSemanas, respostaJson , adicoes, interacao, qtdContribuintes){
  
   for(var i = 0; i < qtdSemanas; i++){
-    
       var minhaData = new Date( respostaJson.weeks[i].w *1000);
       semanas[i] =   minhaData.toLocaleString();
-      adicoes[i] =  respostaJson.weeks[i].a
-      delecoes[i] = respostaJson.weeks[i].d
-      commits[i] =   respostaJson.weeks[i].c
-      console.log(semanas[i] ,
-        adicoes[i] ,
-        delecoes[i],
-        commits[i] )
+      adicoes[i] =  respostaJson.weeks[i].a + adicoes[i]  ;
+      delecoes[i] = respostaJson.weeks[i].d ;
+      commits[i] =   respostaJson.weeks[i].c;
   }
-  
+  if(interacao == qtdContribuintes - 1){
+    console.log(adicoes, 
+      delecoes,
+      commits, semanas )
+  }
 }
+
+
 function getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson){
   var contribuinte = []
+  for(var i = 0; i < qtdSemanas; i++){
+    adicoes[i] = 0;
+    delecoes[i] = 0;
+    commits[i] = 0;
+    semanas[i] = 0;
+  }
+
   for(var i = 0; i < qtdContribuintes ; i++){
     contribuinte[i] = respostaJson[i].author.login;
-    console.log(contribuinte[i])
-    calcResultado(qtdSemanas, respostaJson[i])
-    
+    calcResultado(qtdSemanas, respostaJson[i] , adicoes, i, qtdContribuintes)
   }
 }
+
 export function geracaoPorGrupo(){
 
   var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
-      //  console.log(this.responseText);
+      console.log(this.responseText);
       var respostaJson = JSON.parse(this.responseText)
       var qtdContribuintes = respostaJson.length
       var qtdSemanas = respostaJson[0].weeks.length
