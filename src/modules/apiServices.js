@@ -1,4 +1,6 @@
 import {GraficoPessoal} from '../libraries/app.js';
+import {GraficoGrupo} from '../libraries/app.js';
+
 export function CodigoDevicePost(){
     var xhr = new XMLHttpRequest();
 
@@ -181,16 +183,20 @@ var semanas = [];
 function calcResultado(qtdSemanas, respostaJson , adicoes, interacao, qtdContribuintes){
  
   for(var i = 0; i < qtdSemanas; i++){
-      var minhaData = new Date( respostaJson.weeks[i].w *1000);
-      semanas[i] =   minhaData.toLocaleString();
+      var minhaData = new Date( respostaJson.weeks[i].w * 1000);
+      let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
+      let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
+      let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
+      semanas[i] =   `${da}/${mo}/${ye}`;
       adicoes[i] =  respostaJson.weeks[i].a + adicoes[i]  ;
-      delecoes[i] = respostaJson.weeks[i].d ;
-      commits[i] =   respostaJson.weeks[i].c;
+      delecoes[i] = respostaJson.weeks[i].d  +  delecoes[i] ;
+      commits[i] =   respostaJson.weeks[i].c + commits[i];
   }
   if(interacao == qtdContribuintes - 1){
     console.log(adicoes, 
       delecoes,
       commits, semanas);
+      GraficoGrupo( adicoes, delecoes,commits, semanas)
   }
 }
 
@@ -206,7 +212,8 @@ function getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson
 
   for(var i = 0; i < qtdContribuintes ; i++){
     contribuinte[i] = respostaJson[i].author.login;
-    calcResultado(qtdSemanas, respostaJson[i] , adicoes, i, qtdContribuintes)
+    var qtd = semanas.length
+    calcResultado(qtdSemanas, respostaJson[i] , adicoes, i, qtdContribuintes, qtd)
   }
 }
 
