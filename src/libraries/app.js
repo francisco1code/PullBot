@@ -4,7 +4,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
 
     var ctx = document.getElementById("myChart").getContext('2d');
   var myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     options: {
         plugins: {
           title: {
@@ -27,10 +27,11 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
                 "#00BFFF",
                 "#98FB98"
             ],
-            data: qtdComitsContribuinte
+            data: qtdComitsContribuinte,
+            
         },
       ]
-    }
+    },
     
   });
   }
@@ -46,7 +47,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
       labels: semanas,
       datasets: [
         {
-          label: 'Dataset 1',
+          label: 'Adições',
           backgroundColor: [
             "#FFD700"
           
@@ -54,7 +55,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
           data: adicoes
         },
         {
-          label: 'Dataset 2',
+          label: 'Deleções',
           backgroundColor: [
             "#F08080"
            
@@ -63,7 +64,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
          
         },
         {
-          label: 'Dataset 2',
+          label: 'Commits',
           backgroundColor: [
             "#FF00FF"
             
@@ -74,7 +75,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
       ]
     };
 
-    var ctx = document.getElementById("myChart").getContext('2d');
+    var ctx = document.getElementById("myChart2").getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'bar',
     options: {

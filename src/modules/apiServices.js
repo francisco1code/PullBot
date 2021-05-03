@@ -174,46 +174,34 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
 
 // ////////////////////////////////////////////////
 
-
-var adicoes = [];
-var delecoes = [];
-var commits = [];
-var semanas = [];
-
-function calcResultado(qtdSemanas, respostaJson , adicoes, interacao, qtdContribuintes){
- 
-  for(var i = 0; i < qtdSemanas; i++){
-      var minhaData = new Date( respostaJson.weeks[i].w * 1000);
-      let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
-      let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
-      let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
-      semanas[i] =   `${da}/${mo}/${ye}`;
-      adicoes[i] =  respostaJson.weeks[i].a + adicoes[i]  ;
-      delecoes[i] = respostaJson.weeks[i].d  +  delecoes[i] ;
-      commits[i] =   respostaJson.weeks[i].c + commits[i];
+var nomes = [];
+var contribuicaoSemana = [];
+function calcResultado( respostaJson , interacao, qtdContribuintes, contribuicaoSemana, qtdSemanas){
+  var adicoes = [] ;
+  for(var i = 0; i < qtdContribuintes; i++){
+      
+      adicoes[i] =  respostaJson[i].weeks[interacao].a 
+      
+      nomes[i] = respostaJson[i].author.login
   }
-  if(interacao == qtdContribuintes - 1){
-    console.log(adicoes, 
-      delecoes,
-      commits, semanas);
-      GraficoGrupo( adicoes, delecoes,commits, semanas)
+  contribuicaoSemana[interacao] = adicoes;
+  if(interacao == qtdSemanas - 1){
+  
+    
+    console.log(contribuicaoSemana)
+    console.log(nomes) 
   }
+
 }
 
 
 function getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson){
-  var contribuinte = []
-  for(var i = 0; i < qtdSemanas; i++){
-    adicoes[i] = 0;
-    delecoes[i] = 0;
-    commits[i] = 0;
-    semanas[i] = 0;
-  }
 
-  for(var i = 0; i < qtdContribuintes ; i++){
-    contribuinte[i] = respostaJson[i].author.login;
-    var qtd = semanas.length
-    calcResultado(qtdSemanas, respostaJson[i] , adicoes, i, qtdContribuintes, qtd)
+ 
+
+  for(var i = 0; i < qtdSemanas ; i++){
+   
+    calcResultado( respostaJson , i, qtdContribuintes, contribuicaoSemana, qtdSemanas)
   }
 }
 
@@ -223,11 +211,12 @@ export function geracaoPorGrupo(){
 
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
-      console.log(this.responseText);
+      // console.log(this.responseText);
       var respostaJson = JSON.parse(this.responseText)
       var qtdContribuintes = respostaJson.length
       var qtdSemanas = respostaJson[0].weeks.length
-      // console.log(qtdContribuintes, qtdSemanas)
+      
+       console.log(qtdContribuintes, qtdSemanas)
        getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson);
     }
   });
@@ -237,3 +226,71 @@ export function geracaoPorGrupo(){
   xhr.send();
   
 }  
+
+
+
+
+// 
+
+// var adicoes = [];
+// var delecoes = [];
+// var commits = [];
+// var semanas = [];
+
+// function calcResultado(qtdSemanas, respostaJson , adicoes, interacao, qtdContribuintes){
+ 
+//   for(var i = 0; i < qtdSemanas; i++){
+//       var minhaData = new Date( respostaJson.weeks[i].w * 1000);
+//       let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
+//       let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
+//       let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
+//       semanas[i] =   `${da}/${mo}/${ye}`;
+//       adicoes[i] =  respostaJson.weeks[i].a + adicoes[i]  ;
+//       delecoes[i] = respostaJson.weeks[i].d  +  delecoes[i] ;
+//       commits[i] =   respostaJson.weeks[i].c + commits[i];
+//   }
+//   if(interacao == qtdContribuintes - 1){
+//     console.log(adicoes, 
+//       delecoes,
+//       commits, semanas);
+//       GraficoGrupo( adicoes, delecoes,commits, semanas)
+//   }
+// }
+
+
+// function getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson){
+//   var contribuinte = []
+//   for(var i = 0; i < qtdSemanas; i++){
+//     adicoes[i] = 0;
+//     delecoes[i] = 0;
+//     commits[i] = 0;
+//     semanas[i] = 0;
+//   }
+
+//   for(var i = 0; i < qtdSemanas ; i++){
+//     contribuinte[i] = respostaJson[i].author.login;
+//     var qtd = semanas.length
+//     calcResultado(qtdSemanas, respostaJson[i] , adicoes, i, qtdContribuintes, qtd)
+//   }
+// }
+
+// export function geracaoPorGrupo(){
+
+//   var xhr = new XMLHttpRequest();
+
+//   xhr.addEventListener("readystatechange", function() {
+//     if(this.readyState === 4) {
+//       console.log(this.responseText);
+//       var respostaJson = JSON.parse(this.responseText)
+//       var qtdContribuintes = respostaJson.length
+//       var qtdSemanas = respostaJson[0].weeks.length
+//       // console.log(qtdContribuintes, qtdSemanas)
+//        getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson);
+//     }
+//   });
+  
+//   xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/stats/contributors");
+  
+//   xhr.send();
+  
+// }  
