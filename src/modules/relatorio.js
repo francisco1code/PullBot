@@ -1,13 +1,17 @@
-import {File} from '../libraries/filesaver.js';
+import File from '../libraries/filesaver.js';
 
-export function criarRelatorio(owner, repo, milestoneName) {
+export default function criarRelatorio(owner, repo, milestoneName) {
   var xhr = new XMLHttpRequest();
   var token = localStorage.getItem('token');
-  xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-      var contribuintes = JSON.parse(this.responseText);
+
+  function dadosContribuintes() {
+    if(xhr.readyState === 4) {
+      var contribuintes = JSON.parse(xhr.responseText);
       milestone(contribuintes, owner, repo, milestoneName);
-}});
+  }}
+  
+  xhr.addEventListener("readystatechange", dadosContribuintes());
+
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/contributors`);
   xhr.setRequestHeader("authorization", "Bearer " + token);
   xhr.send();
@@ -16,18 +20,20 @@ export function criarRelatorio(owner, repo, milestoneName) {
 
 // DATA DE ABERTURA DA MILESTONE
 function milestone(contribuinte, owner, repo, milestoneName){
-  
   var xhr = new XMLHttpRequest();
   var token = localStorage.getItem('token');
-  xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-     var milestone = JSON.parse(this.responseText);
+
+  function dadosMilestone() {
+    if(xhr.readyState === 4) {
+     var milestone = JSON.parse(xhr.responseText);
      const dataAberturaMilestone = milestone[0].created_at
       let numeroMilestone =  milestone[0].number
      getComments(contribuinte, dataAberturaMilestone,  owner, repo, milestoneName, numeroMilestone);
-  
-    }
-});
+
+  }}
+
+  xhr.addEventListener("readystatechange", dadosMilestone());
+
   xhr.open("GET", "https://api.github.com/repos/" + owner + "/" + repo + "/milestones?state=all&sort=completeness");
   xhr.setRequestHeader("authorization", "Bearer " + token);
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
@@ -39,12 +45,15 @@ function milestone(contribuinte, owner, repo, milestoneName){
 function getComments(contribuinte, dataAbertura,  owner, repo, milestoneName, numeroMilestone) {
   var xhr = new XMLHttpRequest();
   var token = localStorage.getItem('token');
-  xhr.addEventListener("readystatechange", function() {
-      if(this.readyState === 4) {
-          var comments = JSON.parse(this.responseText);
-          getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestoneName, numeroMilestone)
-      }
-});
+
+  function dadosComments() {
+    if(xhr.readyState === 4) {
+        var comments = JSON.parse(xhr.responseText);
+        getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestoneName, numeroMilestone)
+  }}
+
+  xhr.addEventListener("readystatechange", dadosComments());
+
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues/comments?since=${dataAbertura}`);
   xhr.setRequestHeader("authorization", "Bearer " + token);
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
@@ -55,13 +64,15 @@ function getComments(contribuinte, dataAbertura,  owner, repo, milestoneName, nu
 function getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestoneName, numeroMilestone) {
   var xhr = new XMLHttpRequest();
   var token = localStorage.getItem('token');
-  xhr.addEventListener("readystatechange", function() {
-      if(this.readyState === 4) {
-          var issues = JSON.parse(this.responseText);
-          // console.log(contribuinte,"\n",dataAbertura,"\n", comments,"\n", issues, "\n", owner, "\n",repo,"\n", milestoneName,"\n", numeroMilestone)
-          relatorio(contribuinte, dataAbertura, comments, issues,  owner, repo, milestoneName, numeroMilestone)
-      }
-});
+
+  function dadosIssues() {
+    if(xhr.readyState === 4) {
+        var issues = JSON.parse(xhr.responseText);
+        relatorio(contribuinte, dataAbertura, comments, issues,  owner, repo, milestoneName, numeroMilestone)
+  }}
+
+  xhr.addEventListener("readystatechange", dadosIssues());
+
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues?since=${dataAbertura}`);
   xhr.setRequestHeader("authorization", "Bearer " + token);
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
@@ -72,12 +83,15 @@ function getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestone
 function getCommits(contribuinte, dataAbertura , owner, repo){
   var xhr = new XMLHttpRequest();
   var token = localStorage.getItem('token');
-  xhr.addEventListener("readystatechange", function() {
-      if(this.readyState === 4) {
-          var commits = JSON.parse(this.responseText).length;
-          localStorage.setItem(`commits_${contribuinte}`, commits);
-      }
-});
+
+  function dadosCommits() {
+    if(xhr.readyState === 4) {
+        var commits = JSON.parse(xhr.responseText).length;
+        localStorage.setItem(`commits_${contribuinte}`, commits);
+  }}
+
+  xhr.addEventListener("readystatechange", dadosCommits());
+  
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/commits?author=${contribuinte}&since=${dataAbertura}`);
   xhr.setRequestHeader("authorization", "Bearer " + token);
   xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
@@ -106,7 +120,6 @@ function relatorio(contribuintes, data, comments, issues, owner, repo, milestone
       
       getCommits(contribuintes[i].login, data,  owner, repo);
       var commits = JSON.parse(localStorage.getItem(`commits_${contribuintes[i].login}`));
-      console.log(commits)
       relatorio += `| ${contribuintes[i].login} | ${commits} | \n`;
       totalCommits += commits;
   }
@@ -120,20 +133,21 @@ function relatorio(contribuintes, data, comments, issues, owner, repo, milestone
   }
 
   for(i = 0; i < issues.length; i++) {
-
+    if(issues[i].assignees != undefined){
       for(var j = 0; j < issues[i].assignees.length; j++) {
           var quantidade = new Number(localStorage.getItem(`issues_${issues[i].assignees[j].login}`));
           quantidade++;
           localStorage.setItem(`issues_${issues[i].assignees[j].login}`, quantidade)
-      }
+      }}
   }
-
+  
   var totalIssues = 0;
   for(i = 0; i < contribuintes.length; i++) {
+    if(contribuintes[i].login != undefined) {
       var quantidade = new Number(localStorage.getItem(`issues_${contribuintes[i].login}`));
       relatorio += `| ${contribuintes[i].login} | ${quantidade} | \n`;
       totalIssues += quantidade;
-  }
+  }}
 
 // COMENTÁRIOS EM ISSUES
   relatorio += `\n## 3. Comentários em Issues \n| Contribuinte | Quantidade de comentários | \n|:-:|:-:| \n`;
@@ -144,11 +158,11 @@ function relatorio(contribuintes, data, comments, issues, owner, repo, milestone
   }
 
   for(i = 0; i < comments.length; i++) {
+    if(contribuintes[i].login != undefined) {
       var quantidade = new Number(localStorage.getItem(`comments_${comments[i].user.login}`));
       quantidade++;
       localStorage.setItem(`comments_${comments[i].user.login}`, quantidade)
-
-  }
+  }}
 
   var totalComments = 0;
   for(i = 0; i < contribuintes.length; i++) {

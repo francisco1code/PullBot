@@ -155,7 +155,7 @@ var saveAs = _global.saveAs || (
 _global.saveAs = saveAs.saveAs = saveAs
 
 
-export function File(relatorio, numberMilestone){
+export default function File(relatorio, numberMilestone){
 
 
   // DOWNLOAD DO RELATÓRIO DE DESENVOLVIMENTO APÓS FECHAR MILESTONE
