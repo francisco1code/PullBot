@@ -2,41 +2,39 @@ import File from '../libraries/filesaver.js';
 
 export default function criarRelatorio(owner, repo, milestoneName) {
   var xhr = new XMLHttpRequest();
-  var token = localStorage.getItem('token');
 
   function dadosContribuintes() {
     if(xhr.readyState === 4) {
-      var contribuintes = JSON.parse(xhr.responseText);
-      milestone(contribuintes, owner, repo, milestoneName);
-  }}
-  
-  xhr.addEventListener("readystatechange", dadosContribuintes());
+
+        var contribuintes = JSON.parse(xhr.responseText);
+        milestone(contribuintes, owner, repo, milestoneName);
+      }
+  }
+
+  xhr.addEventListener("readystatechange", dadosContribuintes);
 
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/contributors`);
-  xhr.setRequestHeader("authorization", "Bearer " + token);
   xhr.send();
-
 }
 
 // DATA DE ABERTURA DA MILESTONE
 function milestone(contribuinte, owner, repo, milestoneName){
+
   var xhr = new XMLHttpRequest();
-  var token = localStorage.getItem('token');
 
   function dadosMilestone() {
     if(xhr.readyState === 4) {
-     var milestone = JSON.parse(xhr.responseText);
-     const dataAberturaMilestone = milestone[0].created_at
-      let numeroMilestone =  milestone[0].number
-     getComments(contribuinte, dataAberturaMilestone,  owner, repo, milestoneName, numeroMilestone);
 
-  }}
+      var milestone = JSON.parse(xhr.responseText);
+      const dataAberturaMilestone = milestone[0].created_at;
+      let numeroMilestone =  milestone[0].number;
+      getComments(contribuinte, dataAberturaMilestone,  owner, repo, milestoneName, numeroMilestone);
+    }
+  }
 
-  xhr.addEventListener("readystatechange", dadosMilestone());
+  xhr.addEventListener("readystatechange", dadosMilestone);
 
   xhr.open("GET", "https://api.github.com/repos/" + owner + "/" + repo + "/milestones?state=all&sort=completeness");
-  xhr.setRequestHeader("authorization", "Bearer " + token);
-  xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
   xhr.send();
 }
 
@@ -44,63 +42,61 @@ function milestone(contribuinte, owner, repo, milestoneName){
 // COMENTÁRIOS EM ISSUES
 function getComments(contribuinte, dataAbertura,  owner, repo, milestoneName, numeroMilestone) {
   var xhr = new XMLHttpRequest();
-  var token = localStorage.getItem('token');
 
   function dadosComments() {
     if(xhr.readyState === 4) {
-        var comments = JSON.parse(xhr.responseText);
-        getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestoneName, numeroMilestone)
-  }}
 
-  xhr.addEventListener("readystatechange", dadosComments());
+        var comments = JSON.parse(xhr.responseText);
+        getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestoneName, numeroMilestone);
+    }
+  }
+
+  xhr.addEventListener("readystatechange", dadosComments);
 
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues/comments?since=${dataAbertura}`);
-  xhr.setRequestHeader("authorization", "Bearer " + token);
-  xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
   xhr.send();
 }
 
 // ISSUES ASSOCIADAS A CADA CONTRIBUINTE
 function getIssues(contribuinte, dataAbertura, comments,  owner, repo, milestoneName, numeroMilestone) {
   var xhr = new XMLHttpRequest();
-  var token = localStorage.getItem('token');
 
   function dadosIssues() {
     if(xhr.readyState === 4) {
-        var issues = JSON.parse(xhr.responseText);
-        relatorio(contribuinte, dataAbertura, comments, issues,  owner, repo, milestoneName, numeroMilestone)
-  }}
 
-  xhr.addEventListener("readystatechange", dadosIssues());
+        var issues = JSON.parse(xhr.responseText);
+        relatorio(contribuinte, dataAbertura, comments, issues,  owner, repo, milestoneName, numeroMilestone);
+    }
+  }
+
+  xhr.addEventListener("readystatechange", dadosIssues);
 
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/issues?since=${dataAbertura}`);
-  xhr.setRequestHeader("authorization", "Bearer " + token);
-  xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
   xhr.send();
 }
 
 // QUANTIDADE DE COMMITS POR CONTRIBUINTE DESDE A ABERTURA DA MILESTONE
 function getCommits(contribuinte, dataAbertura , owner, repo){
+
   var xhr = new XMLHttpRequest();
-  var token = localStorage.getItem('token');
 
   function dadosCommits() {
     if(xhr.readyState === 4) {
+
         var commits = JSON.parse(xhr.responseText).length;
         localStorage.setItem(`commits_${contribuinte}`, commits);
-  }}
+    }
+  }
 
-  xhr.addEventListener("readystatechange", dadosCommits());
+  xhr.addEventListener("readystatechange", dadosCommits);
   
   xhr.open("GET", `https://api.github.com/repos/${owner}/${repo}/commits?author=${contribuinte}&since=${dataAbertura}`);
-  xhr.setRequestHeader("authorization", "Bearer " + token);
-  xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
   xhr.send();
 }
 
 // CONSTRUINDO RELATÓRIO DE DESENVOLVIMENTO
 function relatorio(contribuintes, data, comments, issues, owner, repo, milestoneName, numeroMilestone){
-  
+
   var relatorio = `# Relatorio de desenvolvimento da milestone: ${milestoneName} \n\n## 1. Ranking de contribuições total  \n| | Contribuinte | Quantidade de Contribuições | \n|:-:|:-:|:-:| \n`;
 
 // CONTRIBUIÇÕES
@@ -158,7 +154,7 @@ function relatorio(contribuintes, data, comments, issues, owner, repo, milestone
   }
 
   for(i = 0; i < comments.length; i++) {
-    if(contribuintes[i].login != undefined) {
+    if(comments[i].user != undefined) {
       var quantidade = new Number(localStorage.getItem(`comments_${comments[i].user.login}`));
       quantidade++;
       localStorage.setItem(`comments_${comments[i].user.login}`, quantidade)
