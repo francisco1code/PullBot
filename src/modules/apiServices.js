@@ -182,17 +182,19 @@ function calcResultado( respostaJson , iteracao, qtdContribuintes, qtdSemanas, d
   var adicoes = [] ;
 
   for(var i = 0; i < qtdSemanas; i++){
-      adicoes[i] =  respostaJson.weeks[i].a 
+      adicoes[i] =  respostaJson.weeks[i].c
       
   }
-  
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
   dataSetArray[iteracao] = {
     label: respostaJson.author.login,
+    backgroundColor: "#" + randomColor ,
     data: adicoes
   }
 
   if(iteracao == qtdContribuintes - 1){
-   console.log(dataSetArray)
+    //  GraficoGrupo(dataSetArray)
+    console.log(dataSetArray)
 
 
   }

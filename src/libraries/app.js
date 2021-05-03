@@ -36,49 +36,26 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
   });
   }
 
-  export function GraficoGrupo(adicoes, delecoes,commits, semanas, qtd){
-    
-    
-    const NUMBER_CFG = {count: qtd, min: 0};
-    
-    
+  export function GraficoGrupo(datasets){
+      
     const data = {
       // labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-      labels: semanas,
-      datasets: [
-        {
-          label: 'Adições',
-          backgroundColor: [
-            "#FFD700"
-          
-        ],
-          data: adicoes
-        },
-        {
-          label: 'Deleções',
-          backgroundColor: [
-            "#F08080"
-           
-        ],
-          data: delecoes,
-         
-        },
-        {
-          label: 'Commits',
-          backgroundColor: [
-            "#FF00FF"
-            
-        ],
-          data: commits,
-         
-        }
-      ]
+      labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      datasets: datasets,
     };
 
     var ctx = document.getElementById("myChart2").getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'bar',
     options: {
+      scales: {
+        x: {
+          stacked: true,
+        },
+        y: {
+          stacked: true
+        }
+      },
         plugins: {
           title: {
             display: true,
