@@ -174,22 +174,27 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
 
 // ////////////////////////////////////////////////
 
+
 var nomes = [];
 var contribuicaoSemana = [];
-function calcResultado( respostaJson , interacao, qtdContribuintes, contribuicaoSemana, qtdSemanas){
+
+function calcResultado( respostaJson , iteracao, qtdContribuintes, qtdSemanas, dataSetArray){
   var adicoes = [] ;
-  for(var i = 0; i < qtdContribuintes; i++){
+
+  for(var i = 0; i < qtdSemanas; i++){
+      adicoes[i] =  respostaJson.weeks[i].a 
       
-      adicoes[i] =  respostaJson[i].weeks[interacao].a 
-      
-      nomes[i] = respostaJson[i].author.login
   }
-  contribuicaoSemana[interacao] = adicoes;
-  if(interacao == qtdSemanas - 1){
   
-    
-    console.log(contribuicaoSemana)
-    console.log(nomes) 
+  dataSetArray[iteracao] = {
+    label: respostaJson.author.login,
+    data: adicoes
+  }
+
+  if(iteracao == qtdContribuintes - 1){
+   console.log(dataSetArray)
+
+
   }
 
 }
@@ -197,11 +202,10 @@ function calcResultado( respostaJson , interacao, qtdContribuintes, contribuicao
 
 function getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson){
 
- 
-
-  for(var i = 0; i < qtdSemanas ; i++){
+  var dataSetArray = [];
+  for(var i = 0; i < qtdContribuintes ; i++){
    
-    calcResultado( respostaJson , i, qtdContribuintes, contribuicaoSemana, qtdSemanas)
+    calcResultado( respostaJson[i] , i, qtdContribuintes, qtdSemanas, dataSetArray)
   }
 }
 
