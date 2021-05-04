@@ -112,6 +112,8 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
   var myChart = new Chart(ctx, {
     type: 'bar',
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
         x: {
           stacked: true,

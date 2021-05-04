@@ -1,5 +1,7 @@
 import {GraficoPessoal} from '../libraries/app.js';
-import {GraficoGrupo} from '../libraries/app.js';
+import {GraficoGrupoAdicoes} from '../libraries/app.js';
+import {GraficoGrupoDelecoes} from '../libraries/app.js';
+import {GraficoGrupoCommits} from '../libraries/app.js';
 
 export function CodigoDevicePost(){
     var xhr = new XMLHttpRequest();
@@ -173,7 +175,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
   }
 
 // ////////////////////////////////////////////////
-
+// FUNÇOES DE GRAFICOS
 
 var nomes = [];
 var contribuicaoSemana = [];
@@ -229,8 +231,8 @@ export function geracaoPorGrupoAdicoes(){
     }
   });
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/stats/contributors");
-  
+  xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
+  xhr.setRequestHeader("authorization", "Bearer " + token);
   xhr.send();
   
 }  
