@@ -291,8 +291,8 @@ export function geracaoPorGrupoDelecoes(){
     }
   });
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/stats/contributors");
-  
+  xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
+  xhr.setRequestHeader("authorization", "Bearer " + token);
   xhr.send();
   
 }  
@@ -350,8 +350,8 @@ export function geracaoPorGrupoCommits(){
     }
   });
   
-  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/stats/contributors");
-  
+  xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
+  xhr.setRequestHeader("authorization", "Bearer " + token);
   xhr.send();
   
 } 
