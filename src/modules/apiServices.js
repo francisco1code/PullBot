@@ -316,14 +316,14 @@ function calcResultadoCommits( respostaJson , iteracao, qtdContribuintes, qtdSem
   }
 
   if(iteracao == qtdContribuintes - 1){
-       GraficoGrupoDelecoesCommits(dataSetArray,semanas )
+       GraficoGrupoCommits(dataSetArray,semanas )
    
 
   }
 
 }
 
-function getDadosSemanaisContribuinteDelecoesCommits(qtdContribuintes, qtdSemanas, respostaJson){
+function getDadosSemanaisContribuinteCommits(qtdContribuintes, qtdSemanas, respostaJson){
 
   var dataSetArray = [];
   for(var i = 0; i < qtdContribuintes ; i++){
@@ -332,7 +332,7 @@ function getDadosSemanaisContribuinteDelecoesCommits(qtdContribuintes, qtdSemana
   }
 }
 
-export function geracaoPorGrupoDelecoesCommits(){
+export function geracaoPorGrupoCommits(){
 
   var xhr = new XMLHttpRequest();
 
@@ -344,7 +344,7 @@ export function geracaoPorGrupoDelecoesCommits(){
       var qtdSemanas = respostaJson[0].weeks.length
       
        console.log(qtdContribuintes, qtdSemanas)
-       getDadosSemanaisContribuinteDelecoesCommits(qtdContribuintes, qtdSemanas, respostaJson);
+       getDadosSemanaisContribuinteCommits(qtdContribuintes, qtdSemanas, respostaJson);
     }
   });
   
