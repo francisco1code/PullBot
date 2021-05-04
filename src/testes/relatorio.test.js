@@ -43,6 +43,9 @@ jest.mock('../libraries/filesaver')
 test("calls fileSaver()", () => {
     criarRelatorio();
 
-    // TESTANDO SE criarRelatorio() CHEGOU A CHAMAR O MÉTODO fileSaver() [ÚLTIMA LINHA]
+    // TESTANDO SE A API EXECUTOU O MOCK addEventListener 6 VEZES (uma vez para cada informação obtida no relatório)
+    expect(mockXHR.addEventListener).toHaveBeenCalledTimes(6);
+
+    // TESTANDO SE criarRelatorio() CHEGOU A CHAMAR O MÉTODO fileSaver() (última linha)
     expect(fileSaver).toHaveBeenCalledTimes(1);
 });
