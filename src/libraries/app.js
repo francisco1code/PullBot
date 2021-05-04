@@ -36,11 +36,11 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
   });
   }
 
-  export function GraficoGrupo(datasets){
+  export function GraficoGrupo(datasets, semanas){
       
     const data = {
       // labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-      labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      labels: semanas,
       datasets: datasets,
     };
 
@@ -67,5 +67,3 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
     
   });
   }
-
- 

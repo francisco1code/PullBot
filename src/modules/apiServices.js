@@ -180,10 +180,14 @@ var contribuicaoSemana = [];
 
 function calcResultado( respostaJson , iteracao, qtdContribuintes, qtdSemanas, dataSetArray){
   var adicoes = [] ;
-
+  var semanas = [];
   for(var i = 0; i < qtdSemanas; i++){
-      adicoes[i] =  respostaJson.weeks[i].c
-      
+      adicoes[i] =  respostaJson.weeks[i].a
+      var minhaData = new Date( respostaJson.weeks[i].w * 1000);
+      let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
+      let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
+      let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
+      semanas[i] =   `${da}/${mo}/${ye}`;
   }
   var randomColor = Math.floor(Math.random()*16777215).toString(16);
   dataSetArray[iteracao] = {
@@ -193,20 +197,18 @@ function calcResultado( respostaJson , iteracao, qtdContribuintes, qtdSemanas, d
   }
 
   if(iteracao == qtdContribuintes - 1){
-    //  GraficoGrupo(dataSetArray)
-    console.log(dataSetArray)
-
+       GraficoGrupo(dataSetArray,semanas )
+   
 
   }
 
 }
 
-
 function getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson){
 
   var dataSetArray = [];
   for(var i = 0; i < qtdContribuintes ; i++){
-   
+  
     calcResultado( respostaJson[i] , i, qtdContribuintes, qtdSemanas, dataSetArray)
   }
 }
@@ -233,70 +235,8 @@ export function geracaoPorGrupo(){
   
 }  
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-// 
 
-// var adicoes = [];
-// var delecoes = [];
-// var commits = [];
-// var semanas = [];
-
-// function calcResultado(qtdSemanas, respostaJson , adicoes, interacao, qtdContribuintes){
- 
-//   for(var i = 0; i < qtdSemanas; i++){
-//       var minhaData = new Date( respostaJson.weeks[i].w * 1000);
-//       let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
-//       let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
-//       let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
-//       semanas[i] =   `${da}/${mo}/${ye}`;
-//       adicoes[i] =  respostaJson.weeks[i].a + adicoes[i]  ;
-//       delecoes[i] = respostaJson.weeks[i].d  +  delecoes[i] ;
-//       commits[i] =   respostaJson.weeks[i].c + commits[i];
-//   }
-//   if(interacao == qtdContribuintes - 1){
-//     console.log(adicoes, 
-//       delecoes,
-//       commits, semanas);
-//       GraficoGrupo( adicoes, delecoes,commits, semanas)
-//   }
-// }
-
-
-// function getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson){
-//   var contribuinte = []
-//   for(var i = 0; i < qtdSemanas; i++){
-//     adicoes[i] = 0;
-//     delecoes[i] = 0;
-//     commits[i] = 0;
-//     semanas[i] = 0;
-//   }
-
-//   for(var i = 0; i < qtdSemanas ; i++){
-//     contribuinte[i] = respostaJson[i].author.login;
-//     var qtd = semanas.length
-//     calcResultado(qtdSemanas, respostaJson[i] , adicoes, i, qtdContribuintes, qtd)
-//   }
-// }
-
-// export function geracaoPorGrupo(){
-
-//   var xhr = new XMLHttpRequest();
-
-//   xhr.addEventListener("readystatechange", function() {
-//     if(this.readyState === 4) {
-//       console.log(this.responseText);
-//       var respostaJson = JSON.parse(this.responseText)
-//       var qtdContribuintes = respostaJson.length
-//       var qtdSemanas = respostaJson[0].weeks.length
-//       // console.log(qtdContribuintes, qtdSemanas)
-//        getDadosSemanaisContribuinte(qtdContribuintes, qtdSemanas, respostaJson);
-//     }
-//   });
-  
-//   xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/stats/contributors");
-  
-//   xhr.send();
-  
-// }  
