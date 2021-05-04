@@ -12,7 +12,7 @@ chrome.storage.sync.get(['key'], function(result) {
   
 
   // contribuinteRepositorio(dados[0], dados[1] , $owner,  $repo )
-  geracaoPorGrupoAdicoes();
+  geracaoPorGrupoAdicoes(dados[1] ,$owner,  $repo);
 });
 
 
