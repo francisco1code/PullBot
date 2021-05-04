@@ -62,3 +62,7 @@ Integrante 4 | 1 | 9
 Integrante 5 | 0 | 11
 Total: | 7 | 49
 
+### 2.0 Funcionalidades no popup
+Assim que se entra no escopo das milestonas, a extensão irá apresentar alguns gráficos de desempenho relacionados a sprint em questão. 
+
+### 3.0 Funcionalidades nos PDFs
