@@ -1,6 +1,6 @@
-import File from '../libraries/filesaver.js';
+import {File} from '../libraries/filesaver.js';
 
-export default function criarRelatorio(owner, repo, milestoneName) {
+export function criarRelatorio(owner, repo, milestoneName) {
   var xhr = new XMLHttpRequest();
 
   function dadosContribuintes() {
