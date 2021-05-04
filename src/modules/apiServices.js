@@ -215,7 +215,7 @@ function getDadosSemanaisContribuinteAdicoes(qtdContribuintes, qtdSemanas, respo
   }
 }
 
-export function geracaoPorGrupoAdicoes(){
+export function geracaoPorGrupoAdicoes( token, $owner, $repo){
 
   var xhr = new XMLHttpRequest();
 
@@ -275,7 +275,7 @@ function getDadosSemanaisContribuinteDelecoes(qtdContribuintes, qtdSemanas, resp
   }
 }
 
-export function geracaoPorGrupoDelecoes(){
+export function geracaoPorGrupoDelecoes( token, $owner, $repo){
 
   var xhr = new XMLHttpRequest();
 
@@ -334,7 +334,7 @@ function getDadosSemanaisContribuinteCommits(qtdContribuintes, qtdSemanas, respo
   }
 }
 
-export function geracaoPorGrupoCommits(){
+export function geracaoPorGrupoCommits( token, $owner, $repo){
 
   var xhr = new XMLHttpRequest();
 
