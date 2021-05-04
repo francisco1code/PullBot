@@ -295,4 +295,61 @@ export function geracaoPorGrupoDelecoes(){
   
 }  
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 
+function calcResultadoCommits( respostaJson , iteracao, qtdContribuintes, qtdSemanas, dataSetArray){
+  var adicoes = [] ;
+  var semanas = [];
+  for(var i = 0; i < qtdSemanas; i++){
+      adicoes[i] =  respostaJson.weeks[i].c
+      var minhaData = new Date( respostaJson.weeks[i].w * 1000);
+      let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
+      let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
+      let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
+      semanas[i] =   `${da}/${mo}/${ye}`;
+  }
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  dataSetArray[iteracao] = {
+    label: respostaJson.author.login,
+    backgroundColor: "#" + randomColor ,
+    data: adicoes
+  }
+
+  if(iteracao == qtdContribuintes - 1){
+       GraficoGrupoDelecoesCommits(dataSetArray,semanas )
+   
+
+  }
+
+}
+
+function getDadosSemanaisContribuinteDelecoesCommits(qtdContribuintes, qtdSemanas, respostaJson){
+
+  var dataSetArray = [];
+  for(var i = 0; i < qtdContribuintes ; i++){
+  
+    calcResultadoCommits( respostaJson[i] , i, qtdContribuintes, qtdSemanas, dataSetArray)
+  }
+}
+
+export function geracaoPorGrupoDelecoesCommits(){
+
+  var xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+      // console.log(this.responseText);
+      var respostaJson = JSON.parse(this.responseText)
+      var qtdContribuintes = respostaJson.length
+      var qtdSemanas = respostaJson[0].weeks.length
+      
+       console.log(qtdContribuintes, qtdSemanas)
+       getDadosSemanaisContribuinteDelecoesCommits(qtdContribuintes, qtdSemanas, respostaJson);
+    }
+  });
+  
+  xhr.open("GET", "https://api.github.com/repos/fga-eps-mds/PullBot/stats/contributors");
+  
+  xhr.send();
+  
+} 
