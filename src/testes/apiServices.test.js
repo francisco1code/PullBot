@@ -53,6 +53,9 @@ test("call loginDevice()", () => {
     expect(document.getElementById.mock.calls[5][0]).toBe('user-code-6')
     expect(document.getElementById.mock.calls[6][0]).toBe('user-code-7')
     expect(document.getElementById.mock.calls[7][0]).toBe('user-code-8')
+
+    // TESTANDO SE A CHAVE DO DEVICE (deviceCode) ESTÁ SENDO SALVA CORRETAMENTE
+    expect(localStorage.getItem('key_dev')).toBe('CHAVE_DO_DEVICE_CODE123')
 });
 
 
