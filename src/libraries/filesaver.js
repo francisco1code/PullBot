@@ -13,19 +13,15 @@ function click (node) {
   }
 }
 
-export var saveAs = _global.saveAs || (
-  function saveAs (blob, name) {
-
+function saveAs (blob, name) {
     var URL = _global.URL 
     var a = document.createElement('a')
     name = name || blob.name || 'download'
     a.download = name
-    a.rel = 'noopener' 
-    //var URL = new URL();
+    a.rel = 'noopener'
     a.href = URL.createObjectURL(blob)
     click(a)
-})
-_global.saveAs = saveAs.saveAs = saveAs
+}
 
 
 export function File(relatorio, numberMilestone){
