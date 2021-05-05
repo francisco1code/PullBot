@@ -21,6 +21,7 @@ export function CodigoDevicePost(){
   xhr.send();
 }
 
+
 function loginDevice(codeUser){
 
   document.getElementById("user-code-0").value = codeUser[0];
@@ -39,8 +40,9 @@ export function ConfirmaLoginContaUsuario(){
   var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-      const $getResponse = String(this.responseText).split("&");
+    if(xhr.readyState === 4) {
+
+      const $getResponse = String(xhr.responseText).split("&");
       const $separateToken = $getResponse[0].split("=");
       const $token = $separateToken[1]
       localStorage.setItem("token",$token);
@@ -50,8 +52,7 @@ export function ConfirmaLoginContaUsuario(){
   xhr.open("POST", "https://github.com/login/oauth/access_token?client_id=46da77694ca94b6a86d7&device_code="+keyValue+"&grant_type=urn:ietf:params:oauth:grant-type:device_code");
   // xhr.setRequestHeader("Cookie", "_device_id="+keyValue+"; _gh_sess=eJ4SGU%2B24YwcePUSGoD82e%2Bm5C6pCMXSTicqWhqxjqK2q%2FdT%2BnIZRy2VT17XgsvqnrMmPA8Nm3foDTdRakuDTl5ZVWW%2F%2BzDAqvsEv6B4eoE83TNIIaC1HTZvT93ojGs8ARDPh26hSSFoUIYDHYnz6KEDJTK3hjlrX5ATkhOLy%2BDUwus78XVkwT1hhC0nIpj4Qm0YC6Z2rqNGkDeCzg6Kz5O0tSNzQxyahCC9WHLgoECgonCtnYIQ27w%2BBmzQ%2FWIqRmaUM%2BPRUOZBGmttLbSEhX4FaHUNIlglvwjNx9R34UAcaVkO--YFp0BPOo4pjLQIHV--aQrfy79bV3QfnmGMwYPhGw%3D%3D; _octo=GH1.1.2068834575.1616879702; logged_in=no");
 
-  xhr.send();
-  
+  xhr.send();  
 }
 // ///////////////////////////////////////////////////////////////////////
 
