@@ -1,37 +1,36 @@
 import {GraficoPessoal} from '../libraries/app.js';
+
 export function CodigoDevicePost(){
-    var xhr = new XMLHttpRequest();
 
-    xhr.addEventListener("readystatechange", function() {
-      if(this.readyState === 4) {
+  var xhr = new XMLHttpRequest();
 
-         
-        
-        const $getResponse = String(this.responseText).split("&");
-        const $separeteValueDevice = $getResponse[0].split("=");
-        var deviceCode = $separeteValueDevice[1];
-        localStorage.setItem("key_dev", deviceCode);
-       const $separatevalue = String($getResponse[3]).split("=");
-       var codeUser = $separatevalue[1];
-        loginDevice(codeUser)
-      }
-    });
+  xhr.addEventListener("readystatechange", function() {
+    if(xhr.readyState === 4) {
+      
+      const $getResponse = String(xhr.responseText).split("&");
+      const $separeteValueDevice = $getResponse[0].split("=");
+      var deviceCode = $separeteValueDevice[1];
+      localStorage.setItem("key_dev", deviceCode);
+      const $separatevalue = String($getResponse[3]).split("=");
+      var codeUser = $separatevalue[1];
+      loginDevice(codeUser)
+    }
+  });
 
-    xhr.open("POST", "https://github.com/login/device/code?client_id=46da77694ca94b6a86d7&scope=repo%20user");
-    xhr.send();
-  }
-  function loginDevice(codeUser){
-   
-    document.getElementById("user-code-0").value = codeUser[0];
-    document.getElementById("user-code-1").value = codeUser[1];
-    document.getElementById("user-code-2").value =  codeUser[2];
-    document.getElementById("user-code-3").value = codeUser[3];
-    document.getElementById("user-code-5").value = codeUser[5];
-    document.getElementById("user-code-6").value = codeUser[6];
-    document.getElementById("user-code-7").value = codeUser[7];
-    document.getElementById("user-code-8").value = codeUser[8];
-    
-    
+  xhr.open("POST", "https://github.com/login/device/code?client_id=46da77694ca94b6a86d7&scope=repo%20user");
+  xhr.send();
+}
+
+function loginDevice(codeUser){
+
+  document.getElementById("user-code-0").value = codeUser[0];
+  document.getElementById("user-code-1").value = codeUser[1];
+  document.getElementById("user-code-2").value = codeUser[2];
+  document.getElementById("user-code-3").value = codeUser[3];
+  document.getElementById("user-code-5").value = codeUser[5];
+  document.getElementById("user-code-6").value = codeUser[6];
+  document.getElementById("user-code-7").value = codeUser[7];
+  document.getElementById("user-code-8").value = codeUser[8];    
 }
 //////////////////////////////////////////////////////////////////////////////
 
