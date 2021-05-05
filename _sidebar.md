@@ -50,3 +50,6 @@
     - [Sprint 11](#)
         - [Planning](docs/sprints/sprint11/planning.md)
         - [Review](docs/sprints/sprint11/review.md)
+    - [Sprint 12](#)
+        - [Planning](docs/sprints/sprint12/planning.md)
+        - [Review](docs/sprints/sprint12/review.md)
