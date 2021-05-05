@@ -1,5 +1,7 @@
 import {CodigoDevicePost} from '../modules/apiServices';
 import {ConfirmaLoginContaUsuario} from '../modules/apiServices';
+import {contribuinteRepositorio} from '../modules/apiServices';
+import {GraficoPessoal} from '../libraries/app';
 
 // MOCK DA CLASSE XMLHttpRequest
 const mockXHR = {
@@ -16,10 +18,28 @@ const mockXHR = {
         } catch (e) {}
     }),
     readyState: 4,
-    responseText: 'device_code=CHAVE_DO_DEVICE_CODE123&expires_in=000&interval=5&user_code=0000-ABCD&verification_uri=https%3A%2F%2Fgithub.com%2Flogin%2Fdevice'
+    responseText: 'device_code=CHAVE_DO_DEVICE_CODE123&expires_in=000&interval=5&user_code=0000-ABCD&verification_uri=https%3A%2F%2Fgithub.com%2Flogin%2Fdevice',
+    setRequestHeader: jest.fn()
 };
 window.XMLHttpRequest = jest.fn(() => mockXHR);
 
+
+var objetoJson = [
+    {
+    number: 12,
+    "title": 'teste',
+    "created_at": 'teste1',
+    "closed_at": 'teste2',
+    },
+    {
+    number: 11,
+    "title": 'teste',
+    "created_at": 'teste1',
+    "closed_at": 'teste2',
+    }
+]
+// MOCK DE UM OBJETO JSON
+JSON.parse = jest.fn().mockReturnValue(objetoJson)
 
 // MOCK DO OBJETO Document
 const mockDocument = {
@@ -66,4 +86,22 @@ test("ConfirmaLoginContaUsuario()", () => {
 
     // TESTANDO SE O TOKEN DO GITHUB ESTÁ SENDO SALVO CORRETAMENTE
     expect(localStorage.getItem('token')).toBe('TOKEN_DE_ACESSO_GITHUB123')
+})
+
+
+// MOCK DO MÉTODO GraficoPessoal()
+jest.mock('../libraries/app')
+
+
+var numeroMilestone = 12;
+var token = localStorage.getItem('token');
+var owner = 'fga-eps-mds';
+var repositorio = 'PullBot';
+var sprint = 11;
+
+contribuinteRepositorio(numeroMilestone, token, owner, repositorio, sprint);
+
+test("Criação de gráficos", () => {
+    // TESTANDO SE contribuinteRepositorio() EXECUTOU O MÉTODO GraficoPessoal() (última linha)
+    expect(GraficoPessoal).toHaveBeenCalledTimes(2);
 })
