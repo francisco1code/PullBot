@@ -1,4 +1,4 @@
-import criarRelatorio from '../modules/relatorio';
+import {criarRelatorio} from '../modules/relatorio';
 import {File} from '../libraries/filesaver';
 
 var objetoJson = [
@@ -40,12 +40,16 @@ JSON.parse = jest.fn().mockReturnValue(objetoJson)
 // MOCK DO MÉTODO File()
 jest.mock('../libraries/filesaver')
 
+criarRelatorio();
+
 test("calls File()", () => {
-    criarRelatorio();
 
-    // TESTANDO SE A API EXECUTOU O MOCK addEventListener 6 VEZES (uma vez para cada informação obtida no relatório)
-    expect(mockXHR.addEventListener).toHaveBeenCalledTimes(6);
-
-    // TESTANDO SE criarRelatorio() CHEGOU A CHAMAR O MÉTODO File() (última linha)
+    // TESTANDO SE criarRelatorio() EXECUTOU O MÉTODO File() (última linha)
     expect(File).toHaveBeenCalledTimes(1);
 });
+
+test("calls addEventListener()", () => {
+
+    // TESTANDO SE criarRelatorio() EXECUTOU O MOCK addEventListener 6 VEZES (uma vez para cada informação obtida pela API)
+    expect(mockXHR.addEventListener).toHaveBeenCalledTimes(6);
+})
