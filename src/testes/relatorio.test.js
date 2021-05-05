@@ -2,15 +2,15 @@ import {criarRelatorio} from '../modules/relatorio';
 import {File} from '../libraries/filesaver';
 
 var objetoJson = [
-  [{
-  "teste": 'teste',
-  "teste1": 'teste1',
-}],
-[{
-  "teste2": 'teste',
-  "teste3": 'teste'
-}]]
-
+  {
+  login: 'teste',
+  user: 'teste1',
+  assignees: 'teste'
+},{
+  login: 'teste',
+  user: 'teste1',
+  assignees: 'teste'
+}]
 
 // MOCK DA CLASSE XMLHttpRequest
 const mockXHR = {
@@ -33,6 +33,13 @@ const mockXHR = {
   responseText: objetoJson
 };
 window.XMLHttpRequest = jest.fn(() => mockXHR);
+
+// MOCK DO localStorage
+global.localStorage = {
+  store:{},
+  getItem: (key) => this.store[key],
+  setItem: (key, value) => this.store[key] = value
+}
 
 // MOCK DE UM OBJETO JSON
 JSON.parse = jest.fn().mockReturnValue(objetoJson)

@@ -129,21 +129,19 @@ function relatorio(contribuintes, data, comments, issues, owner, repo, milestone
   }
 
   for(i = 0; i < issues.length; i++) {
-    if(issues[i].assignees != undefined){
       for(var j = 0; j < issues[i].assignees.length; j++) {
           var quantidade = new Number(localStorage.getItem(`issues_${issues[i].assignees[j].login}`));
           quantidade++;
           localStorage.setItem(`issues_${issues[i].assignees[j].login}`, quantidade)
-      }}
+      }
   }
   
   var totalIssues = 0;
   for(i = 0; i < contribuintes.length; i++) {
-    if(contribuintes[i].login != undefined) {
       var quantidade = new Number(localStorage.getItem(`issues_${contribuintes[i].login}`));
       relatorio += `| ${contribuintes[i].login} | ${quantidade} | \n`;
       totalIssues += quantidade;
-  }}
+  }
 
 // COMENTÁRIOS EM ISSUES
   relatorio += `\n## 3. Comentários em Issues \n| Contribuinte | Quantidade de comentários | \n|:-:|:-:| \n`;
@@ -154,11 +152,10 @@ function relatorio(contribuintes, data, comments, issues, owner, repo, milestone
   }
 
   for(i = 0; i < comments.length; i++) {
-    if(comments[i].user != undefined) {
       var quantidade = new Number(localStorage.getItem(`comments_${comments[i].user.login}`));
       quantidade++;
       localStorage.setItem(`comments_${comments[i].user.login}`, quantidade)
-  }}
+  }
 
   var totalComments = 0;
   for(i = 0; i < contribuintes.length; i++) {
