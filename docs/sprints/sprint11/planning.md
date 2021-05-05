@@ -12,7 +12,7 @@ Issue | Descrição | Responsável
 ---|---|---
 Geração de gráficos informativos da equipe | Para aprimoramento do bot, desejamos que ele entregue gráficos com informações valiosas sobre o desempenho da equipe | Arthur de Melo e Eliás Yousef
 Geração de gráficos informativos por contribuinte | Para aprimoramento do bot, desejamos que ele entregue gráficos com informações valiosas sobre o desempenho pessoal | Arthur de Melo e Eliás Yousef
-Testes unitários | Testar as assinaturas de entrada e saída do projeto, afim de validar ou invalidar as aplicações implementadas | Jaime Juan, Peniel Etémana e Lorrayne Cardozo
+Testes unitários | Testar as assinaturas de entrada e saída do projeto, afim de validar ou invalidar as aplicações implementadas | Jaime Juan e Lorrayne Cardozo
 Bug de token | O PullBot em alguns momentos nao registra o token adequadamente | Arthur de Melo
 Refatoração Protótipo de alta fidelidade | Diante das novas implementações, é necessário refatorar o documento para ficar condizente com o escopo do projeto | Eliás Yousef
 Refatoração do Documento de Arquitetura | Diante das novas implementações, é necessário refatorar o documento de arquitetura para ficar condizente com o escopo do projeto | Arthur de Melo e Eliás Yousef
