@@ -17,7 +17,7 @@ Para a ativar e começar a utilizar os recursos do PullBot, basta seguir os pass
 4. Autorize o PullBot como uma aplicação OAuth.
 
 ## Funcionalidades
-O PullBot exibirá informações das equipes de desenvolvimento em arquivos markdown, gráficos no popup e PDFs. A seguir, será mostrado e explicado exemplos de todas as fontes de informação da extensão.
+O PullBot exibirá informações das equipes de desenvolvimento em arquivos markdown e gráficos no popup. A seguir, será exemplificado e explicado exemplos das fontes de informação da extensão.
 
 ### 1.0 - Funcionalidades no Markdown
 Entre as informações disponibilizadas no arquivo markdown, todas estão descritas abaixo:
@@ -64,5 +64,3 @@ Total: | 7 | 49
 
 ### 2.0 Funcionalidades no popup
 Assim que se entra no escopo das milestonas, a extensão irá apresentar alguns gráficos de desempenho relacionados a sprint em questão. 
-
-### 3.0 Funcionalidades nos PDFs
