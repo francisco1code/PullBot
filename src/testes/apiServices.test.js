@@ -103,5 +103,5 @@ contribuinteRepositorio(numeroMilestone, token, owner, repositorio, sprint);
 
 test("Criação de gráficos", () => {
     // TESTANDO SE contribuinteRepositorio() EXECUTOU O MÉTODO GraficoPessoal() (última linha)
-    expect(GraficoPessoal).toHaveBeenCalledTimes(2);
+    expect(GraficoPessoal).toHaveBeenCalledTimes(1);
 })
