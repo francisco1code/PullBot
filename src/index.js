@@ -38,7 +38,6 @@
 
           // NOME DA MILESTONE
           localStorage.setItem('milestoneName', milestoneName); 
-          localStorage.setItem('abrirModal', 'true')
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
           //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
           localStorage.setItem('abrirModal', 'true')
