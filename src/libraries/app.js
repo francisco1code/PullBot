@@ -139,13 +139,5 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
     
   });
 
-  const actions = [
-    {
-      name: 'Title Position: start',
-      handler(chart) {
-        chart.options.plugins.legend.align = 'start';
-        chart.options.plugins.legend.title.position = 'start';
-        chart.update();
-      }
-  }]
+
   }
