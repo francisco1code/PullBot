@@ -28,27 +28,20 @@ a{
     text-align: center;
 }
 
-.btn-style{
-    display: block;
-    padding: 10px 20px;
-    margin: auto;
-    text-align: center;
-    background-color: white;
-    color: #29567b;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 20px;
-}
-
 .btn-style:hover{
     background-color: rgb(228, 228, 228);
     cursor: pointer;
 }
 
-.nav-item:hover{
+.nav{
+    list-style: none;
+}
 
+.nav-link{
+    text-decoration: none;
+}
+
+.nav-item:hover{
     background-color: #29567b !important;
     border-radius: 5px;
 }
