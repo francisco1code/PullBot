@@ -65,7 +65,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
           
           title: {
             display: true,
-            text: "Desempenho Repo"
+            text: "Adições Repo"
           }
         }
       },
@@ -97,7 +97,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
         plugins: {
           title: {
             display: true,
-            text: "Desempenho Repo",
+            text: "Deleções Repo",
           }
         }
       },
@@ -131,7 +131,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
         plugins: {
           title: {
             display: true,
-            text: "Desempenho Repo",
+            text: "Commits Repo",
           }
         }
       },
