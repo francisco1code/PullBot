@@ -19,7 +19,7 @@ chrome.storage.sync.get(['key'], function(result) {
 function CreateDivDisplay( DivAmount, numerDivPriority, start){
 
 	createClass('.plane0', "display: none; z-index: 0;");
-	createClass('.plane1', "z-index: 1; display: inline;");
+	createClass('.plane1', "z-index: 1; display: inline !important;");
 	
     for(var i = 1; i <=  DivAmount; i++){
         if (i <= numerDivPriority & i >= start){
