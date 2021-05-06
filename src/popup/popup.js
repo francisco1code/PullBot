@@ -47,6 +47,12 @@ function applyClass(name,element,doRemove){
 	}
 }
 
+const $div1 = document.getElementById('div1')
+const $div2 = document.getElementById('div1')
+const $div3 = document.getElementById('div1')
+const $div4 = document.getElementById('div1')
+
+
 chrome.storage.sync.get(['key'], function(result) {
   var dados = result.key;
  
