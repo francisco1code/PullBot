@@ -46,3 +46,14 @@ a{
     background-color: rgb(228, 228, 228);
     cursor: pointer;
 }
+
+.nav-item:hover{
+
+    background-color: #29567b !important;
+    border-radius: 5px;
+}
+
+.nav-link:hover{
+
+    color:#f4f4f4 !important;
+}
