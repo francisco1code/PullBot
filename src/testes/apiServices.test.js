@@ -2,6 +2,9 @@ import {CodigoDevicePost} from '../modules/apiServices';
 import {ConfirmaLoginContaUsuario} from '../modules/apiServices';
 import {contribuinteRepositorio} from '../modules/apiServices';
 import {GraficoPessoal} from '../libraries/app';
+import {geracaoPorGrupoAdicoes} from '../modules/apiServices';
+import {geracaoPorGrupoDelecoes} from '../modules/apiServices';
+import {geracaoPorGrupoCommits} from '../modules/apiServices';
 
 // MOCK DA CLASSE XMLHttpRequest
 const mockXHR = {
@@ -27,15 +30,21 @@ window.XMLHttpRequest = jest.fn(() => mockXHR);
 var objetoJson = [
     {
     number: 12,
-    "title": 'teste',
-    "created_at": 'teste1',
-    "closed_at": 'teste2',
+    weeks: [
+
+    ],
+    title: 'teste',
+    created_at: 'teste1',
+    closed_at: 'teste2',
     },
     {
-    number: 11,
-    "title": 'teste',
-    "created_at": 'teste1',
-    "closed_at": 'teste2',
+    number: 12,
+    weeks: [
+        
+    ],
+    title: 'teste',
+    created_at: 'teste1',
+    closed_at: 'teste2',
     }
 ]
 // MOCK DE UM OBJETO JSON
@@ -79,9 +88,10 @@ test("call loginDevice()", () => {
 });
 
 
-mockXHR.responseText = 'access_token=TOKEN_DE_ACESSO_GITHUB123&scope=repo%2Cuser&token_type=bearer'
-
 test("ConfirmaLoginContaUsuario()", () => {
+
+    mockXHR.responseText = 'access_token=TOKEN_DE_ACESSO_GITHUB123&scope=repo%2Cuser&token_type=bearer'
+
     ConfirmaLoginContaUsuario();
 
     // TESTANDO SE O TOKEN DO GITHUB ESTÁ SENDO SALVO CORRETAMENTE
@@ -95,13 +105,77 @@ jest.mock('../libraries/app')
 
 var numeroMilestone = 12;
 var token = localStorage.getItem('token');
-var owner = 'fga-eps-mds';
-var repositorio = 'PullBot';
+var owner = 'owner';
+var repositorio = 'repositorio';
 var sprint = 11;
 
 contribuinteRepositorio(numeroMilestone, token, owner, repositorio, sprint);
 
 test("Criação de gráficos", () => {
-    // TESTANDO SE contribuinteRepositorio() EXECUTOU O MÉTODO GraficoPessoal() (última linha)
+
+    // TESTANDO SE contribuinteRepositorio() EXECUTOU O MÉTODO GraficoPessoal()
     expect(GraficoPessoal).toHaveBeenCalledTimes(1);
+})
+
+
+
+test('Métodos de geração de gráficos', () => {
+
+    // EDITANDO OBJETO JSON PARA SE ADAPTAR AOS MÉTODOS E A SAÍDA ESPERADA
+    objetoJson = [
+        {
+            weeks: [
+                {
+                    w: 1612051200,
+                    a: 0,
+                    d: 0,
+                    c: 0
+                },
+                {
+                    w: 1612656000,
+                    a: 0,
+                    d: 0,
+                    c: 0
+                }
+            ],
+            author: {
+                login: 'usuario'
+            }
+        },
+        {
+            weeks: [
+                {
+                    w: 1612051200,
+                    a: 7,
+                    d: 2,
+                    c: 11
+                },
+                {
+                    w: 1612656000,
+                    a: 4,
+                    d: 6,
+                    c: 10
+                }
+            ],
+            author: {
+                login: 'usuario'
+            }
+        },
+    ];
+    JSON.parse = () => objetoJson;
+    mockXHR.responseText = objetoJson;
+
+
+    // TESTANDO SE HOUVE UMA CHAMA A API EM CADA MÉTODO
+    mockXHR.open.mockClear();
+    geracaoPorGrupoAdicoes(token, owner, repositorio);
+    expect(mockXHR.open.mock.calls.length).toBe(1);
+    
+    mockXHR.open.mockClear();
+    geracaoPorGrupoDelecoes(token, owner, repositorio);
+    expect(mockXHR.open.mock.calls.length).toBe(1);
+
+    mockXHR.open.mockClear();
+    geracaoPorGrupoCommits(token, owner, repositorio);
+    expect(mockXHR.open.mock.calls.length).toBe(1);
 })
