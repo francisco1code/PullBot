@@ -11,8 +11,8 @@ chrome.storage.sync.get(['key'], function(result) {
   const $repo = dados[3]
   
 
-  // contribuinteRepositorio(dados[0], dados[1] , $owner,  $repo )
-  geracaoPorGrupoAdicoes(dados[1] ,$owner,  $repo);
+  contribuinteRepositorio(dados[0], dados[1] , $owner,  $repo )
+  // geracaoPorGrupoAdicoes(dados[1] ,$owner,  $repo);
 });
 
 
