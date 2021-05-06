@@ -11,10 +11,9 @@ Este documento tem por finalidade apresentar o funcionamento e funcionalidades d
 
 ## Funcionamento
 Para a ativar e começar a utilizar os recursos do PullBot, basta seguir os passos abaixo:
-1. Abra o [Chrome Web Store.](https://chrome.google.com/webstore/category/extensions)
-2. Localize e selecione a extensão PullBot.
-3. Clique em Usar no Chrome.
-4. Autorize o PullBot como uma aplicação OAuth.
+1. Abra o [Chrome Web Store.](https://chrome.google.com/webstore/category/extensions), localize e seleciona a extensão PullBot.
+2. Clique em Usar no Chrome.
+3. Autorize o PullBot como uma aplicação OAuth no GitHub.
 
 ## Funcionalidades
 O PullBot exibirá informações das equipes de desenvolvimento em arquivos markdown e gráficos no popup. A seguir, será exemplificado e explicado exemplos das fontes de informação da extensão.
