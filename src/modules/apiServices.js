@@ -193,6 +193,7 @@ function calcResultadoAdicoes( respostaJson , iteracao, qtdContribuintes, qtdSem
   }
   var randomColor = Math.floor(Math.random()*16777215).toString(16);
   dataSetArray[iteracao] = {
+    
     label: respostaJson.author.login,
     backgroundColor: "#" + randomColor ,
     data: adicoes

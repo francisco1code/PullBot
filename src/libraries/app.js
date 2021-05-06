@@ -34,6 +34,11 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
     },
     
   });
+
+ 
+      
+  
+
   }
 
   export function GraficoGrupoAdicoes(datasets, semanas){
@@ -57,9 +62,10 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
         }
       },
         plugins: {
+          
           title: {
             display: true,
-            text: "Desempenho Repo",
+            text: "Desempenho Repo"
           }
         }
       },
@@ -132,7 +138,14 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
     data: data
     
   });
+
+  const actions = [
+    {
+      name: 'Title Position: start',
+      handler(chart) {
+        chart.options.plugins.legend.align = 'start';
+        chart.options.plugins.legend.title.position = 'start';
+        chart.update();
+      }
+  }]
   }
-
-
-  
