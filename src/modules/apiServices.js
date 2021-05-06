@@ -163,3 +163,179 @@ function calculaCommits(contribuinte, todosCommits , numerosContribuintes, nomeS
   
   contador++;
 }
+
+
+// FUNÇOES DE GRAFICOS
+
+var nomes = [];
+var contribuicaoSemana = [];
+
+function calcResultadoAdicoes( respostaJson , iteracao, qtdContribuintes, qtdSemanas, dataSetArray){
+  var adicoes = [] ;
+  var semanas = [];
+  for(var i = 0; i < qtdSemanas; i++){
+      adicoes[i] =  respostaJson.weeks[i].a
+      var minhaData = new Date( respostaJson.weeks[i].w * 1000);
+      let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
+      let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
+      let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
+      semanas[i] =   `${da}/${mo}/${ye}`;
+  }
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  dataSetArray[iteracao] = {
+    
+    label: respostaJson.author.login,
+    backgroundColor: "#" + randomColor ,
+    data: adicoes
+  }
+
+  if(iteracao == qtdContribuintes - 1){
+       GraficoGrupoAdicoes(dataSetArray,semanas )
+   
+
+  }
+
+}
+
+function getDadosSemanaisContribuinteAdicoes(qtdContribuintes, qtdSemanas, respostaJson){
+
+  var dataSetArray = [];
+  for(var i = 0; i < qtdContribuintes ; i++){
+  
+    calcResultadoAdicoes( respostaJson[i] , i, qtdContribuintes, qtdSemanas, dataSetArray)
+  }
+}
+
+export function geracaoPorGrupoAdicoes( token, $owner, $repo){
+
+  var xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("readystatechange", function() {
+    if(xhr.readyState === 4) {
+      var respostaJson = JSON.parse(xhr.responseText)
+      var qtdContribuintes = respostaJson.length
+      var qtdSemanas = respostaJson[0].weeks.length
+      
+       getDadosSemanaisContribuinteAdicoes(qtdContribuintes, qtdSemanas, respostaJson);
+    }
+  });
+  
+  xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
+  xhr.setRequestHeader("authorization", "Bearer " + token);
+  xhr.send();
+  
+}  
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function calcResultadoDelecoes( respostaJson , iteracao, qtdContribuintes, qtdSemanas, dataSetArray){
+  var adicoes = [] ;
+  var semanas = [];
+  for(var i = 0; i < qtdSemanas; i++){
+      adicoes[i] =  respostaJson.weeks[i].d
+      var minhaData = new Date( respostaJson.weeks[i].w * 1000);
+      let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
+      let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
+      let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
+      semanas[i] =   `${da}/${mo}/${ye}`;
+  }
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  dataSetArray[iteracao] = {
+    label: respostaJson.author.login,
+    backgroundColor: "#" + randomColor ,
+    data: adicoes
+  }
+  
+  if(iteracao == qtdContribuintes - 1){
+       GraficoGrupoDelecoes(dataSetArray,semanas )
+
+  }
+
+}
+
+function getDadosSemanaisContribuinteDelecoes(qtdContribuintes, qtdSemanas, respostaJson){
+
+  var dataSetArray = [];
+  for(var i = 0; i < qtdContribuintes ; i++){
+
+    calcResultadoDelecoes( respostaJson[i] , i, qtdContribuintes, qtdSemanas, dataSetArray)
+  }
+}
+
+export function geracaoPorGrupoDelecoes( token, $owner, $repo){
+
+  var xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("readystatechange", function() {
+    if(xhr.readyState === 4) {
+
+      var respostaJson = JSON.parse(xhr.responseText)
+      var qtdContribuintes = respostaJson.length
+      var qtdSemanas = respostaJson[0].weeks.length
+       getDadosSemanaisContribuinteDelecoes(qtdContribuintes, qtdSemanas, respostaJson);
+    }
+  });
+  
+  xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
+  xhr.setRequestHeader("authorization", "Bearer " + token);
+  xhr.send();
+  
+}  
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+function calcResultadoCommits( respostaJson , iteracao, qtdContribuintes, qtdSemanas, dataSetArray){
+  var adicoes = [] ;
+  var semanas = [];
+  for(var i = 0; i < qtdSemanas; i++){
+      adicoes[i] =  respostaJson.weeks[i].c
+      var minhaData = new Date( respostaJson.weeks[i].w * 1000);
+      let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
+      let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
+      let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
+      semanas[i] =   `${da}/${mo}/${ye}`;
+  }
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  dataSetArray[iteracao] = {
+    label: respostaJson.author.login,
+    backgroundColor: "#" + randomColor ,
+    data: adicoes
+  }
+
+  if(iteracao == qtdContribuintes - 1){
+       GraficoGrupoCommits(dataSetArray,semanas )
+   
+
+  }
+
+}
+
+function getDadosSemanaisContribuinteCommits(qtdContribuintes, qtdSemanas, respostaJson){
+
+  var dataSetArray = [];
+  for(var i = 0; i < qtdContribuintes ; i++){
+  
+    calcResultadoCommits( respostaJson[i] , i, qtdContribuintes, qtdSemanas, dataSetArray)
+  }
+}
+
+export function geracaoPorGrupoCommits( token, $owner, $repo){
+
+  var xhr = new XMLHttpRequest();
+  xhr.addEventListener("readystatechange", function() {
+    if(xhr.readyState === 4) {
+      var respostaJson = JSON.parse(xhr.responseText)
+      var qtdContribuintes = respostaJson.length
+      var qtdSemanas = respostaJson[0].weeks.length
+      
+    
+       getDadosSemanaisContribuinteCommits(qtdContribuintes, qtdSemanas, respostaJson);
+    }
+  });
+  
+  xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
+  xhr.setRequestHeader("authorization", "Bearer " + token);
+  xhr.send();
+  
+} 

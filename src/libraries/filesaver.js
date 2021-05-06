@@ -1,7 +1,5 @@
-var _global = typeof window === 'object' && window.window === window
-? self : typeof global === 'object' && global.global === global
-? global
-: this 
+var _global = typeof window === 'object'&& window.window === window 
+? self : typeof global.global === global
 
 function click (node) {
   try {
@@ -12,7 +10,7 @@ function click (node) {
 function saveAs (blob, name) {
     var URL = _global.URL 
     var a = document.createElement('a')
-    name = name || blob.name || 'download'
+    name = name
     a.download = name
     a.rel = 'noopener'
     a.href = URL.createObjectURL(blob)
