@@ -6,11 +6,7 @@ var _global = typeof window === 'object' && window.window === window
 function click (node) {
   try {
     node.dispatchEvent(new MouseEvent('click'))
-  } catch (e) {
-    var evt = document.createEvent('MouseEvents')
-    evt.initMouseEvent('click', true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null)
-    node.dispatchEvent(evt)
-  }
+  } catch (e) {}
 }
 
 function saveAs (blob, name) {
