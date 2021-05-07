@@ -166,7 +166,7 @@ test('Métodos de geração de gráficos', () => {
     mockXHR.responseText = objetoJson;
 
 
-    // TESTANDO SE HOUVE UMA CHAMA A API EM CADA MÉTODO
+    // TESTANDO SE HOUVE UMA CHAMADA A API DO GITHUB EM CADA MÉTODO
     mockXHR.open.mockClear();
     geracaoPorGrupoAdicoes(token, owner, repositorio);
     expect(mockXHR.open.mock.calls.length).toBe(1);
