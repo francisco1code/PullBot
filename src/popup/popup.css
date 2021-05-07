@@ -28,6 +28,7 @@ a{
 .nav{
     list-style: none;
     display: flex;
+    justify-content: center;
 }
 
 .nav-item{
@@ -39,13 +40,10 @@ a{
     margin: 5px;
 }
 
-/* #li-1{
-    margin: 5px;
-} */
-
 .nav-link{
     text-decoration: none;
     color: #29567b;
+    display: block;
 }
 
 
