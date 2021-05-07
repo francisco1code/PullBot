@@ -4,27 +4,6 @@ body{
     height: 400px;
 }
 
-
-p{
-    font-size: 16px;
-    padding: 6px 12px;
-    
-}
-
-a{
-    color: rgb(175, 175, 175);
-}
-
-.title{
-    padding-top: 16px;
-    text-align: center;
-}
-
-.btn-style:hover{
-    background-color: rgb(228, 228, 228);
-    cursor: pointer;
-}
-
 .nav{
     list-style: none;
     display: flex;
@@ -45,8 +24,6 @@ a{
     color: #29567b;
     display: block;
 }
-
-
 
 /* .nav-item:hover{
     background-color: #29567b !important;
