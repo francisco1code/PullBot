@@ -1,17 +1,9 @@
-button {
-    padding: 5px;
-    margin-top: 10px;
-}
-
 body{
-    background-color: #f4f4f4;
+    background-color: #29567b;
     width: 400px; 
     height: 400px;
 }
 
-.text{
-    color: white;
-}
 
 p{
     font-size: 16px;
@@ -35,18 +27,35 @@ a{
 
 .nav{
     list-style: none;
+    display: flex;
 }
+
+.nav-item{
+    background-color: white;
+    font-size: 16px;
+    padding: 10px 8px;
+    border: solid 1px #29567b;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* #li-1{
+    margin: 5px;
+} */
 
 .nav-link{
     text-decoration: none;
+    color: #29567b;
 }
 
-.nav-item:hover{
+
+
+/* .nav-item:hover{
     background-color: #29567b !important;
-    border-radius: 5px;
-}
+    
+} */
 
-.nav-link:hover{
+/* .nav-link:hover{
 
     color:#f4f4f4 !important;
-}
+} */
