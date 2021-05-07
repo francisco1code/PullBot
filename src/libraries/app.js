@@ -18,6 +18,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
         labels:  nomeContribuinte,
             datasets: [{
                 label: "commits",
+                color: "#f4f4f4",
             backgroundColor: [
                 "#FFD700",
                 "#F08080",
