@@ -1,17 +1,9 @@
-button {
-    padding: 5px;
-    margin-top: 10px;
-}
-
 body{
-    background-color: #f4f4f4;
+    background-color: #29567b;
     width: 400px; 
     height: 400px;
 }
 
-.text{
-    color: white;
-}
 
 p{
     font-size: 16px;
@@ -28,32 +20,40 @@ a{
     text-align: center;
 }
 
-.btn-style{
-    display: block;
-    padding: 10px 20px;
-    margin: auto;
-    text-align: center;
-    background-color: white;
-    color: #29567b;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 20px;
-}
-
 .btn-style:hover{
     background-color: rgb(228, 228, 228);
     cursor: pointer;
 }
 
-.nav-item:hover{
-
-    background-color: #29567b !important;
-    border-radius: 5px;
+.nav{
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
-.nav-link:hover{
+.nav-item{
+    background-color: white;
+    font-size: 16px;
+    padding: 10px 8px;
+    border: solid 1px #29567b;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #29567b;
+    display: block;
+}
+
+
+
+/* .nav-item:hover{
+    background-color: #29567b !important;
+    
+} */
+
+/* .nav-link:hover{
 
     color:#f4f4f4 !important;
 }
