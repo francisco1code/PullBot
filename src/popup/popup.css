@@ -8,6 +8,9 @@ body{
     list-style: none;
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
 }
 
 .nav-item{
@@ -17,6 +20,7 @@ body{
     border: solid 1px #29567b;
     border-radius: 5px;
     margin: 5px;
+    cursor: pointer;
 }
 
 .nav-link{
