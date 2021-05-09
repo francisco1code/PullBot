@@ -7,13 +7,14 @@
 | 17/03/2021 | 1.1 | Refatoração do Backlog| Arthur Melo
 | 07/04/2021 | 1.2 | Refatoração do Backlog| Arthur Melo
 | 08/05/2021 | 1.3 | Refatoração do Backlog| Arthur Melo
+
 # Épicos 
 | ID | Descrição |
 | :---        |    :----:   |       
-| EP01 | Comunicação via API |
-| EP02 | Resultado da sprint gerado para usuário |
-| EP03 | Extensão Google Chrome para GitHub |
-| EP04 | Gráficos de relatório |
+| EP01 | Comunicação do PullBot via API com GitHub|
+| EP02 | Resultado da sprint gerado em graficos e markdown para usuário |
+| EP03 | Extensão PullBot no Google Chrome |
+| EP04 | Gráficos do desenvolvimento do grupo e pessoal  |
  
 # Features
 | ID      | Descrição | 
