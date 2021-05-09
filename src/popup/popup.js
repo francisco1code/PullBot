@@ -65,7 +65,7 @@ const $div3 = document.getElementById('b3')
 const $div4 = document.getElementById('b4')
 
 $div1.addEventListener('click', ()=> {
-  CreateDivDisplay(6, 6, 6)
+  
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
   let numeroMilestone = localStorage.getItem("numeroMilestone")

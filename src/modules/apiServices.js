@@ -2,6 +2,49 @@ import {GraficoPessoal} from '../libraries/app.js';
 import {GraficoGrupoAdicoes} from '../libraries/app.js';
 import {GraficoGrupoDelecoes} from '../libraries/app.js';
 import {GraficoGrupoCommits} from '../libraries/app.js';
+/*CREATE A DIV DISPLAY*/
+function CreateDivDisplay( DivAmount, numerDivPriority, start){
+
+	createClass('.plane0', "display: none ; z-index: -1;");
+	createClass('.plane1', "z-index: 1; display: grid !important;");
+	
+    for(var i = 1; i <=  DivAmount; i++){
+        if (i <= numerDivPriority & i >= start){
+            var DivPriority = eval(new String('div'+i))
+            applyClass('plane1', DivPriority);
+            applyClass('plane0',DivPriority, true);
+        }
+        else
+        {
+            var DivSecundary = eval(new String('div'+i))
+             applyClass('plane0',DivSecundary);
+             applyClass('plane1',DivSecundary, true);
+        }
+    }
+
+}
+
+function createClass(name,rules){
+	var style = document.createElement('style');
+	style.type = 'text/css';
+	document.getElementsByTagName('head')[0].appendChild(style);
+	if(!(style.sheet||{}).insertRule) 
+		(style.styleSheet || style.sheet).addRule(name, rules);
+	else
+		style.sheet.insertRule(name+"{"+rules+"}",0);
+}
+
+function applyClass(name,element,doRemove){
+	if(typeof element.valueOf() == "string"){
+		element = document.getElementById(element);
+	}
+	if(!element) return;
+	if(doRemove){
+		element.className = element.className.replace(new RegExp("\\b"+name+"\\b","g"),"");
+	}else{
+		element.className = element.className + " "+name;
+	}
+}
 
 export function CodigoDevicePost(){
     var xhr = new XMLHttpRequest();
@@ -168,6 +211,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
      console.log(nomeContribuinte)
      console.log(qtdComitsContribuinte)
      GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint);
+     CreateDivDisplay(5, 1, 1)
    }
     
    contador++;
@@ -320,6 +364,7 @@ function calcResultadoCommits( respostaJson , iteracao, qtdContribuintes, qtdSem
   }
 
   if(iteracao == qtdContribuintes - 1){
+      
        GraficoGrupoCommits(dataSetArray,semanas )
    
 
