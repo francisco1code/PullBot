@@ -39,3 +39,9 @@
 | US05 | Usuário | Receber um relatório com auxilio de gráficos de desempenho pessoal para facilitar o entendimento  | FT05 | EP04|
 | US06 | Usuário | Baixar extensão no Chrome  | FT07 |  EP03|
 | US07 | Usuário | Desejo receber relatório do que foi feito durante a milestone dentro do PRs feitos em markdown| FT08 | EP02
+
+# Resumos 
+
+### O PullBot é uma extensão que pretende melhorar a forma que equipes de software trabalham em seus repositórios. Seu objetivo é automatizar tarefas como criar Prs no final de uma sprint e receber o desenvolvimento de projeto de de cada integrante de uma forma fácil.
+
+
