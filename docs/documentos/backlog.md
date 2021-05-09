@@ -20,14 +20,13 @@
 | ID      | Descrição | 
 | :---        |    :----:   |       
 | FT01 | Pull request automático via GitHub API    |
-| FT02 | Commit automático via GitHub API  |
-| FT03 | Receber relatório de desenvolvimento no fechamentos de milestone  |  
-| FT04 | Geração de gráficos informativos da equipe|
-| FT05 | Geração de gráficos informativos por contribuinte|
-| FT06 | Pegar evento de fechamento de milestone automaticamente|
-| FT07 | Acessibilzar extensão no Chrome|
-| FT08 | Geração de texto markdown para escopo dos commits e pull requests   |
-| FT09 | Autenticação via token Ouath2  |
+| FT02 | Receber relatório de desenvolvimento no fechamentos de milestone  |  
+| FT03 | Geração de gráficos informativos da equipe|
+| FT04 | Geração de gráficos informativos por contribuinte|
+| FT05 | Pegar evento de fechamento de milestone automaticamente|
+| FT06 | Acessibilzar extensão no Chrome|
+| FT07 | Geração de texto markdown para escopo dos commits e pull requests   |
+| FT08 | Autenticação via token Ouath2  |
 
 
 # User Stories 
