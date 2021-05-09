@@ -18,8 +18,8 @@ chrome.storage.sync.get(['key'], function(result) {
 /*CREATE A DIV DISPLAY*/
 function CreateDivDisplay( DivAmount, numerDivPriority, start){
 
-	createClass('.plane0', "display: none; z-index: 0;");
-	createClass('.plane1', "z-index: 1; display: inline !important;");
+	createClass('.plane0', "display: none ; z-index: -1;");
+	createClass('.plane1', "z-index: 1; display: grid !important;");
 	
     for(var i = 1; i <=  DivAmount; i++){
         if (i <= numerDivPriority & i >= start){
@@ -65,7 +65,7 @@ const $div3 = document.getElementById('b3')
 const $div4 = document.getElementById('b4')
 
 $div1.addEventListener('click', ()=> {
-  CreateDivDisplay(5, 1, 1)
+  CreateDivDisplay(6, 6, 6)
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
   let numeroMilestone = localStorage.getItem("numeroMilestone")
@@ -97,7 +97,7 @@ $div3.addEventListener('click', ()=> {
 });
 
 $div4.addEventListener('click', ()=> {
-  CreateDivDisplay(5, 4, 4)
+  CreateDivDisplay(6, 6, 6)
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
   let numeroMilestone = localStorage.getItem("numeroMilestone")
