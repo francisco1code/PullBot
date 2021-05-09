@@ -29,6 +29,10 @@ body{
     display: block;
 }
 
+#space{
+  height: 75px;
+}
+
 /* .nav-item:hover{
     background-color: #29567b !important;
     
