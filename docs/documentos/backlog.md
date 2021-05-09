@@ -42,6 +42,9 @@
 
 # Resumos 
 
-### O PullBot é uma extensão que pretende melhorar a forma que equipes de software trabalham em seus repositórios. Seu objetivo é automatizar tarefas como criar Prs no final de uma sprint e receber o desenvolvimento de projeto de de cada integrante de uma forma fácil.
+### O PullBot é uma extensão que pretende melhorar a forma que equipes de software trabalham em seus repositórios. Seu objetivo é automatizar tarefas como criar Prs no final de uma sprint e receber o desenvolvimento de projeto de de cada integrante de uma forma fácil. O PullBot conta com 4 gráficos que descreverão como você e seu grupo está indo durante as semanas.
+###  O gráfico adições descreverá a quantidade de adições em todas as branchs durantes as semanas. Os gráficos de deleções e commits tem o mesmo intuito mas com a quantidade de deleções e commits respectivamente. O último grafico funcionará a partir da milestone desejada, por exemeplo, você esta navegando no GitHub na área de milestones do grupo e clica na milestone que desejar, no popup da extensão , estará disponível o grçafico de desempenho de cada integrante do repositório naquela milestone clicada.
+### Juntamente a tudo isso, ao fechar uma milestone, o PullBot fará o dowload de um arquivo em markdown do desempenho do grupo naquela sprint, semelhante ao gráfico de milestone, porém em texto markdown.
+
 
 
