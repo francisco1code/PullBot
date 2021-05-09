@@ -65,7 +65,7 @@ const $div3 = document.getElementById('b3')
 const $div4 = document.getElementById('b4')
 
 $div1.addEventListener('click', ()=> {
-  CreateDivDisplay(4, 1, 1)
+  CreateDivDisplay(5, 1, 1)
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
   let numeroMilestone = localStorage.getItem("numeroMilestone")
@@ -76,7 +76,7 @@ $div1.addEventListener('click', ()=> {
 });
 
 $div2.addEventListener('click', ()=> {
-  CreateDivDisplay(4, 2, 2)
+  CreateDivDisplay(5, 2, 2)
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
   let numeroMilestone = localStorage.getItem("numeroMilestone")
@@ -87,7 +87,7 @@ $div2.addEventListener('click', ()=> {
 });
 
 $div3.addEventListener('click', ()=> {
-  CreateDivDisplay(4, 3, 3)
+  CreateDivDisplay(5, 3, 3)
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
   let token = localStorage.getItem("token")
@@ -97,7 +97,7 @@ $div3.addEventListener('click', ()=> {
 });
 
 $div4.addEventListener('click', ()=> {
-  CreateDivDisplay(4, 4, 4)
+  CreateDivDisplay(5, 4, 4)
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
   let numeroMilestone = localStorage.getItem("numeroMilestone")
