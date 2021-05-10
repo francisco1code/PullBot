@@ -6,20 +6,29 @@ import {GraficoGrupoCommits} from '../libraries/app.js';
 /*CREATE A DIV DISPLAY*/
  export function CreateDivDisplay( DivAmount, numerDivPriority, start){
 
-	createClass('.plane0', "display: none !important; z-index: -1;");
+	createClass('.plane0', "display: none; z-index: -1;");
 	createClass('.plane1', "z-index: 1; display: grid !important;");
 	
     for(var i = 1; i <=  DivAmount; i++){
         if (i <= numerDivPriority & i >= start){
             var DivPriority = eval(new String('div'+i))
-            applyClass('plane1', DivPriority);
+            var estadoDisplay = window.getComputedStyle(document.getElementById(DivPriority));
+            if(estadoDisplay.display == "none"){
+              applyClass('plane1', DivPriority);
+            }
+            
             applyClass('plane0',DivPriority, true);
         }
         else
         {
             var DivSecundary = eval(new String('div'+i))
+            var estadoDisplay = window.getComputedStyle(document.getElementById(DivPriority));
+            if(estadoDisplay.display == "grid"){
+              applyClass('plane1', DivPriority);
+            }
              applyClass('plane0',DivSecundary);
              applyClass('plane1',DivSecundary, true);
+             
         }
     }
 

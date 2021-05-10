@@ -36,6 +36,7 @@ $div1.addEventListener('click', ()=> {
 });
 
 $div2.addEventListener('click', ()=> {
+  
   CreateDivDisplay(5, 2, 2)
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
