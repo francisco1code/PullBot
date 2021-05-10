@@ -10,14 +10,16 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
           title: {
             display: true,
             text: sprint,
-          }
-        }
+            fontColor: 'white',
+          },
+         }
       },
     data: {
         
         labels:  nomeContribuinte,
             datasets: [{
                 label: "commits",
+                color: "#f4f4f4",
             backgroundColor: [
                 "#FFD700",
                 "#F08080",
@@ -34,6 +36,11 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
     },
     
   });
+
+  
+      
+  
+
   }
 
   export function GraficoGrupoAdicoes(datasets, semanas){
@@ -57,9 +64,10 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
         }
       },
         plugins: {
+          
           title: {
             display: true,
-            text: "Desempenho Repo",
+            text: "Adições Repo"
           }
         }
       },
@@ -91,7 +99,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
         plugins: {
           title: {
             display: true,
-            text: "Desempenho Repo",
+            text: "Deleções Repo",
           }
         }
       },
@@ -125,14 +133,13 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
         plugins: {
           title: {
             display: true,
-            text: "Desempenho Repo",
+            text: "Commits Repo",
           }
         }
       },
     data: data
     
   });
+
+
   }
-
-
-  

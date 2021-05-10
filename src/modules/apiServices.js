@@ -2,7 +2,63 @@ import {GraficoPessoal} from '../libraries/app.js';
 import {GraficoGrupoAdicoes} from '../libraries/app.js';
 import {GraficoGrupoDelecoes} from '../libraries/app.js';
 import {GraficoGrupoCommits} from '../libraries/app.js';
+// ESSAS FUNÇÕES SÃO UTILIZADAS NO POPUP.JS PARA FAZER APARECER E DESAPARECER O CONTEUDO DO JS
+/*CREATE A DIV DISPLAY*/
+ export function CreateDivDisplay( DivAmount, numerDivPriority, start){
 
+	createClass('.plane0', "display: none; z-index: -1;");
+	createClass('.plane1', "z-index: 1; display: grid !important;");
+    for(var i = 1; i <=  DivAmount; i++){
+        if (i <= numerDivPriority & i >= start){
+            var DivPriority = eval(new String('div'+i))
+            var estadoDisplay = window.getComputedStyle(document.getElementById(DivPriority));
+            if(estadoDisplay.display == "none"){
+              applyClass('plane1', DivPriority);
+            }
+            
+            applyClass('plane0',DivPriority, true);
+        }
+        else
+        {
+            var DivSecundary = eval(new String('div'+i))
+            var estadoDisplay = window.getComputedStyle(document.getElementById(DivSecundary));
+
+            
+            if(estadoDisplay.display != "none"){
+              applyClass('plane0',DivSecundary);
+            }
+              
+             applyClass('plane1', DivSecundary, true);
+            
+             
+        }
+    }
+
+}
+
+function createClass(name,rules){
+	var style = document.createElement('style');
+	style.type = 'text/css';
+	document.getElementsByTagName('head')[0].appendChild(style);
+	if(!(style.sheet||{}).insertRule) 
+		(style.styleSheet || style.sheet).addRule(name, rules);
+	else
+		style.sheet.insertRule(name+"{"+rules+"}",0);
+}
+
+function applyClass(name,element,doRemove){
+	if(typeof element.valueOf() == "string"){
+		element = document.getElementById(element);
+	}
+	if(!element) return;
+	if(doRemove){
+		element.className = element.className.replace(new RegExp("\\b"+name+"\\b","g"),"");
+	}else{
+		element.className = element.className + " "+name;
+	}
+}
+
+/////
 export function CodigoDevicePost(){
     var xhr = new XMLHttpRequest();
 
@@ -168,6 +224,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
      console.log(nomeContribuinte)
      console.log(qtdComitsContribuinte)
      GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint);
+     CreateDivDisplay(6, 1, 1)
    }
     
    contador++;
@@ -193,6 +250,7 @@ function calcResultadoAdicoes( respostaJson , iteracao, qtdContribuintes, qtdSem
   }
   var randomColor = Math.floor(Math.random()*16777215).toString(16);
   dataSetArray[iteracao] = {
+    
     label: respostaJson.author.login,
     backgroundColor: "#" + randomColor ,
     data: adicoes
@@ -200,7 +258,7 @@ function calcResultadoAdicoes( respostaJson , iteracao, qtdContribuintes, qtdSem
 
   if(iteracao == qtdContribuintes - 1){
        GraficoGrupoAdicoes(dataSetArray,semanas )
-   
+       CreateDivDisplay(6, 2, 2);
 
   }
 
@@ -253,6 +311,7 @@ function calcResultadoDelecoes( respostaJson , iteracao, qtdContribuintes, qtdSe
   }
   var randomColor = Math.floor(Math.random()*16777215).toString(16);
   dataSetArray[iteracao] = {
+
     label: respostaJson.author.login,
     backgroundColor: "#" + randomColor ,
     data: adicoes
@@ -260,7 +319,7 @@ function calcResultadoDelecoes( respostaJson , iteracao, qtdContribuintes, qtdSe
 
   if(iteracao == qtdContribuintes - 1){
        GraficoGrupoDelecoes(dataSetArray,semanas )
-   
+       CreateDivDisplay(6, 3, 3);
 
   }
 
@@ -318,8 +377,9 @@ function calcResultadoCommits( respostaJson , iteracao, qtdContribuintes, qtdSem
   }
 
   if(iteracao == qtdContribuintes - 1){
+      
        GraficoGrupoCommits(dataSetArray,semanas )
-   
+       CreateDivDisplay(6, 4, 4);
 
   }
 
