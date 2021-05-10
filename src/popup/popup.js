@@ -34,8 +34,8 @@ $div1.addEventListener('click', ()=> {
     let token = localStorage.getItem("token")
     // console.log(owner, repo,numeroMilestone, token)
     contribuinteRepositorio(numeroMilestone, token , owner,  repo )
-  }
-  CreateDivDisplay(6, 1, 1);
+  }else{ CreateDivDisplay(6, 1, 1);}
+ 
  
  
 });
