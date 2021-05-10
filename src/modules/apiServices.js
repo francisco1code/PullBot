@@ -22,12 +22,12 @@ import {GraficoGrupoCommits} from '../libraries/app.js';
         else
         {
             var DivSecundary = eval(new String('div'+i))
-            var estadoDisplay = window.getComputedStyle(document.getElementById(DivPriority));
+            var estadoDisplay = window.getComputedStyle(document.getElementById(DivSecundary));
             if(estadoDisplay.display == "grid"){
-              applyClass('plane1', DivPriority);
+              applyClass('plane0',DivSecundary);
             }
-             applyClass('plane0',DivSecundary);
-             applyClass('plane1',DivSecundary, true);
+            applyClass('plane1', DivPriority, true);
+            
              
         }
     }
