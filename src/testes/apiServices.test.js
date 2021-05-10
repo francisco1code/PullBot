@@ -182,11 +182,14 @@ test('Métodos de geração de gráficos', () => {
     expect(mockXHR.open.mock.calls.length).toBe(1);
 })
 
+
+// MOCK getComputedStyle
 const mockGetStyle = {
     display: 'none'
 }
 window.getComputedStyle = jest.fn(() => mockGetStyle);
 
+// MOCK document.createElement
 const mockCreateElement = {
     style: null,
     sheet: {
@@ -198,14 +201,26 @@ const mockCreateElement = {
 }
 window.document.createElement = jest.fn(() => mockCreateElement)
 
+// MOCK document.getElementsByTagName
 const mockGetElementByTag = [{
     appendChild: jest.fn()
 }]
 window.document.getElementsByTagName = jest.fn(() => mockGetElementByTag)
 
 
-test('', () => {
+test('CreateDivDisplay()', () => {
+    
     mockGetStyle.display = 0;
     mockCreateElement.sheet.insertRule = jest.fn();
+    mockGetElementByTag[0].appendChild.mockClear();
+    document.getElementById.mockClear();
+    getComputedStyle.mockClear();
+
     CreateDivDisplay(2, 2, 2);
-})
+
+    // TESTANDO SE O MÉTODO createClass() FOI EXECUTADO DUAS VEZES
+    expect(mockGetElementByTag[0].appendChild.mock.calls.length).toBe(2);
+
+    // TESTANDO SE O MOCK getComputedStyle() FOI EXECUTADO DUAS VEZES
+    expect(getComputedStyle.mock.calls.length).toBe(2);
+});

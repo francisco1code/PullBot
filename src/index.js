@@ -1,7 +1,7 @@
-    import {criarPullRequest} from './modules/services.js';
+import {criarPullRequest} from './modules/services.js';
     import {CodigoDevicePost} from './modules/apiServices.js';
     import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
-
+  
     //URL DAS PÁGINAS
     var currentUrl = String(window.location.href);
     var urlParts = currentUrl.split("/");
@@ -38,7 +38,6 @@
 
           // NOME DA MILESTONE
           localStorage.setItem('milestoneName', milestoneName); 
-          localStorage.setItem('abrirModal', 'true')
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
           //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
           localStorage.setItem('abrirModal', 'true')
@@ -52,13 +51,14 @@
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
 
     CodigoDevicePost();
+    
    
   }
 
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device" && urlParts[5] == "success" ){
    
     ConfirmaLoginContaUsuario();
-   
+
   }
   
 
@@ -84,4 +84,3 @@ function getNumberMilestone(valuesAPI){
   console.log(milestoneNumber)
   return milestoneNumber;
 }
-
