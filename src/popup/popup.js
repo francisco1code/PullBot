@@ -84,19 +84,19 @@ $div3.addEventListener('click', ()=> {
 var displayLoad4 = true;
 $div4.addEventListener('click', ()=> {
 
-  if(displayLoad4){
+  // if(displayLoad4){
     CreateDivDisplay(6, 6, 6);
-    displayLoad4 = false;
-    const owner = localStorage.getItem("owner")
-    let repo = localStorage.getItem("repo")
-    let numeroMilestone = localStorage.getItem("numeroMilestone")
-    let token = localStorage.getItem("token")
-    // console.log(owner, repo,numeroMilestone, token)
-    geracaoPorGrupoCommits( token , owner,  repo )
-  }
-  else{ 
-    CreateDivDisplay(6, 4, 4);
-  }
+  //   displayLoad4 = false;
+  //   const owner = localStorage.getItem("owner")
+  //   let repo = localStorage.getItem("repo")
+  //   let numeroMilestone = localStorage.getItem("numeroMilestone")
+  //   let token = localStorage.getItem("token")
+  //   // console.log(owner, repo,numeroMilestone, token)
+  //   geracaoPorGrupoCommits( token , owner,  repo )
+  // }
+  // else{ 
+  //   CreateDivDisplay(6, 4, 4);
+  // }
  
  
 });

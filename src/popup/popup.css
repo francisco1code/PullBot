@@ -43,10 +43,10 @@ body{
 }
 
 .c-loader {
-    border: 6px solid #e5e5e5;
-    border-top-color: #51d4db;
-    height: 50px;
-    width: 50px;
+    display:flexbox;
+    padding: 50px;
+    margin: 110px;
+    justify-content: center;
     align-items: center;
   }
 
@@ -62,7 +62,7 @@ body{
   animation: is-rotating 1s infinite;
   border: 6px solid #e5e5e5;
   border-radius: 50%;
-  border-top-color: #51d4db;
+  border-top-color: #516494;
   height: 50px;
   width: 50px;
 }
