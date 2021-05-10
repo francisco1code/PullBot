@@ -24,9 +24,10 @@ import {GraficoGrupoCommits} from '../libraries/app.js';
             var DivSecundary = eval(new String('div'+i))
             var estadoDisplay = window.getComputedStyle(document.getElementById(DivSecundary));
             if(estadoDisplay.display == "grid"){
+              
               applyClass('plane0',DivSecundary);
             }
-            applyClass('plane1', DivPriority, true);
+             applyClass('plane1', DivSecundary, true);
             
              
         }
