@@ -44,7 +44,7 @@ $div2.addEventListener('click', ()=> {
 
   if(displayLoad2){
     CreateDivDisplay(6, 6, 6);
-    displayLoad = false;
+    displayLoad2 = false;
   }
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
@@ -59,7 +59,7 @@ var displayLoad3 = true;
 $div3.addEventListener('click', ()=> {
   if(displayLoad3){
     CreateDivDisplay(6, 6, 6);
-    displayLoad = false;
+    displayLoad3 = false;
   }
   
   const owner = localStorage.getItem("owner")
@@ -75,7 +75,7 @@ $div4.addEventListener('click', ()=> {
 
   if(displayLoad4){
     CreateDivDisplay(6, 6, 6);
-    displayLoad = false;
+    displayLoad4 = false;
   }
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
