@@ -10,8 +10,9 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
           title: {
             display: true,
             text: sprint,
-          }
-        }
+            fontColor: 'white',
+          },
+         }
       },
     data: {
         
@@ -36,7 +37,7 @@ export function GraficoPessoal(nomeContribuinte, qtdComitsContribuinte , sprint)
     
   });
 
- 
+  
       
   
 
