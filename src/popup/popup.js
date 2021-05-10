@@ -47,11 +47,11 @@ $div2.addEventListener('click', ()=> {
     CreateDivDisplay(6, 6, 6);
     displayLoad2 = false;
     const owner = localStorage.getItem("owner")
-  let repo = localStorage.getItem("repo")
-  let numeroMilestone = localStorage.getItem("numeroMilestone")
-  let token = localStorage.getItem("token")
-  // console.log(owner, repo,numeroMilestone, token)
-  geracaoPorGrupoAdicoes( token , owner,  repo )
+    let repo = localStorage.getItem("repo")
+    let numeroMilestone = localStorage.getItem("numeroMilestone")
+    let token = localStorage.getItem("token")
+    // console.log(owner, repo,numeroMilestone, token)
+    geracaoPorGrupoAdicoes( token , owner,  repo )
   }
   CreateDivDisplay(6, 2, 2);
  
@@ -62,13 +62,14 @@ $div3.addEventListener('click', ()=> {
   if(displayLoad3){
     CreateDivDisplay(6, 6, 6);
     displayLoad3 = false;
+    const owner = localStorage.getItem("owner")
+    let repo = localStorage.getItem("repo")
+    let token = localStorage.getItem("token")
+    // console.log(owner, repo,numeroMilestone, token)
+    geracaoPorGrupoDelecoes( token , owner,  repo )
   }
+  CreateDivDisplay(6, 3, 3);
   
-  const owner = localStorage.getItem("owner")
-  let repo = localStorage.getItem("repo")
-  let token = localStorage.getItem("token")
-  // console.log(owner, repo,numeroMilestone, token)
-  geracaoPorGrupoDelecoes( token , owner,  repo )
  
 });
 
@@ -78,13 +79,14 @@ $div4.addEventListener('click', ()=> {
   if(displayLoad4){
     CreateDivDisplay(6, 6, 6);
     displayLoad4 = false;
+    const owner = localStorage.getItem("owner")
+    let repo = localStorage.getItem("repo")
+    let numeroMilestone = localStorage.getItem("numeroMilestone")
+    let token = localStorage.getItem("token")
+    // console.log(owner, repo,numeroMilestone, token)
+    geracaoPorGrupoCommits( token , owner,  repo )
   }
-  const owner = localStorage.getItem("owner")
-  let repo = localStorage.getItem("repo")
-  let numeroMilestone = localStorage.getItem("numeroMilestone")
-  let token = localStorage.getItem("token")
-  // console.log(owner, repo,numeroMilestone, token)
-  geracaoPorGrupoCommits( token , owner,  repo )
+  CreateDivDisplay(6, 4, 4);
  
 });
 
