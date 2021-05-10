@@ -2,10 +2,11 @@ import {GraficoPessoal} from '../libraries/app.js';
 import {GraficoGrupoAdicoes} from '../libraries/app.js';
 import {GraficoGrupoDelecoes} from '../libraries/app.js';
 import {GraficoGrupoCommits} from '../libraries/app.js';
+// ESSAS FUNÇÕES SÃO UTILIZADAS NO POPUP.JS PARA FAZER APARECER E DESAPARECER O CONTEUDO DO JS
 /*CREATE A DIV DISPLAY*/
-function CreateDivDisplay( DivAmount, numerDivPriority, start){
+ export function CreateDivDisplay( DivAmount, numerDivPriority, start){
 
-	createClass('.plane0', "display: none ; z-index: -1;");
+	createClass('.plane0', "display: none !important; z-index: -1;");
 	createClass('.plane1', "z-index: 1; display: grid !important;");
 	
     for(var i = 1; i <=  DivAmount; i++){
@@ -46,6 +47,7 @@ function applyClass(name,element,doRemove){
 	}
 }
 
+/////
 export function CodigoDevicePost(){
     var xhr = new XMLHttpRequest();
 
@@ -211,7 +213,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
      console.log(nomeContribuinte)
      console.log(qtdComitsContribuinte)
      GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint);
-     CreateDivDisplay(5, 1, 1)
+     CreateDivDisplay(6, 1, 1)
    }
     
    contador++;

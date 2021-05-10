@@ -2,6 +2,7 @@ import {contribuinteRepositorio} from '../modules/apiServices.js';
 import {geracaoPorGrupoAdicoes} from '../modules/apiServices.js';
 import {geracaoPorGrupoDelecoes} from '../modules/apiServices.js';
 import {geracaoPorGrupoCommits} from '../modules/apiServices.js';
+import {CreateDivDisplay} from '../modules/apiServices.js';
 chrome.storage.sync.get(['key'], function(result) {
   var dados = result.key;
  
@@ -24,7 +25,7 @@ const $div4 = document.getElementById('b4')
 
 $div1.addEventListener('click', ()=> {
   
-  document.getElementById("div6").style.display = "grid"
+  CreateDivDisplay(6, 6, 6)
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
   let numeroMilestone = localStorage.getItem("numeroMilestone")
