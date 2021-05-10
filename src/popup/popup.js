@@ -46,7 +46,7 @@ $div1.addEventListener('click', ()=> {
 
 var displayLoad2 = true;
 $div2.addEventListener('click', ()=> {
-  document.getElementById('body').style.background = "#white"
+  document.getElementById('body').style.background = "white"
   if(displayLoad2){
     CreateDivDisplay(6, 6, 6);
     displayLoad2 = false;
@@ -66,7 +66,7 @@ $div2.addEventListener('click', ()=> {
 
 var displayLoad3 = true;
 $div3.addEventListener('click', ()=> {
-  document.getElementById('body').style.background = "#white"
+  document.getElementById('body').style.background = "white"
   if(displayLoad3){
     CreateDivDisplay(6, 6, 6);
     displayLoad3 = false;
@@ -86,7 +86,7 @@ $div3.addEventListener('click', ()=> {
 
 var displayLoad4 = true;
 $div4.addEventListener('click', ()=> {
-  document.getElementById('body').style.background = "#white"
+  document.getElementById('body').style.background = "white"
   if(displayLoad4){
     CreateDivDisplay(6, 6, 6);
     displayLoad4 = false;
