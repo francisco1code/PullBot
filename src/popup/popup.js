@@ -28,14 +28,15 @@ $div1.addEventListener('click', ()=> {
   if(displayLoad){
     CreateDivDisplay(6, 6, 6);
     displayLoad = false;
+    const owner = localStorage.getItem("owner")
+    let repo = localStorage.getItem("repo")
+    let numeroMilestone = localStorage.getItem("numeroMilestone")
+    let token = localStorage.getItem("token")
+    // console.log(owner, repo,numeroMilestone, token)
+    contribuinteRepositorio(numeroMilestone, token , owner,  repo )
   }
-  
-  const owner = localStorage.getItem("owner")
-  let repo = localStorage.getItem("repo")
-  let numeroMilestone = localStorage.getItem("numeroMilestone")
-  let token = localStorage.getItem("token")
-  // console.log(owner, repo,numeroMilestone, token)
-  contribuinteRepositorio(numeroMilestone, token , owner,  repo )
+  CreateDivDisplay(6, 1, 1);
+ 
  
 });
 
@@ -45,13 +46,14 @@ $div2.addEventListener('click', ()=> {
   if(displayLoad2){
     CreateDivDisplay(6, 6, 6);
     displayLoad2 = false;
-  }
-  const owner = localStorage.getItem("owner")
+    const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
   let numeroMilestone = localStorage.getItem("numeroMilestone")
   let token = localStorage.getItem("token")
   // console.log(owner, repo,numeroMilestone, token)
   geracaoPorGrupoAdicoes( token , owner,  repo )
+  }
+  CreateDivDisplay(6, 2, 2);
  
 });
 

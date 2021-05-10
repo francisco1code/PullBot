@@ -24,9 +24,10 @@ import {GraficoGrupoCommits} from '../libraries/app.js';
             var estadoDisplay = window.getComputedStyle(document.getElementById(DivSecundary));
 
             
-              
+            if(estadoDisplay.display != "none"){
               applyClass('plane0',DivSecundary);
-           
+            }
+              
              applyClass('plane1', DivSecundary, true);
             
              
