@@ -25,6 +25,7 @@ const $div4 = document.getElementById('b4')
 
 var displayLoad = true;
 $div1.addEventListener('click', ()=> {
+  document.getElementById('body').style.background = "white"
   if(displayLoad){
     CreateDivDisplay(6, 6, 6);
     displayLoad = false;
@@ -34,7 +35,7 @@ $div1.addEventListener('click', ()=> {
     let token = localStorage.getItem("token")
     // console.log(owner, repo,numeroMilestone, token)
     contribuinteRepositorio(numeroMilestone, token , owner,  repo )
-    document.getElementById('body').style.background = "#c5d2f1"
+    
   }else{ 
     CreateDivDisplay(6, 1, 1);
   }
@@ -45,7 +46,7 @@ $div1.addEventListener('click', ()=> {
 
 var displayLoad2 = true;
 $div2.addEventListener('click', ()=> {
-
+  document.getElementById('body').style.background = "white"
   if(displayLoad2){
     CreateDivDisplay(6, 6, 6);
     displayLoad2 = false;
@@ -65,6 +66,7 @@ $div2.addEventListener('click', ()=> {
 
 var displayLoad3 = true;
 $div3.addEventListener('click', ()=> {
+  document.getElementById('body').style.background = "white"
   if(displayLoad3){
     CreateDivDisplay(6, 6, 6);
     displayLoad3 = false;
@@ -84,7 +86,7 @@ $div3.addEventListener('click', ()=> {
 
 var displayLoad4 = true;
 $div4.addEventListener('click', ()=> {
-
+  document.getElementById('body').style.background = "white"
   if(displayLoad4){
     CreateDivDisplay(6, 6, 6);
     displayLoad4 = false;
