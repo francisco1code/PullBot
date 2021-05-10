@@ -257,7 +257,7 @@ function calcResultadoAdicoes( respostaJson , iteracao, qtdContribuintes, qtdSem
 
   if(iteracao == qtdContribuintes - 1){
        GraficoGrupoAdicoes(dataSetArray,semanas )
-   
+       CreateDivDisplay(6, 2, 2);
 
   }
 
@@ -318,7 +318,7 @@ function calcResultadoDelecoes( respostaJson , iteracao, qtdContribuintes, qtdSe
 
   if(iteracao == qtdContribuintes - 1){
        GraficoGrupoDelecoes(dataSetArray,semanas )
-   
+       CreateDivDisplay(6, 3, 3);
 
   }
 
@@ -378,7 +378,7 @@ function calcResultadoCommits( respostaJson , iteracao, qtdContribuintes, qtdSem
   if(iteracao == qtdContribuintes - 1){
       
        GraficoGrupoCommits(dataSetArray,semanas )
-   
+       CreateDivDisplay(6, 4, 4);
 
   }
 
