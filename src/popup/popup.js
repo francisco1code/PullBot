@@ -22,10 +22,13 @@ const $div1 = document.getElementById('b1')
 const $div2 = document.getElementById('b2')
 const $div3 = document.getElementById('b3')
 const $div4 = document.getElementById('b4')
-
+var displayLoad = true;
 $div1.addEventListener('click', ()=> {
+  if(displayLoad){
+    CreateDivDisplay(6, 6, 6);
+    displayLoad = false;
+  }
   
-  CreateDivDisplay(6, 6, 6)
   const owner = localStorage.getItem("owner")
   let repo = localStorage.getItem("repo")
   let numeroMilestone = localStorage.getItem("numeroMilestone")

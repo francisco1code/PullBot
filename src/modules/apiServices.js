@@ -8,7 +8,6 @@ import {GraficoGrupoCommits} from '../libraries/app.js';
 
 	createClass('.plane0', "display: none; z-index: -1;");
 	createClass('.plane1', "z-index: 1; display: grid !important;");
-	
     for(var i = 1; i <=  DivAmount; i++){
         if (i <= numerDivPriority & i >= start){
             var DivPriority = eval(new String('div'+i))
@@ -23,10 +22,11 @@ import {GraficoGrupoCommits} from '../libraries/app.js';
         {
             var DivSecundary = eval(new String('div'+i))
             var estadoDisplay = window.getComputedStyle(document.getElementById(DivSecundary));
-            if(estadoDisplay.display == "grid"){
+
+            
               
               applyClass('plane0',DivSecundary);
-            }
+           
              applyClass('plane1', DivSecundary, true);
             
              
