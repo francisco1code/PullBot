@@ -34,7 +34,9 @@ $div1.addEventListener('click', ()=> {
     let token = localStorage.getItem("token")
     // console.log(owner, repo,numeroMilestone, token)
     contribuinteRepositorio(numeroMilestone, token , owner,  repo )
-  }else{ CreateDivDisplay(6, 1, 1);}
+  }else{ 
+    CreateDivDisplay(6, 1, 1);
+  }
  
  
  
@@ -53,7 +55,10 @@ $div2.addEventListener('click', ()=> {
     // console.log(owner, repo,numeroMilestone, token)
     geracaoPorGrupoAdicoes( token , owner,  repo )
   }
-  CreateDivDisplay(6, 2, 2);
+  else{ 
+    CreateDivDisplay(6, 2, 2); 
+  }
+ 
  
 });
 
@@ -68,7 +73,10 @@ $div3.addEventListener('click', ()=> {
     // console.log(owner, repo,numeroMilestone, token)
     geracaoPorGrupoDelecoes( token , owner,  repo )
   }
-  CreateDivDisplay(6, 3, 3);
+  else{ 
+    CreateDivDisplay(6, 3, 3);
+  }
+ 
   
  
 });
@@ -86,7 +94,10 @@ $div4.addEventListener('click', ()=> {
     // console.log(owner, repo,numeroMilestone, token)
     geracaoPorGrupoCommits( token , owner,  repo )
   }
-  CreateDivDisplay(6, 4, 4);
+  else{ 
+    CreateDivDisplay(6, 4, 4);
+  }
+ 
  
 });
 

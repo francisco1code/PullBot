@@ -14,31 +14,30 @@ body{
 }
 
 .nav-item{
-    background-color: white;
-    font-size: 16px;
-    padding: 6px 8px;
-    border: solid 1px #29567b;
-    border-radius: 5px;
-    margin: 5px;
-    cursor: pointer;
+  margin: 2px;
 }
 
 .nav-link{
     text-decoration: none;
     color: #29567b;
     display: block;
+    background-color: white;
+    font-size: 16px;
+    padding: 6px 8px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #space{
   height: 75px;
 }
 
-/* .nav-item:hover{
-    background-color: #29567b !important;
+ .nav-link:hover{
+    background-color: #021231 !important;
     
-} */
+} 
 
-/* .nav-link:hover{
+ .nav-link:hover{
 
     color:#f4f4f4 !important;
 }
@@ -51,13 +50,13 @@ body{
     align-items: center;
   }
 
-/* body {
+ /* body {
   align-items: center;
   display: flex;
   justify-content: center;
   min-height: 100vh;
   transform: scale(5);
-} */
+}  */
 
 .c-loader {
   animation: is-rotating 1s infinite;
