@@ -5,6 +5,7 @@ import {GraficoPessoal} from '../libraries/app';
 import {geracaoPorGrupoAdicoes} from '../modules/apiServices';
 import {geracaoPorGrupoDelecoes} from '../modules/apiServices';
 import {geracaoPorGrupoCommits} from '../modules/apiServices';
+import {CreateDivDisplay} from '../modules/apiServices'
 
 // MOCK DA CLASSE XMLHttpRequest
 const mockXHR = {
@@ -65,9 +66,10 @@ global.localStorage = {
  }
 
 
-CodigoDevicePost();
 test("call loginDevice()", () => {
     
+    CodigoDevicePost();
+
 // TESTANDO SE CodigoDevicePost() EXECUTOU O MÉTODO loginDevice() CORRETAMENTE
 
     // TESTANDO SE document.getElementById() FOI EXECUTADO 8 VEZES (uma vez para cada elemento do vetor codeUser)
@@ -109,9 +111,9 @@ var owner = 'owner';
 var repositorio = 'repositorio';
 var sprint = 11;
 
-contribuinteRepositorio(numeroMilestone, token, owner, repositorio, sprint);
 
 test("Criação de gráficos", () => {
+    contribuinteRepositorio(numeroMilestone, token, owner, repositorio, sprint);
 
     // TESTANDO SE contribuinteRepositorio() EXECUTOU O MÉTODO GraficoPessoal()
     expect(GraficoPessoal).toHaveBeenCalledTimes(1);
@@ -178,4 +180,32 @@ test('Métodos de geração de gráficos', () => {
     mockXHR.open.mockClear();
     geracaoPorGrupoCommits(token, owner, repositorio);
     expect(mockXHR.open.mock.calls.length).toBe(1);
+})
+
+const mockGetStyle = {
+    display: 'none'
+}
+window.getComputedStyle = jest.fn(() => mockGetStyle);
+
+const mockCreateElement = {
+    style: null,
+    sheet: {
+        addRule: jest.fn()
+    },
+    styleSheet: {
+        addRule: jest.fn()
+    }
+}
+window.document.createElement = jest.fn(() => mockCreateElement)
+
+const mockGetElementByTag = [{
+    appendChild: jest.fn()
+}]
+window.document.getElementsByTagName = jest.fn(() => mockGetElementByTag)
+
+
+test('', () => {
+    mockGetStyle.display = 0;
+    mockCreateElement.sheet.insertRule = jest.fn();
+    CreateDivDisplay(2, 2, 2);
 })
