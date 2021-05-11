@@ -50,7 +50,6 @@ function applyClass(name,element,doRemove){
 	if(typeof element.valueOf() == "string"){
 		element = document.getElementById(element);
 	}
-	if(!element) return;
 	if(doRemove){
 		element.className = element.className.replace(new RegExp("\\b"+name+"\\b","g"),"");
 	}else{
@@ -63,11 +62,11 @@ export function CodigoDevicePost(){
     var xhr = new XMLHttpRequest();
 
     xhr.addEventListener("readystatechange", function() {
-      if(this.readyState === 4) {
+      if(xhr.readyState === 4) {
 
          
         
-        const $getResponse = String(this.responseText).split("&");
+        const $getResponse = String(xhr.responseText).split("&");
         const $separeteValueDevice = $getResponse[0].split("=");
         var deviceCode = $separeteValueDevice[1];
         localStorage.setItem("key_dev", deviceCode);
@@ -100,8 +99,8 @@ export function ConfirmaLoginContaUsuario(){
   var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-      const $getResponse = String(this.responseText).split("&");
+    if(xhr.readyState === 4) {
+      const $getResponse = String(xhr.responseText).split("&");
       const $separateToken = $getResponse[0].split("=");
       const $token = $separateToken[1]
       localStorage.setItem("token",$token);
@@ -130,8 +129,8 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
   
   
   xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-     var recebeContribuintes = JSON.parse(this.responseText);
+    if(xhr.readyState === 4) {
+     var recebeContribuintes = JSON.parse(xhr.responseText);
     const $numerosContribuintes = recebeContribuintes.length;
     milestone(numeroMilestone, recebeContribuintes, $numerosContribuintes, token, $owner, $repo, sprint);
      
@@ -148,10 +147,10 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
     var xhr = new XMLHttpRequest();
   
     xhr.addEventListener("readystatechange", function() {
-      if(this.readyState === 4) {
-        var b = String(this.responseText).split('url:')
+      if(xhr.readyState === 4) {
+        var b = String(xhr.responseText).split('url:')
         
-       var resposta = JSON.parse(this.responseText);
+       var resposta = JSON.parse(xhr.responseText);
       
        const resultadoProcura = milestoneDesejada(numeroMilestone,resposta, resposta.length)
        
@@ -198,8 +197,8 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
     
     var xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", function() {
-      if(this.readyState === 4) {
-        var todosCommits = JSON.parse(this.responseText);
+      if(xhr.readyState === 4) {
+        var todosCommits = JSON.parse(xhr.responseText);
           
          calculaCommits(contribuinte, todosCommits.length, numerosContribuintes, nomeSprint);
       
@@ -221,8 +220,6 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
    
    
    if(contador == numerosContribuintes - 1){
-     console.log(nomeContribuinte)
-     console.log(qtdComitsContribuinte)
      GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint);
      CreateDivDisplay(6, 1, 1)
    }
@@ -278,14 +275,13 @@ export function geracaoPorGrupoAdicoes( token, $owner, $repo){
   var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-      // console.log(this.responseText);
-      var respostaJson = JSON.parse(this.responseText)
+    if(xhr.readyState === 4) {
+
+      var respostaJson = JSON.parse(xhr.responseText)
       var qtdContribuintes = respostaJson.length
       var qtdSemanas = respostaJson[0].weeks.length
       
-       console.log(qtdContribuintes, qtdSemanas)
-       getDadosSemanaisContribuinteAdicoes(qtdContribuintes, qtdSemanas, respostaJson);
+      getDadosSemanaisContribuinteAdicoes(qtdContribuintes, qtdSemanas, respostaJson);
     }
   });
   
@@ -339,14 +335,13 @@ export function geracaoPorGrupoDelecoes( token, $owner, $repo){
   var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-      // console.log(this.responseText);
-      var respostaJson = JSON.parse(this.responseText)
+    if(xhr.readyState === 4) {
+
+      var respostaJson = JSON.parse(xhr.responseText)
       var qtdContribuintes = respostaJson.length
       var qtdSemanas = respostaJson[0].weeks.length
-      
-       console.log(qtdContribuintes, qtdSemanas)
-       getDadosSemanaisContribuinteDelecoes(qtdContribuintes, qtdSemanas, respostaJson);
+
+      getDadosSemanaisContribuinteDelecoes(qtdContribuintes, qtdSemanas, respostaJson);
     }
   });
   
@@ -399,13 +394,12 @@ export function geracaoPorGrupoCommits( token, $owner, $repo){
   var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-      // console.log(this.responseText);
-      var respostaJson = JSON.parse(this.responseText)
+    if(xhr.readyState === 4) {
+
+      var respostaJson = JSON.parse(xhr.responseText)
       var qtdContribuintes = respostaJson.length
       var qtdSemanas = respostaJson[0].weeks.length
-      
-       console.log(qtdContribuintes, qtdSemanas)
+ 
        getDadosSemanaisContribuinteCommits(qtdContribuintes, qtdSemanas, respostaJson);
     }
   });

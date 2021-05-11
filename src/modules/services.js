@@ -80,7 +80,7 @@ export function criarPullRequest() {
   
     var xhr = new XMLHttpRequest();
        xhr.addEventListener("readystatechange", function () {
-          if (this.readyState === 4) {
+          if (xhr.readyState === 4) {
             
           }
         });

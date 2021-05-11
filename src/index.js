@@ -1,4 +1,4 @@
-    import {criarPullRequest} from './modules/services.js';
+import {criarPullRequest} from './modules/services.js';
     import {CodigoDevicePost} from './modules/apiServices.js';
     import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
   
@@ -84,4 +84,3 @@ function getNumberMilestone(valuesAPI){
   console.log(milestoneNumber)
   return milestoneNumber;
 }
-
