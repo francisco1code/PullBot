@@ -97,7 +97,7 @@ $div3.addEventListener('click', ()=> {
 
 var displayLoad4 = true;
 $div4.addEventListener('click', ()=> {
-  document.getElementById('b1').style.background = "##29567b";
+  document.getElementById('b1').style.background = "#29567b";
   document.getElementById('b2').style.background = "#29567b";
   document.getElementById('b3').style.background = "#29567b";
   document.getElementById('b4').style.background = "#021231";
