@@ -17,6 +17,10 @@ body{
     margin: 0px;
     padding: 0px;
 }
+.container{
+  background-color: #f4f4f4;
+  border-radius: 15px;
+}
 
 .nav-item{
   margin: 2px;
