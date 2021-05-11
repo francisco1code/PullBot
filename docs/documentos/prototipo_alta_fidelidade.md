@@ -10,3 +10,5 @@ Data | Versão | Descrição | Autor
 
 ## Objetivo
 Este documento tem por objetivo a idealização da fração visual do projeto PullBot.
+
+Segue o <a href="https://www.figma.com/file/icHO1DjSXPtPs6KjEqA5Zn/Untitled?node-id=0%3A1" target="_blank">link para Figma</a>
