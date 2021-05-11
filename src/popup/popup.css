@@ -1,7 +1,7 @@
 body{
-    background-color: #29567b;
-    width: 400px; 
-    height: 400px;
+  background-color: #29567b;
+  width: 400px; 
+  height: 400px;
 }
 
 #div5{
@@ -14,12 +14,12 @@ body{
 }
 
 .nav{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
 }
 
 .container{
@@ -32,14 +32,14 @@ body{
 }
 
 .nav-link{
-    text-decoration: none;
-    color: #f4f4f4;
-    display: block;
-    background-color: #29567b;
-    font-size: 16px;
-    padding: 15px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+  text-decoration: none;
+  color: #f4f4f4;
+  display: block;
+  background-color: #29567b;
+  font-size: 16px;
+  padding: 15px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #space{
