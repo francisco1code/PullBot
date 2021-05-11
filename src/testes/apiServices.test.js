@@ -11,17 +11,29 @@ import {CreateDivDisplay} from '../modules/apiServices'
 const mockXHR = {
     addEventListener: jest.fn(),
     setRequestHeader: jest.fn(),
-    open: jest.fn(),
-    send: jest.fn(() => {
-        try {
-            var quantidadeDeChamadas = mockXHR.addEventListener.mock.calls.length;
-            if(quantidadeDeChamadas > 0) {
-                mockXHR.addEventListener.mock.calls[quantidadeDeChamadas-1][1]();
-                return;
-            }
-        } catch (e) {}
-    }),
     readyState: 4,
+    open: jest.fn(() => {
+      mockXHR.readyState = 4;
+      try {
+        var quantidadeDeChamadas = mockXHR.addEventListener.mock.calls.length;
+        if(quantidadeDeChamadas > 0) {
+          mockXHR.addEventListener.mock.calls[quantidadeDeChamadas-1][1]();
+          return;
+        }
+        
+      } catch (e) {}    }
+    ),
+    send: jest.fn(() => {
+      mockXHR.readyState = null;
+      try {
+        var quantidadeDeChamadas = mockXHR.addEventListener.mock.calls.length;
+        if(quantidadeDeChamadas > 0) {
+          mockXHR.addEventListener.mock.calls[quantidadeDeChamadas-1][1]();
+          return;
+        }
+        
+      } catch (e) {}    }
+    ),
     responseText: 'device_code=CHAVE_DO_DEVICE_CODE123&expires_in=000&interval=5&user_code=0000-ABCD&verification_uri=https%3A%2F%2Fgithub.com%2Flogin%2Fdevice',
     setRequestHeader: jest.fn()
 };
