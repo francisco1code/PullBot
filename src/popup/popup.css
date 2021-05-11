@@ -3,14 +3,19 @@ body{
     width: 400px; 
     height: 400px;
 }
-
+#div5{
+  text-align: center;
+  background-color: #f4f4f4 ;
+  padding: 15px;
+  border-radius: 5px;
+}
 .nav{
     list-style: none;
     display: flex;
     justify-content: center;
-    position: absolute;
-    bottom: 20px;
-    left: 25px;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
 }
 
 .nav-item{
@@ -19,11 +24,11 @@ body{
 
 .nav-link{
     text-decoration: none;
-    color: #29567b;
+    color: #f4f4f4;
     display: block;
-    background-color: white;
+    background-color: #29567b;
     font-size: 16px;
-    padding: 6px 8px;
+    padding: 15px 15px;
     border-radius: 5px;
     cursor: pointer;
 }
