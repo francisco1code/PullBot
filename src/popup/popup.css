@@ -14,6 +14,11 @@ body{
   margin: 5px 15px;
 }
 
+#div5 a{
+  text-decoration: none;
+  color: #29567b;
+}
+
 .nav{
   list-style: none;
   display: flex;
