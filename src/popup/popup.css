@@ -3,12 +3,14 @@ body{
     width: 400px; 
     height: 400px;
 }
+
 #div5{
   text-align: center;
   background-color: #f4f4f4 ;
   padding: 15px;
   border-radius: 5px;
 }
+
 .nav{
     list-style: none;
     display: flex;
@@ -17,6 +19,7 @@ body{
     margin: 0px;
     padding: 0px;
 }
+
 .container{
   background-color: #f4f4f4;
   border-radius: 15px;
@@ -41,23 +44,22 @@ body{
   height: 75px;
 }
 
- .nav-link:hover{
-    background-color: #021231 !important;
+.nav-link:hover{
+  background-color: #021231 !important;
     
 } 
 
- .nav-link:hover{
-
-    color:#f4f4f4 !important;
+.nav-link:hover{
+  color:#f4f4f4 !important;
 }
 
 .c-loader {
-    display:flexbox;
-    padding: 50px;
-    margin: 110px;
-    justify-content: center;
-    align-items: center;
-  }
+  display:flexbox;
+  padding: 50px;
+  margin: 110px;
+  justify-content: center;
+  align-items: center;
+}
 
  /* body {
   align-items: center;
