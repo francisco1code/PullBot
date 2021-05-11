@@ -25,7 +25,11 @@ const $div4 = document.getElementById('b4')
 
 var displayLoad = true;
 $div1.addEventListener('click', ()=> {
-  document.getElementById('body').style.background = "white"
+  document.getElementById('b1').style.background = "#021231";
+  document.getElementById('b2').style.background = "#29567b";
+  document.getElementById('b3').style.background = "#29567b";
+  document.getElementById('b4').style.background = "#29567b";
+  document.getElementById('b1').style.backgroundColor = "#021231";
   if(displayLoad){
     CreateDivDisplay(6, 6, 6);
     displayLoad = false;
@@ -46,7 +50,11 @@ $div1.addEventListener('click', ()=> {
 
 var displayLoad2 = true;
 $div2.addEventListener('click', ()=> {
-  document.getElementById('body').style.background = "white"
+  document.getElementById('b1').style.background = "#29567b";
+  document.getElementById('b2').style.background = "#021231";
+  document.getElementById('b3').style.background = "#29567b";
+  document.getElementById('b4').style.background = "#29567b";
+  
   if(displayLoad2){
     CreateDivDisplay(6, 6, 6);
     displayLoad2 = false;
@@ -66,7 +74,10 @@ $div2.addEventListener('click', ()=> {
 
 var displayLoad3 = true;
 $div3.addEventListener('click', ()=> {
-  document.getElementById('body').style.background = "white"
+  document.getElementById('b1').style.background = "##29567b";
+  document.getElementById('b2').style.background = "#29567b";
+  document.getElementById('b3').style.background = "#021231";
+  document.getElementById('b4').style.background = "#29567b";
   if(displayLoad3){
     CreateDivDisplay(6, 6, 6);
     displayLoad3 = false;
@@ -86,7 +97,10 @@ $div3.addEventListener('click', ()=> {
 
 var displayLoad4 = true;
 $div4.addEventListener('click', ()=> {
-  document.getElementById('body').style.background = "white"
+  document.getElementById('b1').style.background = "##29567b";
+  document.getElementById('b2').style.background = "#29567b";
+  document.getElementById('b3').style.background = "#29567b";
+  document.getElementById('b4').style.background = "#021231";
   if(displayLoad4){
     CreateDivDisplay(6, 6, 6);
     displayLoad4 = false;
