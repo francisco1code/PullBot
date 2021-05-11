@@ -13,24 +13,22 @@ const mockXHR = {
     setRequestHeader: jest.fn(),
     readyState: 4,
     open: jest.fn(() => {
-      mockXHR.readyState = 4;
+      mockXHR.readyState = 0;
       try {
         var quantidadeDeChamadas = mockXHR.addEventListener.mock.calls.length;
-        if(quantidadeDeChamadas > 0) {
+        
+        if(quantidadeDeChamadas > 0)
           mockXHR.addEventListener.mock.calls[quantidadeDeChamadas-1][1]();
-          return;
-        }
         
       } catch (e) {}    }
     ),
     send: jest.fn(() => {
-      mockXHR.readyState = null;
+      mockXHR.readyState = 4;
       try {
         var quantidadeDeChamadas = mockXHR.addEventListener.mock.calls.length;
-        if(quantidadeDeChamadas > 0) {
+        
+        if(quantidadeDeChamadas > 0) 
           mockXHR.addEventListener.mock.calls[quantidadeDeChamadas-1][1]();
-          return;
-        }
         
       } catch (e) {}    }
     ),

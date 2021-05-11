@@ -5,17 +5,27 @@ import {criarRelatorio} from '../modules/relatorio';
 const mockXHR = {
     addEventListener: jest.fn(),
     setRequestHeader: jest.fn(),
-    open: jest.fn(),
+    readyState: 4,
+    open: jest.fn(() => {
+      mockXHR.readyState = 0;
+      try {
+        var quantidadeDeChamadas = mockXHR.addEventListener.mock.calls.length;
+        
+        if(quantidadeDeChamadas > 0)
+          mockXHR.addEventListener.mock.calls[quantidadeDeChamadas-1][1]();
+        
+      } catch (e) {}    }
+    ),
     send: jest.fn(() => {
-        try {
-            var quantidadeDeChamadas = mockXHR.addEventListener.mock.calls.length;
-            if(quantidadeDeChamadas > 0) {
-                mockXHR.addEventListener.mock.calls[quantidadeDeChamadas-1][1]();
-                return;
-            }
-        } catch (e) {}
-    }),
-    readyState: 4
+      mockXHR.readyState = 4;
+      try {
+        var quantidadeDeChamadas = mockXHR.addEventListener.mock.calls.length;
+        
+        if(quantidadeDeChamadas > 0) 
+          mockXHR.addEventListener.mock.calls[quantidadeDeChamadas-1][1]();
+        
+      } catch (e) {}    }
+    ),
 };
 window.XMLHttpRequest = jest.fn(() => mockXHR);
 
@@ -61,16 +71,18 @@ jest.mock('../modules/relatorio')
 
 test('Testando criarPullRequest()', () => {
 
-    criarPullRequest()
+    criarPullRequest();
     // SIMULANDO QUE O MÉTODO criarPullRequest() CRIOU O PULL REQUEST E EXECUTOU O MÉTODO criarRelatório() (última linha)
     expect(criarRelatorio).toHaveBeenCalledTimes(1);
     expect(mockElementById.classList.remove).toHaveBeenCalledTimes(1);
 })
 
 
-
 test('Fechando modal e cancelando Pull Request', () => {
-
+    evento.target.id = "submit";
+    mockElementById.checked = false;
+    criarPullRequest();
+ 
     // SIMULANDO CLICK NO BOTÃO "X" DO MODAL
     global.e = {
         target: {
