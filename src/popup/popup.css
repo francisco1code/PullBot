@@ -9,6 +9,8 @@ body{
   background-color: #f4f4f4 ;
   padding: 15px;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .nav{
@@ -60,14 +62,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-
- /* body {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  transform: scale(5);
-}  */
 
 .c-loader {
   animation: is-rotating 1s infinite;
