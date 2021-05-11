@@ -8,5 +8,5 @@ Data | Versão | Descrição | Autor
 05/05 | 0.3 | Remoção de tópicos do protótipo | Eliás Yousef
 11/05 | 1.0 | Adição do link para o figma | Eliás Yousef
 
-## Introdução
-Este documento tem por finalidade apresentar o funcionamento e funcionalidades da extensão para o navegador Google Chrome, a PullBot.
+## Objetivo
+Este documento tem por objetivo a idealização da fração visual do projeto PullBot.
