@@ -1,6 +1,13 @@
 import {criarPullRequest} from '../modules/services';
 import {criarRelatorio} from '../modules/relatorio';
 
+
+var objetoJson = [
+    {
+        name: 'nome'
+    }
+];
+
 // MOCK DA CLASSE XMLHttpRequest
 const mockXHR = {
     addEventListener: jest.fn(),
@@ -26,21 +33,29 @@ const mockXHR = {
         
       } catch (e) {}    }
     ),
+    responseText: objetoJson
 };
 window.XMLHttpRequest = jest.fn(() => mockXHR);
 
+// MOCK DE UM OBJETO JSON
+JSON.parse = jest.fn().mockReturnValue(objetoJson);
+JSON.stringify = jest.fn().mockReturnValue(null);
 
-// SIMULANDO CLICK NO BOTÃO "submit" DO MODAL
+
+// SIMULANDO CLICK'S NO MODAL
 global.evento = {
     target: {
-        id: "submit"
-    }}
+        id: "opt1",
+        value: "value"
+}};
 
 // MOCK DO OUVINTE document.addEventListener
 window.document.addEventListener = jest.fn(() => {
     try {
         var quantidadeDeChamadas = document.addEventListener.mock.calls.length;
         if(quantidadeDeChamadas > 0) {
+            if(quantidadeDeChamadas == 2) evento.target.id = "opt2";
+            if(quantidadeDeChamadas == 3) evento.target.id = "submit"; 
             document.addEventListener.mock.calls[quantidadeDeChamadas-1][1](evento);
             return;
         }
@@ -79,7 +94,8 @@ test('Testando criarPullRequest()', () => {
 
 
 test('Fechando modal e cancelando Pull Request', () => {
-    evento.target.id = "submit";
+    evento.target.id = "opt1";
+    document.addEventListener.mockClear();
     mockElementById.checked = false;
     criarPullRequest();
  
@@ -104,7 +120,7 @@ test('Fechando modal e cancelando Pull Request', () => {
     mockXHR.open.mockClear();
     mockXHR.send.mockClear();
     mockXHR.setRequestHeader.mockClear();
-         
+    
     criarPullRequest();
 
     
@@ -112,7 +128,7 @@ test('Fechando modal e cancelando Pull Request', () => {
     expect(mockElementById.classList.remove).toHaveBeenCalledTimes(1);
 
     // TESTANDO SE O PULL REQUEST NÃO FOI CRIADO
-    expect(mockXHR.open).toHaveBeenCalledTimes(0);
-    expect(mockXHR.send).toHaveBeenCalledTimes(0);
+    expect(mockXHR.open).toHaveBeenCalledTimes(1);
+    expect(mockXHR.send).toHaveBeenCalledTimes(1);
     expect(mockXHR.setRequestHeader).toHaveBeenCalledTimes(0);
 });
