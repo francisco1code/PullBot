@@ -18,3 +18,4 @@ Refatoração do documento de visão | Diante das novas implementações, é nec
 Deploy da extensão | Colocar a extensão no rol das extensões da loja do Chrome para que fique acessível para o amplo público | Jaime Juan
 Refatoração do PR automático | Diante da reta final do projeto, ajustes serão feitos ao efetuar o PR automático do projeto | Arthur de Melo e Lorrayne Cardozo
 Elaboração da Apresentação para a Release 2 | Elaborar o material e o conteúdo a ser apresentado para a Release 2 | Jaime Juan
+Refatoração do RoadMap | Diante das novas atribuições, é necessário refatorar o roadmap para ficar condizente com o escopo do projeto | Jaime Juan
