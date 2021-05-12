@@ -23,5 +23,5 @@ Data | Versão | Descrição | Autor
 | 10 | 20/04 - 27/04 | - US05-Implementar gráficos informativos pesoais |
 | 11 | 27/04 - 04/05 | - US06-Implementar API nas extensões do Chrome <br> - US07-Implementação do relatório em markdown do relatório da milestone |
 | 12 | 04/05 - 11/05 | - Testes de Usabilidade <br> - Testes Funcionais <br> - Corrigir Bugfix's |
-| 13 | 11/05 - 18/05 | - Preparar apresentação para a Release 1 <br> - Revisar documentos <br> - **Revisar implementação** <br> - **Revisar o GitHub Pages** <br> |
+| 13 | 11/05 - 18/05 | - Preparar apresentação para a Release 2 <br> - Revisar documentos <br> - **Revisar implementação** <br> - **Revisar o GitHub Pages** <br> |
 | 14 | 18/05 - 25/05 | - **_Release 2_** |
