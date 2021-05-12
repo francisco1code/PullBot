@@ -16,3 +16,4 @@ Refatoração Protótipo de alta fidelidade | Diante das novas implementações,
 Refatoração do Documento de Arquitetura | Diante das novas implementações, é necessário refatorar o documento de arquitetura para ficar condizente com o escopo do projeto | Arthur de Melo e Eliás Yousef
 Refatoração do Backlog | Diante das novas implementações, é necessário refatorar o backlog para ficar condizente com o escopo do projeto | Arthur de Melo
 Refatoração do documento de visão | Diante das novas implementações, é necessário refatorar o documento de visão para ficar condizente com o escopo do projeto | Arthur de Melo
+Css popup | Apenas ajustes finais nas cores dos gráficos | Arthur de Melo
