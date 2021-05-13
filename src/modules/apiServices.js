@@ -10,7 +10,7 @@ import {GraficoGrupoCommits} from '../libraries/app.js';
 	createClass('.plane1', "z-index: 1; display: grid !important;");
     for(var i = 1; i <=  DivAmount; i++){
         if (i <= numerDivPriority & i >= start){
-            var DivPriority = eval(new String('div'+i))
+            var DivPriority = "div"+i;
             var estadoDisplay = window.getComputedStyle(document.getElementById(DivPriority));
             if(estadoDisplay.display == "none"){
               applyClass('plane1', DivPriority);
@@ -20,7 +20,8 @@ import {GraficoGrupoCommits} from '../libraries/app.js';
         }
         else
         {
-            var DivSecundary = eval(new String('div'+i))
+            var DivSecundary = 'div'+i
+            // console.log(DivSecundary);
             var estadoDisplay = window.getComputedStyle(document.getElementById(DivSecundary));
 
             
@@ -69,10 +70,11 @@ export function CodigoDevicePost(){
         const $getResponse = String(xhr.responseText).split("&");
         const $separeteValueDevice = $getResponse[0].split("=");
         var deviceCode = $separeteValueDevice[1];
-        const $separatevalue = String($getResponse[3]).split("=");
-        var codeUser = $separatevalue[1];
-        loginDevice(codeUser);
-        ConfirmaLoginContaUsuario(deviceCode);
+        console.log(deviceCode);
+        localStorage.setItem("key_dev", deviceCode);
+       const $separatevalue = String($getResponse[3]).split("=");
+       var codeUser = $separatevalue[1];
+        loginDevice(codeUser)
       }
     });
 
@@ -94,8 +96,8 @@ export function CodigoDevicePost(){
 }
 //////////////////////////////////////////////////////////////////////////////
 
-export function ConfirmaLoginContaUsuario(deviceCode){
-  var keyValue = deviceCode;
+export function ConfirmaLoginContaUsuario(){
+  var keyValue = localStorage.getItem('key_dev');
   var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function() {
@@ -103,6 +105,7 @@ export function ConfirmaLoginContaUsuario(deviceCode){
       const $getResponse = String(xhr.responseText).split("&");
       const $separateToken = $getResponse[0].split("=");
       const $token = $separateToken[1]
+      console.log(xhr.responseText);
       localStorage.setItem("token",$token);
     }
   });
