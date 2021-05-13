@@ -69,9 +69,10 @@ export function CodigoDevicePost(){
         const $getResponse = String(xhr.responseText).split("&");
         const $separeteValueDevice = $getResponse[0].split("=");
         var deviceCode = $separeteValueDevice[1];
-       const $separatevalue = String($getResponse[3]).split("=");
-       var codeUser = $separatevalue[1];
-        loginDevice(codeUser)
+        const $separatevalue = String($getResponse[3]).split("=");
+        var codeUser = $separatevalue[1];
+        loginDevice(codeUser);
+        ConfirmaLoginContaUsuario(deviceCode);
       }
     });
 
@@ -93,8 +94,8 @@ export function CodigoDevicePost(){
 }
 //////////////////////////////////////////////////////////////////////////////
 
-export function ConfirmaLoginContaUsuario(){
-  var keyValue = localStorage.getItem('key_dev');
+export function ConfirmaLoginContaUsuario(deviceCode){
+  var keyValue = deviceCode;
   var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function() {
