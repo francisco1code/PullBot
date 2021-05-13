@@ -69,7 +69,6 @@ export function CodigoDevicePost(){
         const $getResponse = String(xhr.responseText).split("&");
         const $separeteValueDevice = $getResponse[0].split("=");
         var deviceCode = $separeteValueDevice[1];
-        localStorage.setItem("key_dev", deviceCode);
        const $separatevalue = String($getResponse[3]).split("=");
        var codeUser = $separatevalue[1];
         loginDevice(codeUser)
