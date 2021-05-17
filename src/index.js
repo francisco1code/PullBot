@@ -1,6 +1,6 @@
 import {criarPullRequest} from './modules/services.js';
-    import {CodigoDevicePost} from './modules/apiServices.js';
-    import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
+import {CodigoDevicePost} from './modules/apiServices.js';
+import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
   
     //URL DAS PÁGINAS
     var currentUrl = String(window.location.href);

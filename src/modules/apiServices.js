@@ -64,16 +64,23 @@ export function CodigoDevicePost(){
 
     xhr.addEventListener("readystatechange", function() {
       if(xhr.readyState === 4) {
-
-         
+        
         
         const $getResponse = String(xhr.responseText).split("&");
         const $separeteValueDevice = $getResponse[0].split("=");
         var deviceCode = $separeteValueDevice[1];
-        localStorage.setItem("key_dev", deviceCode);
+       
        const $separatevalue = String($getResponse[3]).split("=");
        var codeUser = $separatevalue[1];
+       console.log(codeUser)
         loginDevice(codeUser)
+
+        var temCodigo = localStorage.getItem("key_dev");
+        if(temCodigo != undefined){
+          localStorage.clear();
+        }
+        
+        localStorage.setItem("key_dev", deviceCode);
       }
     });
 
@@ -104,6 +111,7 @@ export function ConfirmaLoginContaUsuario(){
       const $getResponse = String(xhr.responseText).split("&");
       const $separateToken = $getResponse[0].split("=");
       const $token = $separateToken[1]
+      console.log(xhr.responseText);
       localStorage.setItem("token",$token);
     }
   });
