@@ -59,11 +59,7 @@ A finalidade do projeto PullBot se concentra em auxiliar os usuário da platafor
 ## 2.1. Camada de negócio (Back-end)
 Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express.
 
-### 2.1.1. Node
-O Node.js pode ser definido como um ambiente de execução Javascript server-side.Isso significa que com o Node.js é possível criar aplicações Javascript para rodar como uma aplicação standalone em uma máquina, não dependendo de um browser para a execução[5]. No PullBot, o node fará uso da arquitetura overview.
-
-### 2.1.2. Express
-Express é um framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto bem robusto de recursos para os aplicativos web e móvel.
+### 2.1.1. Bibliotecas
 
 ## 2.2. Tecnologias
 Tecnologia | Descrição
