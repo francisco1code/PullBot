@@ -102,5 +102,40 @@ export function criarPullRequest() {
 
 
 
-
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Document</title>
+  </head>
+  <body>
+      <div class="card-principal">
+          <H1 class="titulo1">Realize o Pull Request de uma branch fanalizada</H1>
+          <div >
+              <h3 class="texto-lateral">Escolha sua branch</h3>
+              <button class="bt-estilo" id="bt1">+</button>
+          </div>
+      </div>
+      <div id="div1" class="card-secundario" >
+          <label class="titulo1"><h3>Qual a branch para merge?</h3></label> 
+          <select id='opt1'>
+          <option>Main</option>
+          <option>Arthur</option>
+          <option>Arthur</option>
+          <option>Arthur</option>
+          </select>
+          <p>Adicionar issue relacionada</p>
+          <button>+</button>
+      </div>
+      <script src="index.js"></script>
+  </body>
+  </html>
+  
+  
+  
+  
+  
 
