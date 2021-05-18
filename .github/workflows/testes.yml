@@ -1,5 +1,5 @@
 
-name: "units-test"
+name: "test"
 on:
   pull_request:
   push:
