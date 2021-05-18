@@ -25,7 +25,12 @@
                   "/modules/*",
                   "/libraries/app.js",
                   "/libraries/filesaver.js"],
-    "matches": ["<all_urls>"],
+    "matches": [
+                "http://github.com/*",
+                "https://github.com/*",
+                "http://*.github.com/*",
+                "https://*.github.com/*"
+              ],
     "extension_ids": []
    }],
   "commands": {
@@ -40,7 +45,10 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "http://github.com/*",
+        "https://github.com/*",
+        "http://*.github.com/*",
+        "https://*.github.com/*"
       ],
       "js": ["content.js"],
       "run_at": "document_end"
@@ -48,7 +56,11 @@
   ], "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["<all_urls>",
+  "permissions": [
+    "http://github.com/*",
+    "https://github.com/*",
+    "http://*.github.com/*",
+    "https://*.github.com/*",
     "storage",
     "tabs"
 ]
